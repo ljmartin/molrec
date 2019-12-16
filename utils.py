@@ -1,3 +1,6 @@
+import numpy as np
+from scipy import sparse
+
 def train_test_split(input_matrix, fraction):
     """
     Splits a label matrix ("y" in the sklearn style), with rows being 
