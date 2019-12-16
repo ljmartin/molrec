@@ -4,7 +4,7 @@ Must have a local copy of chembl_25.db, which obviously doesn't fit here. It is 
 
 Code to setup the data:
 
-`
+```
 sqlite3 chembl_25.db < .read get_interaction_data_SUBSET.sql
 python parse_interaction_data_SUBSET.py
-`
+```
