@@ -16,8 +16,8 @@ The best-performing algorithm is then used for predicting either:
 * New ligands, for a target of interest, that are _not_ close-neighbours known ligands (i.e. to discover new scaffold) 
 
 To do:
-- [x] write readme - 16-12-19
-- [x] upload small dataset and parsing script - 16-12-19
+- [x] write readme - complete 16-12-19
+- [x] upload small dataset and parsing script - complete 16-12-19
 - [ ] create a common assessment task to compare any method on the 243-target subset. Must output data and/or figures.
 - [ ] `implicit` hyperparameter optimization
 - [ ] `lightfm` hyperparameter optimization
