@@ -12,9 +12,8 @@ This project explores the use of network-based algorithms for this task. Data is
 The algorithms are then compared using a single time-split. 
 
 The best-performing algorithm is then used for predicting either: 
-* Ligands that are close-neighbours to an approved drug
-* Ligands that are _not_ close-neighbours to a known ligand
-for a given target of interest. 
+* New ligands, for a target of interest, that are close-neighbours to an approved drug
+* New ligands, for a target of interest, that are _not_ close-neighbours known ligands (i.e. to discover new scaffold) 
 
 To do:
 - [x] write readme - 16-12-19
