@@ -18,7 +18,7 @@ The best-performing algorithm is then used for predicting either:
 To do:
 - [x] write readme - complete 16-12-19
 - [x] upload small dataset and parsing script - complete 16-12-19
-- [ ] create a common assessment task to compare any method on the 243-target subset. Must output data and/or figures.
+- [ ] create a common assessment task to compare any method on the 243-target subset. This will be the objective function for HPO.
 - [ ] `implicit` hyperparameter optimization
 - [ ] `lightfm` hyperparameter optimization
 - [ ] [optional] [keras hyperparameter optimization](https://www.onceupondata.com/2019/02/10/nn-collaborative-filtering/)
