@@ -1,6 +1,6 @@
 .headers on
 .mode csv
-.output interaction_data.csv
+.output interaction_data_SUBSET.csv
 
 ###Getting all three protein families for single protein, with the year for time split cross validation:
 SELECT target_dictionary.chembl_id, target_dictionary.organism, target_dictionary.pref_name, molecule_dictionary.chembl_id, activities.pchembl_value, compound_structures.canonical_smiles, docs.year
