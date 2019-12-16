@@ -16,6 +16,8 @@ def train_test_split(input_matrix, fraction):
     :param input_matrix: 2D numpy array of size (n,m) for dataset with
     n instances and m labls. Must be 1 for label, and 0 for absence of a label.
     :param fraction: percentage size of the test matrix. 
+
+
     """
 
     indices = np.arange(input_matrix.shape[1]) 
@@ -34,3 +36,31 @@ def train_test_split(input_matrix, fraction):
                 test[count][o]=1
                 
     return sparse.csr_matrix(train), sparse.csr_matrix(test)
+
+
+
+def evaluate_predictions(prediction_matrix, test):   
+    """
+    Input a numpy array, with rows for instances and columns for labels, 
+    with entries containing predicted interaction scores. Usually, the higher
+    the highest interaction score corresponds to the top predicted ligand,
+    and thus function assumes the most positive score is the best. 
+
+    Calculates the ranks of the test ligands and returns the mean rank. 
+    This is to be optimized (i.e. minimized) by scikit-optimize. 
+
+    :param prediction_matrix: n by m np array (n = number of instances, m = number of labels)
+    containg predicted interaction scores resulting from some recommender algorithm 
+    :param test: n by m sparse matrix containing 1's in the positions of each test label. Returned
+    by train_test_split.
+    """
+    #order from highest to lowest:
+    order = (-prediction_matrix).argsort()
+    #get ranks of each ligand. 
+    ranks = order.argsort()
+    
+    #calc rank fo each ligand
+    test = np.array(test.todense())
+    test_ranks = ranks[np.array(test, dtype=bool)]
+    
+    return np.mean(test_ranks)
