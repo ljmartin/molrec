@@ -1,6 +1,6 @@
 # How to make data:
 
-Must have a local copy of chembl_25.db, which obviously doesn't fit here. It is freely available from chembl.  
+Must have a local copy of the chembl_25.db database, which is a large file that doesn't fit here. It is freely available from chembl.  
 
 Code to setup the data:
 
