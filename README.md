@@ -17,7 +17,7 @@ The best-performing algorithm is then used for predicting either:
 for a given target of interest. 
 
 To do:
-- [ ] write readme
+- [ x ] write readme
 - [ ] upload datasets
 - [ ] create a common assessment task to compare any method on the 243-target subset. Must output data and/or figures.
 - [ ] `implicit` hyperparameter optimization
