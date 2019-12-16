@@ -1,5 +1,6 @@
 import numpy as np
 from scipy import sparse
+import copy
 
 def train_test_split(input_matrix, fraction):
     """
@@ -24,7 +25,7 @@ def train_test_split(input_matrix, fraction):
 
     indices = np.arange(input_matrix.shape[1]) 
     np.random.shuffle(indices)
-    y = matrix[:,indices]
+    y = input_matrix[:,indices]
     
     train = copy.copy(y)
     test = np.zeros([y.shape[0], y.shape[1]])
