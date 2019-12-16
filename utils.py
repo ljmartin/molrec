@@ -1,3 +1,7 @@
+import numpy as np
+from scipy import sparse
+import copy
+
 def train_test_split(input_matrix, fraction):
     """
     Splits a label matrix ("y" in the sklearn style), with rows being 
@@ -8,10 +12,9 @@ def train_test_split(input_matrix, fraction):
     so we can't just remove a fraction of the instances like in normal cross validation. 
 
     Instead, this iterates through the labels and removes a percentage of them
-    into the test matrix. Some may still have all labels removed by bad luck.
-    Those will be dealt with at the evaluation stage. 
-
-    The column are first shuffled as randomization. 
+    into the test matrix. If all previous labels have been removed, the final label
+    is skipped. This might lead to bias in which labels get removed, so 
+    the columns are randomly shuffled first. 
 
     :param input_matrix: 2D numpy array of size (n,m) for dataset with
     n instances and m labls. Must be 1 for label, and 0 for absence of a label.
@@ -22,22 +25,22 @@ def train_test_split(input_matrix, fraction):
 
     indices = np.arange(input_matrix.shape[1]) 
     np.random.shuffle(indices)
-    y = matrix[:,indices]
+    y = input_matrix[:,indices]
     
     train = copy.copy(y)
     test = np.zeros([y.shape[0], y.shape[1]])
-    #test = copy.copy(y)
     
     for count, row in enumerate(train):
         ones = row.nonzero()[0]
+        numligs = len(ones) 
         for o in ones:
             if np.random.uniform(0,1)<fraction:
-                train[count][o]=0
-                test[count][o]=1
+                if numligs>1:#so we don't remove all labels from an instance
+                    numligs-=1
+                    train[count][o]=0
+                    test[count][o]=1
                 
     return sparse.csr_matrix(train), sparse.csr_matrix(test)
-
-
 
 def evaluate_predictions(prediction_matrix, test):   
     """
