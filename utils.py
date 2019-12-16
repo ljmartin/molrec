@@ -77,7 +77,7 @@ def load_subset():
     at least one label in the test set. 
     """
 
-    interaction_matrix = sparse.load_npz('./data/interaction_matrix.npz')
+    interaction_matrix = sparse.load_npz('../data/interaction_matrix.npz')
     interaction_matrix = np.array(interaction_matrix.todense())
 
     mask = np.sum(interaction_matrix, axis=1)
