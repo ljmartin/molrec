@@ -1,9 +1,10 @@
 # molrec
 recsys for ligands
------
 
 
 Predicting ligands using recommender system algorithms.
+
+Structure-based and ligand-based virtual screening tools have seen some wins but are either [very brute force](https://www.nature.com/articles/s41586-019-0917-9) or highly [baised to existing structures](https://pubs.acs.org/doi/10.1021/acs.jcim.7b00403). Ideally, a virtual screening technique can succesfully predict new ligands with 
 
 To do:
 - [ ] write readme
