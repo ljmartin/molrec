@@ -89,3 +89,25 @@ def load_subset():
     interaction_matrix = interaction_matrix[:,np.sum(interaction_matrix, axis=0)>0]
 
     return interaction_matrix
+
+def load_time_split(year=2015):
+    """
+    Get the interaction matrix of the 243-target subset. Then
+    split into two matrices, train and test, based on year of 
+    the interactions. 
+    :param year: split point. All interactions from this year 
+    or afterwards become test interactions. 
+    """
+
+    interaction_matrix = sparse.load_npz('../data/interaction_matrix.npz')
+    interaction_matrix = np.array(interaction_matrix.todense())
+
+    interaction_dates = sparse.load_npz('../data/interaction_dates.npz')
+    interaction_dates = np.array(interaction_dates.todense())
+
+    split = np.array(interaction_dates<=year, dtype=int)
+
+    train = interaction_matrix*split
+    test = interaction_matrix - train
+
+    return train, test
