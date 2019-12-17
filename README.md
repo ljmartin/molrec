@@ -20,8 +20,8 @@ To do:
 - [x] upload small dataset and parsing script - complete 16-12-19
 - [x] create a common assessment task to compare any method on the 243-target subset. This will be the objective function for HPO. - complete 16-12-19
 - [x] `implicit` hyperparameter optimization
-- [ ] `lightfm` hyperparameter optimization
-- [ ] `surprise` hyperparameter optimization
+- [x] `lightfm` hyperparameter optimization
+- ~~[ ] `surprise` hyperparameter optimization~~
 - [ ] [optional] [keras hyperparameter optimization](https://www.onceupondata.com/2019/02/10/nn-collaborative-filtering/)
 - [ ] compare `label correlation`, `implicit-bpr`, `implicit-als`, and `lightfm-warp`, `lightfm-bpr` algorithms using time-split. Must output figures and data. [optional] keras 
 - [ ] calculate number of known negatives (if any) predicted by best technique from above
