@@ -4,7 +4,7 @@ from scipy import sparse
 import copy
 from tqdm import tqdm
 
-df = pd.read_csv('./interaction_data.csv')
+df = pd.read_csv('./interaction_data_SUBSET.csv')
 df.columns = ['chembl_id', 'organism', 'pref_name', 'instance_id', 'pchembl_value', 'canonical_smiles', 'year']
 
 
@@ -65,7 +65,7 @@ for _ in range(100):
     assert tids[col] in list(df[df['instance_id']==cids[row]]['chembl_id'])
     
 print('passed')
-
+print('Matrix shape:', interaction_matrix.shape)
 
 ##Save all the data
 sparse.save_npz('../data/interaction_dates.npz', sparse.csr_matrix(interaction_dates))
