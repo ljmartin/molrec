@@ -19,8 +19,8 @@ To do:
 - [x] write readme - complete 16-12-19
 - [x] upload small dataset and parsing script - complete 16-12-19
 - [x] create a common assessment task to compare any method on the 243-target subset. This will be the objective function for HPO. - complete 16-12-19
-- [x] `implicit` hyperparameter optimization
-- [x] `lightfm` hyperparameter optimization
+- [x] `implicit` hyperparameter optimization - complete 17-12-19
+- [x] `lightfm` hyperparameter optimization - complete 17-12-19
 - [ ] ~~`surprise` hyperparameter optimization~~
 - [ ] compare `label correlation`, `implicit-bpr`, `implicit-als`, and `lightfm-warp`, `lightfm-bpr` algorithms using time-split. Must output figures and data.
 - [ ] calculate number of known negatives (if any) predicted by best technique from above
