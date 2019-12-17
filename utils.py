@@ -1,6 +1,7 @@
 import numpy as np
 from scipy import sparse
 import copy
+import itertools
 
 def train_test_split(input_matrix, fraction):
     """
