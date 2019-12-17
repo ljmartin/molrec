@@ -5,13 +5,5 @@ Uses scikit-optimize to find close-to-optimum hyperparameters for running `impli
 To run analysis, simple as:
 
 ```
-python hpo_implicit_als.py
-python hpo_implicit_bpr.py
-python hpo_implicit_log.py
-
-python hpo_lightfm_warp.py
-python hpo_lightfm_bpr.py
-python hpo_lightfm_log.py
-
-python make_figures.py
+bash run_all.sh
 ```
