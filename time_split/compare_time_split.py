@@ -111,6 +111,12 @@ pars = find_opt_pars(filenames[3])
 for _ in range(3):
     mean, median = train_lightfm_bpr(pars)
     outfile.write(filenames[3]+': '+str(mean)+' '+str(median)+'\n')
+    
+#label correlation:
+L1 = 1- utils.makeCorrelations(train)
+prediction_matrix = utils.makeProbabilities(train, L1)
+test_ranks = utils.evaluate_predictions(prediction_matrix, sparse.csr_matrix(test), avg=False)
+outfile.write('label correl: '+str(np.mean(test_ranks))+' '+str(np.median(test_ranks))+'\n')
 
 
 outfile.close()
