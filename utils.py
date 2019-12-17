@@ -118,3 +118,38 @@ def load_time_split(year=2015):
     test = test[row_mask]
     
     return train, test
+
+
+def makeCorrelations(y_in):
+    """
+    Calculates pairwise correlations between labels.
+
+    :param y_in: interaction matrix - np array of length n_instances and width n_labels
+    with 1's in positions of interactions.
+    """
+    num_lines = len(y_in)
+    tot_instances = np.sum(y_in, axis=0)
+    L = np.zeros([y_in.shape[1], y_in.shape[1]])
+
+    for row in y_in:
+        if np.sum(row)>1:
+            for j,k in itertools.permutations(np.where(row==1)[0], 2):
+                L[j][k] += (1)/(tot_instances[k])
+
+    return L
+
+def clipY(y):
+    return np.clip(y, 0, 1)
+
+def makeProbabilities(y, L1):
+    """
+    Uses the correlation matrix from makeCorrelations to create a prediction matrix
+    """
+    y_new = copy.copy(y)
+    for count, row in enumerate(y):
+        posLines = row.nonzero()[0]
+        corrs = L1[:,posLines]
+        probs = 1-np.prod(corrs, axis=1)
+        y_new[count]+=probs
+
+    return clipY(y_new)
