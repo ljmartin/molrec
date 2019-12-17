@@ -77,7 +77,7 @@ def evaluate_predictions(prediction_matrix, test, outtype='mean'):
         #only calculate mean-rank for ligands having a label (otherwise tonnes of '0' ranks):
         m = np.sum(test,axis=1).astype(bool)
         #first calculate mean per ligand. Then take mean of all those (avoids inspection bias)
-        return np.mean(np.mean(np.ma.masked_array(ranks[m], mask=test[m]), axis=1).data)
+        return np.mean(np.mean(np.ma.masked_array(ranks[m], mask=~test[m]), axis=1).data)
     if outtype=='full':
         #just return the ranks
         return ranks
