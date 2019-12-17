@@ -71,7 +71,8 @@ def evaluate_predictions(prediction_matrix, test, outtype='mean'):
     test = np.array(test.todense(), dtype=bool)
     
     if outtype=='mean':
-        #return the mean of the ranks of all test labels
+        #return the mean of the ranks of all test labels - possible frequency bias towards
+        #promiscuous ligands.
         return np.mean(ranks[test])
     if outtype=='unbiased_mean':
         #only calculate mean-rank for ligands having a label (otherwise tonnes of '0' ranks):
@@ -91,7 +92,7 @@ def load_subset():
     at least one label in the test set. 
     """
 
-    interaction_matrix = sparse.load_npz('../data/interaction_matrix.npz')
+    interaction_matrix = sparse.load_npz('../data/interaction_matrix_pchembl.npz')
     interaction_matrix = np.array(interaction_matrix.todense())
 
     mask = np.sum(interaction_matrix, axis=1)
