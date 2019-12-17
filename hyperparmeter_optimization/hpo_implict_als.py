@@ -83,8 +83,8 @@ outfile.write(str(result.x_iters[np.argmin(result.func_vals)]))
 outfile.write('\nResult: ')
 outfile.write(str(result.fun))
 
-outfile.write('\n\nAll:\n')
-for i in result.x_iters:
-    outfile.write(str(i)+'\n')
 
+outfile.write('\n\nAll:\n')
+for j,k in zip(result.x_iters, result.func_vals):
+    outfile.write(str(j)+' '+str(k)+'\n')
 outfile.close()
