@@ -42,7 +42,7 @@ def train_test_split(input_matrix, fraction):
                 
     return sparse.csr_matrix(train), sparse.csr_matrix(test)
 
-def evaluate_predictions(prediction_matrix, test):   
+def evaluate_predictions(prediction_matrix, test, avg=True):   
     """
     Input a numpy array, with rows for instances and columns for labels, 
     with entries containing predicted interaction scores. Usually, the higher
@@ -65,8 +65,10 @@ def evaluate_predictions(prediction_matrix, test):
     #calc rank fo each ligand
     test = np.array(test.todense())
     test_ranks = ranks[np.array(test, dtype=bool)]
-    
-    return np.mean(test_ranks)
+    if avg:
+        return np.mean(test_ranks)
+    else:
+        return test_ranks
 
 def load_subset():
     """
@@ -89,6 +91,7 @@ def load_subset():
     interaction_matrix = interaction_matrix[:,np.sum(interaction_matrix, axis=0)>0]
 
     return interaction_matrix
+        
 
 def load_time_split(year=2015):
     """
@@ -109,5 +112,9 @@ def load_time_split(year=2015):
 
     train = interaction_matrix*split
     test = interaction_matrix - train
-
+    #to ensure no ligands with zero labels:
+    row_mask = np.sum(train, axis=1)!=0
+    train = train[row_mask]
+    test = test[row_mask]
+    
     return train, test
