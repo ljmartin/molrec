@@ -1,0 +1,13 @@
+algorithm, mean, median
+hpo_implicit_als.dat: 50.87843833185448 19.0
+hpo_implicit_als.dat: 49.06122448979592 18.0
+hpo_implicit_als.dat: 49.81810115350488 19.0
+hpo_implicit_bpr.dat: 37.33274179236912 15.0
+hpo_implicit_bpr.dat: 34.53238686779059 14.0
+hpo_implicit_bpr.dat: 37.1357586512866 14.0
+hpo_lightfm_warp.dat: 39.13842058562555 16.0
+hpo_lightfm_warp.dat: 36.08695652173913 15.0
+hpo_lightfm_warp.dat: 38.67613132209406 16.0
+hpo_lightfm_bpr.dat: 48.698314108252 28.0
+hpo_lightfm_bpr.dat: 45.62111801242236 30.0
+hpo_lightfm_bpr.dat: 45.942324755989354 26.0
