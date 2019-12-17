@@ -42,7 +42,7 @@ def train_test_split(input_matrix, fraction):
                 
     return sparse.csr_matrix(train), sparse.csr_matrix(test)
 
-def evaluate_predictions(prediction_matrix, test, avg=True):   
+def evaluate_predictions(prediction_matrix, test, outtype='mean'):   
     """
     Input a numpy array, with rows for instances and columns for labels, 
     with entries containing predicted interaction scores. Usually, the higher
@@ -56,6 +56,10 @@ def evaluate_predictions(prediction_matrix, test, avg=True):
     containg predicted interaction scores resulting from some recommender algorithm 
     :param test: n by m sparse matrix containing 1's in the positions of each test label. Returned
     by train_test_split.
+    :param outtype: either 'mean', 'unbiased_mean', or 'full'. Mean gives the mean over
+    all ranks for each test label. Unbiased mean accounts for inspection bias (where promiscuous
+    ligands are over-represented in the mean statistic) by first taking the mean rank for EACH 
+    ligand, and then taking mean over all these. 'Full' just returns the ranks of all ligands. 
     """
     #order from highest to lowest:
     order = (-prediction_matrix).argsort()
@@ -63,12 +67,19 @@ def evaluate_predictions(prediction_matrix, test, avg=True):
     ranks = order.argsort()
     
     #calc rank fo each ligand
-    test = np.array(test.todense())
-    test_ranks = ranks[np.array(test, dtype=bool)]
-    if avg:
-        return np.mean(test_ranks)
-    else:
-        return test_ranks
+    test = np.array(test.todense(), dtype=bool)
+    
+    if outtype=='mean':
+        #return the mean of the ranks of all test labels
+        return np.mean(ranks[test])
+    if outtype=='unbiased_mean':
+        #only calculate mean-rank for ligands having a label (otherwise tonnes of '0' ranks):
+        m = np.sum(test,axis=1).astype(bool)
+        #first calculate mean per ligand. Then take mean of all those (avoids inspection bias)
+        return np.mean(np.mean(np.ma.masked_array(ranks[m], mask=test[m]), axis=1).data)
+    if outtype=='full':
+        #just return the ranks
+        return ranks
 
 def load_subset():
     """
