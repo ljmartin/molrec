@@ -22,11 +22,13 @@ To do:
 - [x] `implicit` hyperparameter optimization
 - [x] `lightfm` hyperparameter optimization
 - [ ] ~~`surprise` hyperparameter optimization~~
-- [ ] [optional] [keras hyperparameter optimization](https://www.onceupondata.com/2019/02/10/nn-collaborative-filtering/)
-- [ ] compare `label correlation`, `implicit-bpr`, `implicit-als`, and `lightfm-warp`, `lightfm-bpr` algorithms using time-split. Must output figures and data. [optional] keras 
+- [ ] compare `label correlation`, `implicit-bpr`, `implicit-als`, and `lightfm-warp`, `lightfm-bpr` algorithms using time-split. Must output figures and data.
 - [ ] calculate number of known negatives (if any) predicted by best technique from above
 - [ ] upload large dataset and parsing script
 - [ ] determine top predictions for target of interest
 - [ ] determine nearest approved molecules
 - [ ] compare nearest approved molecules to those predicted by similarity search with known ligands
 - [ ] alternative to approved drugs --> optimize both rank and Tanimoto distance to known ligands
+
+This requires explicit interaction data, i.e. ligand affinity values. Harry?:
+- [ ] [optional] [keras hyperparameter optimization](https://www.onceupondata.com/2019/02/10/nn-collaborative-filtering/)
