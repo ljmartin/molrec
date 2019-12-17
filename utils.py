@@ -67,3 +67,25 @@ def evaluate_predictions(prediction_matrix, test):
     test_ranks = ranks[np.array(test, dtype=bool)]
     
     return np.mean(test_ranks)
+
+def load_subset():
+    """
+    Loads the 243-target subset of data for HPO. 
+    Also removes ligands with only 1 label in the dataset -
+    these aren't useful since test/train splits require each 
+    instance has at least one label in the training set and
+    at least one label in the test set. 
+    """
+
+    interaction_matrix = sparse.load_npz('../data/interaction_matrix.npz')
+    interaction_matrix = np.array(interaction_matrix.todense())
+
+    mask = np.sum(interaction_matrix, axis=1)
+    mask = mask>1
+
+    interaction_matrix = interaction_matrix[mask] #remove instances with only 1 label
+    #possible that some labels don't have ANY instances now... removing columns
+    #with no labels:
+    interaction_matrix = interaction_matrix[:,np.sum(interaction_matrix, axis=0)>0]
+
+    return interaction_matrix
