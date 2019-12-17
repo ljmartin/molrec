@@ -3,8 +3,10 @@ import numpy as np
 from scipy import sparse
 import copy
 from tqdm import tqdm
+import sys
 
-df = pd.read_csv('./interaction_data_SUBSET.csv')
+fname = sys.argv[1]
+df = pd.read_csv('interaction_data_SUBSET_'+fname+'.csv')
 df.columns = ['chembl_id', 'organism', 'pref_name', 'instance_id', 'pchembl_value', 'canonical_smiles', 'year']
 
 
@@ -68,7 +70,7 @@ print('passed')
 print('Matrix shape:', interaction_matrix.shape)
 
 ##Save all the data
-sparse.save_npz('../data/interaction_dates.npz', sparse.csr_matrix(interaction_dates))
-sparse.save_npz('../data/interaction_matrix.npz', sparse.csr_matrix(interaction_matrix))
+sparse.save_npz('../data/interaction_dates_'+fname+'.npz', sparse.csr_matrix(interaction_dates))
+sparse.save_npz('../data/interaction_matrix_'+fname+'.npz', sparse.csr_matrix(interaction_matrix))
 
-df.sort_values('instance_id').drop_duplicates(['instance_id'])[['instance_id', 'canonical_smiles']].to_csv('../data/chemicals.csv', index=False)
+df.sort_values('instance_id').drop_duplicates(['instance_id'])[['instance_id', 'canonical_smiles']].to_csv('../data/'+fname+'_chemicals.csv', index=False)
