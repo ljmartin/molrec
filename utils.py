@@ -3,6 +3,9 @@ from scipy import sparse
 import copy
 import itertools
 
+
+
+
 def train_test_split(input_matrix, fraction):
     """
     Splits a label matrix ("y" in the sklearn style), with rows being 
@@ -83,7 +86,7 @@ def evaluate_predictions(prediction_matrix, test, outtype='mean'):
         #just return the ranks
         return ranks
 
-def load_subset():
+def load_subset(subset=False, numchoose=50):
     """
     Loads the 243-target subset of data for HPO. 
     Also removes ligands with only 1 label in the dataset -
@@ -91,10 +94,16 @@ def load_subset():
     instance has at least one label in the training set and
     at least one label in the test set. 
     """
+    np.random.seed(100)
 
     interaction_matrix = sparse.load_npz('../data/interaction_matrix_pchembl.npz')
     interaction_matrix = np.array(interaction_matrix.todense())
 
+    if subset:
+        #make smaller to make hyperparameter tuning faster:
+        cols= np.random.choice(np.arange(243), numchoose, replace=False)
+        interaction_matrix = interaction_matrix[:,cols]
+    
     mask = np.sum(interaction_matrix, axis=1)
     mask = mask>1
 
@@ -103,6 +112,8 @@ def load_subset():
     #with no labels:
     interaction_matrix = interaction_matrix[:,np.sum(interaction_matrix, axis=0)>0]
 
+
+    
     return interaction_matrix
         
 
@@ -115,18 +126,22 @@ def load_time_split(year=2015):
     or afterwards become test interactions. 
     """
 
-    interaction_matrix = sparse.load_npz('../data/interaction_matrix.npz')
+    interaction_matrix = sparse.load_npz('../data/interaction_matrix_pchembl.npz')
     interaction_matrix = np.array(interaction_matrix.todense())
 
-    interaction_dates = sparse.load_npz('../data/interaction_dates.npz')
+    interaction_dates = sparse.load_npz('../data/interaction_dates_pchembl.npz')
     interaction_dates = np.array(interaction_dates.todense())
 
     split = np.array(interaction_dates<=year, dtype=int)
 
     train = interaction_matrix*split
     test = interaction_matrix - train
-    #to ensure no ligands with zero labels:
+    #to ensure no ligands with zero labels in the training set:
     row_mask = np.sum(train, axis=1)!=0
+    train = train[row_mask]
+    test = test[row_mask]
+    #to ensure no ligands with zero labels in the test set (no point):
+    row_mask = np.sum(test, axis=1)!=0
     train = train[row_mask]
     test = test[row_mask]
     
