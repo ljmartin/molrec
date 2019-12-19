@@ -46,7 +46,7 @@ def train_test_split(input_matrix, fraction):
                 
     return sparse.csr_matrix(train), sparse.csr_matrix(test)
 
-def evaluate_predictions(prediction_matrix, test, outtype='mean'):   
+def evaluate_predictions(prediction_matrix, train, test, outtype='mean'):   
     """
     Input a numpy array, with rows for instances and columns for labels, 
     with entries containing predicted interaction scores. Usually, the higher

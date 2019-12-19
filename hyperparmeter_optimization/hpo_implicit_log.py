@@ -37,7 +37,7 @@ def bootstrap(params, matrix, repeats):
         #make interaction predictions:
         pred_matrix = np.dot(model.item_factors, model.user_factors.T)
         #evaluate by calculating mean rank:
-        results.append(utils.evaluate_predictions(pred_matrix, test))
+        results.append(utils.evaluate_predictions(pred_matrix, train, test))
                 
     return np.mean(results)
 
