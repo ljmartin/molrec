@@ -46,7 +46,7 @@ def train_test_split(input_matrix, fraction):
                 
     return sparse.csr_matrix(train), sparse.csr_matrix(test)
 
-def evaluate_predictions(prediction_matrix, train, test, outtype='mean'):   
+def evaluate_predictions(prediction_matrix, train, test, outtype='pAt20'):   
     """
     Input a numpy array, with rows for instances and columns for labels, 
     with entries containing predicted interaction scores. Usually, the higher
@@ -66,22 +66,25 @@ def evaluate_predictions(prediction_matrix, train, test, outtype='mean'):
     ligand, and then taking mean over all these. 'Full' just returns the ranks of all ligands. 
     """
 
+    if isinstance(train, sparse.csr_matrix):
+        train = train.todense()
     #mask ligands that are known positives:
     prediction_matrix = np.ma.masked_array(prediction_matrix, mask=train.astype(bool))
     
 
     #order from highest to lowest:
-    order = (-prediction_matrix).argsort()
+    order = (-prediction_matrix).argsort(axis=1)
     #get ranks of each ligand. 
-    ranks = order.argsort()
+    ranks = order.argsort(axis=1)
     
     #calc rank fo each ligand
     test = np.array(test.todense(), dtype=bool)
     
-    if outtype=='mean':
-        #return the mean of the ranks of all test labels - possible frequency bias towards
-        #promiscuous ligands.
-        return np.mean(ranks[test])
+    if outtype=='pAt20':
+        #return the fraction of test ligands being predicted in the top 20 ranks
+        #i.e. precision@20
+        r = ranks[test]
+        return (r<20).sum() / len(r)
     if outtype=='unbiased_mean':
         #only calculate mean-rank for ligands having a label (otherwise tonnes of '0' ranks):
         m = np.sum(test,axis=1).astype(bool)
