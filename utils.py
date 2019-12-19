@@ -65,6 +65,11 @@ def evaluate_predictions(prediction_matrix, test, outtype='mean'):
     ligands are over-represented in the mean statistic) by first taking the mean rank for EACH 
     ligand, and then taking mean over all these. 'Full' just returns the ranks of all ligands. 
     """
+
+    #mask ligands that are known positives:
+    prediction_matrix = np.ma.masked_array(prediction_matrix, mask=train.astype(bool))
+    
+
     #order from highest to lowest:
     order = (-prediction_matrix).argsort()
     #get ranks of each ligand. 
