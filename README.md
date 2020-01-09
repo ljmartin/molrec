@@ -7,6 +7,8 @@ Predicting ligands using recommender system algorithms.
 
 Structure-based and ligand-based virtual screening tools have seen some wins but are either very [brute force](https://www.nature.com/articles/s41586-019-0917-9) or highly [baised to existing structures](https://pubs.acs.org/doi/10.1021/acs.jcim.7b00403). Ideally, a virtual screening technique can succesfully predict new ligands both efficiently and with non-obvious scaffolds. That means the predicted ligands must not arise by straight up similarity search from the known ligands, which we will use as a stand-in for an chemist's recommendation.
 
+(Adding to the above -> many existing algorithms require binary true positive and true negative labels. Network analysis allows for positive, negative, and unknown) 
+
 This project explores the use of network-based algorithms for this task. Data is activity records from ChEMBL25. Hyperparameter optimization uses a 243-target subset of ChEMBL and k-fold bootstrapping (structure bias is impossible for network-based algorithms, which are not fed any ligand or protein structure information). The k-fold bootstrapping procedure is required because of the requirement for network-based algorithms to have at least a single interaction to learn from in the train matrix - this is not gauranteed in k fold cross validation. 
 
 The algorithms are then compared using a single time-split. 
