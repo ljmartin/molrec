@@ -27,7 +27,7 @@ To do:
 - [x] convert label correlation approach to use sparse matrices
 - [x] show that optimizing for wide vs long is equivalent or not equivalent.
   _It is better to do long_!
-- [ ] determine what sklearn ranking loss returns in the event of a zero-vector
+- [ ] ~~determine what sklearn ranking loss returns in the event of a zero-vector~~ Not relevant for mean rank or p@k. 
 - [ ] compare `label correlation`, `implicit-bpr`, `implicit-als`, and `lightfm-warp`, `lightfm-bpr` algorithms using time-split. Must output figures and data.
 - [ ] calculate number of known negatives (if any) predicted by best technique from above
 - [ ] upload large dataset and parsing script
