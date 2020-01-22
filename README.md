@@ -25,6 +25,7 @@ To do:
 - [x] `lightfm` hyperparameter optimization - complete 17-12-19
 - [ ] ~~`surprise` hyperparameter optimization~~
 - [ ] show that optimizing for wide vs long is equivalent or not equivalent.
+- [ ] determine what sklearn ranking loss returns in the event of a zero-vector
 - [ ] compare `label correlation`, `implicit-bpr`, `implicit-als`, and `lightfm-warp`, `lightfm-bpr` algorithms using time-split. Must output figures and data.
 - [ ] calculate number of known negatives (if any) predicted by best technique from above
 - [ ] upload large dataset and parsing script
