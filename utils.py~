@@ -68,8 +68,8 @@ def evaluate_predictions(prediction_matrix, train, test, outtype='pAt20'):
 
     if isinstance(train, sparse.csr_matrix):
         train = train.todense()
-    ##mask ligands that are known positives:
-    #prediction_matrix = np.ma.masked_array(prediction_matrix, mask=train.astype(bool))
+    #mask ligands that are known positives:
+    prediction_matrix = np.ma.masked_array(prediction_matrix, mask=train.astype(bool))
     
 
     #order from highest to lowest:

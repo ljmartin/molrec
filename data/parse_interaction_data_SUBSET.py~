@@ -18,8 +18,8 @@ df = df.sort_values('year').drop_duplicates(['pref_name', 'instance_id'],keep='f
 df = df[~(df['chembl_id']=='CHEMBL2111414')]
 df = df[~(df['chembl_id']=='CHEMBL2111353')]
 
-#NaN values will mess with numpy later so should be dealt with now. Setting all these to year=1 is functionally equivalent to ensuring these interactions are always the training set. #Ps - don't set to 0! Otherwise the '0' dates will be removed whenever the matrix becomes a sparse csr_matrix.
-df = df.replace(np.nan, 1)
+#NaN values will mess with numpy later so should be dealt with now. Setting all these to year=0 is functionally equivalent to ensuring these interactions are always the training set.
+df = df.replace(np.nan, 0)
 
 #Sklearn has a good function for creating a label matrix ("y"), but we want to have a duplicate matrix with the year of the interactions, so lets just do both at the same time.
 
