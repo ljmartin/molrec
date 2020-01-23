@@ -140,18 +140,28 @@ def load_time_split(year=2015):
     interaction_dates = sparse.load_npz('../data/interaction_dates_pchembl.npz')
     interaction_dates = np.array(interaction_dates.todense())
 
-    split = np.array(interaction_dates<=year, dtype=int)
+    #turn interaction dates into a masker
+    dates_mask = (interaction_dates.data<=year).astype(int)
 
-    train = interaction_matrix*split
-    test = interaction_matrix - train
-    #to ensure no ligands with zero labels in the training set:
-    row_mask = np.sum(train, axis=1)!=0
-    train = train[row_mask]
+    #make copies that will become train / test matrices
+    train = copy.copy(interaction_matrix)
+    test = copy.copy(interaction_matrix)
+
+    #remove 2015 and later records from train matrix
+    train.data = train.data * dates_mask
+    #remove all training data from the test matrix. 
+    test.data = test.data - train.data
+
+    #remove any rows from the train matrix that have zero interactions.
+    #this is the case any time a new ligand is discovered in the cutoff-year or after. 
+    #we can't use link prediction on new ligands! It's a cold start problem. 
+    #so we remove all these ligands from the present analysis. 
+    row_mask = np.array((train.sum(axis=1)!=0)).reshape(1,-1)[0] #there must be a cleaner way to do that.
+    train = train[row_mask] 
     test = test[row_mask]
-    #to ensure no ligands with zero labels in the test set (no point):
-    row_mask = np.sum(test, axis=1)!=0
-    train = train[row_mask]
-    test = test[row_mask]
+
+    train.eliminate_zeros()
+    test.eliminate_zeros()    
     
     return train, test
 
