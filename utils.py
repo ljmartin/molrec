@@ -1,9 +1,8 @@
 import numpy as np
 from scipy import sparse
+from scipy.stats.mstats import rankdata #for dealing with ties
 import copy
 import itertools
-
-
 
 
 def train_test_split(input_matrix, fraction):
@@ -23,10 +22,8 @@ def train_test_split(input_matrix, fraction):
     :param input_matrix: 2D numpy array of size (n,m) for dataset with
     n instances and m labls. Must be 1 for label, and 0 for absence of a label.
     :param fraction: percentage size of the test matrix. 
-
-
     """
-
+    
     indices = np.arange(input_matrix.shape[1]) 
     np.random.shuffle(indices)
     y = input_matrix[:,indices]
@@ -46,7 +43,7 @@ def train_test_split(input_matrix, fraction):
                 
     return sparse.csr_matrix(train), sparse.csr_matrix(test)
 
-def evaluate_predictions(prediction_matrix, train, test, outtype='pAt20'):   
+def evaluate_predictions(prediction_matrix, test):   
     """
     Input a numpy array, with rows for instances and columns for labels, 
     with entries containing predicted interaction scores. Usually, the higher
@@ -60,39 +57,44 @@ def evaluate_predictions(prediction_matrix, train, test, outtype='pAt20'):
     containg predicted interaction scores resulting from some recommender algorithm 
     :param test: n by m sparse matrix containing 1's in the positions of each test label. Returned
     by train_test_split.
-    :param outtype: either 'mean', 'unbiased_mean', or 'full'. Mean gives the mean over
-    all ranks for each test label. Unbiased mean accounts for inspection bias (where promiscuous
-    ligands are over-represented in the mean statistic) by first taking the mean rank for EACH 
-    ligand, and then taking mean over all these. 'Full' just returns the ranks of all ligands. 
+#    :param outtype: either 'mean', 'unbiased_mean', or 'full'. Mean gives the mean over
+#    all ranks for each test label. Unbiased mean accounts for inspection bias (where promiscuous
+#    ligands are over-represented in the mean statistic) by first taking the mean rank for EACH 
+#    ligand, and then taking mean over all these. 'Full' just returns the ranks of all ligands. 
     """
+    if isinstance(test, sparse.csr_matrix):
+        test = test.toarray()
 
-    if isinstance(train, sparse.csr_matrix):
-        train = train.todense()
+    #This will mask all ROWS that contain no test ligands. No point ranking
+    #a row if you're aren't going to evaluate the ranks!
+    #(and it works on sparse or np.array)
+    row_mask = np.array(test.sum(axis=1)>0).reshape(-1,)
+    test_masked = test[row_mask]
+    get_ranks = test_masked.toarray().astype(bool) #this will select using boolean all test ranks.
+
     ##mask ligands that are known positives:
     #prediction_matrix = np.ma.masked_array(prediction_matrix, mask=train.astype(bool))
-    
 
-    #order from highest to lowest:
-    order = (-prediction_matrix).argsort(axis=1)
-    #get ranks of each ligand. 
-    ranks = order.argsort(axis=1)
+    ####Double argsort approach (not used anymore):
+    ##order from highest to lowest:
+    #order = (-prediction_matrix).argsort(axis=1)
+    ##get ranks of each ligand. 
+    #ranks = order.argsort(axis=1)
+
+    #rankdata approach, which correctly handles ties:
+    prediction_ranks = rankdata(-predictions[row_mask], axis=1)
     
-    #calc rank fo each ligand
-    test = np.array(test.todense(), dtype=bool)
-    
-    if outtype=='pAt20':
-        #return the fraction of test ligands being predicted in the top 20 ranks
-        #i.e. precision@20
-        r = ranks[test]
-        return (r<20).sum() / len(r)
-    if outtype=='unbiased_mean':
-        #only calculate mean-rank for ligands having a label (otherwise tonnes of '0' ranks):
-        m = np.sum(test,axis=1).astype(bool)
-        #first calculate mean per ligand. Then take mean of all those (avoids inspection bias)
-        return np.mean(np.mean(np.ma.masked_array(ranks[m], mask=~test[m]), axis=1).data)
-    if outtype=='full':
-        #just return the ranks
-        return ranks
+    #all ranks:
+    all_test_ranks = prediction_ranks[get_ranks]
+    return all_test_ranks
+
+    ##Old stuff:
+    #if outtype=='unbiased_mean':
+    #    #only calculate mean-rank for ligands having a label (otherwise tonnes of '0' ranks):
+    #    m = np.sum(test,axis=1).astype(bool)
+    #    #first calculate mean per ligand. Then take mean of all those (avoids inspection bias)
+    #    return np.mean(np.mean(np.ma.masked_array(ranks[m], mask=~test[m]), axis=1).data)
+
 
 def load_subset(subset=False, numchoose=50):
     """

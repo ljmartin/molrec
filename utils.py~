@@ -4,8 +4,6 @@ import copy
 import itertools
 
 
-
-
 def train_test_split(input_matrix, fraction):
     """
     Splits a label matrix ("y" in the sklearn style), with rows being 
@@ -23,8 +21,6 @@ def train_test_split(input_matrix, fraction):
     :param input_matrix: 2D numpy array of size (n,m) for dataset with
     n instances and m labls. Must be 1 for label, and 0 for absence of a label.
     :param fraction: percentage size of the test matrix. 
-
-
     """
 
     indices = np.arange(input_matrix.shape[1]) 
@@ -70,7 +66,6 @@ def evaluate_predictions(prediction_matrix, train, test, outtype='pAt20'):
         train = train.todense()
     ##mask ligands that are known positives:
     #prediction_matrix = np.ma.masked_array(prediction_matrix, mask=train.astype(bool))
-    
 
     #order from highest to lowest:
     order = (-prediction_matrix).argsort(axis=1)
@@ -80,11 +75,6 @@ def evaluate_predictions(prediction_matrix, train, test, outtype='pAt20'):
     #calc rank fo each ligand
     test = np.array(test.todense(), dtype=bool)
     
-    if outtype=='pAt20':
-        #return the fraction of test ligands being predicted in the top 20 ranks
-        #i.e. precision@20
-        r = ranks[test]
-        return (r<20).sum() / len(r)
     if outtype=='unbiased_mean':
         #only calculate mean-rank for ligands having a label (otherwise tonnes of '0' ranks):
         m = np.sum(test,axis=1).astype(bool)
@@ -140,18 +130,28 @@ def load_time_split(year=2015):
     interaction_dates = sparse.load_npz('../data/interaction_dates_pchembl.npz')
     interaction_dates = np.array(interaction_dates.todense())
 
-    split = np.array(interaction_dates<=year, dtype=int)
+    #turn interaction dates into a masker
+    dates_mask = (interaction_dates.data<=year).astype(int)
 
-    train = interaction_matrix*split
-    test = interaction_matrix - train
-    #to ensure no ligands with zero labels in the training set:
-    row_mask = np.sum(train, axis=1)!=0
-    train = train[row_mask]
+    #make copies that will become train / test matrices
+    train = copy.copy(interaction_matrix)
+    test = copy.copy(interaction_matrix)
+
+    #remove 2015 and later records from train matrix
+    train.data = train.data * dates_mask
+    #remove all training data from the test matrix. 
+    test.data = test.data - train.data
+
+    #remove any rows from the train matrix that have zero interactions.
+    #this is the case any time a new ligand is discovered in the cutoff-year or after. 
+    #we can't use link prediction on new ligands! It's a cold start problem. 
+    #so we remove all these ligands from the present analysis. 
+    row_mask = np.array((train.sum(axis=1)!=0)).reshape(1,-1)[0] #there must be a cleaner way to do that.
+    train = train[row_mask] 
     test = test[row_mask]
-    #to ensure no ligands with zero labels in the test set (no point):
-    row_mask = np.sum(test, axis=1)!=0
-    train = train[row_mask]
-    test = test[row_mask]
+
+    train.eliminate_zeros()
+    test.eliminate_zeros()    
     
     return train, test
 
