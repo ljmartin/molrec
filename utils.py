@@ -43,7 +43,7 @@ def train_test_split(input_matrix, fraction):
                 
     return sparse.csr_matrix(train), sparse.csr_matrix(test)
 
-def evaluate_predictions(prediction_matrix, test):   
+def evaluate_predictions(predictions, test):   
     """
     Input a numpy array, with rows for instances and columns for labels, 
     with entries containing predicted interaction scores. Usually, the higher
@@ -64,13 +64,14 @@ def evaluate_predictions(prediction_matrix, test):
     """
     if isinstance(test, sparse.csr_matrix):
         test = test.toarray()
-
+    if isinstance(predictions, sparse.csr_matrix):
+        predictions = predictions.toarray()
     #This will mask all ROWS that contain no test ligands. No point ranking
     #a row if you're aren't going to evaluate the ranks!
     #(and it works on sparse or np.array)
     row_mask = np.array(test.sum(axis=1)>0).reshape(-1,)
     test_masked = test[row_mask]
-    get_ranks = test_masked.toarray().astype(bool) #this will select using boolean all test ranks.
+    get_ranks = test_masked.astype(bool) #this will select using boolean all test ranks.
 
     ##mask ligands that are known positives:
     #prediction_matrix = np.ma.masked_array(prediction_matrix, mask=train.astype(bool))
