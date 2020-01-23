@@ -43,7 +43,7 @@ def bootstrap(params, matrix, repeats):
         pred_matrix = model.predict(np.repeat(cid, len(tid)), np.tile(tid, len(cid)))
         pred_matrix = np.reshape(pred_matrix, (len(cid), len(tid)))
         #evaluate by calculating mean rank:
-        results.append(utils.evaluate_predictions(pred_matrix, train, test).mean())
+        results.append(utils.evaluate_predictions(pred_matrix, test).mean())
                 
     return np.mean(results)
 
