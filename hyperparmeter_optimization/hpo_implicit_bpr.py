@@ -23,23 +23,18 @@ import skopt
 interaction_matrix = utils.load_subset()
 
 #this performs multiple repeats of the test/train split, if desired:
+#this performs multiple repeats of the test/train split, if desired:
 def bootstrap(params, matrix, repeats):
     results = list()
     for _ in range(repeats):
+        #get a train/test split:
         train, test = utils.train_test_split(interaction_matrix, 0.05)
-        model = implicit.bpr.BayesianPersonalizedRanking(factors=params['factors'],
-                                                     learning_rate=params['learning_rate'],
-                                                     regularization=params['regularization'],
-                                                     iterations=params['iterations'], 
-                                                     num_threads=1,
-                                                     use_gpu=False)
-        model.fit(train)
-        #make interaction predictions:
-        pred_matrix = np.dot(model.item_factors, model.user_factors.T)
-        #evaluate by calculating mean rank:
+        #train matrix is used to train the model and make predictions:
+        pred_matrix = utils.train_implicit_bpr(params, train)
+        #test matrix is used to score the predictions:
         results.append(utils.evaluate_predictions(pred_matrix, test).mean())
-                
     return np.mean(results)
+
 
 
 ####SKOPT:
@@ -80,12 +75,11 @@ result = skopt.utils.create_result(optimizer.Xi,
 #write the data so we don't need to repeat it:
 outfile = open('hpo_implicit_bpr.dat', 'w')
 
-outfile.write('Best:\n')
-outfile.write('Paramaters: ')
-outfile.write(str(result.x_iters[np.argmin(result.func_vals)]))
-outfile.write('\nResult: ')
+outfile.write('Best parameters:\n')
+for j,k in zip(space, result.x_iters[np.argmin(result.func_vals)]):
+    outfile.write(str(j.name)+' '+str(k)+'\n')
+outfile.write('Result: ')
 outfile.write(str(result.fun))
-
 
 outfile.write('\n\nAll:\n')
 for j,k in zip(result.x_iters, result.func_vals):

@@ -3,7 +3,8 @@ from scipy import sparse
 from scipy.stats.mstats import rankdata #for dealing with ties
 import copy
 import itertools
-
+import implicit
+import lightfm
 
 def train_test_split(input_matrix, fraction):
     """
@@ -202,3 +203,68 @@ def makeProbabilities(y, L1):
         y_new[count]+=probs
 
     return clipY(y_new)
+
+def train_implicit_bpr(params, inp):
+    model = implicit.bpr.BayesianPersonalizedRanking(factors=params['factors'],
+                                                 learning_rate=params['learning_rate'],
+                                                 regularization=params['regularization'],
+                                                 iterations=params['iterations'],
+                                                 use_gpu=False)
+    model.fit(sparse.csr_matrix(inp), show_progress=False)
+    return np.dot(model.item_factors, model.user_factors.T)
+
+def train_implicit_als(params, inp):
+    model = implicit.als.AlternatingLeastSquares(factors=params['factors'],
+                                                 regularization=params['regularization'],
+                                                 iterations=params['iterations'],
+                                                 num_threads=1,
+                                                 use_gpu=False)
+    model.fit(sparse.csr_matrix(inp), show_progress=False)
+    return np.dot(model.item_factors, model.user_factors.T)
+
+def train_implicit_log(params, inp):
+    model = implicit.lmf.LogisticMatrixFactorization(factors=params['factors'],
+                                                     learning_rate=params['learning_rate'],
+                                                     regularization=params['regularization'],
+                                                     iterations=params['iterations'],
+                                                     num_threads=1,
+                                                     use_gpu=False)
+    model.fit(sparse.csr_matrix(inp))
+    return np.dot(model.item_factors, model.user_factors.T)
+
+def get_lightfm_indexing(inp):
+    """Returns user and item indexes used by lightfm. Input is an interaction matrix. """
+    return np.arange(inp.shape[0]), np.arange(inp.shape[1])
+
+def train_lightfm_warp(params, inp):
+    cid, tid = get_lightfm_indexing(inp)    
+    model = lightfm.LightFM(no_components = params['no_components'],
+                           loss='warp',
+                           max_sampled=params['max_sampled'],
+                           learning_rate=params['learning_rate'])
+    model.fit(inp, epochs=params['epochs'])
+    #get flattened predictions:
+    pred_matrix = model.predict(np.repeat(cid, len(tid)), np.tile(tid, len(cid)))
+    return np.reshape(pred_matrix, (len(cid), len(tid))) #unflattened.
+
+def train_lightfm_bpr(params, inp):
+    cid, tid = get_lightfm_indexing(inp)    
+    model = lightfm.LightFM(no_components = params['no_components'],
+                           loss='bpr',
+                           max_sampled=params['max_sampled'],
+                           learning_rate=params['learning_rate'])
+    model.fit(inp, epochs=params['epochs'])
+    #get flattened predictions:
+    pred_matrix = model.predict(np.repeat(cid, len(tid)), np.tile(tid, len(cid)))
+    return np.reshape(pred_matrix, (len(cid), len(tid))) #unflattened.
+
+def train_lightfm_log(params, inp):
+    cid, tid = get_lightfm_indexing(inp)    
+    model = lightfm.LightFM(no_components = params['no_components'],
+                           loss='logistic',
+                           max_sampled=params['max_sampled'],
+                           learning_rate=params['learning_rate'])
+    model.fit(inp, epochs=params['epochs'])
+    #get flattened predictions:
+    pred_matrix = model.predict(np.repeat(cid, len(tid)), np.tile(tid, len(cid)))
+    return np.reshape(pred_matrix, (len(cid), len(tid))) #unflattened.

@@ -22,29 +22,16 @@ import skopt
 #load the 243-protein subset:
 interaction_matrix = utils.load_subset()
 
-##lightfm requires a particular way of getting the predictions:
-#lightfm 'user id' (chemical id)
-cid = np.arange(interaction_matrix.shape[0])
-#lightfm 'item id' (target id)
-tid = np.arange(interaction_matrix.shape[1])
-
-
 #this performs multiple repeats of the test/train split, if desired:
 def bootstrap(params, matrix, repeats):
     results = list()
     for _ in range(repeats):
+        #get a train/test split:
         train, test = utils.train_test_split(interaction_matrix, 0.05)
-        model = lightfm.LightFM(no_components = params['no_components'],
-                           loss='logistic', 
-                           max_sampled=params['max_sampled'],
-                           learning_rate=params['learning_rate'])
-        model.fit(train, epochs=params['epochs'])
-        #make interaction predictions:
-        pred_matrix = model.predict(np.repeat(cid, len(tid)), np.tile(tid, len(cid)))
-        pred_matrix = np.reshape(pred_matrix, (len(cid), len(tid)))
-        #evaluate by calculating mean rank:
-        results.append(utils.evaluate_predictions(pred_matrix, test).mean())
-                
+        #train matrix is used to train the model and make predictions:
+        pred_matrix = utils.train_lightfm_log(params, train)
+        #test matrix is used to score the predictions:
+        results.append(utils.evaluate_predictions(pred_matrix, test).mean())                
     return np.mean(results)
 
 
@@ -85,12 +72,11 @@ result = skopt.utils.create_result(optimizer.Xi,
 #write the data so we don't need to repeat it:
 outfile = open('hpo_lightfm_log.dat', 'w')
 
-outfile.write('Best:\n')
-outfile.write('Paramaters: ')
-outfile.write(str(result.x_iters[np.argmin(result.func_vals)]))
-outfile.write('\nResult: ')
+outfile.write('Best parameters:\n')
+for j,k in zip(space, result.x_iters[np.argmin(result.func_vals)]):
+    outfile.write(str(j.name)+' '+str(k)+'\n')
+outfile.write('Result: ')
 outfile.write(str(result.fun))
-
 
 outfile.write('\n\nAll:\n')
 for j,k in zip(result.x_iters, result.func_vals):

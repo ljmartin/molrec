@@ -26,19 +26,12 @@ interaction_matrix = utils.load_subset()
 def bootstrap(params, matrix, repeats):
     results = list()
     for _ in range(repeats):
+        #get a train/test split:
         train, test = utils.train_test_split(interaction_matrix, 0.05)
-        model = implicit.lmf.LogisticMatrixFactorization(factors=params['factors'],
-                                                     learning_rate=params['learning_rate'],
-                                                     regularization=params['regularization'],
-                                                     iterations=params['iterations'], 
-                                                     num_threads=1,
-                                                     use_gpu=False)
-        model.fit(train)
-        #make interaction predictions:
-        pred_matrix = np.dot(model.item_factors, model.user_factors.T)
-        #evaluate by calculating mean rank:
-        results.append(utils.evaluate_predictions(pred_matrix, test).mean())
-                
+        #train matrix is used to train the model and make predictions:
+        pred_matrix = utils.train_implicit_log(params, train)
+        #test matrix is used to score the predictions"
+        results.append(utils.evaluate_predictions(pred_matrix, test).mean())      
     return np.mean(results)
 
 
@@ -80,10 +73,10 @@ result = skopt.utils.create_result(optimizer.Xi,
 #write the data so we don't need to repeat it:
 outfile = open('hpo_implicit_log.dat', 'w')
 
-outfile.write('Best:\n')
-outfile.write('Paramaters: ')
-outfile.write(str(result.x_iters[np.argmin(result.func_vals)]))
-outfile.write('\nResult: ')
+outfile.write('Best parameters:\n')
+for j,k in zip(space, result.x_iters[np.argmin(result.func_vals)]):
+    outfile.write(str(j.name)+' '+str(k)+'\n')
+outfile.write('Result: ')
 outfile.write(str(result.fun))
 
 
