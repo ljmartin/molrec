@@ -128,13 +128,11 @@ def load_subset(subset=False, numchoose=50):
     #possible that some labels don't have ANY instances now... removing columns
     #with no labels:
     interaction_matrix = interaction_matrix[:,np.sum(interaction_matrix, axis=0)>0]
-
-
     
     return interaction_matrix
         
 
-def load_time_split(year=2015):
+def load_time_split(year=2010):
     """
     Get the interaction matrix of the 243-target subset. Then
     split into two matrices, train and test, based on year of 
@@ -142,13 +140,10 @@ def load_time_split(year=2015):
     :param year: split point. All interactions from this year 
     or afterwards become test interactions. 
     """
-
+    
     interaction_matrix = sparse.load_npz('../data/interaction_matrix_pchembl.npz')
-    interaction_matrix = np.array(interaction_matrix.todense())
-
     interaction_dates = sparse.load_npz('../data/interaction_dates_pchembl.npz')
-    interaction_dates = np.array(interaction_dates.todense())
-
+    
     #turn interaction dates into a masker
     dates_mask = (interaction_dates.data<=year).astype(int)
 
@@ -273,3 +268,21 @@ def train_lightfm_log(params, inp):
     #get flattened predictions:
     pred_matrix = model.predict(np.repeat(cid, len(tid)), np.tile(tid, len(cid)))
     return np.reshape(pred_matrix, (len(cid), len(tid))) #unflattened.
+
+def read_params(name):
+    parameter_flag=False
+    params = dict()
+    for line in open('../hyperparameter_optimization/'+name+'.dat', 'r').readlines():
+        if 'Result' in line:
+            parameter_flag=False
+        if parameter_flag:
+            words = line.split()
+            if len(words[1])<=5:
+                params[words[0]]=int(words[1])
+            else:
+                params[words[0]]=float(words[1])
+        if 'Best parameters' in line:
+            parameter_flag=True
+    return params
+
+
