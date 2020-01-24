@@ -28,7 +28,7 @@ def bootstrap(params, interaction_matrix, algorithm_function, repeats):
         #train matrix is used to train the model and make predictions:
         pred_matrix = algorithm_function(params,train)
         #test matrix is used to score the predictions:
-        results.append(utils.evaluate_predictions(pred_matrix, test).mean())                
+        results.append(utils.evaluate_predictions(pred_matrix, test, train).mean())                
     return np.mean(results)
 
 

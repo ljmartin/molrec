@@ -44,7 +44,7 @@ def train_test_split(input_matrix, fraction):
                 
     return sparse.csr_matrix(train), sparse.csr_matrix(test)
 
-def evaluate_predictions(predictions, test):   
+def evaluate_predictions(predictions, test, train):   
     """
     Input a numpy array, with rows for instances and columns for labels, 
     with entries containing predicted interaction scores. Usually, the higher
@@ -65,8 +65,11 @@ def evaluate_predictions(predictions, test):
     """
     if isinstance(test, sparse.csr_matrix):
         test = test.toarray()
+    if isinstance(train, sparse.csr_matrix):
+        train = train.toarray()
     if isinstance(predictions, sparse.csr_matrix):
         predictions = predictions.toarray()
+        
     #This will mask all ROWS that contain no test ligands. No point ranking
     #a row if you're aren't going to evaluate the ranks!
     #(and it works on sparse or np.array)
@@ -74,17 +77,19 @@ def evaluate_predictions(predictions, test):
     test_masked = test[row_mask]
     get_ranks = test_masked.astype(bool) #this will select using boolean all test ranks.
 
-    ##mask ligands that are known positives:
-    #prediction_matrix = np.ma.masked_array(prediction_matrix, mask=train.astype(bool))
-
     ####Double argsort approach (not used anymore):
     ##order from highest to lowest:
     #order = (-prediction_matrix).argsort(axis=1)
     ##get ranks of each ligand. 
     #ranks = order.argsort(axis=1)
 
-    #rankdata approach, which correctly handles ties:
-    prediction_ranks = rankdata(-predictions[row_mask], axis=1)
+    #This step masks the known positives from the training set,
+    #so we are not penalising a highly ranked unknown if it
+    #is only behind other true positives. This has a pretty substantial
+    #effect since the algo's are really good at ranking known positives highly. 
+    predictions = np.ma.masked_array(predictions[row_mask], mask=train[row_mask].astype(bool))    
+    #rankdata approach, which correctly handles ties and also thankgod can take masked arrays:
+    prediction_ranks = rankdata(-predictions, axis=1)
     
     #all ranks:
     all_test_ranks = prediction_ranks[get_ranks]
