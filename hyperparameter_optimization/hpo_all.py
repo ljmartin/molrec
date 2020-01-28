@@ -33,14 +33,6 @@ def bootstrap(params, interaction_matrix, algorithm_function, repeats):
 
 
 ####SKOPT:
-
-#these are the hyperparameters and search spaces:
-space = [Integer(1, 400, name='no_components'),
-        Integer(1,15, name='max_sampled'),
-        Real(10**-5, 10**0, "log-uniform", name='learning_rate'),
-        Integer(1,20, name='epochs')]
-
-
 def run_skopt(algorithm_function, space, interaction_matrix):
     #the objective function for skopt:
     @use_named_args(space)
@@ -94,11 +86,13 @@ if __name__ == '__main__':
     
     ##Set the order of algorithms to be tested:
     algorithms = [utils.train_implicit_als,
-                  utils.train_implicit_bpr,
-                  utils.train_implicit_log,
+                  utils.train_implicit_bpr,                  
                   utils.train_lightfm_warp,
-                  utils.train_lightfm_bpr,
-                  utils.train_lightfm_log]
+                  utils.train_lightfm_bpr]
+
+#Log has been removed because it requires negative records (ChEMBL highly biased to positive)
+#utils.train_implicit_log,                  
+#utils.train_lightfm_log]
     
 
     ##each algo has it's own parameter names and search space
@@ -113,11 +107,12 @@ if __name__ == '__main__':
         Real(10**-5, 10**0, "log-uniform", name='learning_rate'),
         Real(10**-5, 10**0, "log-uniform", name='regularization'), 
         Integer(1,20, name='iterations')])
-    #implicit,log:
-    spaces.append([Integer(1, 400, name='factors'),
-        Real(10**-5, 10**0, "log-uniform", name='learning_rate'),
-        Real(10**-5, 10**0, "log-uniform", name='regularization'), 
-        Integer(1,20, name='iterations')])
+##Log has been removed:
+#    #implicit,log:
+#    spaces.append([Integer(1, 400, name='factors'),
+#        Real(10**-5, 10**0, "log-uniform", name='learning_rate'),
+#        Real(10**-5, 10**0, "log-uniform", name='regularization'), 
+#        Integer(1,20, name='iterations')])
     #lightfm,warp:
     spaces.append([Integer(1, 400, name='no_components'),
         Integer(1,15, name='max_sampled'),
@@ -128,16 +123,20 @@ if __name__ == '__main__':
         Integer(1,15, name='max_sampled'),
         Real(10**-5, 10**0, "log-uniform", name='learning_rate'),
         Integer(1,20, name='epochs')])
-    #lightfm,log:
-    spaces.append([Integer(1, 400, name='no_components'),
-        Integer(1,15, name='max_sampled'),
-        Real(10**-5, 10**0, "log-uniform", name='learning_rate'),
-        Integer(1,20, name='epochs')])
+##Log has been removed:
+#    #lightfm,log:
+#    spaces.append([Integer(1, 400, name='no_components'),
+#        Integer(1,15, name='max_sampled'),
+#        Real(10**-5, 10**0, "log-uniform", name='learning_rate'),
+#        Integer(1,20, name='epochs')])
 
     
     ##associated filenames for the outputs:
-    names = ['hpo_implicit_als.dat', 'hpo_implicit_bpr.dat', 'hpo_implicit_log.dat',
-             'hpo_lightfm_warp.dat', 'hpo_lightfm_bpr.dat', 'hpo_lightfm_log.dat']
+    names = ['hpo_implicit_als.dat', 'hpo_implicit_bpr.dat',
+             'hpo_lightfm_warp.dat', 'hpo_lightfm_bpr.dat']
+
+#    names = ['hpo_implicit_als.dat', 'hpo_implicit_bpr.dat', 'hpo_implicit_log.dat',
+#             'hpo_lightfm_warp.dat', 'hpo_lightfm_bpr.dat', 'hpo_lightfm_log.dat']
 
 
     ##Run through each algo, send the 'space' to skop, run HPO, and write output file:
