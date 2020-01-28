@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-
+plt.style.use('seaborn')
 
 filenames = ['hpo_implicit_als.dat', 'hpo_implicit_bpr.dat', 'hpo_implicit_log.dat',
              'hpo_lightfm_warp.dat', 'hpo_lightfm_bpr.dat', 'hpo_lightfm_log.dat']
@@ -51,7 +51,8 @@ for filename in filenames:
 ax.set_xlabel('Iterations', fontsize=12)
 ax.set_ylabel('Mean rank', fontsize=12)
 ax.set_title('Hyperparameter Optimization', fontsize=15)
-ax.set_ylim(0,130)
-plt.legend()
+ax.set_ylim(0,170)
+ax.legend(fancybox=True, framealpha=1, shadow=True, borderpad=1, ncol=3, loc='upper center')
 plt.tight_layout()
-plt.savefig('all_in_one.png')
+fig.savefig('all_in_one.eps')
+plt.close(fig)

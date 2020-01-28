@@ -5,6 +5,7 @@ import copy
 import itertools
 import implicit
 import lightfm
+from tqdm import tqdm
 
 def train_test_split(input_matrix, fraction):
     """
@@ -177,32 +178,57 @@ def makeCorrelations(y_in):
     :param y_in: interaction matrix - np array of length n_instances and width n_labels
     with 1's in positions of interactions.
     """
-    num_lines = len(y_in)
-    tot_instances = np.sum(y_in, axis=0)
-    L = np.zeros([y_in.shape[1], y_in.shape[1]])
+    print('y_in shape is:', y_in.shape)
+    assert isinstance(y_in, sparse.csr_matrix)
+    tot_instances = np.array(y_in.sum(axis=0))[0]
+    L = sparse.lil_matrix((y_in.shape[1], y_in.shape[1]))
 
-    for row in y_in:
-        if np.sum(row)>1:
-            for j,k in itertools.permutations(np.where(row==1)[0], 2):
-                L[j][k] += (1)/(tot_instances[k])
-
+    for idx in tqdm(range(y_in.shape[0]), smoothing=0.1):
+        row = y_in[idx]
+        if row.sum()>1:
+            for j,k in itertools.permutations(row.nonzero()[1], 2):
+                L[j,k] += (1)/(tot_instances[k])             
     return L
 
-def clipY(y):
-    return np.clip(y, 0, 1)
-
-def makeProbabilities(y, L1):
+def train_label_correlation(y_in, L=None):
     """
-    Uses the correlation matrix from makeCorrelations to create a prediction matrix
+    Uses the correlation matrix calculated by makeCorrelations to generate
+    a matrix of label probabilities
+    :param y_in: interaction matrix (csr_matrix)
+    :param L: the output of makeCorrelations. A numLabels x numLabels sparse
+    array with a value in each position indicating the percentage correlation
+    between two labels. 
     """
-    y_new = copy.copy(y)
-    for count, row in enumerate(y):
-        posLines = row.nonzero()[0]
+    if L==None:
+        L1 = 1-makeCorrelations(y_in).toarray() #working with dense array is much easier for this. 
+                    #but because it's only numLabels x numLabels it's not that big.
+                    #(that is, it is not numLabels x numInstances)
+    else:
+        L1 = 1-L.toarray()
+    y_new = y_in.toarray().astype('float32') #working with a dense array again
+                                             #for ease of row-wise, elementwise addition 
+    for count, row in tqdm(enumerate(y_in), total=y_in.shape[0], smoothing=0.1):
+        posLines = row.nonzero()[1]
         corrs = L1[:,posLines]
         probs = 1-np.prod(corrs, axis=1)
-        y_new[count]+=probs
+        y_new[count]+=probs #elementwise addition here. 
+        y_new[count] = np.clip(y_new[count], 0, 1)
+    return sparse.csr_matrix(y_new)
 
-    return clipY(y_new)
+##This is the dense version of makeLabelCorrelationPredictions. 
+##Faster but unwi
+#def makeProbabilities(y, L1):
+#    """
+#    Uses the correlation matrix from makeCorrelations to create a prediction matrix
+#    """
+#    y_new = copy.copy(y)
+#    for count, row in enumerate(y):
+#        posLines = row.nonzero()[0]
+#        corrs = L1[:,posLines]
+#        probs = 1-np.prod(corrs, axis=1)
+#        y_new[count]+=probs
+#
+#    return clipY(y_new)
 
 def train_implicit_bpr(params, inp):
     model = implicit.bpr.BayesianPersonalizedRanking(factors=params['factors'],

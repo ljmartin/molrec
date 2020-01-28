@@ -33,9 +33,17 @@ def calc_ecdf(ranks):
     return ecdf
 
 if __name__ == '__main__':
+    ##First we will take the three best performing algorithms and 
+    ##take the geometric average of their rankings:
+    ranks = [np.load(name+'.npy') for name in ['label_correlation', 'hpo_implicit_bpr', 'hpo_lightfm_warp']]
+    geo_avg = np.power(ranks[0]*ranks[1]*ranks[2], 1/3)
+    np.save('geometric_avg', geo_avg)
+    
+    ##Now we can proceed to graph all the rankings:
     ##Filenames for the algos to load parameters:
-    filenames = ['hpo_implicit_als', 'hpo_implicit_bpr',
+    filenames = ['geometric_avg', 'label_correlation', 'hpo_implicit_als', 'hpo_implicit_bpr',
              'hpo_lightfm_warp', 'hpo_lightfm_bpr']
+
 
 
     ##Plot first figure:
@@ -67,6 +75,8 @@ if __name__ == '__main__':
     fig.savefig('statistics.eps')
     plt.close(fig)
 
+
+    ##Plot second figure:
     fig = plt.figure(figsize=(12,6))
     grid = plt.GridSpec(2, 5, wspace=0.1, hspace=0.4)
     ax1 = fig.add_subplot(grid[0, :3])
@@ -74,6 +84,7 @@ if __name__ == '__main__':
     ax3 = fig.add_subplot(grid[1, :3])
     ax4 = fig.add_subplot(grid[1, 3:]);
     ax = [ax1, ax2, ax3, ax4]
+
 
     for name in filenames:
         ranks = np.load(name+'.npy')
@@ -84,21 +95,21 @@ if __name__ == '__main__':
         ax3.plot(ecdf, label=name)
         ax4.plot(ecdf, label=name)
 
-    ax1.set_xlim(0,243)
+    ax1.set_xlim(1,243)
     ax1.set_title('Ranks KDE')
     ax1.set_ylabel('Density', fontsize=14)
     ax1.yaxis.grid()
     
-    ax2.set_xlim(0,20)
+    ax2.set_xlim(1,20)
     ax2.set_title('Ranks KDE (top 20)')
     ax2.yaxis.grid()
 
-    ax3.set_xlim(0,243)
+    ax3.set_xlim(1,243)
     ax3.set_title('Ranks ECDF')
     ax3.set_ylabel('Cumulative density', fontsize=14)
     ax3.yaxis.grid()
 
-    ax4.set_xlim(0,20)
+    ax4.set_xlim(1,20)
     ax4.set_title('Ranks ECDF (top 20)')
     ax4.yaxis.grid()
 
