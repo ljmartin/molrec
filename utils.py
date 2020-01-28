@@ -181,6 +181,11 @@ def makeCorrelations(y_in):
     print('y_in shape is:', y_in.shape)
     assert isinstance(y_in, sparse.csr_matrix)
     tot_instances = np.array(y_in.sum(axis=0))[0]
+
+    #shorten interaction matrix to only ligands with 2 or more labels:
+    row_mask = np.array(y_in.sum(axis=1)>=2).reshape(1,-1)[0]
+    y_in = y_in[row_mask]
+
     L = sparse.lil_matrix((y_in.shape[1], y_in.shape[1]))
 
     for idx in tqdm(range(y_in.shape[0]), smoothing=0.1):

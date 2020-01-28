@@ -20,7 +20,10 @@ df = df[df['pref_name'].isin(keeplist)]
 #Make into a n,m matrix:
 num_instances = df['instance_id'].unique().shape[0]
 num_targets = df['pref_name'].unique().shape[0]
+
 interaction_matrix = np.zeros([num_instances, num_targets])
+
+
 ##Setting up containers:
 tids = df.sort_values('pref_name')['pref_name'].unique()
 cids = df.sort_values('instance_id')['instance_id'].unique()
@@ -34,7 +37,7 @@ for count, i in enumerate(cids):
 
     
 ##Filling the values:
-for count, item in tqdm(df.iterrows()):
+for count, item in tqdm(df.iterrows(), total=len(df)):
     t_id = item['pref_name']
     i_id = item['instance_id']
     
