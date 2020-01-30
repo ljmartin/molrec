@@ -2,8 +2,8 @@ import matplotlib.pyplot as plt
 import pymc3 as pm
 from scipy.stats import gaussian_kde
 import numpy as np 
+plt.style.use('seaborn')
 
-plt.style.use('seaborn-colorblind')
 
 def calc_hpd(ranks, statistic=np.mean):
     with pm.Model() as model:
@@ -73,6 +73,7 @@ if __name__ == '__main__':
 
     plt.tight_layout()
     fig.savefig('statistics.eps')
+    fig.savefig('statistics.svg')
     plt.close(fig)
 
 
@@ -118,6 +119,7 @@ if __name__ == '__main__':
     ax1.legend(fancybox=True, framealpha=1, shadow=True, borderpad=1)
 
     fig.savefig('distributions.eps')
+    fig.savefig('distributions.svg')
     plt.close(fig)
 
     

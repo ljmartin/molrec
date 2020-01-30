@@ -37,7 +37,7 @@ def run_skopt(algorithm_function, space, interaction_matrix):
     #the objective function for skopt:
     @use_named_args(space)
     def score(**params):        
-        score = bootstrap(params, interaction_matrix, algorithm_function, 1)
+        score = bootstrap(params, interaction_matrix, algorithm_function, 3)
         return (score)
 
     optimizer = Optimizer(dimensions=space, 

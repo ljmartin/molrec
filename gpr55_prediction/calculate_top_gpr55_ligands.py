@@ -21,22 +21,20 @@ targetIndex = (targetNames=='G-protein coupled receptor 55').nonzero()[0][0]
 #LightFM is slower than the other two. 
 filenames = ['label_correlation', 'hpo_implicit_bpr', 'hpo_lightfm_warp']
 
-algorithms = [utils.train_label_correlation,
-                  utils.train_implicit_bpr,
-                  utils.train_lightfm_warp]
+algorithms = [utils.train_label_correlation, utils.train_implicit_bpr, utils.train_lightfm_warp]
 
 preds_list = list()
 ranks_list = list()
 for name, algo in zip(filenames, algorithms):
-        if name == 'label_correlation':
-		preds = algo(interaction_matrix)
-#		preds_list.append(preds[:,targetIndex].toarray().flatten())
-        else:
-		params = utils.read_params(name)
-		preds = algo(params, interaction_matrix)
-		for _ in tqdm(range(7)):
-			preds += algo(params, interaction_matrix)
-#		preds_list.append(preds[:,targetIndex])
+    if name == 'label_correlation':
+        preds = algo(interaction_matrix)
+        preds_list.append(preds[:,targetIndex].toarray().flatten())
+    else:
+        params = utils.read_params(name)
+        preds = algo(params, interaction_matrix)
+        for _ in tqdm(range(7)):
+            preds += algo(params, interaction_matrix)
+        preds_list.append(preds[:,targetIndex])
 
 
 ##Next, for each set of predictions, get the ranking 
@@ -70,3 +68,8 @@ true_smiles = allSmiles.iloc[true_pos][['instance_id', 'canonical_smiles']]
 
 predicted_smiles.to_csv('predicted_smiles.csv', header=0, index=False)
 true_smiles.to_csv('true_smiles.csv', header=0, index=False)
+
+#save the positive labels so we know why each ligand was recommended:
+positive_labels = interaction_matrix.toarray()[~true_pos][ranked_indices[:2000]]
+np.save('positive_labels.npy', positive_labels)
+
