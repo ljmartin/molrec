@@ -29,10 +29,11 @@ To do:
   _It is better to do long_!
 - [ ] ~~determine what sklearn ranking loss returns in the event of a zero-vector~~ Not relevant for mean rank or p@k. 
 - [ ] ~~decide on the ultimate scoring function. p@k? mean rank of test labels? What about inspection bias?~~ Answer: p@k is useful more for the long-format input data (with axis=1 ranking). But this isn't how we want to use the results! Best to just keep mean rank, or compare the CDF. 
-- [ ] compare `label correlation`, `implicit-bpr`, `implicit-als`, and `lightfm-warp`, `lightfm-bpr` algorithms using time-split. Must output figures and data.
-- [ ] calculate number of known negatives (if any) predicted by best technique from above
-- [ ] upload large dataset and parsing script
-- [ ] determine top predictions for target of interest
+- [x] compare `label correlation`, `implicit-bpr`, `implicit-als`, and `lightfm-warp`, `lightfm-bpr` algorithms using time-split. Must output figures and data.
+- [ ] ~~calculate number of known negatives (if any) predicted by best technique from above~~
+- [x] upload large dataset and parsing script 25/01/2020
+- [x] determine top predictions for target of interest 29/01/2020
+- [ ] filter for 'bad' substructures, PAINS, toxicity, etc.
 - [ ] determine nearest approved molecules
 - [ ] compare nearest approved molecules to those predicted by similarity search with known ligands
 - [ ] alternative to approved drugs --> optimize both rank and Tanimoto distance to known ligands
