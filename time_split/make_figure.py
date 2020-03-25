@@ -16,14 +16,13 @@ def calc_hpd(ranks, statistic=np.mean):
             y = pm.Normal('y', mu=a, sigma=b, observed=ranks)
         elif statistic==np.median:
             y = pm.Laplace('y', mu=a, b=b,observed=ranks)
-
         trace = pm.sample(draws=500, tune=500, chains=2, target_accept=0.9)
-    return statistic(ranks), pm.stats.hpd(trace['a'])
+
+    return trace
     
-def calc_kde(ranks):
+def calc_kde(ranks, xs=np.linspace(0,243,243)):
     #kde:
     density = gaussian_kde(ranks)
-    xs = np.linspace(0,243,243)
     density.covariance_factor= lambda : 0.25
     density._compute_covariance()
     return density(xs)
@@ -31,6 +30,10 @@ def calc_kde(ranks):
 def calc_ecdf(ranks):
     ecdf = [(ranks<i).sum()/len(ranks) for i in range(0, 243)]
     return ecdf
+
+def plot_fig_label(ax, lab):
+    ax.text(0, 1.15, lab, transform=ax.transAxes,
+        fontsize=24, va='top', ha='left')
 
 if __name__ == '__main__':
     ##First we will take the three best performing algorithms and 
@@ -53,16 +56,18 @@ if __name__ == '__main__':
     
     for count, name in enumerate(filenames):
         ranks = np.load(name+'.npy')
-        mean, mean_hpd = calc_hpd(ranks, np.mean)
-        median, median_hpd = calc_hpd(ranks, np.median)
-        ax[0].bar(count, mean, label=name)
-        ax[0].errorbar(count, mean, 
-                       yerr=[[mean-mean_hpd[0]],[mean_hpd[1]-mean]], 
-                       color='black', elinewidth=2, capsize=3, markeredgewidth=2)
-        ax[1].bar(count, median)
-        ax[1].errorbar(count, median, 
-                       yerr=[[median-median_hpd[0]],[median_hpd[1]-median]], 
-                       color='black', elinewidth=2, capsize=3, markeredgewidth=2)
+        mean_trace = calc_hpd(ranks, np.mean)
+        median_trace = calc_hpd(ranks, np.median)
+    
+        for j,trace in zip([0,1], [mean_trace, median_trace]):
+            m = np.mean(trace['a'])
+            hpd = pm.hpd(trace['a'])
+            xs = np.linspace(m-3,m+3,100)
+            density = calc_kde(trace['a'], xs=xs)
+        
+            ax[j].errorbar(count, m, yerr = np.array([m-hpd[0], hpd[1]-m])[:,None],
+                           fmt='o', linewidth=4, markersize=15, capsize=3)
+            ax[j].fill_betweenx(xs,density+count,count, alpha=0.4,label=name.strip('hpo_'))
 
     ax[0].set_ylabel('Mean rank', fontsize=20)
     ax[0].set_xticks([])
@@ -71,9 +76,12 @@ if __name__ == '__main__':
     ax[1].set_ylabel('Median rank', fontsize=20)
     ax[1].set_xticks([])
 
+    plot_fig_label(ax[0], 'A')
+    plot_fig_label(ax[1], 'B')
+
     plt.tight_layout()
-    fig.savefig('statistics.eps')
-    fig.savefig('statistics.svg')
+    fig.savefig('statistics.pdf')
+#    fig.savefig('statistics.svg')
     plt.close(fig)
 
 
@@ -100,26 +108,32 @@ if __name__ == '__main__':
     ax1.set_title('Ranks KDE')
     ax1.set_ylabel('Density', fontsize=14)
     ax1.yaxis.grid()
+    plot_fig_label(ax1, 'A')
     
     ax2.set_xlim(1,20)
     ax2.set_title('Ranks KDE (top 20)')
     ax2.yaxis.grid()
+    ax2.set_xticks(np.arange(0,21,2))
+    plot_fig_label(ax2, 'B')
 
     ax3.set_xlim(1,243)
     ax3.set_title('Ranks ECDF')
     ax3.set_ylabel('Cumulative density', fontsize=14)
     ax3.yaxis.grid()
+    plot_fig_label(ax3, 'C')
 
     ax4.set_xlim(1,20)
     ax4.set_title('Ranks ECDF (top 20)')
     ax4.yaxis.grid()
+    ax4.set_xticks(np.arange(0,21,2))
+    plot_fig_label(ax4, 'D')
 
     plt.setp(ax2.get_yticklabels(), visible=False)
     plt.setp(ax4.get_yticklabels(), visible=False)
     ax1.legend(fancybox=True, framealpha=1, shadow=True, borderpad=1)
 
-    fig.savefig('distributions.eps')
-    fig.savefig('distributions.svg')
+    fig.savefig('distributions.pdf')
+#    fig.savefig('distributions.svg')
     plt.close(fig)
 
     
