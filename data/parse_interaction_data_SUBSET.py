@@ -73,4 +73,6 @@ print('Matrix shape:', interaction_matrix.shape)
 sparse.save_npz('../data/interaction_dates_'+fname+'.npz', sparse.csr_matrix(interaction_dates))
 sparse.save_npz('../data/interaction_matrix_'+fname+'.npz', sparse.csr_matrix(interaction_matrix))
 
+
 df.sort_values('instance_id').drop_duplicates(['instance_id'])[['instance_id', 'canonical_smiles']].to_csv('../data/'+fname+'_chemicals.csv', index=False)
+df.sort_values('chembl_id').drop_duplicates(['chembl_id'])['pref_name'].to_csv('subset_targets', index=False, header=None)
