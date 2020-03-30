@@ -152,7 +152,7 @@ def load_time_split(year=2010):
     train = copy.copy(interaction_matrix)
     test = copy.copy(interaction_matrix)
 
-    #remove 2015 and later records from train matrix
+    #remove entries occuring from `year` and later from train matrix
     train.data = train.data * dates_mask
     #remove all training data from the test matrix. 
     test.data = test.data - train.data

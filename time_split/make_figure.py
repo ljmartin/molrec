@@ -3,7 +3,7 @@ import pymc3 as pm
 from scipy.stats import gaussian_kde
 import numpy as np 
 plt.style.use('seaborn')
-
+from statsmodels.distributions import ECDF
 
 def calc_hpd(ranks, statistic=np.mean):
     with pm.Model() as model:
@@ -27,9 +27,9 @@ def calc_kde(ranks, xs=np.linspace(0,243,243)):
     density._compute_covariance()
     return density(xs)
 
-def calc_ecdf(ranks):
-    ecdf = [(ranks<i).sum()/len(ranks) for i in range(0, 243)]
-    return ecdf
+#def calc_ecdf(ranks):
+#    ecdf = [(ranks<i).sum()/len(ranks) for i in range(0, 243)]
+#    return ecdf
 
 def plot_fig_label(ax, lab):
     ax.text(0, 1.15, lab, transform=ax.transAxes,
@@ -38,13 +38,16 @@ def plot_fig_label(ax, lab):
 if __name__ == '__main__':
     ##First we will take the three best performing algorithms and 
     ##take the geometric average of their rankings:
-    ranks = [np.load(name+'.npy') for name in ['label_correlation', 'hpo_implicit_bpr', 'hpo_lightfm_warp']]
-    geo_avg = np.power(ranks[0]*ranks[1]*ranks[2], 1/3)
-    np.save('geometric_avg', geo_avg)
+    #ranks = [np.load(name+'.npy') for name in ['label_correlation', 'hpo_implicit_bpr', 'hpo_lightfm_warp']]
+    #geo_avg = np.power(ranks[0]*ranks[1]*ranks[2], 1/3)
+    #np.save('geometric_avg', geo_avg)
     
     ##Now we can proceed to graph all the rankings:
     ##Filenames for the algos to load parameters:
-    filenames = ['geometric_avg', 'label_correlation', 'hpo_implicit_als', 'hpo_implicit_bpr',
+    #filenames = ['geometric_avg', 'label_correlation', 'hpo_implicit_als', 'hpo_implicit_bpr',
+    #         'hpo_lightfm_warp', 'hpo_lightfm_bpr']
+
+    filenames = ['label_correlation', 'hpo_implicit_als', 'hpo_implicit_bpr',
              'hpo_lightfm_warp', 'hpo_lightfm_bpr']
 
 
@@ -58,10 +61,11 @@ if __name__ == '__main__':
         ranks = np.load(name+'.npy')
         mean_trace = calc_hpd(ranks, np.mean)
         median_trace = calc_hpd(ranks, np.median)
-    
+        print(name)
         for j,trace in zip([0,1], [mean_trace, median_trace]):
             m = np.mean(trace['a'])
             hpd = pm.hpd(trace['a'])
+            print(m, hpd)
             xs = np.linspace(m-3,m+3,100)
             density = calc_kde(trace['a'], xs=xs)
         
@@ -87,7 +91,7 @@ if __name__ == '__main__':
 
     ##Plot second figure:
     fig = plt.figure(figsize=(12,6))
-    grid = plt.GridSpec(2, 5, wspace=0.1, hspace=0.4)
+    grid = plt.GridSpec(2, 5, wspace=0.25, hspace=0.4)
     ax1 = fig.add_subplot(grid[0, :3])
     ax2 = fig.add_subplot(grid[0, 3:])
     ax3 = fig.add_subplot(grid[1, :3])
@@ -97,39 +101,46 @@ if __name__ == '__main__':
 
     for name in filenames:
         ranks = np.load(name+'.npy')
-        kde = calc_kde(ranks)
-        ecdf = calc_ecdf(ranks)
-        ax1.plot(kde, label=name)
-        ax2.plot(kde, label=name)
-        ax3.plot(ecdf, label=name)
-        ax4.plot(ecdf, label=name)
 
-    ax1.set_xlim(1,243)
-    ax1.set_title('Ranks KDE')
+        ##Plot histogram:
+        n, x = np.histogram(ranks, bins = np.linspace(0,243,243))
+        bin_centers = 0.5*(x[1:]+x[:-1])
+        ax1.plot(bin_centers,n, label=name)
+        ax2.plot(bin_centers,n, label=name)
+ 
+        ##Plot empirical cumulative distribution function
+        ecdf = ECDF(ranks)
+        ax3.plot(ecdf.x,ecdf.y, label=name)
+        ax4.plot(ecdf.x,ecdf.y, label=name)
+
+    ax1.set_xlim(0,243)
+    ax1.set_title('Histogram of predicted ranks')
     ax1.set_ylabel('Density', fontsize=14)
     ax1.yaxis.grid()
+    ax1.axvline(20, linestyle='--', c='k', label='Rank 20')
     plot_fig_label(ax1, 'A')
     
     ax2.set_xlim(1,20)
-    ax2.set_title('Ranks KDE (top 20)')
-    ax2.yaxis.grid()
+    ax2.set_title('Ranks histogram (top 20)')
+    #ax2.yaxis.grid()
     ax2.set_xticks(np.arange(0,21,2))
     plot_fig_label(ax2, 'B')
 
-    ax3.set_xlim(1,243)
-    ax3.set_title('Ranks ECDF')
+    ax3.set_xlim(0,243)
+    ax3.set_title('Empirical CDF of predicted ranks')
     ax3.set_ylabel('Cumulative density', fontsize=14)
     ax3.yaxis.grid()
+    ax3.axvline(20, linestyle='--', c='k')
     plot_fig_label(ax3, 'C')
 
     ax4.set_xlim(1,20)
-    ax4.set_title('Ranks ECDF (top 20)')
-    ax4.yaxis.grid()
+    ax4.set_title('Ranks empirical CDF (top 20)')
+    #ax4.yaxis.grid()
     ax4.set_xticks(np.arange(0,21,2))
     plot_fig_label(ax4, 'D')
 
-    plt.setp(ax2.get_yticklabels(), visible=False)
-    plt.setp(ax4.get_yticklabels(), visible=False)
+    #plt.setp(ax2.get_yticklabels(), visible=False)
+    #plt.setp(ax4.get_yticklabels(), visible=False)
     ax1.legend(fancybox=True, framealpha=1, shadow=True, borderpad=1)
 
     fig.savefig('distributions.pdf')
