@@ -165,6 +165,12 @@ def load_time_split(year=2010):
     train = train[row_mask] 
     test = test[row_mask]
 
+    #similarly we must now remove any targets that have no data (or not enough) in the training matrix.
+    column_mask = (np.array(train.sum(0))[0] >= 20)
+    train = train.T[column_mask].T
+    test = test.T[column_mask].T
+
+    #remove any entries that are explicit zeros because a 0 should be implied by absence
     train.eliminate_zeros()
     test.eliminate_zeros()    
     

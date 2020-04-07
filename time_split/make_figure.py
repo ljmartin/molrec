@@ -106,12 +106,12 @@ if __name__ == '__main__':
         n, x = np.histogram(ranks, bins = np.linspace(0,243,243))
         bin_centers = 0.5*(x[1:]+x[:-1])
         ax1.plot(bin_centers,n, label=name)
-        ax2.plot(bin_centers,n, label=name)
+        ax2.plot(bin_centers,n, label=name, linewidth=0.5)
  
         ##Plot empirical cumulative distribution function
         ecdf = ECDF(ranks)
         ax3.plot(ecdf.x,ecdf.y, label=name)
-        ax4.plot(ecdf.x,ecdf.y, label=name)
+        ax4.plot(ecdf.x,ecdf.y, label=name, linewidth=0.5)
 
     ax1.set_xlim(0,243)
     ax1.set_title('Histogram of predicted ranks')

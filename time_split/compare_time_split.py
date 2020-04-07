@@ -18,7 +18,7 @@ train, test = utils.load_time_split()
 filenames = ['hpo_implicit_als.dat', 'hpo_implicit_bpr.dat',
              'hpo_lightfm_warp.dat', 'hpo_lightfm_bpr.dat']
 def find_opt_pars(filename):
-    f = open('../hyperparmeter_optimization/'+filename, 'r')
+    f = open('../hyperparameter_optimization/'+filename, 'r')
     record=False
     for line in f:
         if 'Paramaters:' in line:
