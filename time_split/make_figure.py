@@ -70,7 +70,7 @@ if __name__ == '__main__':
             density = calc_kde(trace['a'], xs=xs)
         
             ax[j].errorbar(count, m, yerr = np.array([m-hpd[0], hpd[1]-m])[:,None],
-                           fmt='o', linewidth=4, markersize=15, capsize=3)
+                           fmt='o', mfc='white', mew=2, linewidth=4, markersize=7.5, capsize=3)
             ax[j].fill_betweenx(xs,density+count,count, alpha=0.4,label=name.strip('hpo_'))
 
     ax[0].set_ylabel('Mean rank', fontsize=20)
@@ -90,65 +90,62 @@ if __name__ == '__main__':
 
 
     ##Plot second figure:
-    fig = plt.figure(figsize=(12,6))
-    grid = plt.GridSpec(2, 5, wspace=0.25, hspace=0.4)
-    ax1 = fig.add_subplot(grid[0, :3])
-    ax2 = fig.add_subplot(grid[0, 3:])
-    ax3 = fig.add_subplot(grid[1, :3])
-    ax4 = fig.add_subplot(grid[1, 3:]);
-    ax = [ax1, ax2, ax3, ax4]
+    fig, ax = plt.subplots(nrows=2, ncols=2)
+    fig.set_figheight(6)
+    fig.set_figwidth(12)
+    ax1 = ax[0,0]
+    ax2 = ax[0,1]
+    ax3 = ax[1,0]
+    ax4 = ax[1,1]
 
 
     for name in filenames:
         ranks = np.load(name+'.npy')
-
         ##Plot histogram:
-        n, x = np.histogram(ranks, bins = np.linspace(0,243,243))
-        bin_centers = 0.5*(x[1:]+x[:-1])
-        ax1.plot(bin_centers,n, label=name)
-        ax2.plot(bin_centers,n, label=name, linewidth=0.5)
- 
-        ##Plot empirical cumulative distribution function
-        ecdf = ECDF(ranks)
-        ax3.plot(ecdf.x-0.5,ecdf.y)
-        ax4.plot(ecdf.x-0.5,ecdf.y, linewidth=0.5)
-        if name == 'label_correlation':
-            ax4.plot([5,5],[0,ecdf.y[ecdf.x==5][-1]], c='k', linestyle='--')
-            ax4.plot([0,5],[ecdf.y[ecdf.x==5][-1],ecdf.y[ecdf.x==5][-1]],c='k', linestyle='--', label='Label correlation\nECDF at rank 5')
+        n, x = np.histogram(ranks, bins = np.linspace(1,244,244))
+        ax1.plot(x[:-1]+np.random.uniform(-0.15,0.15,len(n)),n, label=name)
+        ax2.plot(x[:-1]+np.random.uniform(-0.15,0.15,len(n)),n,'-o', mfc='white', mew=1.5, label=name, linewidth=0.5)
 
-    ax1.set_xlim(0,243)
+        ##Plot empirical cumulative distribution function
+        ecdf = np.cumsum(n)/n.sum()
+        ax3.plot(x[:-1]+np.random.uniform(-0.1,0.1,len(n)),ecdf)
+        ax4.plot(x[:-1]+np.random.uniform(-0.1,0.1,len(n)),ecdf, '-o', mfc='white', mew=1.5, linewidth=0.5)
+        if name == 'label_correlation':
+            ax4.plot([0,3],[ecdf[2],ecdf[2]],c='C0', linestyle=':',label='Label correlation\nECDF at rank 5')
+
+
     ax1.set_title('Histogram of predicted ranks')
-    ax1.set_ylabel('Count density', fontsize=14)
+    ax1.set_ylabel('Count density')
     ax1.yaxis.grid()
     ax1.axvline(20, linestyle='--', c='k', label='Rank 20')
+    ax1.set_xlim(0,244)
     plot_fig_label(ax1, 'A')
     
-    ax2.set_xlim(1,20)
-    ax2.set_title('Ranks histogram (top 20)')
-    #ax2.yaxis.grid()
-    ax2.set_xticks(np.arange(0,21,2))
+    ax2.set_xlim(0,21)
+    ax2.set_title('Histogram, top 20')
+    ax2.set_xticks(np.arange(1,21,1))
     plot_fig_label(ax2, 'B')
-
-    ax3.set_xlim(0,243)
-    ax3.set_title('Empirical CDF of predicted ranks')
-    ax3.set_ylabel('Cumulative\nnormalized density', fontsize=14)
+    
+    ax3.set_xlim(0,244)
+    ax3.set_title('Empirical CDF (ECDF) of predicted ranks')
+    ax3.set_ylabel('Cumulative\nnormalized density')
     ax3.yaxis.grid()
     ax3.axvline(20, linestyle='--', c='k')
+    ax3.set_xlabel('Ranks')
     plot_fig_label(ax3, 'C')
 
-    ax4.set_xlim(1,20)
-    ax4.set_title('Ranks empirical CDF (top 20)')
-    #ax4.yaxis.grid()
+    ax4.set_xlim(0,21)
+    ax4.set_ylim(0.1, 0.7)
+    ax4.set_title('ECDF, top 20')
     ax4.legend()
-    ax4.set_xticks(np.arange(0,21,2))
+    ax4.set_xticks(np.arange(1,21,1))
+    ax4.set_xlabel('Ranks')
     plot_fig_label(ax4, 'D')
 
-    #plt.setp(ax2.get_yticklabels(), visible=False)
-    #plt.setp(ax4.get_yticklabels(), visible=False)
     ax1.legend(fancybox=True, framealpha=1, shadow=True, borderpad=1)
+    plt.tight_layout()
 
     fig.savefig('distributions.pdf')
-#    fig.savefig('distributions.svg')
     plt.close(fig)
 
     

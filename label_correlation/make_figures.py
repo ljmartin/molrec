@@ -1,6 +1,7 @@
 import numpy as np
 
 from scipy import sparse
+from scipy.stats import gaussian_kde
 
 import pandas as pd
 import six
@@ -8,6 +9,8 @@ import six
 import sys
 sys.path.append("..")
 import utils
+
+import pymc3 as pm
 
 import tqdm
 import itertools
@@ -173,3 +176,121 @@ fig.subplots_adjust(hspace=0.05, wspace=0.1)
 fig.savefig('label_correlation.pdf')
 plt.close(fig)
 
+
+
+
+
+##Plot LOO analysis of label correlation:
+
+def calc_hpd(ranks, statistic=np.mean):
+    with pm.Model() as model:
+        #prior on statistic of interest:
+        a = pm.Normal('a', mu=statistic(ranks), sigma=10.0)
+        #'nuisance' parameter:
+        b = pm.HalfNormal('b', sigma=10.0)
+        #likelihood:
+        if statistic==np.mean:
+            y = pm.Normal('y', mu=a, sigma=b, observed=ranks)
+        elif statistic==np.median:
+            y = pm.Laplace('y', mu=a, b=b,observed=ranks)
+        trace = pm.sample(draws=500, tune=500, chains=2, target_accept=0.9)
+
+    return trace
+
+def calc_kde(ranks, xs=np.linspace(1,244,244)):
+    #kde:
+    density = gaussian_kde(ranks)
+    density.covariance_factor= lambda : 0.25
+    density._compute_covariance()
+    return density(xs)
+
+rank_arr = np.load('rank_arr.npy')
+mean_trace = calc_hpd(np.array(rank_arr), np.mean)
+median_trace = calc_hpd(np.array(rank_arr), np.median)
+
+
+def plot_fig_label(ax, lab):
+    ax.text(-0.15, 1.12, lab, transform=ax.transAxes,
+        fontsize=24, va='top', ha='left')
+
+fig, ax = plt.subplots(nrows=3,ncols=1)
+fig.set_figheight(10)
+fig.set_figwidth(6)
+
+label='Label correlation'
+for count,trace,name in zip([0,1], [mean_trace, median_trace], ['mean rank', 'median rank']):
+    m = np.mean(trace['a'])
+    hpd = pm.hpd(trace['a'])
+    print(m, hpd)
+    xs = np.linspace(m-3,m+3,100)
+    density = calc_kde(trace['a'], xs=xs)
+
+    ax[0].errorbar(count, m, yerr = np.array([m-hpd[0], hpd[1]-m])[:,None],mfc='white',mew=2,
+                           fmt='o', c='C0',linewidth=4, markersize=15, capsize=3, label=label)
+    label=None
+
+ax[0].set_xticks([0,1])
+ax[0].set_xticklabels(['Mean\nrank', 'Median\nrank'])
+ax[0].set_xlim(-0.5,1.5)
+#ax[0].errorbar(-10,3, label='Label correlation')
+ax[0].legend(frameon=True, fancybox=True, framealpha=1)
+ax[0].set_ylabel('Rank', fontsize=14)
+ax[0].set_ylim(0.1,7)
+ax[0].set_title('Mean and median rank', fontsize=14)
+plot_fig_label(ax[0], 'A')
+
+n, x = np.histogram(np.array(rank_arr), bins = np.linspace(1,243,243))
+#bin_centers = 0.5*(x[1:]+x[:-1])
+#ax[1].plot(bin_centers,n,'-o', mfc='white', label='Label correlation')
+#ax[1].plot(x[:-1],n,'-o', mfc='white', label='Label correlation')
+ax[1].plot(x[:-1],n,'-o', mfc='white', mew=1, label='Label correlation')
+#ax[1].scatter(bin_centers,n,label='Label correlation')
+ax[1].set_xlim(0,20)
+ax[1].set_xticks(np.arange(1,20))
+ax[1].set_xlabel('Rank', fontsize=14)
+ax[1].set_ylabel('Count density',fontsize=14)
+ax[1].set_title('Histogram of predicted ranks, top 20',fontsize=14)
+ax[1].legend(frameon=True, fancybox=True, framealpha=1)
+plot_fig_label(ax[1], 'B')
+
+ecdf = np.cumsum(n)/n.sum()
+ax[2].plot([1]+list(x[:-1]),[0]+list(ecdf), '-o', mfc='white', mew=1, label='Label correlation')
+ax[2].set_xlim(0.0,20)
+ax[2].set_xticks(np.arange(1,20))
+ax[2].plot([0,3],[ecdf[2],ecdf[2]],c='C0', linestyle=':', label='ECDF at rank 3')
+ax[2].legend(frameon=True, fancybox=True, framealpha=1)
+ax[2].set_ylabel('Cumulative\nnormalized density', fontsize=14)
+ax[2].set_xlabel('Rank',fontsize=14)
+ax[2].set_title('ECDF, top 20',fontsize=14)
+plot_fig_label(ax[2], 'C')
+
+
+plt.tight_layout()
+
+plt.savefig('label_correlation_loo.pdf')
+
+
+
+
+
+##Plot calibration:
+score_arr = np.load('score_arr.npy')
+
+x =np.linspace(1,0,100)
+metric = list()
+for cutoff in x:
+    ranks = rank_arr[score_arr>=cutoff]
+    n = len(ranks)
+    val =(ranks<=1).sum()/n
+    metric.append(val)
+
+fig, ax = plt.subplots()
+fig.set_figheight(7.5)
+fig.set_figwidth(7.5)
+
+ax.plot(x*100, np.array(metric)*100, '-o', mfc='white', mew=1, label='Label correlation')
+ax.set_ylabel('Percentage labels ranked 1 (%)', fontsize=14)
+ax.set_xlabel('Predicted probability of an interaction (%)', fontsize=14)
+ax.plot([0,100],[0,100], label='Perfect calibration')
+ax.legend()
+fig.savefig('calibration.pdf')    
