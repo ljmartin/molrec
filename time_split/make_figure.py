@@ -110,12 +110,15 @@ if __name__ == '__main__':
  
         ##Plot empirical cumulative distribution function
         ecdf = ECDF(ranks)
-        ax3.plot(ecdf.x,ecdf.y, label=name)
-        ax4.plot(ecdf.x,ecdf.y, label=name, linewidth=0.5)
+        ax3.plot(ecdf.x-0.5,ecdf.y)
+        ax4.plot(ecdf.x-0.5,ecdf.y, linewidth=0.5)
+        if name == 'label_correlation':
+            ax4.plot([5,5],[0,ecdf.y[ecdf.x==5][-1]], c='k', linestyle='--')
+            ax4.plot([0,5],[ecdf.y[ecdf.x==5][-1],ecdf.y[ecdf.x==5][-1]],c='k', linestyle='--', label='Label correlation\nECDF at rank 5')
 
     ax1.set_xlim(0,243)
     ax1.set_title('Histogram of predicted ranks')
-    ax1.set_ylabel('Density', fontsize=14)
+    ax1.set_ylabel('Count density', fontsize=14)
     ax1.yaxis.grid()
     ax1.axvline(20, linestyle='--', c='k', label='Rank 20')
     plot_fig_label(ax1, 'A')
@@ -128,7 +131,7 @@ if __name__ == '__main__':
 
     ax3.set_xlim(0,243)
     ax3.set_title('Empirical CDF of predicted ranks')
-    ax3.set_ylabel('Cumulative density', fontsize=14)
+    ax3.set_ylabel('Cumulative\nnormalized density', fontsize=14)
     ax3.yaxis.grid()
     ax3.axvline(20, linestyle='--', c='k')
     plot_fig_label(ax3, 'C')
@@ -136,6 +139,7 @@ if __name__ == '__main__':
     ax4.set_xlim(1,20)
     ax4.set_title('Ranks empirical CDF (top 20)')
     #ax4.yaxis.grid()
+    ax4.legend()
     ax4.set_xticks(np.arange(0,21,2))
     plot_fig_label(ax4, 'D')
 
