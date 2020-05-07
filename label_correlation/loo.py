@@ -32,7 +32,8 @@ def subtractLigand(L, row, tot_instances):
 tot_instances = np.sum(y, axis=0)
 trials=1000
 rank_list = list()
-score_list = list()
+hit_list = list()
+miss_list = list()
 
 ##Do LOO ranking:
 for idx in tqdm(multiple_labels.nonzero()[0]): #for every multilabel ligand
