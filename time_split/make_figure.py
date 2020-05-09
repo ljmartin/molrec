@@ -85,7 +85,7 @@ if __name__ == '__main__':
 
     plt.tight_layout()
     fig.savefig('statistics.pdf')
-#    fig.savefig('statistics.svg')
+    fig.savefig('statistics.tif')
     plt.close(fig)
 
 
@@ -146,6 +146,7 @@ if __name__ == '__main__':
     plt.tight_layout()
 
     fig.savefig('distributions.pdf')
+    fig.savefig('distributions.tif')
     plt.close(fig)
 
     

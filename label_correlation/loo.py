@@ -60,12 +60,15 @@ for idx in tqdm(multiple_labels.nonzero()[0]): #for every multilabel ligand
     #for example if two ligands ranked 1, 2, we count it as 1,1
     #this is because we don't want to penalise perfect ranking of two ligands in a row. 
     ranks_adj = ranks_unadjusted-(ranks_unadjusted).argsort().argsort()
-    
+
+    #for calculating calibration:
+    hit_list += list(scores[labels.astype(bool)])
+    miss_list += list(scores[~labels.astype(bool)])
+
     rank_list += list(ranks_adj)
-    score_list += list(scores[labels.astype(bool)])
+
 
 rank_arr = np.array(rank_list)
-score_arr = np.array(score_list)
 np.save('rank_arr.npy', rank_arr)
-np.save('score_arr.npy', score_arr)
-
+np.save('hit_arr.npy', np.array(hit_list))
+np.save('miss_arr.npy', np.array(miss_list))

@@ -111,6 +111,7 @@ ax2.text(0, 1.08, 'C', transform=ax2.transAxes,
 plt.tight_layout()
 
 fig.savefig('basic_stats.pdf')
+fig.savefig('basic_stats.tif')
 plt.close(fig)
 
 
@@ -174,6 +175,7 @@ fig.subplots_adjust(hspace=0.05, wspace=0.1)
 
 
 fig.savefig('label_correlation.pdf')
+fig.savefig('label_correlation.tif')
 plt.close(fig)
 
 
@@ -268,29 +270,31 @@ plot_fig_label(ax[2], 'C')
 plt.tight_layout()
 
 plt.savefig('label_correlation_loo.pdf')
+plt.savefig('label_correlation_loo.tif')
 
 
 
 
 
 ##Plot calibration:
-score_arr = np.load('score_arr.npy')
-
-x =np.linspace(1,0,100)
-metric = list()
-for cutoff in x:
-    ranks = rank_arr[score_arr>=cutoff]
-    n = len(ranks)
-    val =(ranks<=1).sum()/n
-    metric.append(val)
+hit_arr = np.load('hit_arr.npy')
+miss_arr = np.load('miss_arr.npy')
 
 fig, ax = plt.subplots()
 fig.set_figheight(7.5)
 fig.set_figwidth(7.5)
 
-ax.plot(x*100, np.array(metric)*100, '-o', mfc='white', mew=1, label='Label correlation')
+x = np.linspace(0,1,21)
+h = np.histogram(hit_arr, bins=x)
+m = np.histogram(miss_arr, bins=x)
+
+ax.plot(x[:-1]+0.025, h[0]/(m[0]+h[0]), '-o', mfc='white', mew=1, label='Label correlation')
+
 ax.set_ylabel('Percentage labels ranked 1 (%)', fontsize=14)
 ax.set_xlabel('Predicted probability of an interaction (%)', fontsize=14)
-ax.plot([0,100],[0,100], label='Perfect calibration')
+ax.plot([0,1],[0,1], label='Perfect calibration')
 ax.legend()
+
+
 fig.savefig('calibration.pdf')    
+fig.savefig('calibration.tif')    

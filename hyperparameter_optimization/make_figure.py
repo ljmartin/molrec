@@ -31,7 +31,8 @@ for filename in filenames:
     count+=1
 
 plt.tight_layout()
-plt.savefig('all.png')
+plt.savefig('all.pdf')
+plt.savefig('all.tif')
 
 #plot all in one:
 fig, ax = plt.subplots()
@@ -55,4 +56,5 @@ ax.set_ylim(0,170)
 ax.legend(fancybox=True, framealpha=1, shadow=True, borderpad=1, ncol=2, loc='upper center')
 plt.tight_layout()
 fig.savefig('all_in_one.pdf')
+fig.savefig('all_in_one.tif')
 plt.close(fig)
