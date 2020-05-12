@@ -7,15 +7,33 @@ Predicting ligands using recommender system algorithms.
 
 Structure-based and ligand-based virtual screening tools have seen some wins but are either very [brute force](https://www.nature.com/articles/s41586-019-0917-9) or highly [baised to existing structures](https://pubs.acs.org/doi/10.1021/acs.jcim.7b00403). Ideally, a virtual screening technique can succesfully predict new ligands both efficiently and with non-obvious scaffolds. That means the predicted ligands could not have arisen by straight up similarity search starting from known ligands, which we will use as a stand-in for a chemist's recommendation.
 
-(Adding to the above -> many existing algorithms require binary true positive and true negative labels. Network analysis allows for positive, negative, and unknown. In fact ChEMBL, which is highly biased to positive-only records, is better suited to implicit data techniques like WARP) 
+In addition, it's common in the field to use classification-based machine learning, which relies on having explicitly labelled positive and negative classes. The realities of _in vitro_ screening mean we only have access to positive labels. That means labelling everything that's 'unpositive' as explicitly negative might miss some highly interesting interactions, but also make classification-based approaches learn the wrong thing. 
 
-This project explores the use of network-based algorithms for this task. Data is activity records from ChEMBL25. Hyperparameter optimization uses a 243-target subset of ChEMBL and k-fold bootstrapping (structure bias is impossible for network-based algorithms, which are not fed any ligand or protein structure information). The k-fold bootstrapping procedure is required because of the requirement for network-based algorithms to have at least a single interaction to learn from in the train matrix - this is not gauranteed in k fold cross validation. 
 
-The algorithms are then compared using a single time-split. 
 
-The best-performing algorithm is then used for predicting either: 
-* New ligands, for a target of interest, that are close-neighbours to an approved drug (to reduce clinical trials)
-* New ligands, for a target of interest, that are _not_ close-neighbours known ligands (i.e. to discover new scaffold) 
+## Blurb
+
+This project explores the use of network-based algorithms for this task. We used a simple baseline (which ended up performing best) and recommender systems to learn from the positive label set, and predict new interactions by filling in the missing labels. 
+
+
+
+## Results
+
+For the results, see below. We used leave-one-out cross validation (which is appropriate because there can be no structure bias if we only use the label graph as input) to show that a technique using the percentage correlation between labels to calculate probabilities of new labels has a median correct rank of 1, i.e. perfect rank, and predicts the correct target for any given multi-label ligand 76% of the time in the top three targets, i.e. a p@3 of 0.76.
+
+
+
+Next we scraped PubChem data for assays for the top 10,000 probability interactions. Most had no evidence yet, but approximately 30% had some data to indicate activity. Of those, above 80% had 'Active' records. Thus we suggest this technique can be used to find low-hanging fruit in the label graph of ChEMBL.
+
+![title](./label_correlation/label_correlation_loo.tif)
+
+
+
+![title](./pubchem_validation/visualization.svg)
+
+
+
+
 
 To do:
 - [x] write readme - complete 16-12-19
