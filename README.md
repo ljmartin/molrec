@@ -21,7 +21,7 @@ For the results, see below. We used leave-one-out cross validation (which is app
 
 Next, we scraped PubChem data for assays for the top 10,000 probability interactions. Most had no evidence yet, but approximately 30% had some data to indicate activity. Of those, above 80% had 'Active' records, which far exceeded our expectations. Thus we suggest this technique can be used to find low-hanging fruit in the label graph of ChEMBL.
 
-<img src="./label_correlation/label_correlation_loo.tif" alt="piccie1" style="zoom:72%;" />
+<img src="./label_correlation/label_correlation_loo.png" alt="piccie1" style="zoom:72%;" />
 
 
 
