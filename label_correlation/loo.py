@@ -102,8 +102,10 @@ for idx in tqdm(sample): #for every multilabel ligand
     #the Morgan fingerprint distances to ALL other positive labels. 
     for o in ones:
         test_ligand = fps[idx]
-        other_ligands = fps_multiples[y_multiples[:,o]==1]
+        other_ligand_indices = np.where(y[:,o]==1)[0] #all other positives with the same label.
+        other_ligands = fps[other_ligand_indices] #this is their fingerprints
         nnsimilarities =fast_dice(test_ligand, other_ligands)[0]
+        
         similarities.append(nnsimilarities)
 
 
@@ -127,10 +129,12 @@ for idx in tqdm(sample): #for every multilabel ligand
 np.save('rank_arr_full_data.npy', np.array(rank_list))
 np.save('hit_arr.npy', np.array(hit_list))
 np.save('miss_arr.npy', np.array(miss_list))
-#we will keep the top 30 most similar ligands:
-N = 31 #it's 31 here because the zeroth similarity is 0 (self similarity)
-top_30 = np.array([i[np.argsort(i)][1:N] for i in similarities])
-np.save('nn_distances_full_data.npy', top_30)
+
+#we will take the mean similarity to the top 30 most similar ligands:
+#we use 1:31 because the most-similar ligand is self similarity (value of 0)
+N=31
+top_30_mean = np.array([i[np.argsort(i)][1:N].mean() for i in similarities])
+np.save('nn_distances_full_data.npy', top_30_mean)
 
 
 #####
@@ -218,8 +222,9 @@ for idx in tqdm(sample): #for every multilabel ligand
 
 
 np.save('rank_arr_nn_removed.npy', np.array(nn_removed_rank_list))
-#we will keep the top 30 most similar ligands:
-N = 30 #it's 30 now because the zeroth similarity has been removed
-       #from when we culled the nearest neighbors!
-top_30 = np.array([i[np.argsort(i)][:N] for i in nn_removed_similarities])
-np.save('nn_distances_nn_removed.npy', top_30)
+#we will take the mean similarity to the top 30 most similar ligands:
+#we use 0:30 because the most-similar ligand has been removed
+N=30
+top_30_mean = np.array([i[np.argsort(i)][1:N].mean() for i in nn_removed_similarities])
+np.save('nn_distances_nn_removed.npy', top_30_mean)
+

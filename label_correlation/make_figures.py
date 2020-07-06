@@ -1,4 +1,5 @@
 import numpy as np
+from scipy.special import logit, expit
 
 from scipy import sparse
 from scipy.stats import gaussian_kde
@@ -18,7 +19,7 @@ import itertools
 import matplotlib.pyplot as plt
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 plt.style.use('seaborn')
-
+import matplotlib.gridspec as grid_spec
 from statsmodels.distributions.empirical_distribution import ECDF
 
 
@@ -206,66 +207,109 @@ def calc_kde(ranks, xs=np.linspace(1,244,244)):
     density._compute_covariance()
     return density(xs)
 
-rank_arr = np.load('rank_arr.npy')
-mean_trace = calc_hpd(np.array(rank_arr), np.mean)
-median_trace = calc_hpd(np.array(rank_arr), np.median)
+
+rank_arr = np.load('rank_arr_full_data.npy')
+rank_arr_nn_removed = np.load('rank_arr_nn_removed.npy')
+
+#nn_distances = np.load('nn_distances_full_data.npy')
+#nn_distances_nn_removed = np.load('nn_distances_nn_removed.npy')
+
+
+#calculate the mean and median ranks with pymc3:
+mean_trace = calc_hpd(logit(np.clip(rank_arr, 1, 241)/241), np.mean)
+median_trace = calc_hpd(logit(np.clip(rank_arr, 1, 241)/241), np.median)
+
+mean_trace_nn_removed = calc_hpd(logit(np.clip(rank_arr_nn_removed, 1, 241)/241), np.mean)
+median_trace_nn_removed = calc_hpd(logit(np.clip(rank_arr_nn_removed, 1, 241)/241), np.median)
 
 
 def plot_fig_label(ax, lab):
     ax.text(-0.15, 1.12, lab, transform=ax.transAxes,
         fontsize=24, va='top', ha='left')
 
-fig, ax = plt.subplots(nrows=3,ncols=1)
+fig, ax = plt.subplots(nrows=3,ncols=2)
 fig.set_figheight(10)
-fig.set_figwidth(6)
+fig.set_figwidth(10)
 
 label='Label correlation'
+
+##First plot the mean, median values for the LOO analysis using the full dataset:
 for count,trace,name in zip([0,1], [mean_trace, median_trace], ['mean rank', 'median rank']):
-    m = np.mean(trace['a'])
-    hpd = pm.hpd(trace['a'])
+    untransformed_values = expit(trace['a'])*241
+    m = np.mean(untransformed_values)
+    hpd = pm.hpd(untransformed_values)
+
     print(m, hpd)
     xs = np.linspace(m-3,m+3,100)
-    density = calc_kde(trace['a'], xs=xs)
+    density = calc_kde(untransformed_values, xs=xs)
 
-    ax[0].errorbar(count, m, yerr = np.array([m-hpd[0], hpd[1]-m])[:,None],mfc='white',mew=2,
+    ax[0,0].errorbar(count, m, yerr = np.array([m-hpd[0], hpd[1]-m])[:,None],mfc='white',mew=2,
+                           fmt='o', c='C0',linewidth=4, markersize=15, capsize=3, label=label)
+
+#Then plot the mean, median values for the LOO analysis with nearest-neighbors removed:
+for count,trace,name in zip([0,1], [mean_trace_nn_removed, median_trace_nn_removed], ['mean rank', 'median rank']):
+    untransformed_values = expit(trace['a'])*241
+    m = np.mean(untransformed_values)
+    hpd = pm.hpd(untransformed_values)
+
+    print(m, hpd)
+    xs = np.linspace(m-3,m+3,100)
+    density = calc_kde(untransformed_values, xs=xs)
+
+    ax[0,1].errorbar(count, m, yerr = np.array([m-hpd[0], hpd[1]-m])[:,None],mfc='white',mew=2,
                            fmt='o', c='C0',linewidth=4, markersize=15, capsize=3, label=label)
     label=None
 
-ax[0].set_xticks([0,1])
-ax[0].set_xticklabels(['Mean\nrank', 'Median\nrank'])
-ax[0].set_xlim(-0.5,1.5)
-#ax[0].errorbar(-10,3, label='Label correlation')
-ax[0].legend(frameon=True, fancybox=True, framealpha=1)
-ax[0].set_ylabel('Rank', fontsize=14)
-ax[0].set_ylim(0.1,7)
-ax[0].set_title('Mean and median rank', fontsize=14)
-plot_fig_label(ax[0], 'A')
+#decorate the top two plots:
+for i in [0,1]:
+    ax[0,i].set_xticks([0,1])
+    ax[0,i].set_xticklabels(['Mean\nrank', 'Median\nrank'])
+    ax[0,i].set_xlim(-0.5,1.5)
+    ax[0,i].legend(frameon=True, fancybox=True, framealpha=1)
+    ax[0,i].set_ylabel('Rank', fontsize=14)
+    ax[0,i].set_ylim(0.1,5)
 
-n, x = np.histogram(np.array(rank_arr), bins = np.linspace(1,243,243))
-#bin_centers = 0.5*(x[1:]+x[:-1])
-#ax[1].plot(bin_centers,n,'-o', mfc='white', label='Label correlation')
-#ax[1].plot(x[:-1],n,'-o', mfc='white', label='Label correlation')
-ax[1].plot(x[:-1],n,'-o', mfc='white', mew=1, label='Label correlation')
-#ax[1].scatter(bin_centers,n,label='Label correlation')
-ax[1].set_xlim(0,20)
-ax[1].set_xticks(np.arange(1,20))
-ax[1].set_xlabel('Rank', fontsize=14)
-ax[1].set_ylabel('Count density',fontsize=14)
-ax[1].set_title('Histogram of predicted ranks, top 20',fontsize=14)
-ax[1].legend(frameon=True, fancybox=True, framealpha=1)
-plot_fig_label(ax[1], 'B')
+ax[0,0].set_title('Mean and median rank', fontsize=14)
+ax[0,1].set_title('Mean and median rank\n(Nearest neighbors removed)', fontsize=14)
+plot_fig_label(ax[0,0], 'A')
+plot_fig_label(ax[0,1], 'D')
 
+##Now it's time to plot the two histograms:
+n, x = np.histogram(rank_arr, bins = np.linspace(1,243,243))
+ax[1,0].plot(x[:-1],n,'-o', mfc='white', mew=1, label='Label correlation')
+n_nn_removed, x_nn_removed = np.histogram(rank_arr_nn_removed, bins = np.linspace(1,243,243))
+ax[1,1].plot(x_nn_removed[:-1],n_nn_removed,'-o', mfc='white', mew=1, label='Label correlation')
+
+for i in [0,1]:
+    ax[1,i].set_xlim(0,20)
+    ax[1,i].set_xticks(np.arange(1,20))
+    ax[1,i].set_xlabel('Rank', fontsize=14)
+    ax[1,i].set_ylabel('Count density',fontsize=14)
+    ax[1,i].legend(frameon=True, fancybox=True, framealpha=1)
+
+ax[1,0].set_title('Histogram of predicted ranks, top 20',fontsize=14)
+ax[1,1].set_title('Histogram of predicted ranks, top 20\n(Nearest neighbors removed)',fontsize=14)
+
+plot_fig_label(ax[1,0], 'B')
+plot_fig_label(ax[1,1], 'E')
+
+##Finally, plot the two ECDFs:
 ecdf = np.cumsum(n)/n.sum()
-ax[2].plot([1]+list(x[:-1]),[0]+list(ecdf), '-o', mfc='white', mew=1, label='Label correlation')
-ax[2].set_xlim(0.0,20)
-ax[2].set_xticks(np.arange(1,20))
-ax[2].plot([0,3],[ecdf[2],ecdf[2]],c='C0', linestyle=':', label='ECDF at rank 3')
-ax[2].legend(frameon=True, fancybox=True, framealpha=1)
-ax[2].set_ylabel('Cumulative\nnormalized density', fontsize=14)
-ax[2].set_xlabel('Rank',fontsize=14)
-ax[2].set_title('ECDF, top 20',fontsize=14)
-plot_fig_label(ax[2], 'C')
+ecdf_nn_removed = np.cumsum(n_nn_removed)/n_nn_removed.sum()
+ax[2,0].plot([1]+list(x[:-1]),[0]+list(ecdf), '-o', mfc='white', mew=1, label='Label correlation')
+ax[2,1].plot([1]+list(x_nn_removed[:-1]),[0]+list(ecdf), '-o', mfc='white', mew=1, label='Label correlation')
+for i in [0,1]:
+    ax[2,i].set_xlim(0.0,20)
+    ax[2,i].set_xticks(np.arange(1,20))
+    ax[2,i].plot([0,3],[ecdf[2],ecdf[2]],c='C0', linestyle=':', label='ECDF at rank 3')
+    ax[2,i].legend(frameon=True, fancybox=True, framealpha=1)
+    ax[2,i].set_ylabel('Cumulative\nnormalized density', fontsize=14)
+    ax[2,i].set_xlabel('Rank',fontsize=14)
 
+ax[2,0].set_title('ECDF, top 20',fontsize=14)
+ax[2,1].set_title('ECDF, top 20\n(Near neighbors removed)',fontsize=14)
+plot_fig_label(ax[2,0], 'C')
+plot_fig_label(ax[2,1], 'F')
 
 plt.tight_layout()
 
@@ -298,3 +342,5 @@ ax.legend()
 
 fig.savefig('calibration.pdf')    
 fig.savefig('calibration.tif')    
+
+
