@@ -1,6 +1,6 @@
 import numpy as np
 from scipy.special import logit, expit
-
+from seaborn import kdeplot
 from scipy import sparse
 from scipy.stats import gaussian_kde
 
@@ -211,10 +211,6 @@ def calc_kde(ranks, xs=np.linspace(1,244,244)):
 rank_arr = np.load('rank_arr_full_data.npy')
 rank_arr_nn_removed = np.load('rank_arr_nn_removed.npy')
 
-#nn_distances = np.load('nn_distances_full_data.npy')
-#nn_distances_nn_removed = np.load('nn_distances_nn_removed.npy')
-
-
 #calculate the mean and median ranks with pymc3:
 mean_trace = calc_hpd(logit(np.clip(rank_arr, 1, 241)/241), np.mean)
 median_trace = calc_hpd(logit(np.clip(rank_arr, 1, 241)/241), np.median)
@@ -232,7 +228,6 @@ fig.set_figheight(10)
 fig.set_figwidth(10)
 
 label='Label correlation'
-
 ##First plot the mean, median values for the LOO analysis using the full dataset:
 for count,trace,name in zip([0,1], [mean_trace, median_trace], ['mean rank', 'median rank']):
     untransformed_values = expit(trace['a'])*241
@@ -245,7 +240,9 @@ for count,trace,name in zip([0,1], [mean_trace, median_trace], ['mean rank', 'me
 
     ax[0,0].errorbar(count, m, yerr = np.array([m-hpd[0], hpd[1]-m])[:,None],mfc='white',mew=2,
                            fmt='o', c='C0',linewidth=4, markersize=15, capsize=3, label=label)
+    label=None
 
+label='Label correlation'
 #Then plot the mean, median values for the LOO analysis with nearest-neighbors removed:
 for count,trace,name in zip([0,1], [mean_trace_nn_removed, median_trace_nn_removed], ['mean rank', 'median rank']):
     untransformed_values = expit(trace['a'])*241
@@ -317,7 +314,59 @@ plt.savefig('label_correlation_loo.pdf')
 plt.savefig('label_correlation_loo.tif')
 
 
+##Next figure, make the ridgeplot showing nearest-neighbor distances per predicted rank.
+nn_distances = np.load('nn_distances_full_data.npy')
+nn_distances_nn_removed = np.load('nn_distances_nn_removed.npy')
 
+for nn,rank, title, filename in zip([nn_distances, nn_distances_nn_removed],
+                                    [rank_arr, rank_arr_nn_removed],
+                               ['Nearest-neighbor Dice distance per rank',
+                                'Nearest-neighbor Dice distance per rank\n(Near neighbors removed)'],
+                               ['ridgeplot.tif', 'ridgeplot_nn_removed.tif']):
+
+    #make a pandas dataframe out of the rank and the nearest-neighbor similarity
+    d = pd.DataFrame(columns=['s', 'r'], data={'s':nn, 'r':rank})
+    d = d[d['r']<10]
+
+    gs = grid_spec.GridSpec(9,1)
+    gs.update(hspace= -0.5)
+
+    fig = plt.figure(figsize=(16,4))
+    fig.set_figheight(10)
+    i = 0
+
+    ax_objs = []
+    for j,k in d.groupby('r'):
+    
+        ax_objs.append(fig.add_subplot(gs[i:i+1, 0:]))
+        kdeplot(k.s, shade=True, ax = ax_objs[-1],alpha=1, legend=False, bw=0.01)
+        kdeplot(k.s, shade=False, ax = ax_objs[-1],alpha=1, color='white', legend=False, bw=0.01)
+        ax_objs[-1].axhline(0, c='k', linestyle='--')
+        ax_objs[-1].grid()
+        # setting uniform x and y lims
+        ax_objs[-1].set_xlim(0,1)
+        # make background transparent
+        rect = ax_objs[-1].patch
+        rect.set_alpha(0)
+        ax_objs[-1].set_yticklabels([])
+        spines = ["top","right","left","bottom"]
+        ax_objs[-1].set_yticklabels([])
+        ax_objs[-1].set_yticks([])
+        for s in spines:
+            ax_objs[-1].spines[s].set_visible(False)
+        if i == 8:
+            ax_objs[-1].set_xlabel("Dice distance (lower is more similar)", fontsize=16,)
+            for tick in ax_objs[-1].xaxis.get_major_ticks():
+                tick.label.set_fontsize(14) 
+        else:
+            ax_objs[-1].set_xticklabels([])
+        spines = ["top","right","left","bottom"]
+        adj_country = "Rank "+str(j)+'\n'
+        ax_objs[-1].text(-0.02,0,adj_country,fontsize=14,ha="right")
+        i+=1
+    
+    ax_objs[0].set_title(title, fontsize=24,)
+    fig.savefig(filename)
 
 
 ##Plot calibration:

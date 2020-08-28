@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import pymc3 as pm
+from scipy.special import logit, expit
 from scipy.stats import gaussian_kde
 import numpy as np 
 plt.style.use('seaborn')
@@ -59,15 +60,19 @@ if __name__ == '__main__':
     
     for count, name in enumerate(filenames):
         ranks = np.load(name+'.npy')
-        mean_trace = calc_hpd(ranks, np.mean)
-        median_trace = calc_hpd(ranks, np.median)
+        
+        logit_transformed_ranks = logit(ranks/244)
+
+        mean_trace = calc_hpd(logit_transformed_ranks, np.mean)
+        median_trace = calc_hpd(logit_transformed_ranks, np.median)
         print(name)
         for j,trace in zip([0,1], [mean_trace, median_trace]):
-            m = np.mean(trace['a'])
-            hpd = pm.hpd(trace['a'])
+            untransformed_samples = expit(trace['a'])*244
+            m = np.mean(untransformed_samples)
+            hpd = pm.hpd(untransformed_samples)
             print(m, hpd)
             xs = np.linspace(m-3,m+3,100)
-            density = calc_kde(trace['a'], xs=xs)
+            density = calc_kde(untransformed_samples, xs=xs)
         
             ax[j].errorbar(count, m, yerr = np.array([m-hpd[0], hpd[1]-m])[:,None],
                            fmt='o', mfc='white', mew=2, linewidth=4, markersize=7.5, capsize=3)
@@ -111,7 +116,7 @@ if __name__ == '__main__':
         ax3.plot(x[:-1]+np.random.uniform(-0.1,0.1,len(n)),ecdf)
         ax4.plot(x[:-1]+np.random.uniform(-0.1,0.1,len(n)),ecdf, '-o', mfc='white', mew=1.5, linewidth=0.5)
         if name == 'label_correlation':
-            ax4.plot([0,3],[ecdf[2],ecdf[2]],c='C0', linestyle=':',label='Label correlation\nECDF at rank 5')
+            ax4.plot([0,3],[ecdf[2],ecdf[2]],c='C0', linestyle=':',label='Label correlation\nECDF at rank 3')
 
 
     ax1.set_title('Histogram of predicted ranks')
