@@ -37,31 +37,56 @@ def plot_fig_label(ax, lab):
         fontsize=24, va='top', ha='left')
 
 if __name__ == '__main__':
-    ##First we will take the three best performing algorithms and 
-    ##take the geometric average of their rankings:
-    #ranks = [np.load(name+'.npy') for name in ['label_correlation', 'hpo_implicit_bpr', 'hpo_lightfm_warp']]
-    #geo_avg = np.power(ranks[0]*ranks[1]*ranks[2], 1/3)
-    #np.save('geometric_avg', geo_avg)
-    
-    ##Now we can proceed to graph all the rankings:
-    ##Filenames for the algos to load parameters:
-    #filenames = ['geometric_avg', 'label_correlation', 'hpo_implicit_als', 'hpo_implicit_bpr',
-    #         'hpo_lightfm_warp', 'hpo_lightfm_bpr']
-
     filenames = ['label_correlation', 'hpo_implicit_als', 'hpo_implicit_bpr',
              'hpo_lightfm_warp', 'hpo_lightfm_bpr']
 
+    yrs = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017]
+    num_targets = [225, 228, 231, 234, 237, 240, 242, 243, 243, 243]
 
 
+    #plot supplementary figure describing which year to use for time split
+    fig = plt.figure()
+    ax1 = plt.subplot(231)
+    ax2 = plt.subplot(232)
+    ax3 = plt.subplot(233)
+    ax4 = plt.subplot(234)
+    ax5 = plt.subplot(235)
+    from scipy.stats import sem 
+    fig.set_figheight(15)
+    fig.set_figwidth(15)
+    z = 1.959964
+    for name, a in zip(filenames, [ax1, ax2, ax3, ax4, ax5]):
+        lows = list()
+        highs = list()
+        middles = list()
+        for count, year, num in zip(range(len(yrs)), yrs, num_targets):
+            ranks = np.load('./processed_data/'+str(year)+'_'+name+'.npy')/num
+            log_ranks = np.log10(ranks)
+            s = sem(log_ranks)
+            m = log_ranks.mean()
+            low = 10**(m-s*z)*num
+            high = 10**(m+s*z)*num
+            highs.append(high)
+            lows.append(low)
+            middles.append(10**m*num)
+        a.fill_between(yrs, y1=lows, y2=highs, label=name)
+        a.plot(yrs, middles,  '-o', c='white',)
+        a.set_ylim(1, 30)
+        a.set_title(name)
+    fig.savefig('supp.pdf')
+    fig.savefig('supp.tif')
+
+    
     ##Plot first figure:
     fig, ax = plt.subplots(2)
     fig.set_figheight(8)
     fig.set_figwidth(8)
-    
+
+    year = 2015
     for count, name in enumerate(filenames):
-        ranks = np.load(name+'.npy')
+        ranks = np.load('./processed_data/'+str(year)+'_'+name+'.npy')
         
-        logit_transformed_ranks = logit(ranks/244)
+        logit_transformed_ranks = logit(ranks/243)
 
         mean_trace = calc_hpd(logit_transformed_ranks, np.mean)
         median_trace = calc_hpd(logit_transformed_ranks, np.median)
@@ -72,11 +97,11 @@ if __name__ == '__main__':
             hpd = pm.hpd(untransformed_samples)
             print(m, hpd)
             xs = np.linspace(m-3,m+3,100)
-            density = calc_kde(untransformed_samples, xs=xs)
+            density = calc_kde(untransformed_samples, xs=xs)/2
         
             ax[j].errorbar(count, m, yerr = np.array([m-hpd[0], hpd[1]-m])[:,None],
                            fmt='o', mfc='white', mew=2, linewidth=4, markersize=7.5, capsize=3)
-            ax[j].fill_betweenx(xs,density+count,count, alpha=0.4,label=name.strip('hpo_'))
+            ax[j].fill_betweenx(xs,density/2+count,count, alpha=0.4,label=name.strip('hpo_'))
 
     ax[0].set_ylabel('Mean rank', fontsize=20)
     ax[0].set_xticks([])
@@ -105,7 +130,8 @@ if __name__ == '__main__':
 
 
     for name in filenames:
-        ranks = np.load(name+'.npy')
+        ranks = np.load('./processed_data/'+str(year)+'_'+name+'.npy')
+
         ##Plot histogram:
         n, x = np.histogram(ranks, bins = np.linspace(1,244,244))
         ax1.plot(x[:-1]+np.random.uniform(-0.15,0.15,len(n)),n, label=name)

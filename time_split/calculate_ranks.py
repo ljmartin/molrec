@@ -13,7 +13,7 @@ def calc_ranks_given_name(name, algo, train, test):
     else:
         params = utils.read_params(name)
         preds = algo(params, train)
-        for _ in range(3):
+        for _ in range(7):
             preds += algo(params, train)
     ranks = utils.evaluate_predictions(preds, test, train)
     return ranks

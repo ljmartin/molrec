@@ -133,7 +133,7 @@ def load_subset(subset=False, numchoose=50):
     return interaction_matrix
         
 
-def load_time_split(year=2010):
+def load_time_split(year=2010, return_fingerprints=False):
     """
     Get the interaction matrix of the 243-target subset. Then
     split into two matrices, train and test, based on year of 
@@ -144,7 +144,7 @@ def load_time_split(year=2010):
     
     interaction_matrix = sparse.load_npz('../data/interaction_matrix_pchembl.npz')
     interaction_dates = sparse.load_npz('../data/interaction_dates_pchembl.npz')
-    
+
     #turn interaction dates into a masker
     dates_mask = (interaction_dates.data<=year).astype(int)
 
@@ -164,17 +164,23 @@ def load_time_split(year=2010):
     row_mask = np.array((train.sum(axis=1)!=0)).reshape(1,-1)[0] #there must be a cleaner way to do that.
     train = train[row_mask] 
     test = test[row_mask]
-
+    if return_fingerprints:
+        fps = sparse.load_npz('../time_split/morgan.npz')
+        fps = fps[row_mask]
+        
     #similarly we must now remove any targets that have no data (or not enough) in the training matrix.
     column_mask = (np.array(train.sum(0))[0] >= 20)
     train = train.T[column_mask].T
     test = test.T[column_mask].T
-
+    
     #remove any entries that are explicit zeros because a 0 should be implied by absence
     train.eliminate_zeros()
     test.eliminate_zeros()    
-    
-    return train, test
+
+    if return_fingerprints:
+        return train, test, fps
+    else:
+        return train, test
 
 
 def makeCorrelations(y_in):
