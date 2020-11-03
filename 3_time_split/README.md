@@ -1,3 +1,7 @@
+# time_split
+
+comparing recommender systems and label correlation to the nearest neighbor approach on a time-split hold out set
+
 |      | Algorithm    | Hyperparameter | Value      |
 | ---: | :----------- | :------------- | ---------- |
 |      | implicit_als | factors        | 36         |
