@@ -114,7 +114,7 @@ def load_subset(subset=False, numchoose=50):
     """
     np.random.seed(100)
 
-    interaction_matrix = sparse.load_npz('../data/interaction_matrix_pchembl.npz')
+    interaction_matrix = sparse.load_npz('../0_data/interaction_matrix_pchembl.npz')
     interaction_matrix = np.array(interaction_matrix.todense())
 
     if subset:
@@ -142,8 +142,8 @@ def load_time_split(year=2010, return_fingerprints=False):
     or afterwards become test interactions. 
     """
     
-    interaction_matrix = sparse.load_npz('../data/interaction_matrix_pchembl.npz')
-    interaction_dates = sparse.load_npz('../data/interaction_dates_pchembl.npz')
+    interaction_matrix = sparse.load_npz('../0_data/interaction_matrix_pchembl.npz')
+    interaction_dates = sparse.load_npz('../0_data/interaction_dates_pchembl.npz')
 
     #turn interaction dates into a masker
     dates_mask = (interaction_dates.data<=year).astype(int)
@@ -165,7 +165,7 @@ def load_time_split(year=2010, return_fingerprints=False):
     train = train[row_mask] 
     test = test[row_mask]
     if return_fingerprints:
-        fps = sparse.load_npz('../time_split/morgan.npz')
+        fps = sparse.load_npz('../3_time_split/morgan.npz')
         fps = fps[row_mask]
         
     #similarly we must now remove any targets that have no data (or not enough) in the training matrix.
@@ -315,7 +315,7 @@ def train_lightfm_log(params, inp):
 def read_params(name):
     parameter_flag=False
     params = dict()
-    for line in open('../hyperparameter_optimization/'+name+'.dat', 'r').readlines():
+    for line in open('../2_hyperparameter_optimization/'+name+'.dat', 'r').readlines():
         if 'Result' in line:
             parameter_flag=False
         if parameter_flag:
