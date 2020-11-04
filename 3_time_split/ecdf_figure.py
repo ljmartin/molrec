@@ -41,6 +41,9 @@ def plot(nn=False):
     if nn:
         nnranks = np.load('./processed_data/2015_nearest_neighbor.npy')
         mask = nnranks>3
+
+    jits = np.linspace(0.35,4.4, 6)
+    np.random.shuffle(jits)
     for count, name in enumerate(filenames):
         #load
         ranks = np.load('./processed_data/'+str(year)+'_'+name+'.npy')
@@ -58,7 +61,8 @@ def plot(nn=False):
     
         #B
         out = kdeplot(bstrap, ax=ax[1], shade=True, color='C'+str(count))
-        jit = np.random.uniform()*3+1
+        #jit = np.random.uniform()*3+1
+        jit = jits[count]
         ax[1].plot([ci[0], ci[1]], [-jit,-jit], lw=5.5, c='C'+str(count),zorder=10)
         ax[1].scatter([np.mean(ci)], [-jit], 
                        facecolor='white', 
@@ -75,7 +79,7 @@ def plot(nn=False):
     ax[1].set_ylabel('Bootstrap density', fontsize=fsize)
     yt = np.arange(-5,25, 5)
     ax[1].set_yticks(yt)
-    ax[1].set_yticklabels(['' for i in yt]) 
+    ax[1].set_yticklabels(['' for i in yt])
     
     plot_fig_label(ax[0], 'A.')
     plot_fig_label(ax[1], 'B.')
@@ -84,9 +88,18 @@ def plot(nn=False):
     ax[0].set_xlim(0,20)
     ax[0].set_xlabel('Rank', fontsize=fsize)
     ax[0].set_ylabel('ECDF', fontsize=fsize)
+    xt = np.arange(1,20,2)
+    ax[0].set_xticks(xt)
+    ax[0].axvline(3, c='k', linestyle='--', zorder=1)
+    plt.tight_layout()
+
     return fig, ax
 
 fig, ax = plot()
 fig.savefig('./figures/timesplit.png')
+fig.savefig('./figures/timesplit.tif')
+fig.savefig('./figures/timesplit.svg')
 fig, ax = plot(nn=True)
 fig.savefig('./figures/timesplit_minusNN.png')
+fig.savefig('./figures/timesplit_minusNN.tif')
+fig.savefig('./figures/timesplit_minusNN.svg')
