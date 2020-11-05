@@ -47,9 +47,13 @@ def plot_meanmed(nn=False):
             #analyse
             #logit transform ranks:
             logit_ranks = logit(ranks / 243)
+
+            bstrap_ = simple_bootstrap(logit_ranks, fun, take=len(ranks))
+            bstrap = expit(bstrap_)*243
             
-            bstrap = expit(simple_bootstrap(logit_ranks, fun, take=len(ranks)))*243
             ci = simple_ci(bstrap)
+
+            print(name, expit(np.mean(bstrap_))*243, ci)
 
             sjitter = np.abs(np.random.randn(len(bstrap))) / 10
             ljitter = np.random.randn(len(bstrap))/20
