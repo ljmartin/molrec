@@ -11,4 +11,4 @@ INNER Join component_class
 INNER Join component_sequences
       ON component_class.component_id = component_sequences.component_id
 WHERE target_dictionary.organism in ("Homo sapiens")
-and target_dictionary.target_type in ("SINGLE PROTEIN");
+

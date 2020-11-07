@@ -1,244 +1,301 @@
-chembl_id,organism,pref_name,instance_id,pchembl_value,canonical_smiles,year
-CHEMBL1075104,Homo sapiens,Leucine-rich repeat serine/threonine-protein kinase 2,CHEMBL3925454,8.52,CCS(=O)(=O)c1cc(OC)c(Nc2ncc(c(NC)n2)C(F)(F)F)cc1C,2015.0
-CHEMBL1163125,Homo sapiens,Bromodomain-containing protein 4,CHEMBL3940880,8.77,CN1C=C(c2cc(NS(=O)(=O)C)ccc2Oc3c(F)cc(F)cc3F)c4cc[nH]c4C1=O,2016.0
-CHEMBL1741186,Homo sapiens,Nuclear receptor ROR-gamma,CHEMBL3909484,5.84,CCNCC1(CCS(=O)(=O)CC1)C(=O)N2CC[C@](C2)(c3ccc(cc3)C(F)(C(F)(F)F)C(F)(F)F)S(=O)(=O)c4ccc(F)cc4,2016.0
-CHEMBL1744525,Homo sapiens,Nicotinamide phosphoribosyltransferase,CHEMBL3968930,8.81,CC(C)(O)CC(=O)N1CCC(=CC1)c2ccc(NC(=O)N3Cc4ccncc4C3)cc2,2016.0
-CHEMBL1800,Homo sapiens,Corticotropin releasing factor receptor 1,CHEMBL291419,6.62,CCCN([C@H](C1CC1)c2ccccc2)c3nccc(n3)c4c(OC)cc(OC)cc4OC,2004.0
-CHEMBL1811,Homo sapiens,Prostanoid EP1 receptor,CHEMBL3895324,6.11,CCCCC[C@H](O)\C=C\[C@H]1[C@H](O)C(C)(C)C(=O)[C@@H]1C\C=C/CCCC(=O)O,2015.0
-CHEMBL1824,Homo sapiens,Receptor protein-tyrosine kinase erbB-2,CHEMBL231100,7.29,CN(C)c1cc2c(Nc3ccc(OC4CCN(CC4)C(=O)CC(C)(C)C)c(C)c3)ncnc2cn1,2007.0
-CHEMBL1827,Homo sapiens,Phosphodiesterase 5A,CHEMBL3973580,7.67,COc1ccc(CNc2nc(ncc2C(=O)NCCN3CCOCC3)N4CCC5(CC5)C4)cc1Cl,2016.0
-CHEMBL1829,Homo sapiens,Histone deacetylase 3,CHEMBL3929319,6.08,CC(=O)N1CCC(CC1)(Nc2ncc(cn2)C(=O)NO)c3ccccc3,2016.0
-CHEMBL1833,Homo sapiens,Serotonin 2b (5-HT2b) receptor,CHEMBL1222624,6.2,CC1CN(CC(C)N1CCC(=O)O)C2=Cc3ccccc3Cn4ccnc24,2010.0
-CHEMBL1835,Homo sapiens,Thromboxane-A synthase,CHEMBL440096,7.96,OC(=O)CCC\C=C(\c1cccnc1)/c2cccc(N\C(=N/Cc3ccccc3)\NC#N)c2,1999.0
-CHEMBL1844,Homo sapiens,Macrophage colony stimulating factor receptor,CHEMBL399932,7.5,NC(=O)c1cnc2cc(ccc2c1Nc3ccc(OC(F)(F)F)c(Cl)c3)c4ccncc4,2007.0
-CHEMBL1855,Homo sapiens,Gonadotropin-releasing hormone receptor,CHEMBL179663,7.21,CC1=C(C(=O)N(C[C@H](N)c2ccccc2)C(=O)N1Cc3cccc(F)c3)c4ccccc4F,2005.0
-CHEMBL1862,Homo sapiens,Tyrosine-protein kinase ABL,CHEMBL262623,5.4,Nc1ncnc2NCCC(=Nc12)c3ccccc3,1.0
-CHEMBL1865,Homo sapiens,Histone deacetylase 6,CHEMBL259708,5.4,COC(=O)[C@H](Cc1ccc(cc1)c2ccsc2)NC(=O)CCCCCCC(=O)NO,2008.0
-CHEMBL1867,Homo sapiens,Alpha-2a adrenergic receptor,CHEMBL1255724,9.39,CCC[C@H]1[C@@H]2c3ccccc3C[C@]12c4c[nH]cn4,2010.0
-CHEMBL1868,Homo sapiens,Vascular endothelial growth factor receptor 1,CHEMBL241669,6.12,Cn1cnc(NCc2ccncc2)c1C(=O)Nc3cccc(OC(F)(F)F)c3,2007.0
-CHEMBL1871,Homo sapiens,Androgen Receptor,CHEMBL1830940,7.36,CC1(C)CN(Cc2ccccc2F)C(=O)C1Oc3ccc(C#N)c(c3)C(F)(F)F,2011.0
-CHEMBL1898,Homo sapiens,Serotonin 1b (5-HT1b) receptor,CHEMBL326125,7.33,OC1(CNCc2ccccc2)CCN(CCCc3c[nH]c4ccc(cc34)n5cnnc5)CC1,1999.0
-CHEMBL1899,Homo sapiens,Serotonin 3a (5-HT3a) receptor,CHEMBL2204356,7.17,Cl.Clc1cccc(Sc2ccccc2N3CCNCC3)c1Cl,2011.0
-CHEMBL1906,Homo sapiens,Serine/threonine-protein kinase RAF,CHEMBL4098693,6.49,Cc1cc(NC(=O)Nc2cc(on2)C(C)(C)C)ccc1Oc3cc(ncn3)N4CCCCC4,2017.0
-CHEMBL1907589,Homo sapiens,Neuronal acetylcholine receptor; alpha4/beta2,CHEMBL3094071,7.7,OC(=O)\C=C\C(=O)O.O=C(C1CCCC1)N2C[C@@H]3CNC[C@@H](C3)C2,2013.0
-CHEMBL1907598,Homo sapiens,Integrin alpha-V/beta-3,CHEMBL377066,5.99,NC(=N)NCCC[C@@H]1NC(=O)[C@H](Cc2ccccc2)NC(=O)[C@@](Cc3ccccc3)(NC(=O)[C@H](CC(=O)O)NC(=O)CNC1=O)C(F)(F)F,2006.0
-CHEMBL1907599,Homo sapiens,Integrin alpha-4/beta-1,CHEMBL171153,8.92,COc1ccccc1c2ccc(C[C@H](NC(=O)C3(CCCC3)S(=O)(=O)C4CCCC4)C(=O)O)cc2,2003.0
-CHEMBL1907600,Homo sapiens,Cyclin-dependent kinase 5/CDK5 activator 1,CHEMBL77066,5.4,COc1ccc(cc1)c2cc3[nH]ccnc3n2,2003.0
-CHEMBL1907601,Homo sapiens,Cyclin-dependent kinase 4/cyclin D1,CHEMBL445813,7.17,Clc1cccc(Cl)c1C(=O)Nc2c[nH]nc2C(=O)NC3CCNCC3,2008.0
-CHEMBL1907611,Homo sapiens,Tumour suppressor p53/oncoprotein Mdm2,CHEMBL3902175,9.49,CNC(=O)c1ccc(OC)c(c1)c2cc3C(=O)N(C(c4ccc(Cl)cc4)c3n2C(C)C)c5ccc(F)c(Cl)c5,2016.0
-CHEMBL1908,Homo sapiens,Cytochrome P450 11B1,CHEMBL451505,8.16,CN1C(=O)CCc2cc(ccc12)c3cncc4ccccc34,2008.0
-CHEMBL1908389,Homo sapiens,Mitogen-activated protein kinase kinase kinase 12,CHEMBL3718810,8.92,Nc1ncc(cc1C(F)(F)F)c2cc([C@H]3[C@@H]4CN(C[C@H]34)C5COC5)n(n2)C6CCC6,2014.0
-CHEMBL1913,Homo sapiens,Platelet-derived growth factor receptor beta,CHEMBL125898,7.0,COc1cc2c(ncnc2cc1OCCCN3CCOCC3)N4CCN(CC4)C(=O)Nc5ccc(OC(C)C)cc5,2002.0
-CHEMBL1914,Homo sapiens,Butyrylcholinesterase,CHEMBL4074258,5.32,COc1cc(\C=C\C(=O)Nc2ccccc2)ccc1OCCCCCCCCCCN3CCCCC3,2017.0
-CHEMBL1936,Homo sapiens,Stem cell growth factor receptor,CHEMBL3319462,6.17,COc1cccc(c1)c2c[nH]c3ncc(cc23)c4cccc(N)c4,2014.0
-CHEMBL1937,Homo sapiens,Histone deacetylase 2,CHEMBL3970984,6.93,CCCc1nn(C)c2C(=O)NC(=Nc12)c3cc(ccc3OCC)S(=O)(=O)N4CCN(CC4)c5ncc(cn5)C(=O)NO,2016.0
-CHEMBL1945,Homo sapiens,Melatonin receptor 1A,CHEMBL382439,6.77,COc1ccc2c(c1)c(cn2C)C(C)(C)CNC(=O)C3CCC3,2006.0
-CHEMBL1946,Homo sapiens,Melatonin receptor 1B,CHEMBL186167,6.0,COc1cc2CCN(C(CCc3ccccc3)c2cc1OC)C(=O)c4ccc(cc4)C(F)(F)F,2004.0
-CHEMBL1957,Homo sapiens,Insulin-like growth factor I receptor,CHEMBL3652829,8.7,CCn1ccc(Nc2ncc3CCc4nn(C)c(c5ccccc5Cl)c4c3n2)n1,2014.0
-CHEMBL1974,Homo sapiens,Tyrosine-protein kinase receptor FLT3,CHEMBL1081169,9.01,CC(C)(C)c1onc(NC(=O)Nc2ccc(NC(=O)c3ccccc3)cc2)c1,2009.0
-CHEMBL1978,Homo sapiens,Cytochrome P450 19A1,CHEMBL1688898,6.9,COc1ccc(COc2ccc3C(=CC(=O)Oc3c2)Cn4ccnc4)cc1,2011.0
-CHEMBL1983,Homo sapiens,Serotonin 1d (5-HT1d) receptor,CHEMBL198975,9.2,CN1CCN(CC1)c2nccc3cc4CCN(C(=O)c5cnn(c5C)c6ccccc6)c4cc23,2005.0
-CHEMBL1985,Homo sapiens,Glucagon receptor,CHEMBL158556,5.57,COc1cc(\C=N\NC(=O)c2ccc(O)c(O)c2)cc(OC)c1OCc3ccc(cc3)C(C)C,2002.0
-CHEMBL1991,Homo sapiens,Inhibitor of nuclear factor kappa B kinase beta subunit,CHEMBL2164411,8.2,CC(C)c1cc2c(ccnc2[nH]1)c3ccc(cc3)S(=O)(=O)NC4CCS(=O)(=O)CC4,2012.0
-CHEMBL1994,Homo sapiens,Mineralocorticoid receptor,CHEMBL1094801,5.66,COC(=O)C1=C(CCl)NC(=C(C#N)[C@@H]1c2ccc(F)cc2Cl)C,2010.0
-CHEMBL2000,Homo sapiens,Plasma kallikrein,CHEMBL4109395,7.54,C[C@@H]1CCC[C@H](N2C=CC(=CC2=O)c3c(F)ccc(Cl)c3F)c4cc(ccn4)c5c(F)cccc5NC1=O,2016.0
-CHEMBL2001,Homo sapiens,Purinergic receptor P2Y12,CHEMBL603146,7.89,CCCCCOC(=O)N1CCN(CC1)C(=O)[C@H](CCC(=O)O)NC(=O)c2cc(cc(n2)c3ccccc3)C(=O)NCC,2010.0
-CHEMBL2007625,Homo sapiens,Isocitrate dehydrogenase [NADP] cytoplasmic,CHEMBL3677081,7.22,C[C@H](Nc1nccc(n1)N2C(=O)OCC2(C)C)c3ccc(Oc4ccccc4)cc3,2015.0
-CHEMBL2010631,Homo sapiens,C-X-C chemokine receptor type 7,CHEMBL3973638,8.4,CCc1cncc(c1)C(=O)Nc2cccc(CN3CCC(CC3)C(=O)NC(C)(C)C)c2,2016.0
-CHEMBL2014,Homo sapiens,Nociceptin receptor,CHEMBL3808523,7.33,Cc1cc(O)cc(C)c1C[C@H](N)C(=O)N[C@H](CCCNC(=N)N)C(=O)N[C@H]2Cc3ccccc3CN(CCC(=O)N[C@@H](CCCNC(=N)N)C(=O)N[C@@H](Cc4ccc(O)cc4)C(=O)N[C@@H](Cc5ccc(O)cc5)C(=O)N[C@@H](CCCNC(=N)N)C(=O)N[C@@H](Cc6c[nH]c7ccccc67)C(=O)N[C@@H](CCCNC(=N)N)C(=O)N)C2=O,2016.0
-CHEMBL202,Homo sapiens,Dihydrofolate reductase,CHEMBL23338,7.03,COc1cc(Cc2cnc(N)nc2N)cc(\C=C\C)c1OC,1988.0
-CHEMBL203,Homo sapiens,Epidermal growth factor receptor erbB1,CHEMBL411243,8.07,CN(C)CCCCCNc1c(Br)cccc1Nc2ncnc3ccncc23,2008.0
-CHEMBL2034,Homo sapiens,Glucocorticoid receptor,CHEMBL3126949,7.89,Cc1ccc(F)cc1C(C)(C)C[C@@](O)(Cc2cc3ncncc3[nH]2)C(F)(F)F,2014.0
-CHEMBL2039,Homo sapiens,Monoamine oxidase B,CHEMBL1934040,5.88,Fc1ccc(cc1)c2csc(N\N=C\c3ccc(Cl)cc3)n2,2012.0
-CHEMBL204,Homo sapiens,Thrombin,CHEMBL291101,7.35,COc1ccc2cc(ccc2c1)S(=O)(=O)NN(Cc3ccc(cc3)C(=N)N)C(=O)N4CCC(C)CC4,2004.0
-CHEMBL205,Homo sapiens,Carbonic anhydrase II,CHEMBL3290054,5.36,N#CC1=CCc2ccccc2C=C1,2014.0
-CHEMBL2056,Homo sapiens,Dopamine D1 receptor,CHEMBL193435,6.81,CN(C)C[C@H]1CC2[C@H](O1)c3cc(Br)ccc3Oc4ccccc24,2005.0
-CHEMBL206,Homo sapiens,Estrogen receptor alpha,CHEMBL2332576,6.35,Cc1cc(sc1c2ccc(O)cc2F)c3ccc(O)cc3F,2013.0
-CHEMBL2069,Homo sapiens,Thromboxane A2 receptor,CHEMBL95867,7.68,OC(=O)CCCc1ccccc1CC2C3CCC(O3)C2\C=N\NC(=O)Nc4ccccc4,1991.0
-CHEMBL208,Homo sapiens,Progesterone receptor,CHEMBL3926496,7.36,C[C@@]12CCC(=O)C=C1[C@H]3C[C@H]3[C@H]4[C@H]2CC[C@]5(C)[C@@H]4[C@H]6C[C@H]6[C@]57CCC(=O)O7,2015.0
-CHEMBL209,Homo sapiens,Trypsin I,CHEMBL117678,6.25,NC(=N)N1CCC[C@H](NC(=O)CNC(=O)[C@@H](CCNC(=O)c2cccnc2)NS(=O)(=O)Cc3ccccc3)C1O,1999.0
-CHEMBL2093863,Homo sapiens,Phosphodiesterase 4,CHEMBL1916073,6.82,Cl.CCOc1cc(ccc1OC)C(=CC#N)c2ccc(OC)c(NC(=O)[C@H](C)N)c2,2011.0
-CHEMBL2093865,Homo sapiens,Histone deacetylase,CHEMBL1688187,6.34,ONC(=O)CCCCCN1C(=O)c2ccccc2Sc3ccccc13,2010.0
-CHEMBL2093869,Homo sapiens,Integrin alpha-IIb/beta-3,CHEMBL146470,6.64,CC(C)(C)C[C@H](NC(=O)[C@H](CC(=O)O)NC(=O)CCCOc1ccc(cc1)C(=N)N)C(=O)O,1996.0
-CHEMBL2094108,Homo sapiens,Protein farnesyltransferase,CHEMBL427191,7.33,CC(=O)CCC(=O)N1CCN(CC1C(=O)NCc2cccnc2)C3c4ccc(Cl)cc4CCc5cc(Br)cnc35,2006.0
-CHEMBL2094120,Homo sapiens,GABA-A receptor; alpha-3/beta-3/gamma-2,CHEMBL179810,6.7,C(Cc1ccccn1)Oc2nn3c(nnc3c4C5CCC(CC5)c24)c6ccccc6,2005.0
-CHEMBL2094121,Homo sapiens,GABA-A receptor; alpha-1/beta-3/gamma-2,CHEMBL331192,5.39,COc1cccc(OC)c1OC(=O)[C@@H](C)N2CCc3ccccc3C2,2001.0
-CHEMBL2094122,Homo sapiens,GABA-A receptor; alpha-5/beta-3/gamma-2,CHEMBL196250,8.47,Fc1ccccc1c2cc(cnn2)c3cccc(c3)C#N,2005.0
-CHEMBL2094128,Homo sapiens,Cyclin-dependent kinase 2/cyclin A,CHEMBL270686,7.96,COc1ccnc2[nH]cc(c3ccnc(N)n3)c12,2008.0
-CHEMBL2094135,Homo sapiens,Gamma-secretase,CHEMBL1223575,6.6,COc1cc(\C=C\2/N=C(NCC3CC3)N([C@@H](C)c4ccc(F)cc4)C2=O)ccc1n5cnc(C)c5,2010.0
-CHEMBL210,Homo sapiens,Beta-2 adrenergic receptor,CHEMBL83698,6.43,CCCCCCCCN1C(=O)CN(C1=O)c2ccc(cc2)S(=O)(=O)Nc3ccc(CCNC[C@H](O)c4cccnc4)cc3,1999.0
-CHEMBL211,Homo sapiens,Muscarinic acetylcholine receptor M2,CHEMBL333125,5.67,CCN1CCC(=C(C1)C(=O)OCCCCc2ccccc2)c3ccccc3.OC(=O)C(=O)O,1999.0
-CHEMBL2111367,Homo sapiens,PI3-kinase p110-alpha/p85-alpha,CHEMBL4099886,6.3,C[C@@H](c1ccccc1)c2nc(nn2C)c3cnc(N)c(n3)n4nnc5ccccc45,2017.0
-CHEMBL213,Homo sapiens,Beta-1 adrenergic receptor,CHEMBL285481,5.7,CCCCCCc1onc(n1)c2ccc(cc2)S(=O)(=O)Nc3ccc(CCNC[C@H](O)c4cccnc4)cc3,2000.0
-CHEMBL214,Homo sapiens,Serotonin 1a (5-HT1a) receptor,CHEMBL208773,7.57,NC(=O)c1ccc(F)c2OC[C@@H](Cc12)N(CCCc3c[nH]c4ccc(F)cc34)C5CCC5,2006.0
-CHEMBL2147,Homo sapiens,Serine/threonine-protein kinase PIM1,CHEMBL3920439,10.16,C[C@H](O)c1ccc(c(F)c1F)c2nc(cs2)C(=O)Nc3cnn(C)c3[C@@H]4CC[C@@H](N)[C@H](F)CO4,2016.0
-CHEMBL2148,Homo sapiens,Tyrosine-protein kinase JAK3,CHEMBL3642369,6.54,CN(c1ncccc1CNc2cccn3nc(Nc4ccc5N(C)C(=O)Cc5c4)nc23)S(=O)(=O)C,2013.0
-CHEMBL215,Homo sapiens,Arachidonate 5-lipoxygenase,CHEMBL2336310,6.33,COc1cc(ccc1OCCCNC(=O)Nc2ccc(OC(F)(F)F)cc2)c3nc4ccc(C)cn4c3NC5CCCC5,2013.0
-CHEMBL216,Homo sapiens,Muscarinic acetylcholine receptor M1,CHEMBL299294,5.21,OCCNc1ccnc(c1)N2CCc3ccccc3C2,2003.0
-CHEMBL217,Homo sapiens,Dopamine D2 receptor,CHEMBL69706,6.82,CCCN(Cc1cccs1)[C@@H]2CCc3c(C2)cccc3OC,1999.0
-CHEMBL2176771,Homo sapiens,Complement factor D,CHEMBL3918286,6.7,COc1cc2c(N)nc(nc2c(F)c1OC)N3CCN(C[C@@H]3c4ccccc4)C(=O)C[C@@H]5CCCNC5,2016.0
-CHEMBL218,Homo sapiens,Cannabinoid CB1 receptor,CHEMBL3961507,5.52,Fc1ccc(Nc2ccc(c(c2)C(F)(F)F)S(=O)(=O)NCc3occc3)c(F)c1,2016.0
-CHEMBL2185,Homo sapiens,Serine/threonine-protein kinase Aurora-B,CHEMBL1983980,6.0,OCc1ccc(cc1)c2sc(nc2C(=O)O)N3CCc4cccc(C(=O)Nc5nc6ccccc6s5)c4C3,1.0
-CHEMBL219,Homo sapiens,Dopamine D4 receptor,CHEMBL560177,6.8,Clc1cccc(c1)N2CCN(CCN3Cc4ccccc4C3)C2=O,2009.0
-CHEMBL220,Homo sapiens,Acetylcholinesterase,CHEMBL328468,9.02,O=C1Cc2cc3onc(CCC4CCN(Cc5ccccc5)CC4)c3cc2N1,1995.0
-CHEMBL222,Homo sapiens,Norepinephrine transporter,CHEMBL388257,6.57,CCOC(=O)C1=C(CCNC1)c2ccc3ccccc3c2,2007.0
-CHEMBL223,Homo sapiens,Alpha-1d adrenergic receptor,CHEMBL50490,6.89,Fc1ccc(cc1F)C2N(C(=O)NCCCN3CCC(CC3)(c4ccccc4)c5ccccc5)C(=O)NC6=C2C(=O)OC6,2000.0
-CHEMBL224,Homo sapiens,Serotonin 2a (5-HT2a) receptor,CHEMBL1080215,6.61,Cc1[nH]c(cc1C(=O)NCCCN2CCN(CC2)c3cccc(Cl)c3)c4ccccc4,2010.0
-CHEMBL2243,Homo sapiens,Anandamide amidohydrolase,CHEMBL332236,5.3,CCCCC[C@H](O)\C=C\C=C/C\C=C/C\C=C/CCCC(=O)OC[C@H](O)CO,2002.0
-CHEMBL225,Homo sapiens,Serotonin 2c (5-HT2c) receptor,CHEMBL145939,7.6,Fc1ccc(CCN2CCC(CC2)S(=O)(=O)c3ccccc3)c(F)c1,2002.0
-CHEMBL2252,Homo sapiens,Dipeptidyl peptidase I,CHEMBL3662556,8.28,Fc1cc(ccc1CC(NC(=O)[C@H]2N[C@@H]3CC[C@H]2C3)C#N)c4ccc5C(=O)NCc5c4,2015.0
-CHEMBL226,Homo sapiens,Adenosine A1 receptor,CHEMBL2391844,6.1,CN(C)c1nc(N)nc(n1)c2sc(NC(=O)c3ccccc3)nc2c4ccccc4,2013.0
-CHEMBL2276,Homo sapiens,c-Jun N-terminal kinase 1,CHEMBL3679490,7.62,O[C@@H]1CCN(C1)c2ccc(cn2)C(=O)NCC3=CN(c4ccccc4)c5cc(Cl)ccc5C3=O,2013.0
-CHEMBL228,Homo sapiens,Serotonin transporter,CHEMBL592028,8.05,CN(CCCc1c[nH]c2ccc(F)cc12)C3COc4ccc5CNC(=O)c5c4C3,2010.0
-CHEMBL229,Homo sapiens,Alpha-1a adrenergic receptor,CHEMBL1078772,6.31,C(COc1ccccc1c2ccccc2)NCC3COC(O3)(c4ccccc4)c5ccccc5,2010.0
-CHEMBL230,Homo sapiens,Cyclooxygenase-2,CHEMBL108201,8.3,COc1ccc(cc1)C2=C(CCC2)c3ccc(cc3)S(=O)(=O)C,1994.0
-CHEMBL231,Homo sapiens,Histamine H1 receptor,CHEMBL571389,7.41,Cc1ccc(CCCCN2CCC(CC2)C(O)(c3ccccc3)c4ccccc4)cc1,2009.0
-CHEMBL232,Homo sapiens,Alpha-1b adrenergic receptor,CHEMBL288768,5.98,CC1=C([C@H](CC(=O)N1)c2ccc(F)c(F)c2)C(=O)NCCCN3CCC(CC3)(C#N)c4ccc(F)cc4,2000.0
-CHEMBL233,Homo sapiens,Mu opioid receptor,CHEMBL275176,5.65,COc1ccc(OC)c(c1)C2=CC=CN(C(CN3CCC(O)C3)c4ccccc4)C2=O,2003.0
-CHEMBL2334,Homo sapiens,Caspase-3,CHEMBL100788,6.24,CC(C)C[C@H](NC(=O)COc1ccc(OCc2ccccc2)cc1)C(=O)N[C@H]3CC(=O)OC3O,2002.0
-CHEMBL2337,Homo sapiens,Glycine transporter 1,CHEMBL241289,6.2,CC(C)C1CCCCN1C[C@@H](O)CNS(=O)(=O)c2cccc3ccccc23,2007.0
-CHEMBL234,Homo sapiens,Dopamine D3 receptor,CHEMBL3289644,5.56,Fc1ccc2CC(CCN3CCN(CC3)c4ccc(Cl)cc4)Cc2c1,2014.0
-CHEMBL235,Homo sapiens,Peroxisome proliferator-activated receptor gamma,CHEMBL412371,6.41,Cc1oc(nc1CCOc2ccc(C[C@@](C)(Oc3ccccc3)C(=O)O)cc2)c4ccccc4,2004.0
-CHEMBL236,Homo sapiens,Delta opioid receptor,CHEMBL434817,7.27,CCN(CC)C(=O)c1ccc(cc1)C(N2CC(C)NCC2(C)C)c3cccc(OC)c3,2000.0
-CHEMBL2363049,Homo sapiens,Epidermal growth factor receptor,CHEMBL3813995,5.75,CN1CCC(CC1)n2cc(cn2)c3cnc(N)c(n3)c4nc5ccccc5n4Cc6ccc(NC(=O)C=C)cc6,2016.0
-CHEMBL237,Homo sapiens,Kappa opioid receptor,CHEMBL371018,8.48,CCCS(=O)(=O)NCc1ccc2O[C@@H](Cc2c1)C(=O)N(C)[C@H](CN3CC[C@H](O)C3)c4ccccc4,2005.0
-CHEMBL238,Homo sapiens,Dopamine transporter,CHEMBL556539,5.43,CCSc1ccccc1C(=O)N(CC2CCC2)[C@H]3CCNC3,2009.0
-CHEMBL239,Homo sapiens,Peroxisome proliferator-activated receptor alpha,CHEMBL246208,6.35,Cc1ccc(cc1)c2oc(C)c(CCOc3ccc4[C@H](CC(=O)O)CCc4c3)n2,2007.0
-CHEMBL240,Homo sapiens,HERG,CHEMBL2164356,5.18,Cc1cccc(CCN2C(C(=O)NCc3ccc(OC(F)(F)F)cc3)c4ccccc4C2=O)n1,2012.0
-CHEMBL2409,Homo sapiens,Epoxide hydratase,CHEMBL215069,8.14,O=C(NCC1CCN(CC1)C(=O)c2ccncc2)NC34CC5CC(CC(C5)C3)C4,2006.0
-CHEMBL2413,Homo sapiens,C-C chemokine receptor type 1,CHEMBL2180507,6.93,CC(C)[C@@H](NC(=O)c1ccc(F)cc1)C(=O)N2CCC(CC2)c3ccc(Cl)cc3,2012.0
-CHEMBL242,Homo sapiens,Estrogen receptor beta,CHEMBL30707,8.7,Oc1ccc2c(OC(=O)c3c2oc4cc(O)ccc34)c1,2004.0
-CHEMBL2431,Homo sapiens,Serine/threonine-protein kinase AKT2,CHEMBL3701775,9.4,CCONC(=O)c1ccc2OCn3c(nc(c4ccc(cc4)C5(N)CC(C)(O)C5)c3c6ccccc6)c2c1,2014.0
-CHEMBL2434,Homo sapiens,Interleukin-8 receptor B,CHEMBL3704564,6.68,CN(C)C(=O)c1cccc(NC2=C(NC(c3occ(C)c3)C4(C)COC4)C(=O)C2=O)c1O,2015.0
-CHEMBL244,Homo sapiens,Coagulation factor X,CHEMBL3940564,6.0,COc1cc2c(N)nccc2cc1C[C@@H](N3CC[C@H](NS(=O)(=O)c4cnc(s4)N5CCC(F)(F)C5)C3=O)C(=O)OCC6CC6,2015.0
-CHEMBL245,Homo sapiens,Muscarinic acetylcholine receptor M3,CHEMBL1200803,6.88,OC(=O)CCC(=O)O.O=C(O[C@H]1CN2CCC1CC2)N3CCc4ccccc4[C@@H]3c5ccccc5,2011.0
-CHEMBL246,Homo sapiens,Beta-3 adrenergic receptor,CHEMBL246908,7.8,C[C@H](CNc1ccc(cc1)c2occ(n2)C(=O)O)NC[C@H](O)c3cccc(Cl)c3,2007.0
-CHEMBL248,Homo sapiens,Leukocyte elastase,CHEMBL3909784,8.85,CCOC(=O)C1=C(C)N(C(=O)N(C)C1c2ccc(cc2C(=O)N3CCNCC3)C#N)c4cccc(c4)C(F)(F)F,2016.0
-CHEMBL249,Homo sapiens,Neurokinin 1 receptor,CHEMBL107220,6.33,COc1ccccc1CNC(=O)C2=C(c3ccccc3C)c4ccccc4C(=O)N2C,1995.0
-CHEMBL251,Homo sapiens,Adenosine A2a receptor,CHEMBL2113605,6.3,CCCCC#Cc1nc(N)c2ncn([C@@H]3O[C@H](CSCC)[C@@H](O)[C@H]3O)c2n1,2002.0
-CHEMBL252,Homo sapiens,Endothelin receptor ET-A,CHEMBL60367,10.52,CCC(=O)c1c(C)c(C)cc(C)c1NC(=O)c2sccc2S(=O)(=O)Nc3onc(C)c3Cl,2004.0
-CHEMBL2525,Homo sapiens,Beta secretase 2,CHEMBL1923754,5.45,Fc1ccc2nc([nH]c2c1)c3cccc(c3)c4cn5ccc(F)cc5n4,2011.0
-CHEMBL253,Homo sapiens,Cannabinoid CB2 receptor,CHEMBL2087109,8.2,CCCCCn1cc(C(=O)NC23CC4CC(CC(C4)C2)C3)c5cc(ccc15)c6cccs6,2012.0
-CHEMBL2534,Homo sapiens,3-phosphoinositide dependent protein kinase-1,CHEMBL3652568,7.78,CN(c1ccccc1)c2cc(nc(N)n2)c3c[nH]c4ncc(cc34)c5cnn(C)c5,2014.0
-CHEMBL255,Homo sapiens,Adenosine A2b receptor,CHEMBL286527,8.17,Brc1ccc(cc1)c2nc3C(=O)N(CC#C)C(=O)Nc3[nH]2,2002.0
-CHEMBL256,Homo sapiens,Adenosine A3 receptor,CHEMBL221206,8.72,CNC(=O)[C@H]1O[C@H]([C@H](O)[C@@H]1O)n2cnc3c(NOC)nc(nc23)C#Cc4ccccc4,2007.0
-CHEMBL258,Homo sapiens,Tyrosine-protein kinase LCK,CHEMBL213290,8.52,Cc1ccc(cc1c2ccc3nc(NCCN4CCOCC4)ncc3c2)C(=O)Nc5cccc(c5C)C(F)(F)F,2006.0
-CHEMBL259,Homo sapiens,Melanocortin receptor 4,CHEMBL398667,6.96,CC(C)N1C[C@@H]([C@H](C1)c2ccc(Cl)cc2)C(=O)N3CCN(CC3)C4(CNCc5ccccc5OC(F)(F)F)CCCCC4,2007.0
-CHEMBL2599,Homo sapiens,Tyrosine-protein kinase SYK,CHEMBL3641507,8.18,COCc1ccnc(c1)c2ccnc(Nc3ccc4[nH]c(cc4c3)C(=O)N5CCN(C)CC5)n2,2014.0
-CHEMBL260,Homo sapiens,MAP kinase p38 alpha,CHEMBL341364,7.0,COc1cccc(C)c1N2C(=O)NCc3nc(Sc4ccc(F)cc4)ccc23,2003.0
-CHEMBL261,Homo sapiens,Carbonic anhydrase I,CHEMBL191613,5.15,OP(=O)(O)C(Nc1ccc(Cl)cc1Cl)P(=O)(O)O,2014.0
-CHEMBL262,Homo sapiens,Glycogen synthase kinase-3 beta,CHEMBL4072455,8.64,CN1C(=O)C=C(N=C1N2CCNC(C2)c3ccc(Cl)c(Cl)c3)c4ccncn4,2017.0
-CHEMBL2637,Homo sapiens,c-Jun N-terminal kinase 3,CHEMBL2376916,7.11,Clc1cccc(Cl)c1Nc2ccc3c(cnn3c4cccc(c4)C(=O)NCCN5CCOCC5)c2,2013.0
-CHEMBL264,Homo sapiens,Histamine H3 receptor,CHEMBL3981463,8.22,C[C@H]1CCCN1C2CC[C@@H](C2)c3ccc(NC(=O)c4c(C)onc4C)cc3,2016.0
-CHEMBL267,Homo sapiens,Tyrosine-protein kinase SRC,CHEMBL194969,8.96,COc1cc(Nc2c(cnc3cc4cc(OC)c(OCCN5CCN(C)CC5)cc4cc23)C#N)c(Cl)cc1Cl,2005.0
-CHEMBL268,Homo sapiens,Cathepsin K,CHEMBL3640081,9.22,CC(C)C[C@H](NC(=O)c1ccc(cc1)c2csc(n2)N3CCN(C)CC3)C(=O)N4C[C@H](C)[C@H]5OCC(=O)[C@@H]45,2013.0
-CHEMBL2695,Homo sapiens,Focal adhesion kinase 1,CHEMBL3645039,6.24,COc1ccc(cc1c2cccn3nc(Nc4ccc5CCN(CCS(=O)(=O)C)CCc5c4)nc23)C(F)(F)F,2013.0
-CHEMBL2722,Homo sapiens,Cytochrome P450 11B2,CHEMBL4096366,7.8,Cc1cncc(Cc2ccc(nc2)c3cccc(NS(=O)(=O)C)c3)c1,2017.0
-CHEMBL274,Homo sapiens,C-C chemokine receptor type 5,CHEMBL2113084,8.15,Cc1cc(C)n2ncc(C3CCN(C[C@H]4CN(C[C@@H]4c5cccc(F)c5)[C@H](CC6CCC6)C(=O)O)CC3)c2n1,2005.0
-CHEMBL2742,Homo sapiens,Fibroblast growth factor receptor 3,CHEMBL3949626,8.74,COc1cc(C)cc2cc(sc12)c3c(CNCC(C)(C)O)c(CN4CCN(CC4)C(=O)C)n5ncnc(N)c35,2015.0
-CHEMBL275,Homo sapiens,Phosphodiesterase 4B,CHEMBL1801151,9.26,O=C(NC1CC1)C2=CN(c3cccc(c3)c4ccc(cc4)C5CC5c6nnn[nH]6)c7ncccc7C2=O,2010.0
-CHEMBL279,Homo sapiens,Vascular endothelial growth factor receptor 2,CHEMBL3702659,7.51,CC(C)c1cccc(NC(=O)c2ccc(C)c(c2)N3CCc4nc(CS)ncc4C3)c1,2014.0
-CHEMBL280,Homo sapiens,Matrix metalloproteinase 13,CHEMBL3675574,7.01,NCCCC[C@H](NC(=O)CCc1ccc(cc1)c2ccc(cc2)c3ccccc3)C(=O)N[C@@H](CCC(=O)O)C(=O)N,2014.0
-CHEMBL2815,Homo sapiens,Nerve growth factor receptor Trk-A,CHEMBL3676076,8.48,OCC(O)COc1ccc(F)cc1[C@H]2CCCN2c3ccn4ncc(C(=O)NC5CC5)c4n3,2014.0
-CHEMBL283,Homo sapiens,Matrix metalloproteinase 3,CHEMBL432385,7.09,COc1ccc(cc1)S(=O)(=O)N(Cc2cccnc2)[C@H](CCCCN(C)C)C(=O)NO,1997.0
-CHEMBL2835,Homo sapiens,Tyrosine-protein kinase JAK1,CHEMBL3929116,9.0,CC(C)(O)CCN1C[C@@H]2CN(C[C@@H]2C1)C(=O)Cn3cc(NC(=O)c4cnn5cccnc45)c(n3)c6cc(Cl)ccc6OC(F)F,2016.0
-CHEMBL284,Homo sapiens,Dipeptidyl peptidase IV,CHEMBL172624,5.92,N[C@H]([C@H]1CC[C@H](C1)OC(=O)Nc2cccc(F)c2)C(=O)N3CCSC3,2004.0
-CHEMBL2842,Homo sapiens,Serine/threonine-protein kinase mTOR,CHEMBL3693477,7.85,COc1ccc(cc1CO)c2ccc3c(nc(nc3n2)N4CCC(CC4)N5CCOCC5)N6CCOC[C@@H]6C,2015.0
-CHEMBL286,Homo sapiens,Renin,CHEMBL49862,8.08,CC(C)C[C@H](O)[C@H](O)[C@H](CC1CCCCC1)NC(=O)[C@H](Cc2cscn2)NC(=O)[C@@H](CC(=O)N3CCOCC3)Cc4ccccc4,1992.0
-CHEMBL287,Homo sapiens,Sigma opioid receptor,CHEMBL3104857,7.54,OCC[C@@H]1CN(CC2CCCCC2)CCN1Cc3ccc(cc3)c4ccccc4,2014.0
-CHEMBL2954,Homo sapiens,Cathepsin S,CHEMBL371893,6.01,CC(C)(C)OC(=O)N[C@@H](Cc1ccc(O)cc1)C(=O)NCC#N,2005.0
-CHEMBL2959,Homo sapiens,Tyrosine-protein kinase ITK/TSK,CHEMBL1684654,7.1,Cc1ccc2cc([nH]c2c1)c3n[nH]c4ccc(NC5CCNC5)cc34,2011.0
-CHEMBL2971,Homo sapiens,Tyrosine-protein kinase JAK2,CHEMBL2035183,8.14,C(CN1CCCC1)Oc2ccc3Nc4nccc(n4)c5ccc(COC\C=C\COCc2c3)s5,2012.0
-CHEMBL2973,Homo sapiens,Rho-associated protein kinase 2,CHEMBL226232,5.2,Clc1cc(ccn1)c2cc3C(=O)NCCc3[nH]2,1.0
-CHEMBL298,Homo sapiens,Cholecystokinin B receptor,CHEMBL322913,6.8,Cc1cccc(NC(=O)N[C@H](COCc2ccccc2)C(=O)N3CCC(CC3)C(=O)Nc4ccccc4)c1,1995.0
-CHEMBL299,Homo sapiens,Protein kinase C alpha,CHEMBL330952,8.25,CC(C)[C@@H]1N(C)c2ccc(NC(=O)\C=C\C=C\c3cc(cc(c3)C(F)(F)F)C(F)(F)F)cc2C[C@@H](CO)NC1=O,2003.0
-CHEMBL2998,Homo sapiens,P2X purinoceptor 3,CHEMBL3669696,7.4,CCC(CC)C1C(C(=O)c2ccc(cc2)C(=O)N(C)C)C(=O)C(=O)N1c3ccc(cc3)c4ccon4,2013.0
-CHEMBL301,Homo sapiens,Cyclin-dependent kinase 2,CHEMBL1998826,6.3,CN(CCOc1cncc(c1)c2ccc3[nH]nc(C)c3c2)S(=O)(=O)C,1.0
-CHEMBL308,Homo sapiens,Cyclin-dependent kinase 1,CHEMBL1984432,5.1,Cc1ccc(Cn2cc(nn2)c3ccc4[nH]ncc4c3)c(C)c1,1.0
-CHEMBL3105,Homo sapiens,Poly [ADP-ribose] polymerase-1,CHEMBL505041,7.75,OCCN1CCCN(CC1)C(=O)c2cccc(CC3=NNC(=O)c4ccccc34)c2,2008.0
-CHEMBL3116,Homo sapiens,Cyclin-dependent kinase 9,CHEMBL3971492,6.1,CS(=O)(=O)N1CCC(=CC1)c2[nH]c3nccc4c5cc(F)ccc5N(CC6CCOCC6)Cc2c34,2016.0
-CHEMBL3130,Homo sapiens,PI3-kinase p110-delta subunit,CHEMBL3695327,7.25,COc1ccc(OC)c(Nc2nc3ccccc3nc2NS(=O)(=O)c4cccnc4)c1,2014.0
-CHEMBL3145,Homo sapiens,PI3-kinase p110-beta subunit,CHEMBL3582351,6.4,COc1ccc(cn1)c2cc(CNc3ccc(cc3)S(=O)(=O)Nc4nnc(C)s4)cc(c2)C(=O)NCCC(C)C,2015.0
-CHEMBL3155,Homo sapiens,Serotonin 7 (5-HT7) receptor,CHEMBL182680,8.3,C[C@H](Nc1cc(NCCc2ccc(F)cc2)ncn1)c3ccccc3,2004.0
-CHEMBL3192,Homo sapiens,Histone deacetylase 8,CHEMBL3415453,6.92,ONC(=O)c1ccc(NC2CCN(C2=O)c3ccc(Cl)cc3)cc1,2015.0
-CHEMBL321,Homo sapiens,Matrix metalloproteinase 9,CHEMBL157289,5.82,OC(=O)[C@@H](Cc1c[nH]c2ccccc12)NS(=O)(=O)c3ccc(C#Cc4ccccc4[N+](=O)[O-])s3,1998.0
-CHEMBL3227,Homo sapiens,Metabotropic glutamate receptor 5,CHEMBL3605280,5.61,Fc1ccc(cc1)C(=O)N2CCc3nc(COc4ccccn4)oc3C2,2015.0
-CHEMBL3231,Homo sapiens,Rho-associated protein kinase 1,CHEMBL2002099,6.7,N#CCC(C1CCCC1)n2cc(cn2)c3ncnc4[nH]ccc34,1.0
-CHEMBL3242,Homo sapiens,Carbonic anhydrase XII,CHEMBL2436875,7.26,CSc1nc(N)n(n1)c2ccncc2S(=O)(=O)N,2013.0
-CHEMBL325,Homo sapiens,Histone deacetylase 1,CHEMBL3689835,7.05,CCCCN(CCC)Cc1c(CCCC)nc2cc(\C=C\C(=O)NO)ccn12,2014.0
-CHEMBL3267,Homo sapiens,PI3-kinase p110-gamma subunit,CHEMBL2018221,5.8,Cc1c(CN2C(=NN3C(=O)C=C(N=C23)N4CCOCC4)C5CC5)cccc1C(F)(F)F,2012.0
-CHEMBL331,Homo sapiens,Cyclin-dependent kinase 4,CHEMBL3641993,7.64,C1CCC(C1)n2c3cnccc3c4cnc(Nc5ccc(nn5)N6CCC(CC6)N7CCCC7)nc24,2014.0
-CHEMBL332,Homo sapiens,Matrix metalloproteinase-1,CHEMBL423686,5.75,CC[C@@H](N[C@@H](CCc1ccccc1)C(=O)N[C@@H](CC(C)C)C(=O)Nc2ccccc2)C(=O)O,1996.0
-CHEMBL333,Homo sapiens,Matrix metalloproteinase-2,CHEMBL251830,5.81,Cc1cc(ccc1C2=CCN(CC2)S(=O)(=O)CC3(CCN(CC3)C(=O)O[C@H]4CCOC4)C(=O)NO)C#N,2008.0
-CHEMBL3371,Homo sapiens,Serotonin 6 (5-HT6) receptor,CHEMBL3692859,9.46,Clc1cccc(c1)S(=O)(=O)c2cc(Cl)c3oc4CCNCc4c3c2,2015.0
-CHEMBL340,Homo sapiens,Cytochrome P450 3A4,CHEMBL169620,6.0,C[C@H](CNCCc1ccc2nsnc2c1)c3c([nH]c4ccc(cc34)C(C)(C)C(=O)N5CC6CCC5CC6)c7cc(C)cc(C)c7,2002.0
-CHEMBL344,Homo sapiens,Melanin-concentrating hormone receptor 1,CHEMBL566257,8.85,Fc1cc2COC3(CCN(Cc4ccc(cc4)C(=O)c5ccc(F)c(F)c5)CC3)c2cn1,2009.0
-CHEMBL3473,Homo sapiens,C-C chemokine receptor type 3,CHEMBL195293,6.64,CC(C)(C)c1ccc(cc1)C(CNCCc2ccc(cc2)C(F)(F)F)N3CCN(CC3)C4CCCCC4,2005.0
-CHEMBL3553,Homo sapiens,Tyrosine-protein kinase TYK2,CHEMBL3942741,7.96,FC[C@@H]1CC[C@H](CC1)c2nnn3cnc4[nH]ccc4c23,2015.0
-CHEMBL3587,Homo sapiens,Dual specificity mitogen-activated protein kinase kinase 1,CHEMBL242237,5.17,NC(=O)c1ccccc1Nc2ccnc(Nc3cccc(O)c3)n2,2007.0
-CHEMBL3594,Homo sapiens,Carbonic anhydrase IX,CHEMBL2047799,7.89,NS(=O)(=O)Oc1ccc(NC(=O)Nc2ccc(Br)cc2)cc1,2012.0
-CHEMBL3650,Homo sapiens,Fibroblast growth factor receptor 1,CHEMBL2216830,8.04,CCN(CC)CCCCNc1ncc2CN(C(=O)N(Cc3cccc(NC(=O)C=C)c3)c2n1)c4c(Cl)c(OC)cc(OC)c4Cl,2012.0
-CHEMBL3706,Homo sapiens,ADAM17,CHEMBL3770688,7.05,Cc1cc(ccc1N2CCN(CC2)S(=O)(=O)N[C@H](CCCNC(=O)OCc3ccccc3)C(=O)NO)C#N,2016.0
-CHEMBL3717,Homo sapiens,Hepatocyte growth factor receptor,CHEMBL561258,5.76,[O-][N+](=O)c1cccc(c1)S(=O)(=O)n2ccc3nccnc23,2009.0
-CHEMBL3759,Homo sapiens,Histamine H4 receptor,CHEMBL448962,6.89,CN1CCN(CC1)c2nc(NCc3ccc(cc3)C#N)c4cc(Cl)ccc4n2,2008.0
-CHEMBL3772,Homo sapiens,Metabotropic glutamate receptor 1,CHEMBL3702386,7.82,CC(C)n1cc(cn1)C2=NCC(=O)N3CCc4c(I)cccc4C3=C2,2014.0
-CHEMBL3778,Homo sapiens,Interleukin-1 receptor-associated kinase 4,CHEMBL4111939,8.3,CC(C)(O)[C@H](F)CNC(=O)c1cnc(cc1NCCC(F)(F)F)n2ncc3cc(cnc23)C#N,2015.0
-CHEMBL3820,Homo sapiens,Hexokinase type IV,CHEMBL489514,6.85,Cc1csc(NC(=O)c2cc(Sc3nncn3C)ccc2N)n1,2009.0
-CHEMBL3837,Homo sapiens,Cathepsin L,CHEMBL4060895,6.84,Fc1ccc(cn1)n2ncc(n2)C(=O)N[C@@H](Cc3ccc(OC(F)(F)F)c(Cl)c3)C(=O)NC4(CC4)C#N,2018.0
-CHEMBL3880,Homo sapiens,Heat shock protein HSP 90-alpha,CHEMBL3656966,6.58,CCc1cn(c2ccc(C(=O)N)c(N[C@@H]3CC[C@@H](N)CC3)c2)c4nccc(c5cnc6ccccc6c5)c14,2014.0
-CHEMBL3884,Homo sapiens,Sodium/glucose cotransporter 2,CHEMBL565377,9.1,Cc1cccc(Cc2cc3c(CO[C@]34O[C@H](CO)[C@@H](O)[C@H](O)[C@H]4O)cc2Cl)c1F,2009.0
-CHEMBL3892,Homo sapiens,Sphingosine 1-phosphate receptor Edg-3,CHEMBL209566,5.92,CC(C)Cc1ccc(nc1)c2onc(n2)c3ccc(CCC(=O)O)cc3C,2006.0
-CHEMBL3920,Homo sapiens,Protein kinase C theta,CHEMBL578783,7.47,Cc1c(Nc2c(CCc3ccccc3)cncc2C#N)ccc4[nH]ccc14,2009.0
-CHEMBL3922,Homo sapiens,Methionine aminopeptidase 2,CHEMBL3932166,7.55,CC(=O)N1CCN(CC1)c2ncccc2c3ccc4c(c3)N(CC(F)(F)F)C(=O)c5c[nH]nc45,2015.0
-CHEMBL3973,Homo sapiens,Fibroblast growth factor receptor 4,CHEMBL3972276,8.54,COCCNc1cc(NC(=O)N2CCCc3cc(CO)c(C=O)nc23)ncc1C#N,2016.0
-CHEMBL3979,Homo sapiens,Peroxisome proliferator-activated receptor delta,CHEMBL1080363,6.92,COc1ccc(cc1)c2oc(COc3ccc(OCC(=O)O)c(C)c3)nc2c4ccc(OC)cc4,2010.0
-CHEMBL3983,Homo sapiens,Dual specificity protein kinase TTK,CHEMBL3330259,6.41,NS(=O)(=O)c1cccc(c1)c2n[nH]c3ccc(NC(=O)Nc4ccccc4)cc23,2014.0
-CHEMBL4005,Homo sapiens,PI3-kinase p110-alpha subunit,CHEMBL1928541,9.05,CN(\N=C\c1cnn2ccc(cc12)C#N)S(=O)(=O)c3cc(ccc3C)[N+](=O)[O-],2012.0
-CHEMBL4015,Homo sapiens,C-C chemokine receptor type 2,CHEMBL400698,7.1,Oc1ccc2[nH]cc(C3CCN(C[C@@H]4CC[C@@H](CC4)NC(=O)\C=C\c5ccc(Cl)c(Cl)c5)CC3)c2c1,2001.0
-CHEMBL4040,Homo sapiens,MAP kinase ERK2,CHEMBL4108337,9.59,Cn1nccc1c2cnc(N)c(c2)c3ccc(C(=O)N[C@H](CO)c4cc(F)cc(Cl)c4)c(F)c3,2016.0
-CHEMBL4093,Homo sapiens,LXR-beta,CHEMBL605314,5.59,Cc1nc2c(cccn2c1c3cccc(Oc4cccc(c4)S(=O)(=O)C)c3)C(F)(F)F,2010.0
-CHEMBL4128,Homo sapiens,Tyrosine-protein kinase TIE-2,CHEMBL197635,6.92,Cc1cccc(NC(=O)Nc2ccc(cc2)c3c(CCC(=O)N)sc4ncnc(N)c34)c1,2005.0
-CHEMBL4142,Homo sapiens,Fibroblast growth factor receptor 2,CHEMBL3982668,8.23,Cl.COc1cc(OC)cc(c1)N(CCN2CCOCC2)c3ccc4ncc(nc4c3)c5cnn(C)c5,2014.0
-CHEMBL4158,Homo sapiens,Fatty acid synthase,CHEMBL3661697,6.26,CC(C)C(=O)N1CCc2nc([nH]c2C1)c3cc(C(=O)N4CCC(CC4)c5ccc(F)cc5)c(C)cc3C,2014.0
-CHEMBL4198,Homo sapiens,Inhibitor of apoptosis protein 3,CHEMBL4115656,7.03,CN[C@H](C)C(=O)Nc1cc(cc(n1)C#Cc2ccc(cc2)n3cnc(C)c3)c4ncnc5cnn(C)c45,2016.0
-CHEMBL4204,Homo sapiens,MAP kinase signal-integrating kinase 2,CHEMBL3698957,8.1,CNC(=O)c1sc2ncnc(Nc3ccc(F)cc3OC(CF)CF)c2c1C,2014.0
-CHEMBL4235,Homo sapiens,11-beta-hydroxysteroid dehydrogenase 1,CHEMBL4059917,7.85,Cc1cccc(c1)C2(CC(=O)N3CC(O)C3)C4CC5CC2CC(C4)C5O,2017.0
-CHEMBL4247,Homo sapiens,ALK tyrosine kinase receptor,CHEMBL3785774,9.3,COc1cc2c(CC\C(=N/N3CCN(C)CC3)\C2(C)C)cc1Nc4ncc(Cl)c(Nc5ccccc5S(=O)(=O)C(C)C)n4,2016.0
-CHEMBL4282,Homo sapiens,Serine/threonine-protein kinase AKT,CHEMBL3701755,8.27,NC1(CC(O)(C1)C2CC2)c3ccc(cc3)c4nc5c6nccnc6OCn5c4c7ccccc7,2014.0
-CHEMBL4296,Homo sapiens,Sodium channel protein type IX alpha subunit,CHEMBL3960616,5.9,CO[C@@H]1C[C@@H](C1)NC(=O)c2ccc3cc(Oc4ccc(cn4)C(F)(F)F)ccc3n2,2016.0
-CHEMBL4308,Homo sapiens,Bradykinin B1 receptor,CHEMBL243680,7.89,Nc1cccc(n1)N2CCC(CNC(=O)c3n[nH]c(NC(=O)c4ccccc4Cl)c3Br)CC2,2007.0
-CHEMBL4333,Homo sapiens,Sphingosine 1-phosphate receptor Edg-1,CHEMBL2011727,6.2,CCCN(C(=O)c1ccc(Cl)cc1)c2nnc(s2)c3cccc(F)c3,2012.0
-CHEMBL4409,Homo sapiens,Phosphodiesterase 10A,CHEMBL3977200,8.07,CCOCCn1c(nc2ccccc12)C3CN(C3)c4cc(nc(C)n4)n5nc(C)nc5C,2016.0
-CHEMBL4422,Homo sapiens,Free fatty acid receptor 1,CHEMBL382831,8.35,Cc1nc(sc1CNc2ccc(cc2)[C@H]3C[C@@H]3C(=O)N)c4ccc(cc4)C(F)(F)F,2006.0
-CHEMBL4429,Homo sapiens,Neurokinin 3 receptor,CHEMBL3648216,7.57,C[C@]1(COc2ccc(Cl)cn2)CN(C[C@@H]1c3ccc(Cl)cc3)C(=O)C4CCN(CC4)c5ccc(cn5)C(F)(F)F,2013.0
-CHEMBL4439,Homo sapiens,TGF-beta receptor type I,CHEMBL3634704,8.01,Cc1ccc(F)c(n1)c2[nH]c(CNc3ccccc3)nc2c4ccc5ncnn5c4,2015.0
-CHEMBL4441,Homo sapiens,C-X-C chemokine receptor type 3,CHEMBL3916566,7.7,Cc1nc(c2nc3ccccc3[nH]2)c(s1)N4CCN(CC4)C(=O)Cn5ccc6cccnc56,2016.0
-CHEMBL4501,Homo sapiens,Ribosomal protein S6 kinase 1,CHEMBL3986206,7.96,Nc1ncnc(N2CCC(CC2)C(OCCN3CCCC3)c4ccc(F)cc4)c1c5ccc(F)cc5,2016.0
-CHEMBL4523,Homo sapiens,Serine/threonine-protein kinase PIM2,CHEMBL1986943,6.4,OC1CCC(CC1)Nc2nc(Cl)cc(n2)c3c[nH]c4ncccc34,1.0
-CHEMBL4550,Homo sapiens,5-lipoxygenase activating protein,CHEMBL3704345,8.01,Cc1ccc(COc2c(F)c(ccc2C3CCC3)c4cnc5NCCOc5c4)cc1,2015.0
-CHEMBL4561,Homo sapiens,Neuropeptide Y receptor type 5,CHEMBL343817,9.52,Cc1nc(N2CCCCC2)c3[nH]c(cc3n1)c4cccc(F)c4,2000.0
-CHEMBL4578,Homo sapiens,Maternal embryonic leucine zipper kinase,CHEMBL3679293,7.92,COc1cc(cc(Cl)c1O)c2ccc3ncc(C(=O)C4CC4)c(Nc5ccc(nc5)N6CCC(O)C6)c3c2,2015.0
-CHEMBL4581,Homo sapiens,Kinesin-like protein 1,CHEMBL381985,7.07,NCCCC1(CC(=NN1C(=O)N2CCCCC2)c3cc(F)ccc3F)c4ccccc4,2006.0
-CHEMBL4588,Homo sapiens,Matrix metalloproteinase 8,CHEMBL343775,6.22,OC(=O)C(=O)C1Cc2ccccc2CN1S(=O)(=O)c3ccc(Br)cc3,1999.0
-CHEMBL4616,Homo sapiens,Ghrelin receptor,CHEMBL3797857,7.23,COc1ccc(Cn2c(nnc2[C@@H](Cc3c[nH]c4ccccc34)NC(=O)C(C)(C)N)[C@@H](Cc5ccccc5)NC=O)cc1,2016.0
-CHEMBL4630,Homo sapiens,Serine/threonine-protein kinase Chk1,CHEMBL1980802,8.2,OC1COc2ccc(Cl)cc2NC(=O)Nc3cnc(C#N)c(OCC1O)n3,1.0
-CHEMBL4691,Homo sapiens,Proteinase activated receptor 4,CHEMBL3718657,7.31,COc1cc(OCc2csc(n2)C(F)(F)F)c3cc(oc3c1)c4cn5nc(OC)sc5n4,2015.0
-CHEMBL4722,Homo sapiens,Serine/threonine-protein kinase Aurora-A,CHEMBL1213152,9.57,COc1ccc(Nc2nc(NC(Cc3c[nH]c4ncccc34)C(=O)N)nc(Nc5ccc6ncccc6c5)n2)cc1OC,2009.0
-CHEMBL4792,Homo sapiens,Orexin receptor 2,CHEMBL3649110,6.76,O=C(N1CC2CN(CC2C1)c3cnc4ccccc4n3)c5ccccc5n6nccn6,2014.0
-CHEMBL4794,Homo sapiens,Vanilloid receptor,CHEMBL3326585,7.5,Cc1cc2c(NC(=O)N[C@@H]3CC(C)(C)Oc4cc(OC(F)(F)F)ccc34)cccc2cn1,2014.0
-CHEMBL4805,Homo sapiens,P2X purinoceptor 7,CHEMBL2218437,6.6,Cc1nn(CCN2CCOCC2)c(C)c1CC(=O)NCc3ccc(F)cc3Cl,1.0
-CHEMBL4822,Homo sapiens,Beta-secretase 1,CHEMBL3690090,5.5,COCCOc1cnc(cn1)C(=O)Nc2cccc(CNc3cccnc3N)c2,2014.0
-CHEMBL4829,Homo sapiens,Acetyl-CoA carboxylase 2,CHEMBL3970881,7.1,CC(NC(=O)C)c1ccc(CN2CCc3c(C2)ccc(OC4CCC4)c3Cl)cc1,2016.0
-CHEMBL4979,Homo sapiens,Sodium/glucose cotransporter 1,CHEMBL3690922,6.75,CCCc1cccc(c1)c2cc(NC(=O)C3CCNC(=O)CC3)nn2c4ccccc4,2014.0
-CHEMBL5023,Homo sapiens,p53-binding protein Mdm-2,CHEMBL4063649,7.23,OCCCCCCOC(=O)c1[nH]c2cc(Cl)ccc2c1c3c(ncn3Cc4ccc(Cl)cc4)c5ccc(F)cc5,2017.0
-CHEMBL5071,Homo sapiens,G protein-coupled receptor 44,CHEMBL3962759,8.82,C[C@H](CC(=O)N1CCc2c(F)ccc(c2C1)c3ccc(CC(=O)O)cc3OCC(F)(F)F)c4ccccc4,2016.0
-CHEMBL5113,Homo sapiens,Orexin receptor 1,CHEMBL1556254,5.27,Cc1nc2c(c(C)nn2c(N)c1c3ccccc3)c4ccccc4,1.0
-CHEMBL5137,Homo sapiens,Metabotropic glutamate receptor 2,CHEMBL3979547,8.0,NC(=O)c1cc(c2ccc(F)cc2)c3ccc(CCc4cccnc4)cc3n1,2016.0
-CHEMBL5145,Homo sapiens,Serine/threonine-protein kinase B-raf,CHEMBL3927672,8.8,CN1N=C(C=C(N2CCOCC2)C1=O)c3cc(NC(=O)c4cccc(c4)C(F)(F)F)ccc3C,2016.0
-CHEMBL5251,Homo sapiens,Tyrosine-protein kinase BTK,CHEMBL4093393,7.25,COc1ccc(cc1)c2cc3c(ccnc3[nH]2)c4cccc(N5C=Cc6cc(cc(F)c6C5=O)C7CC7)c4CO,2015.0
-CHEMBL5407,Homo sapiens,Serine/threonine-protein kinase PIM3,CHEMBL3651969,8.4,C[C@H]1C[C@H](C[C@@H](N)[C@H]1O)c2ccncc2NC(=O)c3ccc(F)c(n3)c4cc(C)ccc4F,2013.0
-CHEMBL5652,Homo sapiens,Glucose-dependent insulinotropic receptor,CHEMBL2312505,7.31,CCc1c(Oc2cccnc2C)ncnc1N3C4CC5CC3CC(C4)N5C(=O)OC6(C)CC6,2013.0
-CHEMBL5658,Homo sapiens,Prostaglandin E synthase,CHEMBL4078358,5.57,COc1c(CC=C(C)C)c(O)c(C(CC(C)C)c2c(O)c3CC(O)C(C)(C)Oc3c(C(=O)C)c2O)c(O)c1C(=O)C,2017.0
-CHEMBL5888,Homo sapiens,Mitogen-activated protein kinase kinase kinase 14,CHEMBL4108752,8.48,Cc1onc(c1)[C@](C)(O)C#Cc2ccc3OCCn4c(nc(C(=O)N)c4C(=O)NCC5CCOCC5)c3c2,2015.0
-CHEMBL5971,Homo sapiens,Smoothened homolog,CHEMBL1807226,6.68,Clc1ccccc1c2ncccc2NC(=O)N3CCN4C(C3)C(=O)N([C@H]5C[C@@H]5c6ccccc6)C4=O,2011.0
-CHEMBL6009,Homo sapiens,Diacylglycerol O-acyltransferase 1,CHEMBL2036577,6.27,CC(=O)N1CCN(CC1)c2ccc(NC(=O)c3oc(Nc4ccccc4F)nn3)cc2,2012.0
+chembl_id,l1,pref_name,lig_chemblid,pchembl_value,canonical_smiles,year
+CHEMBL1075104,Enzyme,Leucine-rich repeat serine/threonine-protein kinase 2,CHEMBL3676125,8.52,CNc1nc(Nc2ccc(cc2OC)c3cnnn3C)ncc1Cl,2014.0
+CHEMBL1075138,Enzyme,Tyrosyl-DNA phosphodiesterase 1,CHEMBL3145073,6.4,CC(=O)C1=C(CC(=O)O)NN(C1=O)c2nc3ccccc3s2,
+CHEMBL1075189,Enzyme,Pyruvate kinase isozymes M1/M2,CHEMBL159226,7.9,CC(C)c1cc(OC(=O)C)c(C)cc1OCCN(C)C,
+CHEMBL1293227,Enzyme,Ubiquitin carboxyl-terminal hydrolase 2,CHEMBL1354685,5.6,CC(CCC=C(C)C)C1CC[C@@]2(C)C3=C(CC[C@@]12C)C4(C)CCC(OC(=O)C)C(C)(C)C4CC3,
+CHEMBL1293236,Enzyme,ATP-dependent DNA helicase Q1,CHEMBL1534619,6.75,COc1ccc(OC)c(NC(=O)c2ccc(OC3CSC3)cc2)c1,
+CHEMBL1293237,Enzyme,Bloom syndrome protein,CHEMBL1596271,5.1,[Na+].[O-]S(=N)(=O)Cc1noc2ccccc12,
+CHEMBL1293255,Enzyme,15-hydroxyprostaglandin dehydrogenase [NAD+],CHEMBL3895385,7.64,OCc1cc(C=C2SC(=O)N=C2O)ccc1OCCC3CCCCC3,2014.0
+CHEMBL1741189,Enzyme,FAD-linked sulfhydryl oxidase ALR,CHEMBL1564800,6.14,Nc1ccc(cc1)N2CCN(CC2)C(=O)c3occc3,
+CHEMBL1741213,Enzyme,Sentrin-specific protease 7,CHEMBL1516968,5.08,Brc1ccccc1NC(=O)Nc2cccs2,
+CHEMBL1741217,Enzyme,DNA dC->dU-editing enzyme APOBEC-3G,CHEMBL1721008,5.09,CCN(CC)CCNC(=O)c1ccc(NC(=O)C2CN(C(=O)C2)c3ccc4OCCOc4c3)cc1,
+CHEMBL1744525,Enzyme,Nicotinamide phosphoribosyltransferase,CHEMBL3919541,7.34,OC(=Nc1ccc(nc1)C2=CCN(CC2)C(=O)C3CCOCC3)N4Cc5ccccc5C4,2016.0
+CHEMBL1784,Membrane receptor,Glucagon-like peptide 1 receptor,CHEMBL3616713,9.8,CCCCCCCCCCCCCCCCCCCC(=O)N[C@@H](CCC(=O)NCCOCCOCC(=O)NCCOCCOCC(=O)NCCCC[C@H](NC(=O)[C@H](C)NC(=O)[C@H](C)NC(=O)[C@H](CCC(=O)N)NC(=O)CNC(=O)[C@H](CCC(=O)O)NC(=O)[C@H](CC(C)C)NC(=O)[C@H](Cc1ccc(O)cc1)NC(=O)[C@H](CO)NC(=O)[C@H](CO)NC(=O)[C@@H](NC(=O)[C@H](CC(=O)O)NC(=O)[C@H](CO)NC(=O)[C@@H](NC(=O)[C@H](Cc2ccccc2)NC(=O)[C@@H](NC(=O)CNC(=O)[C@H](CCC(=O)O)NC(=O)[C@H](C)NC(=O)[C@@H](N)Cc3c[nH]cn3)[C@@H](C)O)[C@@H](C)O)C(C)C)C(=O)N[C@@H](CCC(=O)O)C(=O)N[C@@H](Cc4ccccc4)C(=O)N[C@@H]([C@@H](C)CC)C(=O)N[C@@H](C)C(=O)N[C@@H](Cc5c[nH]c6ccccc56)C(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](C(C)C)C(=O)N[C@@H](CCCNC(=N)N)C(=O)NCC(=O)N[C@@H](CCCNC(=N)N)C(=O)NCC(=O)O)C(=O)O,2015.0
+CHEMBL1785,Membrane receptor,Endothelin receptor ET-B,CHEMBL177802,6.99,CCS(=O)(=O)NCCCOc1nc(nc(NS(=O)(=O)c2ccc(cn2)C(C)C)c1Oc3ccccc3OC)C4CC4,2003.0
+CHEMBL1790,Membrane receptor,Vasopressin V2 receptor,CHEMBL3970631,7.16,CC(C)(C)OC(=NC(CN=C(O)CN1N=C(N(C[C@H](O)C(F)(F)F)C1=O)c2ccc(Cl)cc2)c3ccccc3C(F)(F)F)O,2015.0
+CHEMBL1792,Membrane receptor,Somatostatin receptor 5,CHEMBL3909681,8.81,C[C@H](O)[C@H]1\N=C(\O)/[C@@H](CCCCN)\N=C(\O)/[C@H](Cc2c[nH]c3ccccc23)\N=C(\O)/[C@@H](Cc4ccncc4)\N=C(\O)/[C@@H](Cc5ccccc5)\N=C(\O)/[C@@H](CCCNC(=N)N)\N=C(\O)/[C@H](CCCC\N=C(\O)/[C@@H](Cc6ccccc6)\N=C/1\O)NC[C@@H](CCCCN=C(O)CSC[C@H]7C[C@@H]8[C@H](Cc9c[nH]c%10cccc8c9%10)N(C)C7)N=C(O)CSC[C@H]%11C[C@@H]%12[C@H](Cc%13c[nH]c%14cccc%12c%13%14)N(C)C%11,2015.0
+CHEMBL1795098,Enzyme,Carboxy-terminal domain RNA polymerase II polypeptide A small phosphatase 1,CHEMBL1508545,5.1,COc1cccc(NC(=O)COC(=O)c2ccc(cc2)S(=O)(=O)NCc3occc3)c1,
+CHEMBL1800,Membrane receptor,Corticotropin releasing factor receptor 1,CHEMBL3794050,6.77,CCCN(CCC)c1c(Cl)cc(Cl)c2nc(Nc3c(C)cc(Cl)cc3OC)n(C)c12,2016.0
+CHEMBL1801,Enzyme,Plasminogen,CHEMBL461440,5.46,CCC(=O)Nc1cccc(c1)S(=O)(=O)N[C@@H](Cc2cccc(c2)C(=N)N)C(=O)N3CCC(CCN)CC3,2009.0
+CHEMBL1804,Membrane receptor,Somatostatin receptor 2,CHEMBL3349677,7.12,CC(C)[C@@H]1NC(=O)[C@H](CCCCN)NC(=O)[C@@H](Cc2c[nH]c3ccccc23)NC(=O)[C@H](Cc4cccnc4)NC(=O)[C@@H](CSSC[C@H](NC1=O)C(=O)N[C@@H](Cc5ccc6ccccc6c5)C(=O)N)NC(=O)[C@@H](N)Cc7ccc8ccccc8c7,1998.0
+CHEMBL1811,Membrane receptor,Prostanoid EP1 receptor,CHEMBL234290,7.4,OC(=O)c1cc(ccn1)C2=C(CCC2)c3cc(ccc3OCc4ccccc4)C(F)(F)F,2007.0
+CHEMBL1821,Membrane receptor,Muscarinic acetylcholine receptor M4,CHEMBL210514,5.43,COc1nc(NCCCN2CCOCC2)nc(OC)c1NC(=O)c3oc(Oc4cc5c(CCC5(C)C)cc4C)cc3,2006.0
+CHEMBL1824,Enzyme,Receptor protein-tyrosine kinase erbB-2,CHEMBL3959774,7.3,COc1cc2c(Nc3ccc(Cl)c(Cl)c3F)ncnc2cc1OC[C@@H]4CN5CCC[C@H]5CO4,2009.0
+CHEMBL1827,Enzyme,Phosphodiesterase 5A,CHEMBL28566,5.4,CCCCCCOc1ccccc1c2nc3ccc[nH]c3n2,1993.0
+CHEMBL1833,Membrane receptor,Serotonin 2b (5-HT2b) receptor,CHEMBL1834252,6.92,COc1ccccc1CCN2CCN(Cc3oc4ccccc4c3)CC2,2011.0
+CHEMBL1835,Enzyme,Thromboxane-A synthase,CHEMBL293362,6.7,COc1ccc2N=C3C=CC(=CN3C(=O)c2c1)C(=O)NCCCCc4cccnc4,1987.0
+CHEMBL1836,Membrane receptor,Prostanoid EP4 receptor,CHEMBL3752406,5.91,CC(C)(CCCCF)[C@H](O)\C=C\[C@H]1COC(=O)N1CCSc2nc(cs2)C(=O)O,2016.0
+CHEMBL1844,Enzyme,Macrophage colony stimulating factor receptor,CHEMBL1993941,8.5,CCCn1cc(cn1)c2cnc(N)c3c(csc23)c4ccc(NC(=O)Nc5cccc(F)c5)cc4,
+CHEMBL1855,Membrane receptor,Gonadotropin-releasing hormone receptor,CHEMBL113183,6.82,COc1cccc(c1)C2=C(C)N(Cc3c(F)cccc3F)C(=O)N([C@H](C)CN(C)Cc4ccccc4)C2=O,2003.0
+CHEMBL1862,Enzyme,Tyrosine-protein kinase ABL,CHEMBL1630111,5.35,Nc1ccccc1NC(=O)c2oc(cc2)c3ccc4ncnc(Nc5ccc(OCc6cccc(F)c6)c(Cl)c5)c4c3,2010.0
+CHEMBL1867,Membrane receptor,Alpha-2a adrenergic receptor,CHEMBL362193,6.89,CN(C)c1nc(N[C@@H]2CC[C@@H](CC2)NC(=O)c3cccc(F)c3)nc4ccccc14,2005.0
+CHEMBL1868,Enzyme,Vascular endothelial growth factor receptor 1,CHEMBL212054,8.0,Fc1ccc2c([nH]nc2c1)c3nc4cc(ccc4[nH]3)N5CCC(CC5)N6CCCCC6,2006.0
+CHEMBL1875,Membrane receptor,Serotonin 4 (5-HT4) receptor,CHEMBL2087336,7.3,CC(C)N1C(=O)C(=Cc2ccccc12)C(=O)N[C@H]3C[C@H]4CC[C@@H](C3)N4C[C@H](O)CN(C)S(=O)(=O)C,2012.0
+CHEMBL1878,Membrane receptor,Calcium sensing receptor,CHEMBL1224260,5.57,COc1cccc(c1)[C@@H](C)NCc2cccc(c2)c3ccccc3F,2010.0
+CHEMBL1889,Membrane receptor,Vasopressin V1a receptor,CHEMBL539285,6.6,Cl.Clc1cc(NC(=O)c2ccccc2c3ccccc3)ccc1C(=O)N4C[C@H]5CSCCN5Cc6ccccc46,2004.0
+CHEMBL1898,Membrane receptor,Serotonin 1b (5-HT1b) receptor,CHEMBL2260921,5.56,CNCCOc1ccc(Cl)cc1Cl.OC(=O)C(=O)O,2009.0
+CHEMBL1899,Ion channel,Serotonin 3a (5-HT3a) receptor,CHEMBL38465,8.74,Cc1[nH]cnc1Cc2nc(cs2)c3ccccc3,1990.0
+CHEMBL1900,Enzyme,Aldose reductase,CHEMBL192927,8.0,Cc1ccc2c(Cc3nc4c(F)c(F)cc(F)c4s3)cn(CC(=O)O)c2c1,2005.0
+CHEMBL1906,Enzyme,Serine/threonine-protein kinase RAF,CHEMBL3661251,6.12,COc1cccc(c1F)c2ccc3ncnc(Nc4cccc5[nH]ncc45)c3c2,2014.0
+CHEMBL1908,Enzyme,Cytochrome P450 11B1,CHEMBL598399,7.32,OCCCc1cncn1Cc2ccc(cc2)C#N,2010.0
+CHEMBL1908389,Enzyme,Mitogen-activated protein kinase kinase kinase 12,CHEMBL3732033,7.49,COCCN1C[C@@H]2CN(C[C@H]12)c3cc(nc(n3)C4CC4)c5cnc(N)c(OC(F)F)c5,2014.0
+CHEMBL1913,Enzyme,Platelet-derived growth factor receptor beta,CHEMBL2023485,9.7,CCc1cc(NC(=O)Cc2ccc(Oc3ccnc4cc(OC)c(OC)cc34)cc2OC)n[nH]1,2012.0
+CHEMBL1914,Enzyme,Butyrylcholinesterase,CHEMBL500996,6.01,Cl.Cl.Cl.Cl.COc1ccccc1CNCCCCCCNCCCCCCCCNCCCCCCNCc2ccccc2OC,2004.0
+CHEMBL1916,Membrane receptor,Alpha-2c adrenergic receptor,CHEMBL93801,7.89,COc1cc2OCC3C(CN4CCN(Cc5csc6ccccc56)CC4)ON=C3c2cc1OC,2003.0
+CHEMBL1936,Enzyme,Stem cell growth factor receptor,CHEMBL497343,8.0,CC1=C(C(=O)N(C=C1)c2ccc(cc2)n3cccn3)c4ccc5nc(N)ncc5c4,2008.0
+CHEMBL1945,Membrane receptor,Melatonin receptor 1A,CHEMBL476132,6.53,COc1ccc2cc(cc(CCNC(=O)C)c2c1)c3ccc(CO)cc3,2008.0
+CHEMBL1946,Membrane receptor,Melatonin receptor 1B,CHEMBL1092062,7.33,COc1ccc(O)c(CCCNC(=O)C)c1,2010.0
+CHEMBL1951,Enzyme,Monoamine oxidase A,CHEMBL186609,5.28,COc1ccc2Oc3ccccc3C(=O)c2c1,2004.0
+CHEMBL1955,Enzyme,Vascular endothelial growth factor receptor 3,CHEMBL327725,5.52,CC(O)C(\N=C/1\C=C(O)\C(=N/C(C(C)O)C(=O)O)\C=C1O)C(=O)O,2003.0
+CHEMBL1957,Enzyme,Insulin-like growth factor I receptor,CHEMBL464179,6.3,Clc1ccccc1CNc2ncc(Br)c(Nc3cc([nH]n3)C4CC4)n2,2008.0
+CHEMBL1966,Enzyme,Dihydroorotate dehydrogenase,CHEMBL3674671,8.05,OC(=O)c1cc(ccc1Nc2cnc(nc2)c3ccccc3C(F)(F)F)C4CC4,2013.0
+CHEMBL1974,Enzyme,Tyrosine-protein kinase receptor FLT3,CHEMBL1835865,7.92,CC(=O)Nc1ccc(Nc2nc(N)n(n2)c3ccccn3)cc1,2011.0
+CHEMBL1978,Enzyme,Cytochrome P450 19A1,CHEMBL111888,7.29,CCn1cc(C(c2ccc(F)cc2)n3ccnc3)c4cc(Br)ccc14,1999.0
+CHEMBL1981,Enzyme,Insulin receptor,CHEMBL271381,5.3,COc1ccc(c2ccc(NC(=O)Nc3cccc(Br)c3)cc2)c4c(N)noc14,
+CHEMBL1983,Membrane receptor,Serotonin 1d (5-HT1d) receptor,CHEMBL1788198,8.3,CCCN(CCCCN1C(=O)CC(C)(C)CC1=O)[C@@H]2CCc3ccc4[nH]cc(C=O)c4c3C2,1995.0
+CHEMBL1985,Membrane receptor,Glucagon receptor,CHEMBL198144,6.2,CC(C)(C)C1CCC2(CC1)N(Cc3ccc(cc3)C(=O)Nc4nn[nH]n4)C(=O)N(C2=O)c5ccc(OC(F)(F)F)cc5,2005.0
+CHEMBL1991,Enzyme,Inhibitor of nuclear factor kappa B kinase beta subunit,CHEMBL484967,6.9,NCc1ccc(cc1)c2cc3ccncc3cc2OC4CCNCC4,2009.0
+CHEMBL2000,Enzyme,Plasma kallikrein,CHEMBL3977407,8.05,CC1=C(CN=C(O)c2cn(Cc3ccc4ccccc4c3)nn2)C(=CC(=N)N1)C,2016.0
+CHEMBL2001,Membrane receptor,Purinergic receptor P2Y12,CHEMBL3652605,7.19,CCOC(=O)N1CCN(CC1)C(=O)[C@H](CCC(=O)O)NC(=O)c2cc(OCC(=O)N3CCC[C@H]3C(=O)NC4CCC4)c5cc(F)c(F)cc5n2,2014.0
+CHEMBL2002,Enzyme,Inosine-5'-monophosphate dehydrogenase 2,CHEMBL134665,5.54,COc1c(C)c(C)c(O)c(Cl)c1C\C=C(/C)\CCC(=O)O,1996.0
+CHEMBL2007625,Enzyme,Isocitrate dehydrogenase [NADP] cytoplasmic,CHEMBL3899804,6.16,CC(C)[C@@H]1COC(=O)N1c2ccnc(NC(C)c3cc4ccccn4c3)n2,2015.0
+CHEMBL2010631,Membrane receptor,C-X-C chemokine receptor type 7,CHEMBL3979681,9.0,CCC(C)(C)N=C(O)C1CCN(Cc2cccc(NC(=O)c3ccc(cn3)C(F)(F)F)c2)CC1,2016.0
+CHEMBL2014,Membrane receptor,Nociceptin receptor,CHEMBL2204354,7.77,NC(=O)[C@@H](CN1CCC2(CC1)OCCc3cc(F)sc23)Cc4ccccc4Cl,2011.0
+CHEMBL2016,Enzyme,Coagulation factor IX,CHEMBL1095032,5.35,O[C@H](CS(=O)(=O)c1ccc2cc(Cl)ccc2c1)C(=O)N3CCC(CC3)N4CCCNC4=O,2010.0
+CHEMBL202,Enzyme,Dihydrofolate reductase,CHEMBL1092683,6.0,C=CCNc1ccc2N=C(SCC=C)N(Cc3ccccc3)C(=O)c2c1,2010.0
+CHEMBL2028,Membrane receptor,Somatostatin receptor 3,CHEMBL1076653,5.91,CC(CN1C[C@H](C[C@@H]2CCCC[C@H]12)C(=O)N3CCN(CC3)c4ccc(cc4)[N+](=O)[O-])Cc5ccc6OCOc6c5,2010.0
+CHEMBL203,Enzyme,Epidermal growth factor receptor erbB1,CHEMBL206848,5.36,OC(=O)c1ccc2Oc3ncnc(Nc4ccc(F)c(Cl)c4)c3NCc2c1,2006.0
+CHEMBL2035,Membrane receptor,Muscarinic acetylcholine receptor M5,CHEMBL332980,7.27,CCN1CCC(=C(C1)C(=O)OC2CCCCC2)c3ccccc3.OC(=O)C(=O)O,1999.0
+CHEMBL2039,Enzyme,Monoamine oxidase B,CHEMBL1529697,5.11,CN1C(=O)N(C)c2nc(Oc3ccccc3)n(C)c2C1=O,2011.0
+CHEMBL204,Enzyme,Thrombin,CHEMBL2334326,7.44,CCC[C@]1(C)C[C@H](N2C(=O)C(=NC(=C12)Cl)NC3CCC3)C(=O)NCc4ccc(cc4)C(=N)N,2013.0
+CHEMBL2041,Enzyme,Tyrosine-protein kinase receptor RET,CHEMBL1983575,6.3,Oc1c(Br)cc(C=NNC(=O)Nc2ccccc2)cc1Br,
+CHEMBL2049,Membrane receptor,Oxytocin receptor,CHEMBL395290,8.15,CC[C@H](C)[C@@H]1NC(=O)[C@H](Cc2ccc(O)cc2)NC(=O)[C@@H](N)CSSC[C@H](NC(=O)[C@H](CC(=O)N)NC(=O)[C@H](CCC(=O)N)NC1=O)C(=O)N3CCCC[C@H]3C(=O)N[C@@H](CC(C)C)C(=O)NCC(=O)N,2007.0
+CHEMBL205,Enzyme,Carbonic anhydrase II,CHEMBL169623,7.21,CC(C)c1cc(cc(C(C)C)[n+]1Cc2ccc(cc2)S(=O)(=O)N)c3ccccc3.[O-]Cl(=O)(=O)=O,2004.0
+CHEMBL2056,Membrane receptor,Dopamine D1 receptor,CHEMBL490632,5.71,COc1c(OCCF)cccc1C(=O)C2CCN(CCc3ccc(C)cc3)CC2,2009.0
+CHEMBL2069,Membrane receptor,Thromboxane A2 receptor,CHEMBL390899,6.28,COc1cc(C)ccc1Oc2ccc(cc2S(=O)(=O)NC(=O)NC(C)(C)C)[N+](=O)[O-],2007.0
+CHEMBL209,Enzyme,Trypsin I,CHEMBL73774,5.85,NC(=N)c1ccc(O)c(\C=C\CNC(=O)c2cc3nnc(O)cc3s2)c1,2000.0
+CHEMBL210,Membrane receptor,Beta-2 adrenergic receptor,CHEMBL347400,6.0,C[C@H](CNc1cccc(CCS(=O)(=O)NS(=O)(=O)c2ccccc2)c1)NC[C@H](O)c3cccc(Cl)c3,2002.0
+CHEMBL211,Membrane receptor,Muscarinic acetylcholine receptor M2,CHEMBL2207176,6.39,CC(C)OC(=O)c1ccc(NC(=O)N[C@@H](Cc2ccc(O)cc2)C(=O)NCCC[N+](C)(C)Cc3ccc4ccccc4c3)cc1,2012.0
+CHEMBL213,Membrane receptor,Beta-1 adrenergic receptor,CHEMBL162200,5.96,CN(c1ccc(cc1)C(=O)NCC2CN(CCN2)c3ccccc3)S(=O)(=O)C,1992.0
+CHEMBL214,Membrane receptor,Serotonin 1a (5-HT1a) receptor,CHEMBL3656913,8.89,Oc1cc(CC2CCN(CCc3ccc4OCCC(=O)c4c3)CC2)ccc1Br,2014.0
+CHEMBL2146302,Enzyme,"Glutaminase kidney isoform, mitochondrial",CHEMBL2177753,5.28,CN(C(=O)CCCCc1nnc(NC(=O)Cc2ccccc2)s1)C(C)(C)C,2012.0
+CHEMBL2147,Enzyme,Serine/threonine-protein kinase PIM1,CHEMBL3901121,5.9,CNc1ccc(CN=C2NN=C(S2)c3ccc4[nH]cc(c5ccc(F)cc5F)c4c3)cc1,2016.0
+CHEMBL2148,Enzyme,Tyrosine-protein kinase JAK3,CHEMBL3301607,6.09,O=C(Nc1nc2cccc(c3ccc(CN4CCS(=O)(=O)CC4)cc3)n2n1)C5CC5,2015.0
+CHEMBL215,Enzyme,Arachidonate 5-lipoxygenase,CHEMBL1765906,6.26,COc1ccc(\C=C\2/SC(=NC2=O)c3ccc(cc3)C(=O)C)cc1,2011.0
+CHEMBL216,Membrane receptor,Muscarinic acetylcholine receptor M1,CHEMBL87622,5.59,C\C(=C/CO\N=C\1/CN2CCC1C2)\C#C,1998.0
+CHEMBL2176771,Enzyme,Complement factor D,CHEMBL3907532,7.02,CC(=O)c1cn(CC(=O)N2[C@H]3CC3C[C@@H]2C(=NCc4cccc(Cl)c4F)O)c5cc(CC(=O)O)ccc15,2015.0
+CHEMBL218,Membrane receptor,Cannabinoid CB1 receptor,CHEMBL3613097,5.83,Cc1ccc(Cn2cc(cc2c3ccc(Cl)c(C)c3)C(=O)N[C@H]4[C@@]5(C)CCC(C5)C4(C)C)cc1,2015.0
+CHEMBL2185,Enzyme,Serine/threonine-protein kinase Aurora-B,CHEMBL2148053,6.3,Cc1ccc(cc1)S(=O)(=O)O.CC(C)(C(=O)NCCn2ccc3ncnc(Nc4ccc(Oc5cccc(Cl)c5)c(Cl)c4)c23)S(=O)(=O)C,2012.0
+CHEMBL219,Membrane receptor,Dopamine D4 receptor,CHEMBL213700,6.46,C=CCO\N=C(/CCN1CCN(CC1)c2ccccn2)\c3ccccc3,2006.0
+CHEMBL220,Enzyme,Acetylcholinesterase,CHEMBL3642053,8.42,CC(=O)NCCc1c[nH]c2ccc(OC(=O)NCCCCCCCCCCCCNc3c4CCCCc4nc5ccccc35)cc12,2014.0
+CHEMBL2208,Enzyme,MAP kinase-activated protein kinase 2,CHEMBL1992922,5.7,OCC(CO)Nc1ncnc2[nH]cc(c3ccccc3)c12,
+CHEMBL221,Enzyme,Cyclooxygenase-1,CHEMBL243362,6.22,COc1cc(O)c(C[C@@H](CC=C(C)C)C(=C)C)c(O)c1C(=O)\C=C\c2ccc(O)cc2O,2005.0
+CHEMBL223,Membrane receptor,Alpha-1d adrenergic receptor,CHEMBL37883,7.94,OC(=O)C(=O)O.C(COc1ccccc1)NCC2COC(O2)(c3ccccc3)c4ccccc4,2003.0
+CHEMBL224,Membrane receptor,Serotonin 2a (5-HT2a) receptor,CHEMBL1277770,7.1,OC(=O)C1CCN(CC1)C2CC[C@@]3(C2)Cc4ccccc4Cc5ccccc35,2010.0
+CHEMBL2243,Enzyme,Anandamide amidohydrolase,CHEMBL3423114,6.35,CCN(CC)C(=O)c1cc(c2cccc(OC(=O)NC3CCCCC3)c2)n(n1)c4ccccc4,2015.0
+CHEMBL225,Membrane receptor,Serotonin 2c (5-HT2c) receptor,CHEMBL1080554,7.21,Cc1cccc(N2CCN(CCCCNC(=O)c3cc(c4ccccc4)n(C)c3C)CC2)c1C,2010.0
+CHEMBL2252,Enzyme,Dipeptidyl peptidase I,CHEMBL3667371,9.1,Fc1cc2c(cc1C[C@H](NC(=O)[C@H]3N[C@@H]4CC[C@H]3C4)C#N)C(=O)Nc5ccccc25,2015.0
+CHEMBL226,Membrane receptor,Adenosine A1 receptor,CHEMBL324100,6.5,O=C1N2C(=NN=C1c3occc3)N(c4ccccc4)c5ccccc25,2005.0
+CHEMBL227,Membrane receptor,Type-1 angiotensin II receptor,CHEMBL122458,8.07,CCCCN1C(=O)N(Cc2cc(C)on2)\C(=C/c3cnc(CCCC)n3Cc4ccc(cc4)C(=O)OC)\C1=O,2010.0
+CHEMBL2276,Enzyme,c-Jun N-terminal kinase 1,CHEMBL460815,6.9,COc1cc2CCN(C(=O)C)c2cc1Nc3nc(Nc4cccc(F)c4C(=O)N)c5cc[nH]c5n3,2009.0
+CHEMBL229,Membrane receptor,Alpha-1a adrenergic receptor,CHEMBL44042,8.49,CC1=C([C@H](CC(=O)N1)c2ccc(F)c(F)c2)C(=O)NCCCN3CCC(CC3)(C#N)c4ccccc4C#N,2000.0
+CHEMBL2292,Enzyme,Dual-specificity tyrosine-phosphorylation regulated kinase 1A,CHEMBL3885360,6.01,COc1ccc2c(c1)[nH]c3c4ccncc4cc(CNC(=O)C)c23,2016.0
+CHEMBL230,Enzyme,Cyclooxygenase-2,CHEMBL557128,7.24,CS(=O)(=O)c1ccc(cc1)c2cnc(nc2c3ccc(F)cc3)C(O)c4ccccc4,2009.0
+CHEMBL231,Membrane receptor,Histamine H1 receptor,CHEMBL141343,5.76,Cc1c(C)c2OC(C)(CN3CCN(CC3)c4cc(nc(n4)N5CCCC5)N6CCCC6)CCc2c(C)c1O,
+CHEMBL232,Membrane receptor,Alpha-1b adrenergic receptor,CHEMBL256597,7.3,CC(C)Oc1ccccc1N2CCN(CC2)C3CCC(CC3)NC(=O)Nc4c(Cl)cccc4Cl,2008.0
+CHEMBL2321613,Ion channel,Potassium channel subfamily K member 3,CHEMBL3977809,6.85,CC[C@@H](N=C(O)c1cc(C(=O)N2CCC[C@@H]2C)n3CCOCc13)c4c(F)cc(cc4F)C#N,2016.0
+CHEMBL2326,Enzyme,Carbonic anhydrase VII,CHEMBL1822700,7.92,CCN(CC)c1ccc2c(Oc3cc(ccc3C24N(C(=O)c5ccccc45)c6cccc(c6)S(=O)(=O)N)N(CC)CC)c1,2011.0
+CHEMBL2327,Membrane receptor,Neurokinin 2 receptor,CHEMBL47544,8.34,CC[C@H](NC(=O)c1c(CN2CCC(CC2)N3CCCCC3)c(nc4ccccc14)c5ccccc5)c6ccccc6,2001.0
+CHEMBL233,Membrane receptor,Mu opioid receptor,CHEMBL2180639,6.27,Oc1cccc(CCN(CCc2ccccc2)CC3CCC3)c1,2012.0
+CHEMBL2334,Enzyme,Caspase-3,CHEMBL282508,6.82,OC(=O)CC(NC(=O)[C@H](Cc1cccs1)NC(=O)OCc2ccccc2)C(=O)CF,2004.0
+CHEMBL234,Membrane receptor,Dopamine D3 receptor,CHEMBL3597640,8.09,OC(CCNC(=O)c1cnc2ccc(F)cc2c1)CN3CCN(CC3)c4cccc(Cl)c4Cl,2015.0
+CHEMBL2345,Enzyme,Ribosomal protein S6 kinase alpha 3,CHEMBL3673589,8.64,NC(=O)c1ccccc1NC(=O)c2ccc3cc4C(=O)NCCCn4c3n2,2015.0
+CHEMBL236,Membrane receptor,Delta opioid receptor,CHEMBL260286,5.73,COC(=O)[C@@H]1C[C@H](OC(=O)c2ccc(OC)cc2)C(=O)[C@H]3[C@@]1(C)CC[C@H]4C(=O)O[C@@H](C[C@]34C)c5cocc5,2008.0
+CHEMBL237,Membrane receptor,Kappa opioid receptor,CHEMBL375165,6.02,C[C@H]1CN2CCN(CCCc3ccccc3)C[C@H]2C[C@@]1(C)c4cccc(O)c4,2006.0
+CHEMBL2392,Enzyme,DNA polymerase beta,CHEMBL1442644,5.75,CCC(O)(CC)C(=O)NN(C(=O)Nc1csc2CCCCc12)c3ccccc3,
+CHEMBL240,Ion channel,HERG,CHEMBL52627,7.47,CS(=O)(=O)Nc1ccc2OC3(CCN(CC3)C4CCc5cc(ccc5C4)C#N)CC(O)c2c1,2003.0
+CHEMBL2409,Enzyme,Epoxide hydratase,CHEMBL222080,7.0,C[C@@H](NC(=O)NC12CC3CC(CC(C3)C1)C2)c4ccccc4,2006.0
+CHEMBL2413,Membrane receptor,C-C chemokine receptor type 1,CHEMBL2178570,8.3,CC(=O)Nc1ccc(O)cc1OC[C@@](C)(O)CNC2CCN(Cc3ccc(Cl)cc3)CC2,2012.0
+CHEMBL2431,Enzyme,Serine/threonine-protein kinase AKT2,CHEMBL3699699,7.28,CCc1ccn2c(c3ccccc3)c(nc2c1)c4ccc(cc4)C5(N)CCC5,2015.0
+CHEMBL2434,Membrane receptor,Interleukin-8 receptor B,CHEMBL3701184,6.97,CCC1(COC1)C(NC2=C(Nc3cccc(C(=O)N(C)C)c3O)C(=O)C2=O)c4oc(C)cc4,2015.0
+CHEMBL245,Membrane receptor,Muscarinic acetylcholine receptor M3,CHEMBL1683913,7.85,CCCCCN1CCC(CC1)OC(=O)Nc2ccccc2c3ccccc3,2011.0
+CHEMBL246,Membrane receptor,Beta-3 adrenergic receptor,CHEMBL250184,5.35,O[C@@H](CNCCc1ccc(cc1)c2csc(n2)C(F)(F)F)c3cccnc3,2007.0
+CHEMBL248,Enzyme,Leukocyte elastase,CHEMBL3659903,8.52,CCOC(=O)C1=C(C)N(c2cccc(c2)C(F)(F)F)c3nc4cncnc4n3C1c5ccc(cc5)C#N,2013.0
+CHEMBL2487,Membrane receptor,Beta amyloid A4 protein,CHEMBL3672718,7.64,CC1=NC2(N=C1N)c3cc(ccc3CCC24CC4)c5cc(F)cc(c5)C#N,2015.0
+CHEMBL249,Membrane receptor,Neurokinin 1 receptor,CHEMBL32273,8.15,CO\N=C(/CN(C)C(=O)c1cncc(Br)c1)\C(CCN2CCC(O)(CC2)c3ccccc3)c4ccc(Cl)c(Cl)c4,2002.0
+CHEMBL2492,Ion channel,Neuronal acetylcholine receptor protein alpha-7 subunit,CHEMBL2177531,5.85,CN1CC2CC(C1)C=C(C2)c3cnccc3Cl,2012.0
+CHEMBL251,Membrane receptor,Adenosine A2a receptor,CHEMBL112773,8.7,COC[C@H]1CCCN1C(=O)c2cc(N)n3nc(nc3c2)c4oc(Br)cc4,2004.0
+CHEMBL252,Membrane receptor,Endothelin receptor ET-A,CHEMBL76438,5.85,Cc1ccc(cc1)S(=O)(=O)Nc2onc(C)c2Br,1996.0
+CHEMBL2525,Enzyme,Beta secretase 2,CHEMBL501068,5.36,CCNc1cc(cc(c1)C(=O)N[C@@H](Cc2ccccc2)[C@H](O)CNC(C)(C)CCCC(C)C)N3CCCCS3(=O)=O.CC(=O)O,2008.0
+CHEMBL2527,Enzyme,Serine/threonine-protein kinase Chk2,CHEMBL592784,6.38,COCCOc1cccc(c1)c2cnc(N)c(c2)c3ccc(cc3)C(=O)N,2010.0
+CHEMBL2534,Enzyme,3-phosphoinositide dependent protein kinase-1,CHEMBL1095278,8.3,COc1cc2ncc3c(N)nc(cc3c2cc1OC)c4cncc(OCCN)c4,2010.0
+CHEMBL254,Enzyme,Phosphodiesterase 4A,CHEMBL1911421,6.33,CN(C)c1ccc(NC(=O)C2=CN(Cc3c(F)cccc3F)C4=C(NC(=O)C=C4)C2=O)cc1,2011.0
+CHEMBL255,Membrane receptor,Adenosine A2b receptor,CHEMBL3922797,7.16,O=C(C1=NC(=NCc2cccnc2)Nc3cc(NCc4cccnc4)sc13)c5cccs5,2015.0
+CHEMBL256,Membrane receptor,Adenosine A3 receptor,CHEMBL421420,8.32,NC1=Nc2c(cccc2[N+](=O)[O-])N3C(=O)N(N=C13)c4ccccc4,2004.0
+CHEMBL258,Enzyme,Tyrosine-protein kinase LCK,CHEMBL3335371,8.52,CC(=O)Nc1cc(Oc2ccc3c(c2)nc(Nc4cccc(c4)C(C)(C)C)n3C)ccn1,2015.0
+CHEMBL2581,Enzyme,Cathepsin D,CHEMBL2407487,8.37,CC(C)(C)Cc1cnc2OC3(CCC3)C[C@H](NC[C@@H](O)[C@@H]4Cc5cccc(CCCCCCC(=O)N4)c5)c2c1,2013.0
+CHEMBL259,Membrane receptor,Melanocortin receptor 4,CHEMBL391796,5.7,CCCC[C@H](N)C(=O)N[C@H]1CC(=O)NCCCC[C@H](NC(=O)[C@H](Cc2c[nH]c3ccccc23)NC(=O)[C@H](CCCNC(=N)N)NC(=O)[C@@H](Cc4ccc(Cl)cc4)N5Cc6ccccc6CC(NC1=O)C5=O)C(=O)N,2007.0
+CHEMBL2599,Enzyme,Tyrosine-protein kinase SYK,CHEMBL3653755,7.85,CC(=O)Nc1ccc(cn1)c2cc(OCc3ncccc3C(=O)N)c4cccnc4c2,2014.0
+CHEMBL260,Enzyme,MAP kinase p38 alpha,CHEMBL3695585,7.96,COc1ccc(cc1)n2nc(cc2NC(=O)Nc3ccc(Oc4ccnc5NC(=O)N(C(C)C)c45)c6ccccc36)C(C)(C)C,2015.0
+CHEMBL261,Enzyme,Carbonic anhydrase I,CHEMBL3326415,6.08,NS(=O)(=O)c1c(F)c(F)c(c(F)c1F)n2cc(CCCCCl)nn2,2014.0
+CHEMBL262,Enzyme,Glycogen synthase kinase-3 beta,CHEMBL1993548,5.8,CC(N)COc1cnc(Cl)c(C=Cc2ccncc2)c1,
+CHEMBL2637,Enzyme,c-Jun N-terminal kinase 3,CHEMBL1288129,5.8,Cn1ncnc1c2ncsc2NC(=O)Cc3cccc4cnccc34,2010.0
+CHEMBL264,Membrane receptor,Histamine H3 receptor,CHEMBL551047,7.7,N=C(NCCCCc1ccccc1)SCCCc2c[nH]cn2,2009.0
+CHEMBL2652,Enzyme,Phosphodiesterase 2A,CHEMBL2313252,7.41,CCNC(=O)c1ccc2nc(C)c3nnc(c4cccnc4)n3c2c1,2013.0
+CHEMBL267,Enzyme,Tyrosine-protein kinase SRC,CHEMBL1086731,6.04,Cc1ccc(NC(=O)c2ccc(s2)C(C)(C)C)cc1Nc3nc4ccccc4n3c5cc(N)ncn5,2009.0
+CHEMBL268,Enzyme,Cathepsin K,CHEMBL2316304,9.08,CCCCC(NC(=O)OCC1(CCC1)c2ccc(F)cc2)C(=O)C(=O)Nc3ccn[nH]3,2013.0
+CHEMBL2695,Enzyme,Focal adhesion kinase 1,CHEMBL1090360,6.3,O=C(Cc1ccccc1)Nc2cccc(c2)c3nc4sccn4c3c5ccnc(Nc6cccc(c6)N7CCOCC7)n5,
+CHEMBL2722,Enzyme,Cytochrome P450 11B2,CHEMBL3951973,8.14,Fc1cncc(c1)c2nc3cc(F)c(Cl)cn3c2C4CC4,2017.0
+CHEMBL274,Membrane receptor,C-C chemokine receptor type 5,CHEMBL272556,7.11,CC(C)c1nnc(C)n1[C@H]2C[C@H]3CC[C@@H](C2)N3CCCN(C(=O)NC4CCCC4)c5ccccc5,2008.0
+CHEMBL2742,Enzyme,Fibroblast growth factor receptor 3,CHEMBL3892135,8.37,Cl.COc1cc(OC)c(Cl)c(c1)N(CCCN2CCCC2)c3ccc4ncc(nc4c3)c5cnn(C)c5,2014.0
+CHEMBL275,Enzyme,Phosphodiesterase 4B,CHEMBL3764370,8.8,COc1ccc(cc1OCCCCn2cnc3ncncc23)C4=NN(C5CCCCCC5)C(=O)[C@@H]6CC=CC[C@H]46,2016.0
+CHEMBL280,Enzyme,Matrix metalloproteinase 13,CHEMBL184553,6.18,CC(C)N1CCC(CC(=O)NO)(CS(=O)(=O)c2ccc(OCc3cc(C)nc4ccccc34)cc2)C1,2004.0
+CHEMBL2815,Enzyme,Nerve growth factor receptor Trk-A,CHEMBL3974657,7.89,C[C@H]1CN(CCN1C(=O)OC(C)(C)C)C(=Nc2cnc3ccc(nn23)N4CCC[C@H]4c5cc(F)ccc5F)O,2016.0
+CHEMBL2820,Enzyme,Coagulation factor XI,CHEMBL3917099,6.96,CCC(N1C=C(OC)C(=CC1=O)c2cc(Cl)ccc2C#N)C(=Nc3ccc4[nH]nc(Cl)c4c3)O,2016.0
+CHEMBL2828,Enzyme,Casein kinase I delta,CHEMBL3944359,7.41,Cn1cc(c2ccc3nc(N=C(O)c4ccccc4)c(Br)n3n2)c(n1)c5ccc(F)cc5,2016.0
+CHEMBL283,Enzyme,Matrix metalloproteinase 3,CHEMBL344545,7.89,COc1ccc(cc1)S(=O)(=O)N2C[C@H](C[C@@H]2C(=O)NO)N3CCCS3(=O)=O,2000.0
+CHEMBL2835,Enzyme,Tyrosine-protein kinase JAK1,CHEMBL3934458,8.96,CN(CC(F)(F)F)C1CCN(CC1)C(=O)C2CCN(CC2)c3nc(c(N=C(O)c4cnn5cccnc45)s3)c6cc(Cl)ccc6OC(F)F,2016.0
+CHEMBL284,Enzyme,Dipeptidyl peptidase IV,CHEMBL1082996,7.82,CC(C)(CC(=O)N[C@H]1C[C@@H]1c2cccc(Cl)c2)CC(=O)N3C[C@@H](F)C[C@H]3C#C,2010.0
+CHEMBL2842,Enzyme,Serine/threonine-protein kinase mTOR,CHEMBL3670165,8.0,Cc1ncnc(N2CCC3(CC2)OCCO3)c1C#Cc4ccc(N)nc4,2013.0
+CHEMBL2850,Enzyme,Glycogen synthase kinase-3 alpha,CHEMBL1969049,6.6,COc1cccc(c1)C(C)NC(=O)c2ccc(c(C)c2)c3ccncc3,
+CHEMBL286,Enzyme,Renin,CHEMBL40514,6.81,CC(C)C[C@H](NC(=O)[C@H](Cc1ccccc1)NC(=O)[C@H](Cc2ccccc2)NC(=O)OC(C)(C)C)C(=O)CC(=O)N[C@@H](CC(C)C)C(=O)N[C@@H](Cc3ccccc3)C(=O)N,1987.0
+CHEMBL287,Membrane receptor,Sigma opioid receptor,CHEMBL344813,7.78,CC[C@@H]1C=Cc2ccccc2[C@H]1CCNCc3ccccc3,1999.0
+CHEMBL288,Enzyme,Phosphodiesterase 4D,CHEMBL2172375,7.39,OC(=O)[C@@H]1CC[C@H](CC1)c2cc3cccnc3c(n2)c4cccc(c4)C#N,2012.0
+CHEMBL289,Enzyme,Cytochrome P450 2D6,CHEMBL1371631,6.5,CC(C)(C)NCC[C@@H](O)c1cc(nc2c(cccc12)C(F)(F)F)C(F)(F)F.OP(=O)(O)O,
+CHEMBL2903,Enzyme,Arachidonate 15-lipoxygenase,CHEMBL1350100,5.1,CCN1CCCC1CNC(=O)c2cc(NC(=O)CC)c(cc2OC)N(C)C,
+CHEMBL2954,Enzyme,Cathepsin S,CHEMBL2207549,7.06,O=C(N[C@@H](C1CCCCC1)c2cn(nn2)C3(CC3)C#N)c4cn5ccccc5n4,2012.0
+CHEMBL2959,Enzyme,Tyrosine-protein kinase ITK/TSK,CHEMBL1873475,7.93,Nc1ncnc2c1c(nn2[C@@H]3CCCN(C3)C(=O)C=C)c4ccc(Oc5ccccc5)cc4,2015.0
+CHEMBL2971,Enzyme,Tyrosine-protein kinase JAK2,CHEMBL3947711,7.33,OC(CN1CCC(CC1)c2nnn3cnc4[nH]ccc4c23)c5ccc(cc5)C(F)(F)F,2015.0
+CHEMBL2973,Enzyme,Rho-associated protein kinase 2,CHEMBL3689377,6.68,NCc1ccc(CN2CCCC(C2)Nc3ccc4[nH]ncc4c3)cc1,2013.0
+CHEMBL298,Membrane receptor,Cholecystokinin B receptor,CHEMBL291458,9.32,Cc1ccc2[C@H](C[C@@H](NC(=O)Nc3cccc(Cl)c3)C(=O)N(CC(=O)NC(C)(C)C)c2c1)c4ccccc4,1995.0
+CHEMBL299,Enzyme,Protein kinase C alpha,CHEMBL440707,6.49,CC(C)C\C=C/1\CC(OC1=O)[C@H](CO)OC(=O)CC(C)C,2000.0
+CHEMBL2996,Enzyme,Protein kinase C delta,CHEMBL2326016,7.09,CC[C@@H]1CN(CCN1)c2cccc(n2)c3n[nH]c4ncccc34,2013.0
+CHEMBL2998,Ion channel,P2X purinoceptor 3,CHEMBL3929639,6.81,OCC(CO)CN1C(=O)N=C(Nc2ccc(OC(F)F)cc2)N(Cc3ccc(Cl)cc3)C1=O,2015.0
+CHEMBL301,Enzyme,Cyclin-dependent kinase 2,CHEMBL3298983,7.16,C[C@@H](NC(=O)N1CCc2cnc(NC3CCOCC3)nc2C1)c4ccc5cc[nH]c5c4,2014.0
+CHEMBL3012,Enzyme,Phosphodiesterase 7A,CHEMBL2019111,7.46,CCOc1cc(O[C@@H]2CCNC2)ccc1C3=Nc4snc(C5CCCCC5)c4C(=O)N3,2012.0
+CHEMBL3024,Enzyme,Serine/threonine-protein kinase PLK1,CHEMBL2006263,6.7,Cc1nc2ccc(NS(=O)(=O)c3ccc(N)cc3)cc2nc1C,
+CHEMBL3045,Enzyme,Protein kinase C beta,CHEMBL3892969,7.71,C[C@@H]1CN(CC2CCOCC2)[C@@H](C)CN1C(=O)N3Cc4c(N=C(O)c5cc([nH]n5)C6CC6)n[nH]c4C3(C)C,2015.0
+CHEMBL308,Enzyme,Cyclin-dependent kinase 1,CHEMBL392306,5.79,CN1CCN(CCc2ccc(Nc3ncc(Cl)c(n3)c4ccc(cc4)C(C)(C)N)cc2)CC1,2007.0
+CHEMBL3105,Enzyme,Poly [ADP-ribose] polymerase-1,CHEMBL2058682,9.15,Fc1ccc(CC2=NNC(=O)C3=C2NCCC3)cc1N4C(=O)CCCC4=O,2012.0
+CHEMBL3116,Enzyme,Cyclin-dependent kinase 9,CHEMBL3663798,7.62,Clc1ccc(OCc2ccccc2)nc1c3ccnc4[nH]c(cc34)C5CCNCC5,2015.0
+CHEMBL3130,Enzyme,PI3-kinase p110-delta subunit,CHEMBL1928725,7.62,CN(\N=C\c1cnn2ccc(cc12)C#N)S(=O)(=O)c3cc(ccc3Cl)[N+](=O)[O-],2012.0
+CHEMBL3142,Enzyme,DNA-dependent protein kinase,CHEMBL1242291,6.17,Nc1ncnc2[nH]nc(c3cccc(OCc4ccccc4)c3)c12,2008.0
+CHEMBL3145,Enzyme,PI3-kinase p110-beta subunit,CHEMBL1957854,7.4,Fc1ccc(CN2C=CN3C(=O)C=C(N=C23)N4CCOCC4)cc1Cl,2012.0
+CHEMBL3155,Membrane receptor,Serotonin 7 (5-HT7) receptor,CHEMBL3401492,6.67,Cc1sc2N=CN(CCCCCN3CCN(CC3)c4ccc(Cl)cc4)C(=O)c2c1C,2015.0
+CHEMBL321,Enzyme,Matrix metalloproteinase 9,CHEMBL157289,5.82,OC(=O)[C@@H](Cc1c[nH]c2ccccc12)NS(=O)(=O)c3ccc(C#Cc4ccccc4[N+](=O)[O-])s3,1998.0
+CHEMBL3227,Membrane receptor,Metabotropic glutamate receptor 5,CHEMBL1779871,8.12,Cc1cccc(c1)C#Cc2ccc3C(=O)N(CCc3n2)C4CCCC4,2011.0
+CHEMBL3231,Enzyme,Rho-associated protein kinase 1,CHEMBL3945324,6.55,COc1cccc(c1)[C@H](C)N=C(O)c2ccc(cc2OCCN(C)C)c3cn[nH]c3,2016.0
+CHEMBL3242,Enzyme,Carbonic anhydrase XII,CHEMBL3623676,8.31,CC1=CC(=O)Oc2cc(ccc12)n3cc(CNc4ccccc4)nn3,2015.0
+CHEMBL3267,Enzyme,PI3-kinase p110-gamma subunit,CHEMBL1957860,5.6,CC1=C(C)N2C(=O)C=C(N=C2N1Cc3cccc(Cl)c3Cl)N4CCOCC4,2012.0
+CHEMBL3286,Enzyme,Urokinase-type plasminogen activator,CHEMBL432422,7.0,NC(=N)Nc1ncc(Cl)c2ccc(cc12)c3ccc4OCOc4c3,2004.0
+CHEMBL331,Enzyme,Cyclin-dependent kinase 4,CHEMBL3702203,7.51,CC1CN(CC(C)N1)c2ccc(Nc3ncc4c5ccccc5n(C6CCCC6)c4n3)nc2,2014.0
+CHEMBL332,Enzyme,Matrix metalloproteinase-1,CHEMBL75529,5.6,ON(C=O)C(CS(=O)(=O)N1CCOCC1)CS(=O)(=O)c2ccc(Oc3ccc(OC(F)(F)F)cc3)cc2,2002.0
+CHEMBL333,Enzyme,Matrix metalloproteinase-2,CHEMBL45483,8.22,CNC(=O)[C@H](Cc1ccc(OC)cc1)NC(=O)[C@H](CC(C)C)CC(=O)NO,2003.0
+CHEMBL335,Enzyme,Protein-tyrosine phosphatase 1B,CHEMBL25558,6.57,OC(=O)C(Cc1ccccc1)Oc2ccc(cc2)c3ccc(cc3)c4c(Cc5ccccc5)oc6ccccc46,2000.0
+CHEMBL3371,Membrane receptor,Serotonin 6 (5-HT6) receptor,CHEMBL3696962,9.4,Cn1cc(c2ccccc12)S(=O)(=O)c3cc(C#N)c4oc5CCNCc5c4c3,2015.0
+CHEMBL344,Membrane receptor,Melanin-concentrating hormone receptor 1,CHEMBL362768,9.0,Clc1cccc(c1)C(=O)NCCCOc2cccc3ccc(NCc4oc(cc4)c5ccccc5Cl)nc23,2004.0
+CHEMBL3468,Enzyme,Caspase-7,CHEMBL372994,7.65,Fc1cccc(CN2C(=O)C(=O)c3cc(ccc23)S(=O)(=O)N4CCC[C@H]4COc5ccccc5)n1,2005.0
+CHEMBL3473,Membrane receptor,C-C chemokine receptor type 3,CHEMBL2158786,8.5,C[C@@](Cc1ccccc1)(N2CCC(CN3CCC(CC3)Oc4ccc(Cl)c(Cl)c4)CC2)C(=O)O,2012.0
+CHEMBL3510,Enzyme,Carbonic anhydrase XIV,CHEMBL2048926,7.75,CCOc1ccc2C(=NCCc2c1)c3ccc(cc3)S(=O)(=O)N,2012.0
+CHEMBL3522,Enzyme,Cytochrome P450 17A1,CHEMBL1682904,7.72,CC(C)[C@](O)(c1ccc2c3CN(C)C(=O)c3ccc2c1)c4c[nH]cn4,2011.0
+CHEMBL3553,Enzyme,Tyrosine-protein kinase TYK2,CHEMBL2181315,5.28,C1CC=CCCOc2cccc(c2)c3ccnc(Nc4cccc(O1)c4)n3,2011.0
+CHEMBL3568,Enzyme,"Nitric-oxide synthase, brain",CHEMBL314186,6.14,NC1=Nc2c(F)cc(Cl)cc2[C@H]3CCC[C@@H]13,2002.0
+CHEMBL3572,Ion channel,Cholesteryl ester transfer protein,CHEMBL71333,7.52,OC(CN(Cc1cccc(OC(F)(F)C(F)F)c1)c2cccc(Oc3ccc(F)cc3)c2)C(F)(F)F,2003.0
+CHEMBL3587,Enzyme,Dual specificity mitogen-activated protein kinase kinase 1,CHEMBL2146884,6.1,OCC(O)CCNC(=O)c1ccc(F)c(F)c1Nc2ccc(I)cc2F,2012.0
+CHEMBL3594,Enzyme,Carbonic anhydrase IX,CHEMBL171031,7.46,Cc1cc(C)[n+](Cc2ccc(cc2)S(=O)(=O)N)c(C)c1C.[O-]Cl(=O)(=O)=O,2004.0
+CHEMBL3629,Enzyme,Casein kinase II alpha,CHEMBL3699257,9.39,COC(=O)N[C@H]1CCN(C[C@@H]1O)c2cc(cc(Nc3nc(NC4CC4)c5ncc(C#N)n5n3)c2Cl)C#N,2015.0
+CHEMBL3650,Enzyme,Fibroblast growth factor receptor 1,CHEMBL2086737,5.8,OC(=O)c1ccc2C(=C(c3ccccc3)c4nc5ccccc5[nH]4)C(=O)Nc2c1,2012.0
+CHEMBL3687,Enzyme,Arachidonate 12-lipoxygenase,CHEMBL1531156,7.45,COCCNC(=O)NC1(Oc2ccc(Cl)cc2O1)C(F)(F)F,
+CHEMBL3706,Enzyme,ADAM17,CHEMBL95486,6.98,COc1ccc(cc1)S(=O)(=O)N2Cc3ccccc3N(CC2C(=O)NO)S(=O)(=O)C,2002.0
+CHEMBL3710,Membrane receptor,Prostanoid EP3 receptor,CHEMBL425681,5.23,O[C@H](CC[C@H]1[C@H](O)C[C@H](O)[C@@H]1CCCCCCC(=O)O)COc2ccccc2,2000.0
+CHEMBL3717,Enzyme,Hepatocyte growth factor receptor,CHEMBL1822362,7.7,CC(C)(C)OC(=O)c1cnc2ccn(c2c1)S(=O)(=O)c3ccccc3[N+](=O)[O-],2011.0
+CHEMBL3759,Membrane receptor,Histamine H4 receptor,CHEMBL3909134,5.96,CO[C@H]1Cc2ccccc2C(=C3CCNCC3)c4ccsc14,2016.0
+CHEMBL3764,Membrane receptor,Urotensin II receptor,CHEMBL412746,5.5,Cc1ccc2scc(CCC(=O)N3CCC[C@@H]([C@@H]3CN4CCCC4)c5ccccc5)c2c1,2008.0
+CHEMBL3772,Membrane receptor,Metabotropic glutamate receptor 1,CHEMBL2397372,6.15,C[C@@H]1CN(CCN1C(=O)C23CC4CC(CC(C4)C2)C3)c5ncccn5,2013.0
+CHEMBL3778,Enzyme,Interleukin-1 receptor-associated kinase 4,CHEMBL3586490,6.43,Cc1ccc(cc1)n2nc(cc2NC(=O)c3cnn4cccnc34)C5CC5,2015.0
+CHEMBL3795,Membrane receptor,Melanocortin receptor 1,CHEMBL1089830,5.93,C[C@@H]1CN(C[C@H](C)[C@@]1(O)c2ccccn2)C(=O)[C@@H]3CN(C[C@H]3c4ccc(F)cc4F)C(C)(C)C,2010.0
+CHEMBL3797,Enzyme,Serine-protein kinase ATM,CHEMBL1511760,5.5,CCOc1ccc2nc(NC(=O)Cn3cnc4N(C)C(=O)N(C)C(=O)c34)sc2c1,
+CHEMBL3798,Membrane receptor,Calcitonin gene-related peptide type 1 receptor,CHEMBL2059790,8.6,Oc1ccc(C[C@@H](NC(=O)N2CCC(CC2)N3C(=O)Nc4ccccc34)C(=O)N5CCC(CC5)N6CCCCC6)cc1,2012.0
+CHEMBL3820,Enzyme,Hexokinase type IV,CHEMBL595353,6.39,CCS(=O)(=O)c1ccc(Oc2cc3nc([nH]c3cc2Cc4nnnn4C)c5ccccn5)cc1,2009.0
+CHEMBL3836,Enzyme,LIM domain kinase 1,CHEMBL3613616,6.03,COC(=O)c1cccc(NC(=O)C2(N)CCN(CC2)c3cc(N)ncn3)c1,2015.0
+CHEMBL3837,Enzyme,Cathepsin L,CHEMBL3896036,7.58,Cc1ccc2C(=O)N[C@@H](Cc3ccc(OC\C=C/CSc2n1)c(Cl)c3)C(=NC4(CC4)C#N)O,2016.0
+CHEMBL3861,Enzyme,Pyruvate dehydrogenase kinase isoform 2,CHEMBL3671779,6.53,CC(=O)Nc1ccc(cc1)c2ccc3c4ccccc4C(O)(c3c2)C(F)(F)F,2014.0
+CHEMBL3869,Enzyme,Matrix metalloproteinase 14,CHEMBL1795857,5.68,CCCCc1ccc(cc1)C#Cc2ccc(s2)S(=O)(=O)N[C@H](Cc3ccc(OCc4ccccc4)cc3)C(=O)NO,2011.0
+CHEMBL3891,Enzyme,Calpain 1,CHEMBL401986,5.43,CC1=C(Nc2ccccc2C1=O)C(=O)N[C@@H](Cc3ccccc3)C(=O)C(=O)NCCc4ccccc4,2008.0
+CHEMBL3892,Membrane receptor,Sphingosine 1-phosphate receptor Edg-3,CHEMBL3133706,6.42,NC(CO)(CCc1ccc(Oc2ccc(cc2)c3ccccc3)cc1)COP(=O)(O)O,2013.0
+CHEMBL3920,Enzyme,Protein kinase C theta,CHEMBL3957649,8.22,Nc1ncc(nc1C(=Nc2cnccc2N3CCNCC3)O)c4ccccc4F,2016.0
+CHEMBL3922,Enzyme,Methionine aminopeptidase 2,CHEMBL194429,8.52,Brc1ccc(cc1)c2c[nH]nn2,2005.0
+CHEMBL3973,Enzyme,Fibroblast growth factor receptor 4,CHEMBL3939018,7.56,COc1cc(OC)cc(c1)N(CC#C)c2ccc3ncc(nc3c2)c4cnn(CC5CCOCC5)c4,2014.0
+CHEMBL3974,Membrane receptor,Proteinase-activated receptor 1,CHEMBL2012511,7.19,CC[C@@H]1[C@@H](C)C[C@]2(O)[C@@H]([C@@H](C)OC2=O)[C@H]1\C=C\c3ccc(cn3)N4CCCC4,2012.0
+CHEMBL3976,Enzyme,Dipeptidyl peptidase II,CHEMBL488226,5.75,NCCCC[C@H](N)C(=O)N1Cc2ccccc2C1,2008.0
+CHEMBL3983,Enzyme,Dual specificity protein kinase TTK,CHEMBL3422068,8.1,CN1CCC(CC1)Oc2ccc(cc2)c3n[nH]c4ccc(NC(=O)C(C5CCCC5)c6ccsc6)cc34,2015.0
+CHEMBL4005,Enzyme,PI3-kinase p110-alpha subunit,CHEMBL3646621,7.6,COc1cc(Nc2ncc(cc2c3nc(C)nc(N)n3)C(C)(C)O)cnc1Cl,2014.0
+CHEMBL4015,Membrane receptor,C-C chemokine receptor type 2,CHEMBL1829606,5.75,FC(F)(F)c1cccc(c1)C(=O)NCC(=O)NC2CN(C2)[C@@H]3CC[C@H](CC3)c4ccc5OCOc5c4,2011.0
+CHEMBL4036,Enzyme,Cyclin-dependent kinase 5,CHEMBL362558,5.9,Fc1cc2CN(CCn3cc(C4=C(C(=O)NC4=O)c5cnc6ccccn56)c(c1)c23)C(=O)N7CCCCC7,
+CHEMBL4072,Enzyme,Cathepsin B,CHEMBL381758,5.32,CC(C)C[C@H](N[C@@H](c1ccc(cc1)c2nccs2)C(F)(F)F)C(=O)NCC#N,2006.0
+CHEMBL4128,Enzyme,Tyrosine-protein kinase TIE-2,CHEMBL426211,8.0,CNc1ncnc(n1)c2cccnc2Oc3cc(ccc3C)C(=O)Nc4cccc(c4)C(F)(F)F,2007.0
+CHEMBL4142,Enzyme,Fibroblast growth factor receptor 2,CHEMBL3681267,7.77,CC(C)N1CCC(CC1)c2ccc3[nH]c(cc3c2)C(=O)c4cnn(c4N)c5ccc6[nH]c(C)nc6c5,2014.0
+CHEMBL4158,Enzyme,Fatty acid synthase,CHEMBL3900209,7.62,Cc1cc(C)c(cc1C(=O)N2CC(C2)c3ccc(cc3)C#N)c4n[nH]cc4Cl,2016.0
+CHEMBL4159,Enzyme,Endoplasmic reticulum-associated amyloid beta-peptide-binding protein,CHEMBL1575532,5.2,FC(F)(F)c1cc(nc(n1)n2cnc3ccccc23)c4occc4,
+CHEMBL4179,Enzyme,c-Jun N-terminal kinase 2,CHEMBL392613,6.29,CCNC(=O)N1CCC(CC1)Nc2nccc(n2)n3ccc4ccccc34,2007.0
+CHEMBL4203,Enzyme,Dual specificity protein kinase CLK4,CHEMBL1978200,5.2,Cc1nccn2c(c3ccnc(NCCC(C)(C)O)n3)c(nc12)c4ccc(F)cc4F,
+CHEMBL4204,Enzyme,MAP kinase signal-integrating kinase 2,CHEMBL3632745,7.75,CCNC(=O)c1sc2ncnc(Nc3ccc(F)cc3OC(C)C)c2c1C,2015.0
+CHEMBL4225,Enzyme,Dual specificity protein kinase CLK2,CHEMBL1986499,6.6,Nc1n[nH]c2ccc(cc12)c3nnn(Cc4ccccc4)c3c5ccc(F)cc5,
+CHEMBL4227,Membrane receptor,Lipoxin A4 receptor,CHEMBL3729977,7.96,OCCOCCNC(=O)[C@@H]1[C@H]2CC[C@@H]([C@H]1C(=O)Nc3ncc(Br)s3)C24CC4,2012.0
+CHEMBL4235,Enzyme,11-beta-hydroxysteroid dehydrogenase 1,CHEMBL257129,8.54,Cn1c(nnc1c2ccccc2C(F)(F)F)c3cc4ccccc4cc3Cl,2008.0
+CHEMBL4247,Enzyme,ALK tyrosine kinase receptor,CHEMBL2158514,5.97,COc1cccnc1c2ccc3cnc(Nc4ccc(cc4OC)C5CCN(CC(=O)N)CC5)nn23,2012.0
+CHEMBL4282,Enzyme,Serine/threonine-protein kinase AKT,CHEMBL1997129,5.7,O=C1NCCc2[nH]c(cc12)c3ccnc(C=Cc4ccccc4)c3,
+CHEMBL4296,Ion channel,Sodium channel protein type IX alpha subunit,CHEMBL2323083,6.66,Cn1nccc1c2cc(ncc2Oc3ccc(cc3C#N)S(=O)(=O)Nc4ncc(Cl)s4)C(F)(F)F,2013.0
+CHEMBL4306,Ion channel,Voltage-gated potassium channel subunit Kv1.5,CHEMBL480990,6.38,CC1=C(C(c2cc(C)cc(C)c2)n3nccc3N1)C(=O)N4CCN(CC4)c5ccc(F)cc5,2008.0
+CHEMBL4308,Membrane receptor,Bradykinin B1 receptor,CHEMBL234297,7.22,Fc1ccc(cc1)C2(CCC(CNc3ncccc3NC(=O)CC(F)(F)F)CC2)C#N,2007.0
+CHEMBL4315,Membrane receptor,Purinergic receptor P2Y1,CHEMBL2393200,8.0,CC(C)(C)c1ccccc1Oc2ncccc2Nc3nnc(s3)c4ccc(OC(F)(F)F)cc4,2013.0
+CHEMBL4333,Membrane receptor,Sphingosine 1-phosphate receptor Edg-1,CHEMBL2032311,9.5,OC(=O)CCCCCc1cnc2oc(nc2c1)c3ccc(c4ccccc4)c(c3)C(F)(F)F,2012.0
+CHEMBL4409,Enzyme,Phosphodiesterase 10A,CHEMBL3642215,6.21,O=C(Nc1onc(c1)c2ccccc2)c3nc(ccc3Nc4cncnc4)C5CC5,2013.0
+CHEMBL4422,Membrane receptor,Free fatty acid receptor 1,CHEMBL3601000,6.68,CCc1ccc(cc1)c2noc(COc3ccc(CCC(=O)O)cc3)n2,2015.0
+CHEMBL4427,Membrane receptor,Prostanoid DP receptor,CHEMBL394497,5.35,C[C@H](Oc1ccc(Cl)cc1C2CCCCC2)C(=O)O,2007.0
+CHEMBL4429,Membrane receptor,Neurokinin 3 receptor,CHEMBL3288154,5.9,Cl.CN([C@@H](Cc1ccccc1)C(=O)NCCN)C(=O)[C@@H](CCN2CCC3(CC2)OC(=O)N(C)c4ccc(F)cc34)c5ccc(Cl)c(Cl)c5,2014.0
+CHEMBL4439,Enzyme,TGF-beta receptor type I,CHEMBL595578,7.22,CSc1cccc(c1)C2=C(N(C)N(C)C2=O)c3ccc4nccnc4c3,2010.0
+CHEMBL4441,Membrane receptor,C-X-C chemokine receptor type 3,CHEMBL3889529,6.81,CCCN(Cc1ccc(OCCN2C(=O)C=CN(C)C2=O)c(OC)c1)C(CC(=O)O)c3ccc4OCCc4c3,2016.0
+CHEMBL4481,Enzyme,"Nitric oxide synthase, inducible",CHEMBL321691,6.8,CCSC(=N)N,1996.0
+CHEMBL4501,Enzyme,Ribosomal protein S6 kinase 1,CHEMBL3685225,5.55,COc1ccc(cc1)C(=O)Nc2cccc(CNc3c(cnc4c(cccc34)C(=O)N)C(=O)N)c2,2014.0
+CHEMBL4523,Enzyme,Serine/threonine-protein kinase PIM2,CHEMBL3961823,9.94,Cc1cncc(n1)c2cc3c(cn2)cnn3c4ccc(c(n4)N5CCC[C@H](N)C5)C(F)(F)F,2016.0
+CHEMBL4561,Membrane receptor,Neuropeptide Y receptor type 5,CHEMBL1829333,6.43,CC(C)S(=O)(=O)NC[C@@H]1CC[C@H](CC1)NCCN2CCSc3cc(Cl)ccc23,2011.0
+CHEMBL4578,Enzyme,Maternal embryonic leucine zipper kinase,CHEMBL3944105,8.17,CN(C)C[C@H]1CCC[C@@H](C1)N=C2C(=CNc3ccc(cc23)c4cc(F)c(O)c(Cl)c4)C(=O)C,2015.0
+CHEMBL4588,Enzyme,Matrix metalloproteinase 8,CHEMBL98044,6.7,CN(C[C@@H]([C@@H](CC1CCCC1)C(=O)N2CCCCC2)C(=O)NO)S(=O)(=O)C,1999.0
+CHEMBL4599,Enzyme,Tyrosine kinase non-receptor protein 2,CHEMBL247677,8.15,CN1CCN(Cc2ccc(cc2)c3oc4ncnc(NC[C@@H]5CCCO5)c4c3c6ccccc6)CC1,2007.0
+CHEMBL4608,Membrane receptor,Melanocortin receptor 5,CHEMBL187774,5.99,CC(C)(C)NC(=O)C1(CCN(CC1)C(=O)[C@@H](Cc2ccc(F)cc2)NC(=O)[C@H]3C[C@@H]4CC[C@@H]3NC4)C5CCCCC5,2005.0
+CHEMBL4616,Membrane receptor,Ghrelin receptor,CHEMBL359922,7.08,CCN(CC)CCN1C(=O)[C@@](O)(c2ccc(Cl)cc2)c3c1cc(cc3C(F)(F)F)C(=O)N,2005.0
+CHEMBL4625,Ion channel,Apoptosis regulator Bcl-X,CHEMBL2031022,7.36,CCCCN(CCCC)C(=O)c1nn(c(C)c1Cl)c2ccc(cc2C(=O)N3CCc4ccccc4C3)C(=O)NS(=O)(=O)c5ccc6N(Cc7ccc(Cl)c(Cl)c7)CCc6c5,2012.0
+CHEMBL4630,Enzyme,Serine/threonine-protein kinase Chk1,CHEMBL245600,9.1,COc1cc2Cc3c(n[nH]c3c4ccc(cc4)c5ccc(O)cc5)c2cc1OCCN(C)C,2007.0
+CHEMBL4644,Membrane receptor,Melanocortin receptor 3,CHEMBL91957,6.41,NC(=N)NCCC[C@H](NC(=O)[C@H](Cc1ccccc1)NC(=O)[C@H](Cc2c[nH]cn2)NS(=O)(=O)c3ccc(Cl)cc3)C(=O)N[C@@H](Cc4c[nH]c5ccccc45)C(=O)N,2003.0
+CHEMBL4657,Enzyme,Dipeptidyl peptidase VIII,CHEMBL2441835,8.22,Cc1onc(CN2Cc3nc(C)c(CN)c(c4ccc(Cl)cc4Cl)c3C2=O)c1,2013.0
+CHEMBL4691,Membrane receptor,Proteinase activated receptor 4,CHEMBL3717959,9.16,COc1cc(OCc2cccc(c2)c3ccnc(F)c3)c4cc(oc4c1)c5cn6nc(OC)sc6n5,2013.0
+CHEMBL4722,Enzyme,Serine/threonine-protein kinase Aurora-A,CHEMBL3593286,6.57,Cc1nc(Nc2ncc(s2)c3ccc(NC(=O)Nc4cccc(Cl)c4)cc3)cc(n1)N5CCNCC5,2015.0
+CHEMBL4777,Membrane receptor,Neuropeptide Y receptor type 1,CHEMBL556915,7.32,COc1ccc(cc1)[C@@H](C)N[C@@H]2CC[C@@H](C(=O)C3CCC(CC3)(NC(=O)C)c4ccccc4)C(C)(C)C2,2009.0
+CHEMBL4792,Membrane receptor,Orexin receptor 2,CHEMBL3955337,6.48,COc1cccc(OC)c1[C@@H]2CCCC(=O)N2Cc3ccc4ccccc4n3,2016.0
+CHEMBL4794,Ion channel,Vanilloid receptor,CHEMBL2385411,8.96,CCC(CC)Oc1nc(ccc1CNC(=O)C(C)c2ccc(NS(=O)(=O)C)c(F)c2)C(F)(F)F,2013.0
+CHEMBL4801,Enzyme,Caspase-1,CHEMBL1603692,5.5,CN1C(=O)C(=Nc2cnc(nc12)N3CCNCC3)c4cccs4,
+CHEMBL4805,Ion channel,P2X purinoceptor 7,CHEMBL3932041,8.44,Cc1cccc(C(=NCC(N2CCC(F)(F)CC2)c3ccc(Cl)cc3)O)c1C,2016.0
+CHEMBL4829,Enzyme,Acetyl-CoA carboxylase 2,CHEMBL3686526,7.3,C[C@H](NC(=O)C)c1ccc(OC2CCN(C2)c3ncc(OC4CCCC4)cc3F)cc1,2014.0
+CHEMBL4860,Ion channel,Apoptosis regulator Bcl-2,CHEMBL3704798,8.19,Cc1c(cc(C#N)n1C)N(C(=O)c2cc(c3cc(Cl)ccc3C(=O)N4Cc5ccccc5CC4C(F)(F)F)n(C)c2C)c6ccc(O)cc6,2015.0
+CHEMBL5071,Membrane receptor,G protein-coupled receptor 44,CHEMBL3125343,7.65,C[C@@]1(CC(=NO1)c2ccc3C(=O)N(C(=Nc3c2)CCCCC(=O)O)c4ccc(F)cc4)c5cccc(c5)C#N,2014.0
+CHEMBL5080,Enzyme,Endothelial lipase,CHEMBL3686722,6.41,CC(NC(=O)N1Sc2ncccc2C1=O)c3ccc(cc3)N4CCOCC4,2015.0
+CHEMBL5113,Membrane receptor,Orexin receptor 1,CHEMBL3665716,6.92,CC(C)c1nn(C)c2nc(OCC(=O)N[C@@H](C)c3ccc(C)cc3)cc(C)c12,2014.0
+CHEMBL5137,Membrane receptor,Metabotropic glutamate receptor 2,CHEMBL280563,6.42,N[C@@H]([C@H]1C[C@@H]1C(=O)O)C(=O)O,1995.0
+CHEMBL5145,Enzyme,Serine/threonine-protein kinase B-raf,CHEMBL3937164,8.07,COC(=NC[C@H]1CN(CCO1)c2cc(ccn2)c3cc(cnc3C)N=C(O)c4cccc(c4)C(F)(F)F)O,2016.0
+CHEMBL5147,Enzyme,Ephrin type-B receptor 4,CHEMBL1241770,6.45,Nc1ncnc2c1c(nn2CC3CCNC3)c4ccc(Cl)c(O)c4,2008.0
+CHEMBL5162,Membrane receptor,Neuropeptide S receptor,CHEMBL1556351,5.5,[O-]\[N+](=C\c1cccnc1)\c2ccc(Br)cc2,
+CHEMBL5251,Enzyme,Tyrosine-protein kinase BTK,CHEMBL3928675,7.47,CN1CCN(C)C(=O)[C@@H]1c2ccc(cc2)N=C3NC(=CN(C)C3=O)c4ccc(F)c(N5Cc6cc(sc6C5=O)C(C)(C)C)c4F,2016.0
+CHEMBL5407,Enzyme,Serine/threonine-protein kinase PIM3,CHEMBL3691960,9.08,C[C@H]1C[C@H](C[C@@H](N)[C@H]1n2ccnn2)c3ccncc3NC(=O)c4nc(c(F)cc4N)c5c(F)cccc5F,2015.0
+CHEMBL5443,Enzyme,Cell division cycle 7-related protein kinase,CHEMBL1991410,8.6,Fc1cccc(F)c1C(=O)Nc2cc(cc(Cl)n2)c3c[nH]c4ncccc34,
+CHEMBL5462,Enzyme,Baculoviral IAP repeat-containing protein 2,CHEMBL3898688,7.8,COC[C@@H]1CN[C@@H](C)CN1CC(=O)N2CC(C)(C)c3cnc(CCC(C)C)cc23,2015.0
+CHEMBL5555,Enzyme,Acyl-CoA desaturase,CHEMBL3684076,7.12,Cc1cn(cn1)c2ccc(nn2)N3CCC(CC3)N4CCc5ccccc45,2015.0
+CHEMBL5652,Membrane receptor,Glucose-dependent insulinotropic receptor,CHEMBL3321827,5.92,CCc1cnc(nc1)N2CCC(CC2)N(C)c3ncnc4c(csc34)c5ccc(cc5)S(=O)(=O)C,2014.0
+CHEMBL5658,Enzyme,Prostaglandin E synthase,CHEMBL2315876,5.92,CSCCNC(=O)C1CCN(CC1)c2oc3ccc(Cl)cc3n2,2013.0
+CHEMBL5857,Membrane receptor,Trace amine-associated receptor 1,CHEMBL45763,6.41,CNCCc1ccccc1,2008.0
+CHEMBL5888,Enzyme,Mitogen-activated protein kinase kinase kinase 14,CHEMBL3696653,9.15,CNC(=O)c1c(nc2c3cc(C#CC4(O)CCC4)c(F)cc3OCCn12)C(=O)N,2015.0
+CHEMBL5971,Membrane receptor,Smoothened homolog,CHEMBL1822303,6.62,O=C(NCC1(CCCCCC1)N2CCOCC2)N3CCC(CC3)c4onc(n4)c5ccc6ccccc6n5,2011.0
+CHEMBL6009,Enzyme,Diacylglycerol O-acyltransferase 1,CHEMBL3741306,7.09,OCC(O)CNC(=O)C[C@@H]1CC[C@H](CC1)c2ccc(cc2)C(=O)Nc3nnc(Cc4ccccc4)s3,2016.0
+CHEMBL6115,Enzyme,Lysosomal protective protein,CHEMBL3898572,6.36,Cc1ccc(F)c(c1)c2cc(F)cc(c2)C(CC(=O)O)c3ncc(C)s3,2015.0
+CHEMBL6164,Enzyme,Tankyrase-1,CHEMBL3944854,7.52,OC(=NCc1nc(O)c2COCCc2n1)CN3CCC(CC3)C(=O)c4ccc(OCC5CCC5)cc4,2015.0
+CHEMBL6166,Enzyme,Mitogen-activated protein kinase kinase kinase kinase 4,CHEMBL1989006,8.4,OCCNc1cc(cc(Cl)n1)c2c[nH]c3ncccc23,
