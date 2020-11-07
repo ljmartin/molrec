@@ -106,7 +106,7 @@ def evaluate_predictions(predictions, test, train):
 
 def load_subset(subset=False, numchoose=50):
     """
-    Loads the 243-target subset of data for HPO. 
+    Loads a subset of data for HPO. 
     Also removes ligands with only 1 label in the dataset -
     these aren't useful since test/train splits require each 
     instance has at least one label in the training set and
@@ -119,7 +119,7 @@ def load_subset(subset=False, numchoose=50):
 
     if subset:
         #make smaller to make hyperparameter tuning faster:
-        cols= np.random.choice(np.arange(243), numchoose, replace=False)
+        cols= np.random.choice(np.arange(interaction_matrix.shape[1]), numchoose, replace=False)
         interaction_matrix = interaction_matrix[:,cols]
     
     mask = np.sum(interaction_matrix, axis=1)
@@ -135,8 +135,8 @@ def load_subset(subset=False, numchoose=50):
 
 def load_time_split(year=2010, return_fingerprints=False):
     """
-    Get the interaction matrix of the 243-target subset. Then
-    split into two matrices, train and test, based on year of 
+    Get the interaction matrix and
+    split into two matrices, (train and test), based on the year of 
     the interactions. 
     :param year: split point. All interactions from this year 
     or afterwards become test interactions. 

@@ -13,7 +13,7 @@ def calc_ranks_given_name(name, algo, train, test):
     else:
         params = utils.read_params(name)
         preds = algo(params, train)
-        for _ in range(7):
+        for _ in range(6):
             preds += algo(params, train)
     ranks = utils.evaluate_predictions(preds, test, train)
     return ranks
@@ -31,8 +31,7 @@ if __name__ == '__main__':
                   utils.train_lightfm_warp,
                   utils.train_lightfm_bpr]
 
-
-    yrs = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017]
+    yrs = [2012, 2013, 2014, 2015, 2016, 2017]
     for year in yrs:
         train, test = utils.load_time_split(year=year)
 

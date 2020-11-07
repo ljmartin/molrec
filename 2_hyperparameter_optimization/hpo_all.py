@@ -13,7 +13,7 @@ import implicit
 #skopt:
 from skopt.space import Real, Integer
 from skopt import Optimizer
-from sklearn.externals.joblib import Parallel, delayed
+from joblib import Parallel, delayed
 from skopt.utils import use_named_args
 import skopt
 

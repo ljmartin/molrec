@@ -31,8 +31,9 @@ for filename in filenames:
     count+=1
 
 plt.tight_layout()
-plt.savefig('all.pdf')
-plt.savefig('all.tif')
+plt.savefig('./figures/all.pdf')
+plt.savefig('./figures/all.tif')
+plt.savefig('./figures/all.svg')
 
 #plot all in one:
 fig, ax = plt.subplots()
@@ -52,9 +53,12 @@ for filename in filenames:
 ax.set_xlabel('Iterations', fontsize=12)
 ax.set_ylabel('Mean rank', fontsize=12)
 ax.set_title('Hyperparameter Optimization', fontsize=15)
-ax.set_ylim(0,170)
+ax.set_ylim(0,220)
 ax.legend(fancybox=True, framealpha=1, shadow=True, borderpad=1, ncol=2, loc='upper center')
+#ax.legend()
+
 plt.tight_layout()
-fig.savefig('all_in_one.pdf')
-fig.savefig('all_in_one.tif')
+fig.savefig('./figures/all_in_one.pdf')
+fig.savefig('./figures/all_in_one.tif')
+fig.savefig('./figures/all_in_one.svg')
 plt.close(fig)

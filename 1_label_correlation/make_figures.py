@@ -45,8 +45,8 @@ names =names.sort_values(by='%', ascending=False)
 ec = ECDF(np.sum(all_interactions, axis=1))
 
 
-def plot_fig_label(ax, lab):
-    ax.text(-0.1, 1.15, lab, transform=ax.transAxes,
+def plot_fig_label(ax, lab, xoff=-0.1, yoff=1.15):
+    ax.text(xoff, yoff, lab, transform=ax.transAxes,
         fontsize=24, fontweight='bold', va='top', ha='right')
 
 def render_mpl_table(data, sizes, col_width=10.0, row_height=0.625, font_size=12,
@@ -111,8 +111,9 @@ ax2.text(0, 1.08, 'C', transform=ax2.transAxes,
 
 plt.tight_layout()
 
-fig.savefig('basic_stats.pdf')
-fig.savefig('basic_stats.tif')
+fig.savefig('./figures/basic_stats.pdf')
+fig.savefig('./figures/basic_stats.tif')
+fig.savefig('./figures/basic_stats.svg')
 plt.close(fig)
 
 
@@ -159,7 +160,7 @@ simdf['%'] = similarity
 fig, ax = plt.subplots(1,3, gridspec_kw={'width_ratios': [1.5, 1.5, 1.5]})
 fig.set_figwidth(18)
 fig.set_figheight(6)
-plot_fig_label(ax[0], 'A')
+plot_fig_label(ax[0], 'A', yoff=1.1)
 
 imsh = ax[0].imshow(corr, cmap='Blues_r')
 ax[0].grid()
@@ -182,8 +183,9 @@ ax[1].text(0.05, 1.08, 'B', transform=ax[1].transAxes,
 fig.subplots_adjust(hspace=0.05, wspace=0.1)
 
 plt.tight_layout()
-fig.savefig('label_correlation.pdf')
-fig.savefig('label_correlation.tif')
+fig.savefig('./figures/label_correlation.pdf')
+fig.savefig('./figures/label_correlation.tif')
+fig.savefig('./figures/label_correlation.svg')
 plt.close(fig)
 
 

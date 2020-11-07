@@ -1,22 +1,23 @@
 Leucine-rich repeat serine/threonine-protein kinase 2
 Tyrosyl-DNA phosphodiesterase 1
 Pyruvate kinase isozymes M1/M2
+G-protein coupled receptor 55
+"Carnitine O-palmitoyltransferase 1, liver isoform"
 Ubiquitin carboxyl-terminal hydrolase 2
 ATP-dependent DNA helicase Q1
 Bloom syndrome protein
 15-hydroxyprostaglandin dehydrogenase [NAD+]
+ATP-sensitive inward rectifier potassium channel 1
 FAD-linked sulfhydryl oxidase ALR
 Sentrin-specific protease 7
 DNA dC->dU-editing enzyme APOBEC-3G
 Nicotinamide phosphoribosyltransferase
-Glucagon-like peptide 1 receptor
 Endothelin receptor ET-B
 Vasopressin V2 receptor
-Somatostatin receptor 5
 Carboxy-terminal domain RNA polymerase II polypeptide A small phosphatase 1
 Corticotropin releasing factor receptor 1
 Plasminogen
-Somatostatin receptor 2
+Angiotensin-converting enzyme
 Prostanoid EP1 receptor
 Muscarinic acetylcholine receptor M4
 Receptor protein-tyrosine kinase erbB-2
@@ -31,6 +32,7 @@ Alpha-2a adrenergic receptor
 Vascular endothelial growth factor receptor 1
 Serotonin 4 (5-HT4) receptor
 Calcium sensing receptor
+Prostanoid EP2 receptor
 Vasopressin V1a receptor
 Serotonin 1b (5-HT1b) receptor
 Serotonin 3a (5-HT3a) receptor
@@ -42,14 +44,18 @@ Platelet-derived growth factor receptor beta
 Butyrylcholinesterase
 Alpha-2c adrenergic receptor
 Stem cell growth factor receptor
+Alpha-2b adrenergic receptor
 Melatonin receptor 1A
 Melatonin receptor 1B
 Monoamine oxidase A
+Thymidylate synthase
 Vascular endothelial growth factor receptor 3
 Insulin-like growth factor I receptor
+Thyroid stimulating hormone receptor
 Dihydroorotate dehydrogenase
 Tyrosine-protein kinase receptor FLT3
 Cytochrome P450 19A1
+Sodium channel protein type V alpha subunit
 Insulin receptor
 Serotonin 1d (5-HT1d) receptor
 Glucagon receptor
@@ -57,12 +63,12 @@ Inhibitor of nuclear factor kappa B kinase beta subunit
 Plasma kallikrein
 Purinergic receptor P2Y12
 Inosine-5'-monophosphate dehydrogenase 2
+Platelet-derived growth factor receptor alpha
 Isocitrate dehydrogenase [NADP] cytoplasmic
 C-X-C chemokine receptor type 7
 Nociceptin receptor
 Coagulation factor IX
 Dihydrofolate reductase
-Somatostatin receptor 3
 Epidermal growth factor receptor erbB1
 Muscarinic acetylcholine receptor M5
 Monoamine oxidase B
@@ -71,6 +77,7 @@ Tyrosine-protein kinase receptor RET
 Oxytocin receptor
 Carbonic anhydrase II
 Dopamine D1 receptor
+Ephrin type-A receptor 2
 Thromboxane A2 receptor
 Trypsin I
 Beta-2 adrenergic receptor
@@ -82,7 +89,9 @@ Serine/threonine-protein kinase PIM1
 Tyrosine-protein kinase JAK3
 Arachidonate 5-lipoxygenase
 Muscarinic acetylcholine receptor M1
+Dopamine D2 receptor
 Complement factor D
+Beta-glucocerebrosidase
 Cannabinoid CB1 receptor
 Serine/threonine-protein kinase Aurora-B
 Dopamine D4 receptor
@@ -103,6 +112,7 @@ Cyclooxygenase-2
 Histamine H1 receptor
 Alpha-1b adrenergic receptor
 Potassium channel subfamily K member 3
+"Alpha-1,6-mannosyl-glycoprotein 2-beta-N-acetylglucosaminyltransferase"
 Carbonic anhydrase VII
 Neurokinin 2 receptor
 Mu opioid receptor
@@ -117,6 +127,7 @@ Epoxide hydratase
 C-C chemokine receptor type 1
 Serine/threonine-protein kinase AKT2
 Interleukin-8 receptor B
+Coagulation factor X
 Muscarinic acetylcholine receptor M3
 Beta-3 adrenergic receptor
 Leukocyte elastase
@@ -127,15 +138,20 @@ Adenosine A2a receptor
 Endothelin receptor ET-A
 Beta secretase 2
 Serine/threonine-protein kinase Chk2
+Cannabinoid CB2 receptor
 3-phosphoinositide dependent protein kinase-1
 Phosphodiesterase 4A
 Adenosine A2b receptor
 Adenosine A3 receptor
+Liver glycogen phosphorylase
 Tyrosine-protein kinase LCK
 Cathepsin D
 Melanocortin receptor 4
+Protein kinase C nu
+Protein kinase C iota
 Tyrosine-protein kinase SYK
 MAP kinase p38 alpha
+Lysosomal alpha-glucosidase
 Carbonic anhydrase I
 Glycogen synthase kinase-3 beta
 c-Jun N-terminal kinase 3
@@ -145,9 +161,11 @@ Tyrosine-protein kinase SRC
 Cathepsin K
 Focal adhesion kinase 1
 Cytochrome P450 11B2
+Metabotropic glutamate receptor 4
 C-C chemokine receptor type 5
 Fibroblast growth factor receptor 3
 Phosphodiesterase 4B
+Vascular endothelial growth factor receptor 2
 Matrix metalloproteinase 13
 Nerve growth factor receptor Trk-A
 Coagulation factor XI
@@ -183,25 +201,33 @@ PI3-kinase p110-beta subunit
 Serotonin 7 (5-HT7) receptor
 Matrix metalloproteinase 9
 Metabotropic glutamate receptor 5
+Sphingosine 1-phosphate receptor Edg-6
 Rho-associated protein kinase 1
 Carbonic anhydrase XII
 PI3-kinase p110-gamma subunit
 Urokinase-type plasminogen activator
+Caspase-6
 Cyclin-dependent kinase 4
 Matrix metalloproteinase-1
 Matrix metalloproteinase-2
 Protein-tyrosine phosphatase 1B
+Cytochrome P450 1A2
 Serotonin 6 (5-HT6) receptor
+Cytochrome P450 2C9
+Cytochrome P450 3A4
 Melanin-concentrating hormone receptor 1
 Caspase-7
 C-C chemokine receptor type 3
 Carbonic anhydrase XIV
 Cytochrome P450 17A1
+Phosphodiesterase 9A
 Tyrosine-protein kinase TYK2
 "Nitric-oxide synthase, brain"
 Cholesteryl ester transfer protein
+Aldehyde dehydrogenase 1A1
 Dual specificity mitogen-activated protein kinase kinase 1
 Carbonic anhydrase IX
+Cytochrome P450 2C19
 Casein kinase II alpha
 Fibroblast growth factor receptor 1
 Arachidonate 12-lipoxygenase
@@ -212,7 +238,8 @@ Histamine H4 receptor
 Urotensin II receptor
 Metabotropic glutamate receptor 1
 Interleukin-1 receptor-associated kinase 4
-Melanocortin receptor 1
+Hydroxycarboxylic acid receptor 2
+Serine/threonine-protein kinase PLK4
 Serine-protein kinase ATM
 Calcitonin gene-related peptide type 1 receptor
 Hexokinase type IV
@@ -222,6 +249,7 @@ Pyruvate dehydrogenase kinase isoform 2
 Matrix metalloproteinase 14
 Calpain 1
 Sphingosine 1-phosphate receptor Edg-3
+Tyrosine-protein kinase Lyn
 Protein kinase C theta
 Methionine aminopeptidase 2
 Fibroblast growth factor receptor 4
@@ -231,7 +259,10 @@ Dual specificity protein kinase TTK
 PI3-kinase p110-alpha subunit
 C-C chemokine receptor type 2
 Cyclin-dependent kinase 5
+MAP kinase ERK2
+Chymase
 Cathepsin B
+cAMP-dependent protein kinase alpha-catalytic subunit
 Tyrosine-protein kinase TIE-2
 Fibroblast growth factor receptor 2
 Fatty acid synthase
@@ -249,6 +280,7 @@ Voltage-gated potassium channel subunit Kv1.5
 Bradykinin B1 receptor
 Purinergic receptor P2Y1
 Sphingosine 1-phosphate receptor Edg-1
+Matrix metalloproteinase 12
 Phosphodiesterase 10A
 Free fatty acid receptor 1
 Prostanoid DP receptor
@@ -262,39 +294,51 @@ Neuropeptide Y receptor type 5
 Maternal embryonic leucine zipper kinase
 Matrix metalloproteinase 8
 Tyrosine kinase non-receptor protein 2
-Melanocortin receptor 5
 Ghrelin receptor
+Leukotriene A4 hydrolase
 Apoptosis regulator Bcl-X
 Serine/threonine-protein kinase Chk1
-Melanocortin receptor 3
 Dipeptidyl peptidase VIII
+Aldo-keto-reductase family 1 member C3
 Proteinase activated receptor 4
 Serine/threonine-protein kinase Aurora-A
+Pyruvate dehydrogenase kinase isoform 1
 Neuropeptide Y receptor type 1
 Orexin receptor 2
+Dipeptidyl peptidase IX
 Vanilloid receptor
 Caspase-1
 P2X purinoceptor 7
+Beta-secretase 1
 Acetyl-CoA carboxylase 2
+Mitogen-activated protein kinase kinase kinase kinase 5
 Apoptosis regulator Bcl-2
+Tyrosine-protein kinase receptor UFO
 G protein-coupled receptor 44
 Endothelial lipase
+GABA receptor alpha-5 subunit
 Orexin receptor 1
 Metabotropic glutamate receptor 2
 Serine/threonine-protein kinase B-raf
 Ephrin type-B receptor 4
 Neuropeptide S receptor
 Tyrosine-protein kinase BTK
+Serine/threonine-protein kinase TAO1
+Mitogen-activated protein kinase kinase kinase kinase 2
 Serine/threonine-protein kinase PIM3
+G-protein coupled bile acid receptor 1
 Cell division cycle 7-related protein kinase
 Baculoviral IAP repeat-containing protein 2
 Acyl-CoA desaturase
 Glucose-dependent insulinotropic receptor
 Prostaglandin E synthase
+Egl nine homolog 1
 Trace amine-associated receptor 1
 Mitogen-activated protein kinase kinase kinase 14
 Smoothened homolog
+Transient receptor potential cation channel subfamily A member 1
 Diacylglycerol O-acyltransferase 1
 Lysosomal protective protein
+Tankyrase-2
 Tankyrase-1
 Mitogen-activated protein kinase kinase kinase kinase 4

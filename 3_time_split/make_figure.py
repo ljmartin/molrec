@@ -40,8 +40,12 @@ if __name__ == '__main__':
     filenames = ['label_correlation', 'hpo_implicit_als', 'hpo_implicit_bpr',
              'hpo_lightfm_warp', 'hpo_lightfm_bpr']
     
-    yrs = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017]
-    num_targets = [225, 228, 231, 234, 237, 240, 242, 243, 243, 243]
+    yrs = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2017]
+    num_targets = []
+    for yr in yrs:
+        train, test, fps = utils.load_time_split(year=yr, return_fingerprints=True)
+        num_targets.append(train.shape[1])
+    #num_targets = [225, 228, 231, 234, 237, 240, 242, 243, 243, 243]
 
 
     #plot supplementary figure describing which year to use for time split
