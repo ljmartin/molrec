@@ -31,7 +31,8 @@ if __name__ == '__main__':
                   utils.train_lightfm_warp,
                   utils.train_lightfm_bpr]
 
-    yrs = [2012, 2013, 2014, 2015, 2016, 2017]
+    yrs = [2010, 2011, 2012, 2013, 2014, 2015, 2016]
+
     for year in yrs:
         train, test = utils.load_time_split(year=year)
 
