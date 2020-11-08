@@ -1,5 +1,5 @@
 ,tid,pref_name,lig_chemblid,outcome,nnrank,prob
-119,CHEMBL261,Carbonic anhydrase I,CHEMBL310671,Active,2.0,0.9997008
+142,CHEMBL261,Carbonic anhydrase I,CHEMBL310671,Active,2.0,0.9997008
 126,CHEMBL261,Carbonic anhydrase I,CHEMBL310671,Active,2.0,0.9997008
 127,CHEMBL261,Carbonic anhydrase I,CHEMBL310671,Active,2.0,0.9997008
 128,CHEMBL261,Carbonic anhydrase I,CHEMBL310671,Active,2.0,0.9997008
@@ -12,17 +12,17 @@
 135,CHEMBL261,Carbonic anhydrase I,CHEMBL310671,Active,2.0,0.9997008
 136,CHEMBL261,Carbonic anhydrase I,CHEMBL310671,Active,2.0,0.9997008
 137,CHEMBL261,Carbonic anhydrase I,CHEMBL310671,Active,2.0,0.9997008
-138,CHEMBL261,Carbonic anhydrase I,CHEMBL310671,Active,2.0,0.9997008
 139,CHEMBL261,Carbonic anhydrase I,CHEMBL310671,Active,2.0,0.9997008
 140,CHEMBL261,Carbonic anhydrase I,CHEMBL310671,Active,2.0,0.9997008
 141,CHEMBL261,Carbonic anhydrase I,CHEMBL310671,Active,2.0,0.9997008
-142,CHEMBL261,Carbonic anhydrase I,CHEMBL310671,Active,2.0,0.9997008
 143,CHEMBL261,Carbonic anhydrase I,CHEMBL3359179,Active,1.0,0.9997008
-252,CHEMBL261,Carbonic anhydrase I,CHEMBL1165726,Active,2.0,0.9982675
-251,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
-250,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
+185,CHEMBL261,Carbonic anhydrase I,CHEMBL191528,Active,1.0,0.9986902
+186,CHEMBL261,Carbonic anhydrase I,CHEMBL303004,Active,3.5,0.9986902
+187,CHEMBL261,Carbonic anhydrase I,CHEMBL1955873,Active,3.5,0.9986902
+188,CHEMBL261,Carbonic anhydrase I,CHEMBL1955873,Active,3.5,0.9986902
+189,CHEMBL261,Carbonic anhydrase I,CHEMBL568516,Active,3.0,0.9986902
 125,CHEMBL261,Carbonic anhydrase I,CHEMBL310671,Active,2.0,0.9997008
-249,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
+190,CHEMBL261,Carbonic anhydrase I,CHEMBL571514,Active,3.0,0.9986902
 124,CHEMBL261,Carbonic anhydrase I,CHEMBL310671,Active,2.0,0.9997008
 122,CHEMBL261,Carbonic anhydrase I,CHEMBL310671,Active,2.0,0.9997008
 101,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
@@ -43,13 +43,48 @@
 116,CHEMBL261,Carbonic anhydrase I,CHEMBL310671,Active,2.0,0.9997008
 117,CHEMBL261,Carbonic anhydrase I,CHEMBL310671,Active,2.0,0.9997008
 118,CHEMBL261,Carbonic anhydrase I,CHEMBL310671,Active,2.0,0.9997008
-237,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
+119,CHEMBL261,Carbonic anhydrase I,CHEMBL310671,Active,2.0,0.9997008
 120,CHEMBL261,Carbonic anhydrase I,CHEMBL310671,Active,2.0,0.9997008
 121,CHEMBL261,Carbonic anhydrase I,CHEMBL310671,Active,2.0,0.9997008
 123,CHEMBL261,Carbonic anhydrase I,CHEMBL310671,Active,2.0,0.9997008
 100,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
-248,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
+191,CHEMBL261,Carbonic anhydrase I,CHEMBL119296,Active,3.5,0.9986902
+200,CHEMBL261,Carbonic anhydrase I,CHEMBL571519,Active,2.0,0.99851316
+232,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
+233,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
+234,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
+235,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
+236,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
+237,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
+238,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
+239,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
+240,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
+241,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
+242,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
+243,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
+244,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
+245,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
 246,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
+247,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
+248,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
+249,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
+250,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
+251,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
+252,CHEMBL261,Carbonic anhydrase I,CHEMBL1165726,Active,2.0,0.9982675
+231,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
+199,CHEMBL261,Carbonic anhydrase I,CHEMBL232616,Active,1.0,0.99851316
+230,CHEMBL261,Carbonic anhydrase I,CHEMBL1164420,Active,1.0,0.9982675
+228,CHEMBL261,Carbonic anhydrase I,CHEMBL1165071,Active,1.0,0.9982675
+201,CHEMBL261,Carbonic anhydrase I,CHEMBL232617,Active,1.0,0.99851316
+202,CHEMBL261,Carbonic anhydrase I,CHEMBL395734,Active,1.0,0.99851316
+203,CHEMBL261,Carbonic anhydrase I,CHEMBL232816,Active,1.0,0.99851316
+204,CHEMBL261,Carbonic anhydrase I,CHEMBL233019,Active,1.0,0.99851316
+205,CHEMBL261,Carbonic anhydrase I,CHEMBL390035,Active,1.5,0.99851316
+207,CHEMBL261,Carbonic anhydrase I,CHEMBL176495,Active,1.5,0.99846643
+208,CHEMBL261,Carbonic anhydrase I,CHEMBL176495,Active,1.5,0.99846643
+209,CHEMBL261,Carbonic anhydrase I,CHEMBL176495,Active,1.5,0.99846643
+210,CHEMBL261,Carbonic anhydrase I,CHEMBL176495,Active,1.5,0.99846643
+211,CHEMBL261,Carbonic anhydrase I,CHEMBL176495,Active,1.5,0.99846643
 212,CHEMBL261,Carbonic anhydrase I,CHEMBL176495,Active,1.5,0.99846643
 213,CHEMBL261,Carbonic anhydrase I,CHEMBL176495,Active,1.5,0.99846643
 214,CHEMBL261,Carbonic anhydrase I,CHEMBL176495,Active,1.5,0.99846643
@@ -59,49 +94,12 @@
 218,CHEMBL261,Carbonic anhydrase I,CHEMBL176495,Active,1.5,0.99846643
 219,CHEMBL261,Carbonic anhydrase I,CHEMBL176495,Active,1.5,0.99846643
 220,CHEMBL261,Carbonic anhydrase I,CHEMBL176495,Active,1.5,0.99846643
-239,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
 226,CHEMBL261,Carbonic anhydrase I,CHEMBL1164504,Active,1.0,0.9982675
 227,CHEMBL261,Carbonic anhydrase I,CHEMBL217304,Active,1.0,0.9982675
-228,CHEMBL261,Carbonic anhydrase I,CHEMBL1165071,Active,1.0,0.9982675
 229,CHEMBL261,Carbonic anhydrase I,CHEMBL1163382,Active,1.0,0.9982675
-230,CHEMBL261,Carbonic anhydrase I,CHEMBL1164420,Active,1.0,0.9982675
-231,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
-232,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
-233,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
-234,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
-235,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
-236,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
-211,CHEMBL261,Carbonic anhydrase I,CHEMBL176495,Active,1.5,0.99846643
-247,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
-210,CHEMBL261,Carbonic anhydrase I,CHEMBL176495,Active,1.5,0.99846643
-208,CHEMBL261,Carbonic anhydrase I,CHEMBL176495,Active,1.5,0.99846643
-245,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
-244,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
-243,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
-242,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
-241,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
-185,CHEMBL261,Carbonic anhydrase I,CHEMBL191528,Active,1.0,0.9986902
-186,CHEMBL261,Carbonic anhydrase I,CHEMBL303004,Active,3.5,0.9986902
-187,CHEMBL261,Carbonic anhydrase I,CHEMBL1955873,Active,3.5,0.9986902
-188,CHEMBL261,Carbonic anhydrase I,CHEMBL1955873,Active,3.5,0.9986902
-189,CHEMBL261,Carbonic anhydrase I,CHEMBL568516,Active,3.0,0.9986902
-190,CHEMBL261,Carbonic anhydrase I,CHEMBL571514,Active,3.0,0.9986902
-191,CHEMBL261,Carbonic anhydrase I,CHEMBL119296,Active,3.5,0.9986902
-240,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
-199,CHEMBL261,Carbonic anhydrase I,CHEMBL232616,Active,1.0,0.99851316
-200,CHEMBL261,Carbonic anhydrase I,CHEMBL571519,Active,2.0,0.99851316
-201,CHEMBL261,Carbonic anhydrase I,CHEMBL232617,Active,1.0,0.99851316
-202,CHEMBL261,Carbonic anhydrase I,CHEMBL395734,Active,1.0,0.99851316
-203,CHEMBL261,Carbonic anhydrase I,CHEMBL232816,Active,1.0,0.99851316
-204,CHEMBL261,Carbonic anhydrase I,CHEMBL233019,Active,1.0,0.99851316
-205,CHEMBL261,Carbonic anhydrase I,CHEMBL390035,Active,1.5,0.99851316
-207,CHEMBL261,Carbonic anhydrase I,CHEMBL176495,Active,1.5,0.99846643
-209,CHEMBL261,Carbonic anhydrase I,CHEMBL176495,Active,1.5,0.99846643
 99,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
-238,CHEMBL261,Carbonic anhydrase I,CHEMBL6852,Active,1.0,0.9982675
+138,CHEMBL261,Carbonic anhydrase I,CHEMBL310671,Active,2.0,0.9997008
 97,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
-62,CHEMBL261,Carbonic anhydrase I,CHEMBL406,Active,3.0,0.999701
-61,CHEMBL261,Carbonic anhydrase I,CHEMBL406,Active,3.0,0.999701
 60,CHEMBL261,Carbonic anhydrase I,CHEMBL6705,Active,3.0,0.99970114
 59,CHEMBL261,Carbonic anhydrase I,CHEMBL6705,Active,3.0,0.99970114
 58,CHEMBL261,Carbonic anhydrase I,CHEMBL6705,Active,3.0,0.99970114
@@ -109,11 +107,8 @@
 56,CHEMBL261,Carbonic anhydrase I,CHEMBL6705,Active,3.0,0.99970114
 55,CHEMBL261,Carbonic anhydrase I,CHEMBL6705,Active,3.0,0.99970114
 54,CHEMBL261,Carbonic anhydrase I,CHEMBL6705,Active,3.0,0.99970114
-36,CHEMBL261,Carbonic anhydrase I,CHEMBL6705,Active,3.0,0.99970114
-34,CHEMBL261,Carbonic anhydrase I,CHEMBL6705,Active,3.0,0.99970114
-98,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
 53,CHEMBL261,Carbonic anhydrase I,CHEMBL6705,Active,3.0,0.99970114
-52,CHEMBL261,Carbonic anhydrase I,CHEMBL6705,Active,3.0,0.99970114
+98,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
 51,CHEMBL261,Carbonic anhydrase I,CHEMBL6705,Active,3.0,0.99970114
 50,CHEMBL261,Carbonic anhydrase I,CHEMBL6705,Active,3.0,0.99970114
 49,CHEMBL261,Carbonic anhydrase I,CHEMBL6705,Active,3.0,0.99970114
@@ -122,192 +117,228 @@
 46,CHEMBL261,Carbonic anhydrase I,CHEMBL6705,Active,3.0,0.99970114
 45,CHEMBL261,Carbonic anhydrase I,CHEMBL6705,Active,3.0,0.99970114
 44,CHEMBL261,Carbonic anhydrase I,CHEMBL6705,Active,3.0,0.99970114
-43,CHEMBL261,Carbonic anhydrase I,CHEMBL6705,Active,3.0,0.99970114
-42,CHEMBL261,Carbonic anhydrase I,CHEMBL6705,Active,3.0,0.99970114
-41,CHEMBL261,Carbonic anhydrase I,CHEMBL6705,Active,3.0,0.99970114
-40,CHEMBL261,Carbonic anhydrase I,CHEMBL6705,Active,3.0,0.99970114
-39,CHEMBL261,Carbonic anhydrase I,CHEMBL6705,Active,3.0,0.99970114
-38,CHEMBL261,Carbonic anhydrase I,CHEMBL6705,Active,3.0,0.99970114
-37,CHEMBL261,Carbonic anhydrase I,CHEMBL6705,Active,3.0,0.99970114
-63,CHEMBL261,Carbonic anhydrase I,CHEMBL406,Active,3.0,0.999701
-64,CHEMBL261,Carbonic anhydrase I,CHEMBL406,Active,3.0,0.999701
+338,CHEMBL261,Carbonic anhydrase I,CHEMBL2334351,Active,1.5,0.9932871
+337,CHEMBL261,Carbonic anhydrase I,CHEMBL2331585,Active,3.0,0.9932871
+335,CHEMBL261,Carbonic anhydrase I,CHEMBL71851,Active,2.0,0.99333364
+330,CHEMBL261,Carbonic anhydrase I,CHEMBL578167,Active,2.0,0.99349153
+34,CHEMBL261,Carbonic anhydrase I,CHEMBL6705,Active,3.0,0.99970114
 35,CHEMBL261,Carbonic anhydrase I,CHEMBL6705,Active,3.0,0.99970114
-66,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
-80,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
-81,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
-82,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
-65,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
-78,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
-83,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
-84,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
-85,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
-86,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
-87,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
-88,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
+61,CHEMBL261,Carbonic anhydrase I,CHEMBL406,Active,3.0,0.999701
+36,CHEMBL261,Carbonic anhydrase I,CHEMBL6705,Active,3.0,0.99970114
+38,CHEMBL261,Carbonic anhydrase I,CHEMBL6705,Active,3.0,0.99970114
+39,CHEMBL261,Carbonic anhydrase I,CHEMBL6705,Active,3.0,0.99970114
+40,CHEMBL261,Carbonic anhydrase I,CHEMBL6705,Active,3.0,0.99970114
+41,CHEMBL261,Carbonic anhydrase I,CHEMBL6705,Active,3.0,0.99970114
+42,CHEMBL261,Carbonic anhydrase I,CHEMBL6705,Active,3.0,0.99970114
+43,CHEMBL261,Carbonic anhydrase I,CHEMBL6705,Active,3.0,0.99970114
+37,CHEMBL261,Carbonic anhydrase I,CHEMBL6705,Active,3.0,0.99970114
+62,CHEMBL261,Carbonic anhydrase I,CHEMBL406,Active,3.0,0.999701
+52,CHEMBL261,Carbonic anhydrase I,CHEMBL6705,Active,3.0,0.99970114
+64,CHEMBL261,Carbonic anhydrase I,CHEMBL406,Active,3.0,0.999701
+72,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
 89,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
-90,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
-92,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
+88,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
+87,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
+86,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
+85,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
+63,CHEMBL261,Carbonic anhydrase I,CHEMBL406,Active,3.0,0.999701
+84,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
+83,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
+82,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
+81,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
+80,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
+79,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
+78,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
+77,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
+76,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
+75,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
+74,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
+73,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
 91,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
-94,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
+92,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
+90,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
+70,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
+65,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
+66,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
 67,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
 68,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
 69,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
-70,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
-71,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
-72,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
-73,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
-93,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
-74,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
-76,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
 96,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
-77,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
 95,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
-75,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
-79,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
+94,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
+71,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
+93,CHEMBL261,Carbonic anhydrase I,CHEMBL419,Active,1.0,0.9997008
+308,CHEMBL205,Carbonic anhydrase II,CHEMBL567544,Active,5.0,0.9949212
+33,CHEMBL205,Carbonic anhydrase II,CHEMBL2391084,Active,2.0,0.9997319
+307,CHEMBL205,Carbonic anhydrase II,CHEMBL571738,Active,3.0,0.9949212
+223,CHEMBL205,Carbonic anhydrase II,CHEMBL2070211,Active,1.0,0.9984298
+197,CHEMBL205,Carbonic anhydrase II,CHEMBL511425,Active,1.0,0.9985523
+196,CHEMBL205,Carbonic anhydrase II,CHEMBL469148,Active,1.5,0.9985523
 195,CHEMBL205,Carbonic anhydrase II,CHEMBL468106,Active,1.0,0.9985523
 194,CHEMBL205,Carbonic anhydrase II,CHEMBL466841,Active,1.0,0.9985523
-196,CHEMBL205,Carbonic anhydrase II,CHEMBL469148,Active,1.5,0.9985523
-162,CHEMBL205,Carbonic anhydrase II,CHEMBL303004,Active,3.5,0.9991755
-167,CHEMBL205,Carbonic anhydrase II,CHEMBL119296,Active,3.5,0.9991755
-308,CHEMBL205,Carbonic anhydrase II,CHEMBL567544,Active,5.0,0.9949212
-304,CHEMBL205,Carbonic anhydrase II,CHEMBL567896,Active,2.0,0.9955475
-223,CHEMBL205,Carbonic anhydrase II,CHEMBL2070211,Active,1.0,0.9984298
 222,CHEMBL205,Carbonic anhydrase II,CHEMBL3608874,Active,1.0,0.9984298
 221,CHEMBL205,Carbonic anhydrase II,CHEMBL3608873,Active,1.0,0.9984298
-13,CHEMBL205,Carbonic anhydrase II,CHEMBL567139,Active,10.0,0.9999565
-197,CHEMBL205,Carbonic anhydrase II,CHEMBL511425,Active,1.0,0.9985523
-206,CHEMBL205,Carbonic anhydrase II,CHEMBL97034,Active,1.0,0.99850756
-307,CHEMBL205,Carbonic anhydrase II,CHEMBL571738,Active,3.0,0.9949212
+304,CHEMBL205,Carbonic anhydrase II,CHEMBL567896,Active,2.0,0.9955475
+30,CHEMBL205,Carbonic anhydrase II,CHEMBL2334350,Active,3.0,0.9997451
 31,CHEMBL205,Carbonic anhydrase II,CHEMBL12567,Active,15.0,0.9997319
+13,CHEMBL205,Carbonic anhydrase II,CHEMBL567139,Active,10.0,0.9999565
 32,CHEMBL205,Carbonic anhydrase II,CHEMBL568416,Active,2.0,0.9997319
-33,CHEMBL205,Carbonic anhydrase II,CHEMBL2391084,Active,2.0,0.9997319
+206,CHEMBL205,Carbonic anhydrase II,CHEMBL97034,Active,1.0,0.99850756
+167,CHEMBL205,Carbonic anhydrase II,CHEMBL119296,Active,3.5,0.9991755
+162,CHEMBL205,Carbonic anhydrase II,CHEMBL303004,Active,3.5,0.9991755
 163,CHEMBL205,Carbonic anhydrase II,CHEMBL568516,Active,26.0,0.9991755
 164,CHEMBL205,Carbonic anhydrase II,CHEMBL568385,Active,23.0,0.9991755
 165,CHEMBL205,Carbonic anhydrase II,CHEMBL1214194,Active,17.5,0.9991755
 166,CHEMBL205,Carbonic anhydrase II,CHEMBL571514,Active,17.0,0.9991755
-30,CHEMBL205,Carbonic anhydrase II,CHEMBL2334350,Active,3.0,0.9997451
+324,CHEMBL3242,Carbonic anhydrase XII,CHEMBL750,Active,26.0,0.9937087
+323,CHEMBL3242,Carbonic anhydrase XII,CHEMBL750,Active,26.0,0.9937087
+322,CHEMBL3242,Carbonic anhydrase XII,CHEMBL750,Active,26.0,0.9937087
+321,CHEMBL3242,Carbonic anhydrase XII,CHEMBL750,Active,26.0,0.9937087
+320,CHEMBL3242,Carbonic anhydrase XII,CHEMBL750,Active,26.0,0.9937087
+319,CHEMBL3242,Carbonic anhydrase XII,CHEMBL750,Active,26.0,0.9937087
+325,CHEMBL3242,Carbonic anhydrase XII,CHEMBL19612,Active,6.0,0.9936904
+256,CHEMBL301,Cyclin-dependent kinase 2,CHEMBL91829,Inactive,1.5,0.99817383
 18,CHEMBL301,Cyclin-dependent kinase 2,CHEMBL1973540,Active,1.0,0.9999506
+169,CHEMBL301,Cyclin-dependent kinase 2,CHEMBL1999484,Active,2.0,0.999111
+17,CHEMBL301,Cyclin-dependent kinase 2,CHEMBL1973540,Active,1.0,0.9999506
 16,CHEMBL301,Cyclin-dependent kinase 2,CHEMBL1973540,Active,1.0,0.9999506
 15,CHEMBL301,Cyclin-dependent kinase 2,CHEMBL535,Inactive,8.0,0.9999549
-14,CHEMBL301,Cyclin-dependent kinase 2,CHEMBL535,Inactive,8.0,0.9999549
-17,CHEMBL301,Cyclin-dependent kinase 2,CHEMBL1973540,Active,1.0,0.9999506
-169,CHEMBL301,Cyclin-dependent kinase 2,CHEMBL1999484,Active,2.0,0.999111
-256,CHEMBL301,Cyclin-dependent kinase 2,CHEMBL91829,Inactive,1.5,0.99817383
 192,CHEMBL301,Cyclin-dependent kinase 2,CHEMBL288441,Inactive,129.5,0.99865544
+14,CHEMBL301,Cyclin-dependent kinase 2,CHEMBL535,Inactive,8.0,0.9999549
 260,CHEMBL4036,Cyclin-dependent kinase 5,CHEMBL91829,Inactive,26.5,0.99796367
-269,CHEMBL284,Dipeptidyl peptidase IV,CHEMBL195271,Active,1.0,0.997447
 268,CHEMBL284,Dipeptidyl peptidase IV,CHEMBL459642,Active,1.0,0.997447
-272,CHEMBL284,Dipeptidyl peptidase IV,CHEMBL455298,Active,1.0,0.997447
+269,CHEMBL284,Dipeptidyl peptidase IV,CHEMBL195271,Active,1.0,0.997447
 270,CHEMBL284,Dipeptidyl peptidase IV,CHEMBL194517,Inactive,1.0,0.997447
 271,CHEMBL284,Dipeptidyl peptidase IV,CHEMBL194250,Active,1.0,0.997447
-180,CHEMBL4225,Dual specificity protein kinase CLK2,CHEMBL24828,Inactive,54.0,0.99885094
-267,CHEMBL4225,Dual specificity protein kinase CLK2,CHEMBL939,Inactive,55.0,0.99753404
-255,CHEMBL4225,Dual specificity protein kinase CLK2,CHEMBL565612,Active,101.0,0.998224
+272,CHEMBL284,Dipeptidyl peptidase IV,CHEMBL455298,Active,1.0,0.997447
 294,CHEMBL4225,Dual specificity protein kinase CLK2,CHEMBL31965,Inactive,39.0,0.99654686
 156,CHEMBL4225,Dual specificity protein kinase CLK2,CHEMBL1336,Inactive,31.0,0.9994656
+180,CHEMBL4225,Dual specificity protein kinase CLK2,CHEMBL24828,Inactive,54.0,0.99885094
+255,CHEMBL4225,Dual specificity protein kinase CLK2,CHEMBL565612,Active,101.0,0.998224
+267,CHEMBL4225,Dual specificity protein kinase CLK2,CHEMBL939,Inactive,55.0,0.99753404
 155,CHEMBL4203,Dual specificity protein kinase CLK4,CHEMBL939,Inactive,31.0,0.9994953
-28,CHEMBL4203,Dual specificity protein kinase CLK4,CHEMBL24828,Inactive,54.0,0.9998031
-5,CHEMBL4203,Dual specificity protein kinase CLK4,CHEMBL428690,Inactive,2.5,0.9999983
-168,CHEMBL4203,Dual specificity protein kinase CLK4,CHEMBL31965,Inactive,29.0,0.9991282
-296,CHEMBL4203,Dual specificity protein kinase CLK4,CHEMBL103667,Inactive,11.0,0.99637264
 21,CHEMBL4203,Dual specificity protein kinase CLK4,CHEMBL1336,Inactive,31.0,0.9999366
+28,CHEMBL4203,Dual specificity protein kinase CLK4,CHEMBL24828,Inactive,54.0,0.9998031
+168,CHEMBL4203,Dual specificity protein kinase CLK4,CHEMBL31965,Inactive,29.0,0.9991282
+5,CHEMBL4203,Dual specificity protein kinase CLK4,CHEMBL428690,Inactive,2.5,0.9999983
+334,CHEMBL4203,Dual specificity protein kinase CLK4,CHEMBL553,Inactive,16.0,0.9933945
+296,CHEMBL4203,Dual specificity protein kinase CLK4,CHEMBL103667,Inactive,11.0,0.99637264
 9,CHEMBL2292,Dual-specificity tyrosine-phosphorylation regulated kinase 1A,CHEMBL502835,Inactive,104.5,0.99997765
-193,CHEMBL2292,Dual-specificity tyrosine-phosphorylation regulated kinase 1A,CHEMBL1336,Inactive,107.5,0.99855393
 22,CHEMBL2292,Dual-specificity tyrosine-phosphorylation regulated kinase 1A,CHEMBL288441,Inactive,54.0,0.9999054
+193,CHEMBL2292,Dual-specificity tyrosine-phosphorylation regulated kinase 1A,CHEMBL1336,Inactive,107.5,0.99855393
 263,CHEMBL2068,Ephrin type-A receptor 2,CHEMBL535,Active,111.0,0.99766445
 264,CHEMBL2068,Ephrin type-A receptor 2,CHEMBL535,Inactive,111.0,0.99766445
-261,CHEMBL3650,Fibroblast growth factor receptor 1,CHEMBL939,Inactive,4.5,0.9979549
-154,CHEMBL3650,Fibroblast growth factor receptor 1,CHEMBL428690,Inactive,189.0,0.9995153
-145,CHEMBL3650,Fibroblast growth factor receptor 1,CHEMBL553,Inactive,1.0,0.9996807
+315,CHEMBL3650,Fibroblast growth factor receptor 1,CHEMBL607707,Inactive,115.0,0.9941003
 7,CHEMBL3650,Fibroblast growth factor receptor 1,CHEMBL223360,Active,14.0,0.99998546
+314,CHEMBL3650,Fibroblast growth factor receptor 1,CHEMBL124660,Inactive,11.0,0.9945955
 225,CHEMBL3650,Fibroblast growth factor receptor 1,CHEMBL31965,Inactive,13.0,0.9983343
+145,CHEMBL3650,Fibroblast growth factor receptor 1,CHEMBL553,Inactive,1.0,0.9996807
+154,CHEMBL3650,Fibroblast growth factor receptor 1,CHEMBL428690,Inactive,189.0,0.9995153
+261,CHEMBL3650,Fibroblast growth factor receptor 1,CHEMBL939,Inactive,4.5,0.9979549
+331,CHEMBL2742,Fibroblast growth factor receptor 3,CHEMBL553,Inactive,43.0,0.99343747
+336,CHEMBL2742,Fibroblast growth factor receptor 3,CHEMBL103667,Inactive,106.0,0.9933023
 302,CHEMBL2695,Focal adhesion kinase 1,CHEMBL482967,Active,4.5,0.9959907
 259,CHEMBL2850,Glycogen synthase kinase-3 alpha,CHEMBL91829,Active,16.0,0.9979778
 150,CHEMBL262,Glycogen synthase kinase-3 beta,CHEMBL1336,Inactive,16.5,0.99962074
+20,CHEMBL262,Glycogen synthase kinase-3 beta,CHEMBL2006765,Active,14.5,0.9999396
 3,CHEMBL262,Glycogen synthase kinase-3 beta,CHEMBL535,Inactive,6.0,0.9999992
 12,CHEMBL262,Glycogen synthase kinase-3 beta,CHEMBL288441,Inactive,93.0,0.99995774
-20,CHEMBL262,Glycogen synthase kinase-3 beta,CHEMBL2006765,Active,14.5,0.9999396
 27,CHEMBL3836,LIM domain kinase 1,CHEMBL482967,Active,4.5,0.99980855
-23,CHEMBL3836,LIM domain kinase 1,CHEMBL535,Inactive,1.5,0.9998344
 153,CHEMBL3836,LIM domain kinase 1,CHEMBL1725279,Inactive,87.0,0.99953115
 299,CHEMBL3836,LIM domain kinase 1,CHEMBL428690,Inactive,224.5,0.9962673
-265,CHEMBL4204,MAP kinase signal-integrating kinase 2,CHEMBL91829,Inactive,161.5,0.99755424
+23,CHEMBL3836,LIM domain kinase 1,CHEMBL535,Inactive,1.5,0.9998344
+340,CHEMBL4040,MAP kinase ERK2,CHEMBL475251,Active,5.0,0.9930811
 295,CHEMBL4204,MAP kinase signal-integrating kinase 2,CHEMBL302449,Active,31.0,0.99646556
+265,CHEMBL4204,MAP kinase signal-integrating kinase 2,CHEMBL91829,Inactive,161.5,0.99755424
 182,CHEMBL1844,Macrophage colony stimulating factor receptor,CHEMBL2006765,Active,1.0,0.9988374
 170,CHEMBL4578,Maternal embryonic leucine zipper kinase,CHEMBL482967,Active,106.0,0.9990973
+326,CHEMBL333,Matrix metalloproteinase-2,CHEMBL1801393,Active,1.0,0.9936598
+328,CHEMBL333,Matrix metalloproteinase-2,CHEMBL1801430,Active,1.0,0.9936598
+329,CHEMBL333,Matrix metalloproteinase-2,CHEMBL1801046,Active,1.0,0.9936598
+327,CHEMBL333,Matrix metalloproteinase-2,CHEMBL1801430,Active,1.0,0.9936598
 258,CHEMBL5330,Mitogen-activated protein kinase kinase kinase kinase 2,CHEMBL607707,Active,4.5,0.9981396
-8,CHEMBL4852,Mitogen-activated protein kinase kinase kinase kinase 5,CHEMBL1725279,Inactive,191.5,0.99998075
 149,CHEMBL4852,Mitogen-activated protein kinase kinase kinase kinase 5,CHEMBL428690,Inactive,2.5,0.99963516
-311,CHEMBL2815,Nerve growth factor receptor Trk-A,CHEMBL428690,Inactive,117.0,0.9948544
+8,CHEMBL4852,Mitogen-activated protein kinase kinase kinase kinase 5,CHEMBL1725279,Inactive,191.5,0.99998075
 310,CHEMBL2815,Nerve growth factor receptor Trk-A,CHEMBL24828,Inactive,54.0,0.99489224
-19,CHEMBL2973,Rho-associated protein kinase 2,CHEMBL502835,Inactive,42.5,0.99994326
+311,CHEMBL2815,Nerve growth factor receptor Trk-A,CHEMBL428690,Inactive,117.0,0.9948544
 151,CHEMBL2973,Rho-associated protein kinase 2,CHEMBL2006765,Active,45.0,0.99959916
-184,CHEMBL4501,Ribosomal protein S6 kinase 1,CHEMBL1081312,Active,10.0,0.9988054
+19,CHEMBL2973,Rho-associated protein kinase 2,CHEMBL502835,Inactive,42.5,0.99994326
 183,CHEMBL4501,Ribosomal protein S6 kinase 1,CHEMBL1081312,Active,10.0,0.9988054
-158,CHEMBL2345,Ribosomal protein S6 kinase alpha 3,CHEMBL450786,Active,13.5,0.99935544
+184,CHEMBL4501,Ribosomal protein S6 kinase 1,CHEMBL1081312,Active,10.0,0.9988054
 306,CHEMBL2345,Ribosomal protein S6 kinase alpha 3,CHEMBL939,Inactive,55.0,0.9952873
-161,CHEMBL2345,Ribosomal protein S6 kinase alpha 3,CHEMBL1336,Inactive,89.5,0.999201
+317,CHEMBL2345,Ribosomal protein S6 kinase alpha 3,CHEMBL31965,Inactive,75.0,0.9937871
 254,CHEMBL2345,Ribosomal protein S6 kinase alpha 3,CHEMBL24828,Inactive,54.0,0.9982482
+161,CHEMBL2345,Ribosomal protein S6 kinase alpha 3,CHEMBL1336,Inactive,89.5,0.999201
+158,CHEMBL2345,Ribosomal protein S6 kinase alpha 3,CHEMBL450786,Active,13.5,0.99935544
 300,CHEMBL4282,Serine/threonine-protein kinase AKT,CHEMBL535,Inactive,81.0,0.9960979
 257,CHEMBL4722,Serine/threonine-protein kinase Aurora-A,CHEMBL91829,Inactive,26.5,0.99815714
-144,CHEMBL4722,Serine/threonine-protein kinase Aurora-A,CHEMBL24828,Inactive,1.0,0.9996964
-262,CHEMBL4722,Serine/threonine-protein kinase Aurora-A,CHEMBL31965,Inactive,12.0,0.9976852
+316,CHEMBL4722,Serine/threonine-protein kinase Aurora-A,CHEMBL124660,Inactive,4.0,0.9940048
+312,CHEMBL4722,Serine/threonine-protein kinase Aurora-A,CHEMBL939,Inactive,3.0,0.9946736
 152,CHEMBL4722,Serine/threonine-protein kinase Aurora-A,CHEMBL428690,Inactive,152.0,0.9995329
+262,CHEMBL4722,Serine/threonine-protein kinase Aurora-A,CHEMBL31965,Inactive,12.0,0.9976852
+144,CHEMBL4722,Serine/threonine-protein kinase Aurora-A,CHEMBL24828,Inactive,1.0,0.9996964
 0,CHEMBL2185,Serine/threonine-protein kinase Aurora-B,CHEMBL1983111,Active,2.0,1.0
-279,CHEMBL2147,Serine/threonine-protein kinase PIM1,CHEMBL3792428,Active,1.0,0.9973273
-277,CHEMBL2147,Serine/threonine-protein kinase PIM1,CHEMBL1910909,Active,1.0,0.9973273
-276,CHEMBL2147,Serine/threonine-protein kinase PIM1,CHEMBL2387471,Active,1.0,0.9973273
-280,CHEMBL2147,Serine/threonine-protein kinase PIM1,CHEMBL1910912,Active,1.0,0.9973273
-278,CHEMBL2147,Serine/threonine-protein kinase PIM1,CHEMBL3103862,Active,1.0,0.9973273
-283,CHEMBL2147,Serine/threonine-protein kinase PIM1,CHEMBL3103861,Active,1.0,0.9973273
-282,CHEMBL2147,Serine/threonine-protein kinase PIM1,CHEMBL1910915,Active,1.0,0.9973273
-274,CHEMBL2147,Serine/threonine-protein kinase PIM1,CHEMBL1910911,Active,1.0,0.9973273
-284,CHEMBL2147,Serine/threonine-protein kinase PIM1,CHEMBL1910913,Active,1.0,0.9973273
-285,CHEMBL2147,Serine/threonine-protein kinase PIM1,CHEMBL2387463,Active,2.0,0.9973273
-286,CHEMBL2147,Serine/threonine-protein kinase PIM1,CHEMBL1910908,Active,1.0,0.9973273
+313,CHEMBL2185,Serine/threonine-protein kinase Aurora-B,CHEMBL482767,Active,3.5,0.994666
+298,CHEMBL2147,Serine/threonine-protein kinase PIM1,CHEMBL1336,Inactive,136.0,0.9962857
 287,CHEMBL2147,Serine/threonine-protein kinase PIM1,CHEMBL3103860,Active,1.0,0.9973273
 288,CHEMBL2147,Serine/threonine-protein kinase PIM1,CHEMBL3747207,Active,1.0,0.9973273
 297,CHEMBL2147,Serine/threonine-protein kinase PIM1,CHEMBL1336,Inactive,136.0,0.9962857
-298,CHEMBL2147,Serine/threonine-protein kinase PIM1,CHEMBL1336,Inactive,136.0,0.9962857
-1,CHEMBL2147,Serine/threonine-protein kinase PIM1,CHEMBL535,Inactive,9.0,0.9999999
-281,CHEMBL2147,Serine/threonine-protein kinase PIM1,CHEMBL1910907,Active,1.0,0.9973273
+286,CHEMBL2147,Serine/threonine-protein kinase PIM1,CHEMBL1910908,Active,1.0,0.9973273
+342,CHEMBL2147,Serine/threonine-protein kinase PIM1,CHEMBL24828,Inactive,13.0,0.99282515
+284,CHEMBL2147,Serine/threonine-protein kinase PIM1,CHEMBL1910913,Active,1.0,0.9973273
+285,CHEMBL2147,Serine/threonine-protein kinase PIM1,CHEMBL2387463,Active,2.0,0.9973273
 273,CHEMBL2147,Serine/threonine-protein kinase PIM1,CHEMBL2387465,Active,2.0,0.9973273
+274,CHEMBL2147,Serine/threonine-protein kinase PIM1,CHEMBL1910911,Active,1.0,0.9973273
 275,CHEMBL2147,Serine/threonine-protein kinase PIM1,CHEMBL265470,Active,39.5,0.9973273
+276,CHEMBL2147,Serine/threonine-protein kinase PIM1,CHEMBL2387471,Active,1.0,0.9973273
+277,CHEMBL2147,Serine/threonine-protein kinase PIM1,CHEMBL1910909,Active,1.0,0.9973273
+279,CHEMBL2147,Serine/threonine-protein kinase PIM1,CHEMBL3792428,Active,1.0,0.9973273
+280,CHEMBL2147,Serine/threonine-protein kinase PIM1,CHEMBL1910912,Active,1.0,0.9973273
+278,CHEMBL2147,Serine/threonine-protein kinase PIM1,CHEMBL3103862,Active,1.0,0.9973273
 157,CHEMBL2147,Serine/threonine-protein kinase PIM1,CHEMBL288441,Inactive,13.0,0.9994077
+1,CHEMBL2147,Serine/threonine-protein kinase PIM1,CHEMBL535,Inactive,9.0,0.9999999
+282,CHEMBL2147,Serine/threonine-protein kinase PIM1,CHEMBL1910915,Active,1.0,0.9973273
+283,CHEMBL2147,Serine/threonine-protein kinase PIM1,CHEMBL3103861,Active,1.0,0.9973273
+281,CHEMBL2147,Serine/threonine-protein kinase PIM1,CHEMBL1910907,Active,1.0,0.9973273
+339,CHEMBL3788,Serine/threonine-protein kinase PLK4,CHEMBL31965,Inactive,29.0,0.9931034
 305,CHEMBL3788,Serine/threonine-protein kinase PLK4,CHEMBL939,Inactive,31.0,0.99545753
-175,CHEMBL1862,Tyrosine-protein kinase ABL,CHEMBL1725279,Inactive,148.0,0.99888915
-179,CHEMBL1862,Tyrosine-protein kinase ABL,CHEMBL1725279,Inactive,148.0,0.99888915
 174,CHEMBL1862,Tyrosine-protein kinase ABL,CHEMBL1725279,Inactive,148.0,0.99888915
-173,CHEMBL1862,Tyrosine-protein kinase ABL,CHEMBL1725279,Inactive,148.0,0.99888915
 178,CHEMBL1862,Tyrosine-protein kinase ABL,CHEMBL1725279,Inactive,148.0,0.99888915
-177,CHEMBL1862,Tyrosine-protein kinase ABL,CHEMBL1725279,Inactive,148.0,0.99888915
+173,CHEMBL1862,Tyrosine-protein kinase ABL,CHEMBL1725279,Inactive,148.0,0.99888915
+175,CHEMBL1862,Tyrosine-protein kinase ABL,CHEMBL1725279,Inactive,148.0,0.99888915
 176,CHEMBL1862,Tyrosine-protein kinase ABL,CHEMBL1725279,Inactive,148.0,0.99888915
+179,CHEMBL1862,Tyrosine-protein kinase ABL,CHEMBL1725279,Inactive,148.0,0.99888915
+177,CHEMBL1862,Tyrosine-protein kinase ABL,CHEMBL1725279,Inactive,148.0,0.99888915
 224,CHEMBL2971,Tyrosine-protein kinase JAK2,CHEMBL1336,Inactive,3.0,0.9983746
-11,CHEMBL2971,Tyrosine-protein kinase JAK2,CHEMBL1725279,Inactive,58.0,0.9999676
 301,CHEMBL2971,Tyrosine-protein kinase JAK2,CHEMBL91829,Inactive,32.5,0.9960422
+318,CHEMBL2971,Tyrosine-protein kinase JAK2,CHEMBL31965,Inactive,29.0,0.9937604
+11,CHEMBL2971,Tyrosine-protein kinase JAK2,CHEMBL1725279,Inactive,58.0,0.9999676
 26,CHEMBL258,Tyrosine-protein kinase LCK,CHEMBL1997617,Active,2.5,0.9998259
-160,CHEMBL258,Tyrosine-protein kinase LCK,CHEMBL428690,Inactive,55.0,0.9992199
-159,CHEMBL258,Tyrosine-protein kinase LCK,CHEMBL428690,Active,55.0,0.9992199
-24,CHEMBL258,Tyrosine-protein kinase LCK,CHEMBL1997617,Active,2.5,0.9998259
 25,CHEMBL258,Tyrosine-protein kinase LCK,CHEMBL1997617,Active,2.5,0.9998259
+24,CHEMBL258,Tyrosine-protein kinase LCK,CHEMBL1997617,Active,2.5,0.9998259
+159,CHEMBL258,Tyrosine-protein kinase LCK,CHEMBL428690,Active,55.0,0.9992199
+160,CHEMBL258,Tyrosine-protein kinase LCK,CHEMBL428690,Inactive,55.0,0.9992199
 266,CHEMBL3905,Tyrosine-protein kinase Lyn,CHEMBL1997617,Active,2.5,0.9975512
+332,CHEMBL267,Tyrosine-protein kinase SRC,CHEMBL103667,Active,1.0,0.9934296
+333,CHEMBL267,Tyrosine-protein kinase SRC,CHEMBL103667,Inactive,1.0,0.9934296
+293,CHEMBL267,Tyrosine-protein kinase SRC,CHEMBL1997617,Active,2.5,0.99674153
 181,CHEMBL267,Tyrosine-protein kinase SRC,CHEMBL1725279,Inactive,49.5,0.9988412
 292,CHEMBL267,Tyrosine-protein kinase SRC,CHEMBL1997617,Active,2.5,0.99674153
-293,CHEMBL267,Tyrosine-protein kinase SRC,CHEMBL1997617,Active,2.5,0.99674153
 291,CHEMBL2599,Tyrosine-protein kinase SYK,CHEMBL535,Inactive,6.0,0.9968838
 290,CHEMBL2599,Tyrosine-protein kinase SYK,CHEMBL535,Inactive,6.0,0.9968838
-309,CHEMBL1974,Tyrosine-protein kinase receptor FLT3,CHEMBL1996234,Active,5.5,0.9949043
 2,CHEMBL1974,Tyrosine-protein kinase receptor FLT3,CHEMBL1983111,Active,16.0,0.9999999
+309,CHEMBL1974,Tyrosine-protein kinase receptor FLT3,CHEMBL1996234,Active,5.5,0.9949043
 172,CHEMBL2041,Tyrosine-protein kinase receptor RET,CHEMBL1966628,Active,11.5,0.99897873
-146,CHEMBL279,Vascular endothelial growth factor receptor 2,CHEMBL941,Active,6.0,0.99965525
-147,CHEMBL279,Vascular endothelial growth factor receptor 2,CHEMBL941,Active,6.0,0.99965525
-4,CHEMBL279,Vascular endothelial growth factor receptor 2,CHEMBL31965,Inactive,5.5,0.99999875
-6,CHEMBL279,Vascular endothelial growth factor receptor 2,CHEMBL428690,Inactive,111.0,0.99999714
-148,CHEMBL279,Vascular endothelial growth factor receptor 2,CHEMBL941,Inactive,6.0,0.99965525
-10,CHEMBL279,Vascular endothelial growth factor receptor 2,CHEMBL91829,Inactive,3.0,0.99997336
 198,CHEMBL279,Vascular endothelial growth factor receptor 2,CHEMBL119385,Inactive,71.5,0.9985245
-171,CHEMBL1955,Vascular endothelial growth factor receptor 3,CHEMBL428690,Inactive,230.0,0.9990183
-289,CHEMBL1955,Vascular endothelial growth factor receptor 3,CHEMBL91829,Inactive,13.0,0.9969679
+6,CHEMBL279,Vascular endothelial growth factor receptor 2,CHEMBL428690,Inactive,111.0,0.99999714
+10,CHEMBL279,Vascular endothelial growth factor receptor 2,CHEMBL91829,Inactive,3.0,0.99997336
+4,CHEMBL279,Vascular endothelial growth factor receptor 2,CHEMBL31965,Inactive,5.5,0.99999875
+147,CHEMBL279,Vascular endothelial growth factor receptor 2,CHEMBL941,Active,6.0,0.99965525
+146,CHEMBL279,Vascular endothelial growth factor receptor 2,CHEMBL941,Active,6.0,0.99965525
+148,CHEMBL279,Vascular endothelial growth factor receptor 2,CHEMBL941,Inactive,6.0,0.99965525
 303,CHEMBL1955,Vascular endothelial growth factor receptor 3,CHEMBL31965,Inactive,5.5,0.9959402
+289,CHEMBL1955,Vascular endothelial growth factor receptor 3,CHEMBL91829,Inactive,13.0,0.9969679
+171,CHEMBL1955,Vascular endothelial growth factor receptor 3,CHEMBL428690,Inactive,230.0,0.9990183
+341,CHEMBL2276,c-Jun N-terminal kinase 1,CHEMBL1336,Inactive,16.5,0.99289733
 29,CHEMBL2276,c-Jun N-terminal kinase 1,CHEMBL535,Inactive,67.0,0.999791
 253,CHEMBL4179,c-Jun N-terminal kinase 2,CHEMBL428690,Inactive,224.5,0.99824905

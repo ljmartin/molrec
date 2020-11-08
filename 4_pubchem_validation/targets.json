@@ -333,5 +333,45 @@
         "pref_name": "3-phosphoinositide dependent protein kinase-1",
         "tid": "CHEMBL2534",
         "accession": "O15530"
+    },
+    "42": {
+        "pref_name": "Platelet-derived growth factor receptor beta",
+        "tid": "CHEMBL1913",
+        "accession": "P09619"
+    },
+    "211": {
+        "pref_name": "Matrix metalloproteinase-2",
+        "tid": "CHEMBL333",
+        "accession": "P08253"
+    },
+    "223": {
+        "pref_name": "Tyrosine-protein kinase TYK2",
+        "tid": "CHEMBL3553",
+        "accession": "P29597"
+    },
+    "205": {
+        "pref_name": "Carbonic anhydrase XII",
+        "tid": "CHEMBL3242",
+        "accession": "O43570"
+    },
+    "91": {
+        "pref_name": "Dopamine D2 receptor",
+        "tid": "CHEMBL217",
+        "accession": "P14416"
+    },
+    "0": {
+        "pref_name": "Leucine-rich repeat serine/threonine-protein kinase 2",
+        "tid": "CHEMBL1075104",
+        "accession": "Q5S007"
+    },
+    "291": {
+        "pref_name": "Serine/threonine-protein kinase PIM2",
+        "tid": "CHEMBL4523",
+        "accession": "Q9P1W9"
+    },
+    "30": {
+        "pref_name": "Alpha-2a adrenergic receptor",
+        "tid": "CHEMBL1867",
+        "accession": "P08913"
     }
 }
