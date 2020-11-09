@@ -373,5 +373,180 @@
         "pref_name": "Alpha-2a adrenergic receptor",
         "tid": "CHEMBL1867",
         "accession": "P08913"
+    },
+    "52": {
+        "pref_name": "Insulin-like growth factor I receptor",
+        "tid": "CHEMBL1957",
+        "accession": "P08069"
+    },
+    "90": {
+        "pref_name": "Muscarinic acetylcholine receptor M1",
+        "tid": "CHEMBL216",
+        "accession": "P11229"
+    },
+    "65": {
+        "pref_name": "Platelet-derived growth factor receptor alpha",
+        "tid": "CHEMBL2007",
+        "accession": "P16234"
+    },
+    "196": {
+        "pref_name": "Cyclin-dependent kinase 9",
+        "tid": "CHEMBL3116",
+        "accession": "P50750"
+    },
+    "183": {
+        "pref_name": "Tyrosine-protein kinase ITK/TSK",
+        "tid": "CHEMBL2959",
+        "accession": "Q08881"
+    },
+    "83": {
+        "pref_name": "Muscarinic acetylcholine receptor M2",
+        "tid": "CHEMBL211",
+        "accession": "P08172"
+    },
+    "311": {
+        "pref_name": "Beta-secretase 1",
+        "tid": "CHEMBL4822",
+        "accession": "P56817"
+    },
+    "173": {
+        "pref_name": "Tyrosine-protein kinase JAK1",
+        "tid": "CHEMBL2835",
+        "accession": "P23458"
+    },
+    "130": {
+        "pref_name": "Muscarinic acetylcholine receptor M3",
+        "tid": "CHEMBL245",
+        "accession": "P20309"
+    },
+    "227": {
+        "pref_name": "Dual specificity mitogen-activated protein kinase kinase 1",
+        "tid": "CHEMBL3587",
+        "accession": "Q02750"
+    },
+    "44": {
+        "pref_name": "Alpha-2c adrenergic receptor",
+        "tid": "CHEMBL1916",
+        "accession": "P18825"
+    },
+    "101": {
+        "pref_name": "Serotonin 2a (5-HT2a) receptor",
+        "tid": "CHEMBL224",
+        "accession": "P28223"
+    },
+    "85": {
+        "pref_name": "Serotonin 1a (5-HT1a) receptor",
+        "tid": "CHEMBL214",
+        "accession": "P08908"
+    },
+    "252": {
+        "pref_name": "Protein kinase C theta",
+        "tid": "CHEMBL3920",
+        "accession": "Q04759"
+    },
+    "127": {
+        "pref_name": "Serine/threonine-protein kinase AKT2",
+        "tid": "CHEMBL2431",
+        "accession": "P31751"
+    },
+    "108": {
+        "pref_name": "Alpha-1a adrenergic receptor",
+        "tid": "CHEMBL229",
+        "accession": "P35348"
+    },
+    "112": {
+        "pref_name": "Alpha-1b adrenergic receptor",
+        "tid": "CHEMBL232",
+        "accession": "P35368"
+    },
+    "168": {
+        "pref_name": "Matrix metalloproteinase 13",
+        "tid": "CHEMBL280",
+        "accession": "P45452"
+    },
+    "210": {
+        "pref_name": "Matrix metalloproteinase-1",
+        "tid": "CHEMBL332",
+        "accession": "P03956"
+    },
+    "100": {
+        "pref_name": "Alpha-1d adrenergic receptor",
+        "tid": "CHEMBL223",
+        "accession": "P25100"
+    },
+    "258": {
+        "pref_name": "PI3-kinase p110-alpha subunit",
+        "tid": "CHEMBL4005",
+        "accession": "P42336"
+    },
+    "22": {
+        "pref_name": "Receptor protein-tyrosine kinase erbB-2",
+        "tid": "CHEMBL1824",
+        "accession": "P04626"
+    },
+    "295": {
+        "pref_name": "Tyrosine kinase non-receptor protein 2",
+        "tid": "CHEMBL4599",
+        "accession": "Q07912"
+    },
+    "98": {
+        "pref_name": "MAP kinase-activated protein kinase 2",
+        "tid": "CHEMBL2208",
+        "accession": "P49137"
+    },
+    "201": {
+        "pref_name": "Matrix metalloproteinase 9",
+        "tid": "CHEMBL321",
+        "accession": "P14780"
+    },
+    "103": {
+        "pref_name": "Serotonin 2c (5-HT2c) receptor",
+        "tid": "CHEMBL225",
+        "accession": "P28335"
+    },
+    "254": {
+        "pref_name": "Fibroblast growth factor receptor 4",
+        "tid": "CHEMBL3973",
+        "accession": "P22455"
+    },
+    "117": {
+        "pref_name": "Mu opioid receptor",
+        "tid": "CHEMBL233",
+        "accession": "P35372"
+    },
+    "119": {
+        "pref_name": "Dopamine D3 receptor",
+        "tid": "CHEMBL234",
+        "accession": "P35462"
+    },
+    "152": {
+        "pref_name": "MAP kinase p38 alpha",
+        "tid": "CHEMBL260",
+        "accession": "Q16539"
+    },
+    "162": {
+        "pref_name": "Cytochrome P450 11B2",
+        "tid": "CHEMBL2722",
+        "accession": "P19099"
+    },
+    "266": {
+        "pref_name": "Fibroblast growth factor receptor 2",
+        "tid": "CHEMBL4142",
+        "accession": "P21802"
+    },
+    "192": {
+        "pref_name": "Serine/threonine-protein kinase PLK1",
+        "tid": "CHEMBL3024",
+        "accession": "P53350"
+    },
+    "136": {
+        "pref_name": "Adenosine A2a receptor",
+        "tid": "CHEMBL251",
+        "accession": "P29274"
+    },
+    "59": {
+        "pref_name": "Serotonin 1d (5-HT1d) receptor",
+        "tid": "CHEMBL1983",
+        "accession": "P28221"
     }
 }
