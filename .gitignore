@@ -4,4 +4,5 @@
 .ipynb_checkpoints
 *interaction*.csv
 gpr55_prediction/PubChem_bioactivity_composite_query_gpr55_aids.csv
+classes_data_pchembl.csv
 __pycache__

@@ -548,5 +548,30 @@
         "pref_name": "Serotonin 1d (5-HT1d) receptor",
         "tid": "CHEMBL1983",
         "accession": "P28221"
+    },
+    "197": {
+        "pref_name": "PI3-kinase p110-delta subunit",
+        "tid": "CHEMBL3130",
+        "accession": "O00329"
+    },
+    "46": {
+        "pref_name": "Alpha-2b adrenergic receptor",
+        "tid": "CHEMBL1942",
+        "accession": "P18089"
+    },
+    "172": {
+        "pref_name": "Matrix metalloproteinase 3",
+        "tid": "CHEMBL283",
+        "accession": "P08254"
+    },
+    "105": {
+        "pref_name": "Adenosine A1 receptor",
+        "tid": "CHEMBL226",
+        "accession": "P30542"
+    },
+    "156": {
+        "pref_name": "c-Jun N-terminal kinase 3",
+        "tid": "CHEMBL2637",
+        "accession": "P53779"
     }
 }
