@@ -8,6 +8,7 @@ import lightfm
 from tqdm import tqdm
 from joblib import Parallel, delayed
 from scipy.spatial.distance import squareform
+import pymc3 as pm
 
 
 def train_test_split(input_matrix, fraction):
@@ -266,6 +267,13 @@ def train_implicit_bpr(params, inp):
     model.fit(sparse.csr_matrix(inp), show_progress=False)
     return np.dot(model.item_factors, model.user_factors.T)
 
+
+def train_sea(params, inp, fps, njobs=6, fraction=5):
+    sea = SEA(inp, fps, njobs=njobs, fraction=fraction, cutoff = params['cutoff'])
+    sea.fit()
+    sea.predict()
+    return sea.y_new
+
 def train_implicit_als(params, inp):
     model = implicit.als.AlternatingLeastSquares(factors=params['factors'],
                                                  regularization=params['regularization'],
@@ -363,13 +371,18 @@ def read_params(name):
 
 
 class SEA(object):
-    def __init__(self, interaction_matrix, fps):
+    def __init__(self, interaction_matrix, fps, cutoff=0.3, njobs=1, fraction=5):
+
         self.interaction_matrix = interaction_matrix
         self.fps = fps
+        self.cutoff=cutoff
+        self.fraction=fraction
+        self.njobs=njobs
+        
         self.fp_dict = {}
         for i in range(self.interaction_matrix.shape[1]):
             mask = (self.interaction_matrix[:,i]==1).toarray().flatten()
-            self.fp_dict[i] = self.fps[mask][np.random.choice(mask.sum(), mask.sum()//5, replace=False)]
+            self.fp_dict[i] = self.fps[mask][np.random.choice(mask.sum(), mask.sum()//self.fraction, replace=False)]
         
     def fast_jaccard(self,X, Y=None):
         """credit: https://stackoverflow.com/questions/32805916/compute-jaccard-distances-on-sparse-matrix"""
@@ -396,13 +409,13 @@ class SEA(object):
         idx_2 = np.random.choice(self.fps.shape[0], np.random.choice(np.arange(20,1000)))
         rss = self.fast_jaccard(self.fps[idx_1], self.fps[idx_2])
         num_comparisons = rss.shape[0]*rss.shape[1]
-        return num_comparisons, rss[rss>0.3].sum()
+        return num_comparisons, rss[rss>self.cutoff].sum()
     
     def generate_parameters(self, n=200):
         ns = list()
         rs = list()
         for i in range(n):
-            n, r = generate_random_pairwise_comparison()
+            n, r = self.generate_random_pairwise_comparison()
             ns.append(n)
             rs.append(r)
 
@@ -416,7 +429,7 @@ class SEA(object):
             likelihood = pm.Normal('y', mu=intercept + x_coeff * np.array(ns),
                         sigma=sigma+error_scaler*np.array(ns), observed=np.array(rs))
             # Inference!
-            trace = pm.sample(1000, cores=2) 
+            trace = pm.sample(2000, tune=2000, cores=2) 
         self.gradient = trace['x'].mean()
         self.sigma = trace['sigma'].mean()
         self.sigma_scaler = trace['sigma_scaler'].mean()
@@ -438,7 +451,7 @@ class SEA(object):
         j_,k_= np.triu_indices(num_cols,k=1)
         
         idx = np.array([(j_[i], k_[i]) for i in range(len(j_))])
-        parallel_jobs = Parallel(n_jobs=4)(delayed(self._wrap_rss)(i) for i in np.array_split(idx, 4))
+        parallel_jobs = Parallel(n_jobs=self.njobs)(delayed(self._wrap_rss)(i) for i in np.array_split(idx, self.njobs))
         
         raw_scores = list()
         num_comparisons = list()
@@ -470,9 +483,9 @@ class SEA(object):
         self.generate_parameters()
         self.calc_pP()
         
-    def predict(self)
+    def predict(self):
         self.y_new = self.interaction_matrix.copy().toarray()
-            for count, row in tqdm(enumerate(self.interaction_matrix), 
+        for count, row in tqdm(enumerate(self.interaction_matrix), 
                                                total=self.interaction_matrix.shape[0], 
                                                smoothing=0.1):
             posLines = row.nonzero()[1]

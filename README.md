@@ -6,7 +6,7 @@ Structure-based and ligand-based virtual screening tools have seen some wins but
 
 ## Blurb
 
-This project uses network-based approaches - like recommender systems - and asks how well they perform with or without molecular structure. We ran these algorithms through two validation tasks:
+This project uses network-based approaches - like recommender systems - and asks how well they perform with or without molecular structure. We compared these algorithms:
 
 - 1-NN classifier. This is a basic baseline for structure-based techniques
 - Label correlation. This is a network-based approach that uses the number of shared labels (the 'label correlation') between pairs of proteins to predict new labels
@@ -20,21 +20,6 @@ This project uses network-based approaches - like recommender systems - and asks
 
 
 ## Results
-
-For the results, see below. We used leave-one-out cross validation (which is appropriate because there can be no structure bias if we only use the label graph as input) to show that a technique using the percentage correlation between labels to calculate probabilities of new the correct label has a median ranking of 1 (panel A), i.e. perfect ranking, and predicts the correct target for any given multi-label ligand 76% of the time in the top three targets, i.e. a p@3 of 0.76 (panel C).
-
-
-
-Next, we scraped PubChem data for assays for the top 10,000 probability interactions. Most had no evidence yet, but approximately 30% had some data to indicate activity. Of those, above 80% had 'Active' records, which far exceeded our expectations. Thus we suggest this technique can be used to find low-hanging fruit in the label graph of ChEMBL.
-
-<img src="./label_correlation/label_correlation_loo.png" alt="piccie1" style="zoom:72%;" />
-
-
-
-![piccie2](./pubchem_validation/visualization.svg)
-
-
-
 
 
 To do:

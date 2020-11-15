@@ -37,7 +37,7 @@ def bootstrap(params, interaction_matrix, algorithm_function, repeats, fps):
 
 
 ####SKOPT:
-def run_skopt(algorithm_function, space, interaction_matrix, fps=None):
+def run_skopt(algorithm_function, space, interaction_matrix, random_starts=20, total_runs = 36, fps=None, njobs=6):
     #the objective function for skopt:
     @use_named_args(space)
     def score(**params):        
@@ -45,15 +45,15 @@ def run_skopt(algorithm_function, space, interaction_matrix, fps=None):
         return (score)
 
     optimizer = Optimizer(dimensions=space, 
-                     random_state=1,
-                     base_estimator='ET',
-                     n_random_starts=20)
+                          random_state=1,
+                          base_estimator='ET',
+                          n_random_starts=random_starts)
 
     #6*6 = 36 iterations, with 20 being random. 
-    for i in range(6):
+    for i in range(total_runs//njobs):
         print(i)
-        x = optimizer.ask(n_points=6)
-        y = Parallel(n_jobs=6)(delayed(score)(v) for v in x)
+        x = optimizer.ask(n_points=njobs)
+        y = Parallel(n_jobs=njobs)(delayed(score)(v) for v in x)
         optimizer.tell(x,y)
 
     result = skopt.utils.create_result(optimizer.Xi,
@@ -88,11 +88,10 @@ if __name__ == '__main__':
     interaction_matrix, fps = utils.load_subset(return_fingerprints=True)
 
     ##Set the order of algorithms to be tested:
-    algorithms = [utils.train_implicit_als,
-                  utils.train_implicit_bpr,                  
+    algorithms = [utils.train_implicit_bpr,                  
                   utils.train_lightfm_warp,
                   utils.train_lightfm_warp_fp,
-                  utils.train_lightfm_bpr]
+                  utils.train_sea]
 
 
 #Log has been removed because it requires negative records (ChEMBL highly biased to positive)
@@ -104,9 +103,10 @@ if __name__ == '__main__':
     ##(lightfm's are all the same but it's easier just having multiple copies)
     spaces = list()
     #implicit,als:
-    spaces.append([Integer(1, 400, name='factors'),
-        Real(10**-5, 10**0, "log-uniform", name='regularization'),
-        Integer(1,20, name='iterations')])
+    #spaces.append([Integer(1, 400, name='factors'),
+    #    Real(10**-5, 10**0, "log-uniform", name='regularization'),
+    #    Integer(1,20, name='iterations')])
+
     #implicit,bpr:
     spaces.append([Integer(1, 400, name='factors'),
         Real(10**-5, 10**0, "log-uniform", name='learning_rate'),
@@ -124,20 +124,25 @@ if __name__ == '__main__':
         Real(10**-5, 10**0, "log-uniform", name='learning_rate'),
         Integer(1,20, name='epochs')])
     #lightfm,bpr:
-    spaces.append([Integer(1, 400, name='no_components'),
-        Integer(1,15, name='max_sampled'),
-        Real(10**-5, 10**0, "log-uniform", name='learning_rate'),
-        Integer(1,20, name='epochs')])
+    #spaces.append([Integer(1, 400, name='no_components'),
+    #    Integer(1,15, name='max_sampled'),
+    #    Real(10**-5, 10**0, "log-uniform", name='learning_rate'),
+    #    Integer(1,20, name='epochs')])
+
+    #sea:
+    spaces.append([Real(0.05, 0.95, name='cutoff')])
     
     ##associated filenames for the outputs:
-    names = ['hpo_implicit_bpr.dat', 'hpo_lightfm_warp.dat', 'hpo_lightfm_warp_fp.dat',
-             'hpo_lightfm_bpr.dat']
+    names = ['hpo_implicit_bpr.dat','hpo_lightfm_warp.dat',
+             'hpo_lightfm_warp_fp.dat', 'sea.dat']
 
 
     ##Run through each algo, send the 'space' to skop, run HPO, and write output file:
     for algo, space, name in zip(algorithms, spaces, names):
-        if name in ['hpo_lightfm_warp_fp.dat']:
+        if name == 'sea.dat':
+            result = run_skopt(algo, space, interaction_matrix, random_starts = 9, total_runs = 14, fps=fps, njobs=1)
+        elif name == 'hpo_lightfm_warp_fp.dat':
             result = run_skopt(algo, space, interaction_matrix, fps=fps)
         else:
-            result = run_skopt(algo, space, interaction_matrix, fps=None)
+            result = run_skopt(algo, space, interaction_matrix)
         write_results(name, result, space)
