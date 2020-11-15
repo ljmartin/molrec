@@ -405,8 +405,8 @@ class SEA(object):
         return (1 - intersect / union).A
         
     def generate_random_pairwise_comparison(self):
-        idx_1 = np.random.choice(self.fps.shape[0], np.random.choice(np.arange(20,1000)))
-        idx_2 = np.random.choice(self.fps.shape[0], np.random.choice(np.arange(20,1000)))
+        idx_1 = np.random.choice(self.fps.shape[0], np.random.choice(np.arange(200,2500)))
+        idx_2 = np.random.choice(self.fps.shape[0], np.random.choice(np.arange(200,2500)))
         rss = self.fast_jaccard(self.fps[idx_1], self.fps[idx_2])
         num_comparisons = rss.shape[0]*rss.shape[1]
         return num_comparisons, rss[rss>self.cutoff].sum()

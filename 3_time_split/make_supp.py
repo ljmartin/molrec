@@ -11,8 +11,8 @@ def plot_fig_label(ax, lab):
         fontsize=24, va='top', ha='left')
 
 
-filenames = ['label_correlation', 'hpo_implicit_als', 'hpo_implicit_bpr',
-             'hpo_lightfm_warp', 'hpo_lightfm_warp_fp', 'hpo_lightfm_bpr']
+filenames = ['label_correlation', 'hpo_implicit_bpr', 'hpo_lightfm_warp',
+             'hpo_lightfm_warp_fp', 'sea']
 
 
 if __name__=='__main__':
