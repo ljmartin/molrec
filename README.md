@@ -1,15 +1,21 @@
 # molrec
-##### recsys for ligands
+##### Predicting ligands without structure-bias using recsys
 ---
 
-
-Predicting ligands using recommender system algorithms.
-
-Structure-based and ligand-based virtual screening tools have seen some wins but are either very [brute force](https://www.nature.com/articles/s41586-019-0917-9) or highly [baised to existing structures](https://pubs.acs.org/doi/10.1021/acs.jcim.7b00403). In addition, it's common in the field to use classification-based machine learning, which relies on explicitly labelled positive and negative classes. The realities of _in vitro_ screening mean we only have access to positive labels. That means labelling everything that's 'unpositive' as explicitly negative might miss some highly interesting interactions, but also make the models learn the wrong thing. 
+Structure-based and ligand-based virtual screening tools have seen some wins but are either very [brute force](https://www.nature.com/articles/s41586-019-0917-9) or highly [baised to existing structures](https://pubs.acs.org/doi/10.1021/acs.jcim.7b00403). In addition, it's common in the field to use classification-based machine learning, which relies on explicitly labelled positive and negative classes. The realities of _in vitro_ screening mean we only have access to positive labels, so the assumption that an absent label is negative is known _a priori_ to be untrue. Network-based approaches, such as recommender systems, are: 1) aware of missing labels, and 2) can even perform without any information about molecular structure, potentially achieving scaffold hops more often.
 
 ## Blurb
 
-This project explores the use of network-based algorithms for this task. We used a simple baseline (which ended up performing best) and recommender systems to learn from the positive label set, and predict new interactions by filling in the missing labels. 
+This project uses network-based approaches - like recommender systems - and asks how well they perform with or without molecular structure. We ran these algorithms through two validation tasks:
+
+- 1-NN classifier. This is a basic baseline for structure-based techniques
+- Label correlation. This is a network-based approach that uses the number of shared labels (the 'label correlation') between pairs of proteins to predict new labels
+- Similarity Ensemble Algorithm. This is like label correlation, but uses molecular similarity instead of shared labels tlso predict new labels
+- Bayesian Personalized Recommendation (BPR; implicit library). A recommender system that embeds users and items (proteins and ligands) based on their labels.
+- Weighted Approximate Rank Pairwise (WARP; LightFM library). A recommender system that embeds users and items (proteins and ligands) based on their labels.
+- WARP + fingerprints. The WARP algorithm above but using "metadata" - i.e. molecular structure.
+
+![algosummary](./algorithms.svg)
 
 
 

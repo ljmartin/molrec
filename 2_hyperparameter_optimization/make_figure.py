@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt
 plt.style.use('seaborn')
 
-filenames = ['hpo_implicit_als.dat', 'hpo_implicit_bpr.dat',
-             'hpo_lightfm_warp.dat', 'hpo_lightfm_bpr.dat']
+filenames = ['hpo_implicit_als.dat', 'hpo_implicit_bpr.dat','hpo_lightfm_warp.dat',
+             'hpo_lightfm_warp_fp.dat', 'hpo_lightfm_bpr.dat']
 
 
 fig, ax = plt.subplots(6)
