@@ -9,11 +9,9 @@ from seaborn import kdeplot
 
 
 
-filenames = ['label_correlation', 'hpo_implicit_als', 'hpo_implicit_bpr',
-             'hpo_lightfm_warp', 'hpo_lightfm_bpr', 'nearest_neighbor']
+filenames = ['label_correlation', 'hpo_implicit_bpr', 'hpo_lightfm_warp',
+             'hpo_lightfm_warp_fp', 'sea', 'nearest_neighbor']
 
-yrs = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017]
-num_targets = [225, 228, 231, 234, 237, 240, 242, 243, 243, 243]
 year = 2015
 
 def plot_fig_label(ax, lab):
@@ -72,7 +70,7 @@ def plot(nn=False):
 
     fsize = 14
     ax[1].set_ylim(-0.05,0.6)
-    ax[1].set_xticks([0,1,2,3,4,5])
+    ax[1].set_xticks(np.arange(len(filenames)))
     ax[1].set_xticklabels([i.replace("hpo_", '') for i in filenames], rotation=35, ha='center',fontsize=fsize)
     ax[1].set_ylabel('p@3', fontsize=fsize)
     yt = np.arange(-5,25, 5)

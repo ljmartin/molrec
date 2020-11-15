@@ -12,7 +12,7 @@ def plot_fig_label(ax, lab):
 
 
 filenames = ['label_correlation', 'hpo_implicit_als', 'hpo_implicit_bpr',
-             'hpo_lightfm_warp', 'hpo_lightfm_bpr']
+             'hpo_lightfm_warp', 'hpo_lightfm_warp_fp', 'hpo_lightfm_bpr']
 
 
 if __name__=='__main__':

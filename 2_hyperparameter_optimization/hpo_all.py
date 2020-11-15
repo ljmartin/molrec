@@ -130,8 +130,8 @@ if __name__ == '__main__':
         Integer(1,20, name='epochs')])
     
     ##associated filenames for the outputs:
-    names = ['hpo_implicit_als.dat', 'hpo_implicit_bpr.dat',
-             'hpo_lightfm_warp.dat', 'hpo_lightfm_warp_fp.dat', 'hpo_lightfm_bpr.dat']
+    names = ['hpo_implicit_bpr.dat', 'hpo_lightfm_warp.dat', 'hpo_lightfm_warp_fp.dat',
+             'hpo_lightfm_bpr.dat']
 
 
     ##Run through each algo, send the 'space' to skop, run HPO, and write output file:

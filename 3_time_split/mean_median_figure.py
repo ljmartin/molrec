@@ -7,10 +7,8 @@ plt.style.use('seaborn')
 
 
 filenames = ['label_correlation', 'hpo_implicit_als', 'hpo_implicit_bpr',
-             'hpo_lightfm_warp', 'hpo_lightfm_bpr', 'nearest_neighbor']
+             'hpo_lightfm_warp', 'hpo_lightfm_warp_fp', 'hpo_lightfm_bpr', 'nearest_neighbor']
 
-yrs = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017]
-num_targets = [225, 228, 231, 234, 237, 240, 242, 243, 243, 243]
 year = 2015
 
 def plot_fig_label(ax, lab):
@@ -38,6 +36,7 @@ def plot_meanmed(nn=False):
     
     for count, name in enumerate(filenames):
         #load
+        print(name)
         ranks = np.load('./processed_data/'+str(year)+'_'+name+'.npy')
         if nn:
             ranks = ranks[mask]
@@ -46,14 +45,14 @@ def plot_meanmed(nn=False):
         for a, fun in zip([0,1], [norm, laplace]):
             #analyse
             #logit transform ranks:
-            logit_ranks = logit(ranks / 243)
+            logit_ranks = logit(ranks / 344)
 
             bstrap_ = simple_bootstrap(logit_ranks, fun, take=len(ranks))
-            bstrap = expit(bstrap_)*243
+            bstrap = expit(bstrap_)*344
             
             ci = simple_ci(bstrap)
 
-            print(name, expit(np.mean(bstrap_))*243, ci)
+            print(name, expit(np.mean(bstrap_))*344, ci)
 
             sjitter = np.abs(np.random.randn(len(bstrap))) / 10
             ljitter = np.random.randn(len(bstrap))/20
@@ -78,10 +77,10 @@ def plot_meanmed(nn=False):
     ax[1].legend()
     ax[1].set_ylabel('Median rank', fontsize=fsize)
     
-    ax[1].set_xticks([0,1,2,3,4,5])
+    ax[1].set_xticks([0,1,2,3,4,5, 6])
     ax[1].set_xticklabels([i.replace("hpo_", '') for i in filenames], rotation=35, ha='center',fontsize=fsize)
     
-    ax[0].set_xticks([0,1,2,3,4,5])
+    ax[0].set_xticks([0,1,2,3,4,5, 6])
     ax[0].set_xticklabels(['' for _ in filenames], rotation=65, ha='center', fontsize=fsize)
 
 
