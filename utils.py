@@ -104,7 +104,7 @@ def evaluate_predictions(predictions, test, train):
     #    return np.mean(np.mean(np.ma.masked_array(ranks[m], mask=~test[m]), axis=1).data)
 
 
-def load_subset(subset=False, numchoose=50):
+def load_subset(subset=False, return_fingerprints=False, numchoose=50):
     """
     Loads a subset of data for HPO. 
     Also removes ligands with only 1 label in the dataset -
@@ -117,6 +117,7 @@ def load_subset(subset=False, numchoose=50):
     interaction_matrix = sparse.load_npz('../0_data/interaction_matrix_pchembl.npz')
     interaction_matrix = np.array(interaction_matrix.todense())
 
+
     if subset:
         #make smaller to make hyperparameter tuning faster:
         cols= np.random.choice(np.arange(interaction_matrix.shape[1]), numchoose, replace=False)
@@ -126,10 +127,16 @@ def load_subset(subset=False, numchoose=50):
     mask = mask>1
 
     interaction_matrix = interaction_matrix[mask] #remove instances with only 1 label
+    if return_fingerprints:
+        fps = sparse.load_npz('../0_data/morgan.npz')
+        fps = fps[mask]
+        
     #possible that some labels don't have ANY instances now... removing columns
     #with no labels:
     interaction_matrix = interaction_matrix[:,np.sum(interaction_matrix, axis=0)>0]
-    
+
+    if return_fingerprints:
+        return interaction_matrix, fps
     return interaction_matrix
         
 
@@ -288,6 +295,29 @@ def train_lightfm_warp(params, inp):
     model.fit(inp, epochs=params['epochs'])
     #get flattened predictions:
     pred_matrix = model.predict(np.repeat(cid, len(tid)), np.tile(tid, len(cid)))
+    return np.reshape(pred_matrix, (len(cid), len(tid))) #unflattened.
+
+def train_lightfm_warp_fp(params, inp, fp, fpsize = 512):
+    def fold(arr):
+        folded_arr = arr[:,:int(arr.shape[1]/2)] + arr[:,int(arr.shape[1]/2):]
+        return folded_arr
+    while fp.shape[1]>fpsize:
+        fp = fold(fp)
+
+    cid, tid = get_lightfm_indexing(inp)    
+    model = lightfm.LightFM(no_components = params['no_components'],
+                           loss='warp',
+                           max_sampled=params['max_sampled'],
+                           learning_rate=params['learning_rate'])
+    model.fit(inp,
+              user_features=fp,
+              epochs=params['epochs'])
+    
+    #get flattened predictions:
+    pred_matrix = model.predict(np.repeat(cid, len(tid)),
+                                np.tile(tid, len(cid)),
+                                user_features=fp)
+    
     return np.reshape(pred_matrix, (len(cid), len(tid))) #unflattened.
 
 def train_lightfm_bpr(params, inp):

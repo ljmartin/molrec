@@ -20,24 +20,28 @@ import skopt
 
 
 #this performs multiple repeats of the test/train split, if desired:
-def bootstrap(params, interaction_matrix, algorithm_function, repeats):
+def bootstrap(params, interaction_matrix, algorithm_function, repeats, fps):
     results = list()
     for _ in range(repeats):
         #get a train/test split:
         train, test = utils.train_test_split(interaction_matrix, 0.05)
+
         #train matrix is used to train the model and make predictions:
-        pred_matrix = algorithm_function(params,train)
+        if fps is not None:
+            pred_matrix = algorithm_function(params,train, fps)
+        else:
+            pred_matrix = algorithm_function(params,train)
         #test matrix is used to score the predictions:
         results.append(utils.evaluate_predictions(pred_matrix, test, train).mean())                
     return np.mean(results)
 
 
 ####SKOPT:
-def run_skopt(algorithm_function, space, interaction_matrix):
+def run_skopt(algorithm_function, space, interaction_matrix, fps=None):
     #the objective function for skopt:
     @use_named_args(space)
     def score(**params):        
-        score = bootstrap(params, interaction_matrix, algorithm_function, 3)
+        score = bootstrap(params, interaction_matrix, algorithm_function, 3, fps)
         return (score)
 
     optimizer = Optimizer(dimensions=space, 
@@ -81,14 +85,15 @@ def write_results(filename, result, space):
 if __name__ == '__main__':
 
     ##load the interaction matrix data for the subset of 243 proteins:
-    interaction_matrix = utils.load_subset()
+    interaction_matrix, fps = utils.load_subset(return_fingerprints=True)
 
-    
     ##Set the order of algorithms to be tested:
     algorithms = [utils.train_implicit_als,
                   utils.train_implicit_bpr,                  
                   utils.train_lightfm_warp,
+                  utils.train_lightfm_warp_fp,
                   utils.train_lightfm_bpr]
+
 
 #Log has been removed because it requires negative records (ChEMBL highly biased to positive)
 #utils.train_implicit_log,                  
@@ -107,13 +112,13 @@ if __name__ == '__main__':
         Real(10**-5, 10**0, "log-uniform", name='learning_rate'),
         Real(10**-5, 10**0, "log-uniform", name='regularization'), 
         Integer(1,20, name='iterations')])
-##Log has been removed:
-#    #implicit,log:
-#    spaces.append([Integer(1, 400, name='factors'),
-#        Real(10**-5, 10**0, "log-uniform", name='learning_rate'),
-#        Real(10**-5, 10**0, "log-uniform", name='regularization'), 
-#        Integer(1,20, name='iterations')])
+
     #lightfm,warp:
+    spaces.append([Integer(1, 400, name='no_components'),
+        Integer(1,15, name='max_sampled'),
+        Real(10**-5, 10**0, "log-uniform", name='learning_rate'),
+        Integer(1,20, name='epochs')])
+    #lightfm,warp_fp:
     spaces.append([Integer(1, 400, name='no_components'),
         Integer(1,15, name='max_sampled'),
         Real(10**-5, 10**0, "log-uniform", name='learning_rate'),
@@ -123,23 +128,16 @@ if __name__ == '__main__':
         Integer(1,15, name='max_sampled'),
         Real(10**-5, 10**0, "log-uniform", name='learning_rate'),
         Integer(1,20, name='epochs')])
-##Log has been removed:
-#    #lightfm,log:
-#    spaces.append([Integer(1, 400, name='no_components'),
-#        Integer(1,15, name='max_sampled'),
-#        Real(10**-5, 10**0, "log-uniform", name='learning_rate'),
-#        Integer(1,20, name='epochs')])
-
     
     ##associated filenames for the outputs:
     names = ['hpo_implicit_als.dat', 'hpo_implicit_bpr.dat',
-             'hpo_lightfm_warp.dat', 'hpo_lightfm_bpr.dat']
-
-#    names = ['hpo_implicit_als.dat', 'hpo_implicit_bpr.dat', 'hpo_implicit_log.dat',
-#             'hpo_lightfm_warp.dat', 'hpo_lightfm_bpr.dat', 'hpo_lightfm_log.dat']
+             'hpo_lightfm_warp.dat', 'hpo_lightfm_warp_fp.dat', 'hpo_lightfm_bpr.dat']
 
 
     ##Run through each algo, send the 'space' to skop, run HPO, and write output file:
     for algo, space, name in zip(algorithms, spaces, names):
-        result = run_skopt(algo, space, interaction_matrix)
+        if name in ['hpo_lightfm_warp_fp.dat']:
+            result = run_skopt(algo, space, interaction_matrix, fps=fps)
+        else:
+            result = run_skopt(algo, space, interaction_matrix, fps=None)
         write_results(name, result, space)
