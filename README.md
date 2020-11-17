@@ -2,7 +2,7 @@
 ##### Predicting ligands without structure-bias using recsys
 ---
 
-Structure-based and ligand-based virtual screening tools have seen some wins but are either very [brute force](https://www.nature.com/articles/s41586-019-0917-9) or highly [baised to existing structures](https://pubs.acs.org/doi/10.1021/acs.jcim.7b00403). In addition, it's common in the field to use classification-based machine learning, which relies on explicitly labelled positive and negative classes. The realities of _in vitro_ screening mean we only have access to positive labels, so the assumption that an absent label is negative is known _a priori_ to be untrue. Network-based approaches, such as recommender systems, are: 1) aware of missing labels, and 2) can even perform without any information about molecular structure, potentially achieving scaffold hops more often.
+Structure-based and ligand-based virtual screening tools have seen some wins but are either very [brute force](https://www.nature.com/articles/s41586-019-0917-9) or highly [baised to existing structures](https://pubs.acs.org/doi/10.1021/acs.jcim.7b00403). In addition, it's common in the field to use classification-based machine learning, which relies on explicitly labelled positive and negative classes. The realities of _in vitro_ screening mean we only have access to positive labels, so the assumption of absent labels being negative is _a priori_ known to be false. Network-based approaches, such as recommender systems, are both 1) aware of missing labels, and 2) work without any information about molecular structure. As a result, we think they could be useful for performing scaffold hops.
 
 ## Blurb
 
@@ -15,7 +15,7 @@ This project uses network-based approaches - like recommender systems - and asks
 - Weighted Approximate Rank Pairwise (WARP; LightFM library). A recommender system that embeds users and items (proteins and ligands) based on their labels.
 - WARP + fingerprints. The WARP algorithm above but using "metadata" - i.e. molecular structure.
 
-![algosummary](./algorithms.svg)
+![algosummary](./algorithms2.svg)
 
 
 
