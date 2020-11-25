@@ -1,0 +1,1702 @@
+{
+    "88": {
+        "pref_name": "Tyrosine-protein kinase JAK3",
+        "tid": "CHEMBL2148",
+        "accession": "P52333"
+    },
+    "8": {
+        "pref_name": "15-hydroxyprostaglandin dehydrogenase [NAD+]",
+        "tid": "CHEMBL1293255",
+        "accession": "P15428"
+    },
+    "168": {
+        "pref_name": "Matrix metalloproteinase 13",
+        "tid": "CHEMBL280",
+        "accession": "P45452"
+    },
+    "324": {
+        "pref_name": "Tyrosine-protein kinase BTK",
+        "tid": "CHEMBL5251",
+        "accession": "Q06187"
+    },
+    "167": {
+        "pref_name": "Vascular endothelial growth factor receptor 2",
+        "tid": "CHEMBL279",
+        "accession": "P35968"
+    },
+    "129": {
+        "pref_name": "Coagulation factor X",
+        "tid": "CHEMBL244",
+        "accession": "P00742"
+    },
+    "184": {
+        "pref_name": "Tyrosine-protein kinase JAK2",
+        "tid": "CHEMBL2971",
+        "accession": "O60674"
+    },
+    "117": {
+        "pref_name": "Mu opioid receptor",
+        "tid": "CHEMBL233",
+        "accession": "P35372"
+    },
+    "211": {
+        "pref_name": "Matrix metalloproteinase-2",
+        "tid": "CHEMBL333",
+        "accession": "P08253"
+    },
+    "91": {
+        "pref_name": "Dopamine D2 receptor",
+        "tid": "CHEMBL217",
+        "accession": "P14416"
+    },
+    "5": {
+        "pref_name": "Ubiquitin carboxyl-terminal hydrolase 2",
+        "tid": "CHEMBL1293227",
+        "accession": "O75604"
+    },
+    "144": {
+        "pref_name": "Adenosine A3 receptor",
+        "tid": "CHEMBL256",
+        "accession": "P0DMS8"
+    },
+    "74": {
+        "pref_name": "Thrombin",
+        "tid": "CHEMBL204",
+        "accession": "P00734"
+    },
+    "238": {
+        "pref_name": "Metabotropic glutamate receptor 1",
+        "tid": "CHEMBL3772",
+        "accession": "Q13255"
+    },
+    "151": {
+        "pref_name": "Tyrosine-protein kinase SYK",
+        "tid": "CHEMBL2599",
+        "accession": "P43405"
+    },
+    "103": {
+        "pref_name": "Serotonin 2c (5-HT2c) receptor",
+        "tid": "CHEMBL225",
+        "accession": "P28335"
+    },
+    "174": {
+        "pref_name": "Dipeptidyl peptidase IV",
+        "tid": "CHEMBL284",
+        "accession": "P27487"
+    },
+    "123": {
+        "pref_name": "DNA polymerase beta",
+        "tid": "CHEMBL2392",
+        "accession": "P06746"
+    },
+    "96": {
+        "pref_name": "Dopamine D4 receptor",
+        "tid": "CHEMBL219",
+        "accession": "P21917"
+    },
+    "12": {
+        "pref_name": "DNA dC->dU-editing enzyme APOBEC-3G",
+        "tid": "CHEMBL1741217",
+        "accession": "Q9HC16"
+    },
+    "200": {
+        "pref_name": "Serotonin 7 (5-HT7) receptor",
+        "tid": "CHEMBL3155",
+        "accession": "P34969"
+    },
+    "105": {
+        "pref_name": "Adenosine A1 receptor",
+        "tid": "CHEMBL226",
+        "accession": "P30542"
+    },
+    "154": {
+        "pref_name": "Carbonic anhydrase I",
+        "tid": "CHEMBL261",
+        "accession": "P00915"
+    },
+    "209": {
+        "pref_name": "Cyclin-dependent kinase 4",
+        "tid": "CHEMBL331",
+        "accession": "P11802"
+    },
+    "233": {
+        "pref_name": "ADAM17",
+        "tid": "CHEMBL3706",
+        "accession": "P78536"
+    },
+    "53": {
+        "pref_name": "Thyroid stimulating hormone receptor",
+        "tid": "CHEMBL1963",
+        "accession": "P16473"
+    },
+    "247": {
+        "pref_name": "Pyruvate dehydrogenase kinase isoform 2",
+        "tid": "CHEMBL3861",
+        "accession": "Q15119"
+    },
+    "213": {
+        "pref_name": "Cytochrome P450 1A2",
+        "tid": "CHEMBL3356",
+        "accession": "P05177"
+    },
+    "140": {
+        "pref_name": "Cannabinoid CB2 receptor",
+        "tid": "CHEMBL253",
+        "accession": "P34972"
+    },
+    "205": {
+        "pref_name": "Carbonic anhydrase XII",
+        "tid": "CHEMBL3242",
+        "accession": "O43570"
+    },
+    "210": {
+        "pref_name": "Matrix metalloproteinase-1",
+        "tid": "CHEMBL332",
+        "accession": "P03956"
+    },
+    "148": {
+        "pref_name": "Melanocortin receptor 4",
+        "tid": "CHEMBL259",
+        "accession": "P32245"
+    },
+    "161": {
+        "pref_name": "Focal adhesion kinase 1",
+        "tid": "CHEMBL2695",
+        "accession": "Q05397"
+    },
+    "134": {
+        "pref_name": "Neurokinin 1 receptor",
+        "tid": "CHEMBL249",
+        "accession": "P25103"
+    },
+    "216": {
+        "pref_name": "Cytochrome P450 3A4",
+        "tid": "CHEMBL340",
+        "accession": "P08684"
+    },
+    "235": {
+        "pref_name": "Hepatocyte growth factor receptor",
+        "tid": "CHEMBL3717",
+        "accession": "P08581"
+    },
+    "229": {
+        "pref_name": "Cytochrome P450 2C19",
+        "tid": "CHEMBL3622",
+        "accession": "P33261"
+    },
+    "226": {
+        "pref_name": "Aldehyde dehydrogenase 1A1",
+        "tid": "CHEMBL3577",
+        "accession": "P00352"
+    },
+    "199": {
+        "pref_name": "PI3-kinase p110-beta subunit",
+        "tid": "CHEMBL3145",
+        "accession": "P42338"
+    },
+    "180": {
+        "pref_name": "Cytochrome P450 2D6",
+        "tid": "CHEMBL289",
+        "accession": "P10635"
+    },
+    "173": {
+        "pref_name": "Tyrosine-protein kinase JAK1",
+        "tid": "CHEMBL2835",
+        "accession": "P23458"
+    },
+    "111": {
+        "pref_name": "Histamine H1 receptor",
+        "tid": "CHEMBL231",
+        "accession": "P35367"
+    },
+    "90": {
+        "pref_name": "Muscarinic acetylcholine receptor M1",
+        "tid": "CHEMBL216",
+        "accession": "P11229"
+    },
+    "77": {
+        "pref_name": "Carbonic anhydrase II",
+        "tid": "CHEMBL205",
+        "accession": "P00918"
+    },
+    "214": {
+        "pref_name": "Serotonin 6 (5-HT6) receptor",
+        "tid": "CHEMBL3371",
+        "accession": "P50406"
+    },
+    "256": {
+        "pref_name": "Dipeptidyl peptidase II",
+        "tid": "CHEMBL3976",
+        "accession": "Q9UHL4"
+    },
+    "201": {
+        "pref_name": "Matrix metalloproteinase 9",
+        "tid": "CHEMBL321",
+        "accession": "P14780"
+    },
+    "215": {
+        "pref_name": "Cytochrome P450 2C9",
+        "tid": "CHEMBL3397",
+        "accession": "P11712"
+    },
+    "316": {
+        "pref_name": "G protein-coupled receptor 44",
+        "tid": "CHEMBL5071",
+        "accession": "Q9Y5Y4"
+    },
+    "43": {
+        "pref_name": "Butyrylcholinesterase",
+        "tid": "CHEMBL1914",
+        "accession": "P06276"
+    },
+    "277": {
+        "pref_name": "Sodium channel protein type IX alpha subunit",
+        "tid": "CHEMBL4296",
+        "accession": "Q15858"
+    },
+    "327": {
+        "pref_name": "Serine/threonine-protein kinase PIM3",
+        "tid": "CHEMBL5407",
+        "accession": "Q86V86"
+    },
+    "122": {
+        "pref_name": "Kappa opioid receptor",
+        "tid": "CHEMBL237",
+        "accession": "P41145"
+    },
+    "108": {
+        "pref_name": "Alpha-1a adrenergic receptor",
+        "tid": "CHEMBL229",
+        "accession": "P35348"
+    },
+    "231": {
+        "pref_name": "Fibroblast growth factor receptor 1",
+        "tid": "CHEMBL3650",
+        "accession": "P11362"
+    },
+    "131": {
+        "pref_name": "Beta-3 adrenergic receptor",
+        "tid": "CHEMBL246",
+        "accession": "P13945"
+    },
+    "343": {
+        "pref_name": "Mitogen-activated protein kinase kinase kinase kinase 4",
+        "tid": "CHEMBL6166",
+        "accession": "O95819"
+    },
+    "85": {
+        "pref_name": "Serotonin 1a (5-HT1a) receptor",
+        "tid": "CHEMBL214",
+        "accession": "P08908"
+    },
+    "228": {
+        "pref_name": "Carbonic anhydrase IX",
+        "tid": "CHEMBL3594",
+        "accession": "Q16790"
+    },
+    "110": {
+        "pref_name": "Cyclooxygenase-2",
+        "tid": "CHEMBL230",
+        "accession": "P35354"
+    },
+    "27": {
+        "pref_name": "Macrophage colony stimulating factor receptor",
+        "tid": "CHEMBL1844",
+        "accession": "P07333"
+    },
+    "217": {
+        "pref_name": "Melanin-concentrating hormone receptor 1",
+        "tid": "CHEMBL344",
+        "accession": "Q99705"
+    },
+    "172": {
+        "pref_name": "Matrix metalloproteinase 3",
+        "tid": "CHEMBL283",
+        "accession": "P08254"
+    },
+    "52": {
+        "pref_name": "Insulin-like growth factor I receptor",
+        "tid": "CHEMBL1957",
+        "accession": "P08069"
+    },
+    "118": {
+        "pref_name": "Caspase-3",
+        "tid": "CHEMBL2334",
+        "accession": "P42574"
+    },
+    "263": {
+        "pref_name": "Cathepsin B",
+        "tid": "CHEMBL4072",
+        "accession": "P07858"
+    },
+    "270": {
+        "pref_name": "Dual specificity protein kinase CLK4",
+        "tid": "CHEMBL4203",
+        "accession": "Q9HAZ1"
+    },
+    "124": {
+        "pref_name": "HERG",
+        "tid": "CHEMBL240",
+        "accession": "Q12809"
+    },
+    "22": {
+        "pref_name": "Receptor protein-tyrosine kinase erbB-2",
+        "tid": "CHEMBL1824",
+        "accession": "P04626"
+    },
+    "79": {
+        "pref_name": "Ephrin type-A receptor 2",
+        "tid": "CHEMBL2068",
+        "accession": "P29317"
+    },
+    "152": {
+        "pref_name": "MAP kinase p38 alpha",
+        "tid": "CHEMBL260",
+        "accession": "Q16539"
+    },
+    "97": {
+        "pref_name": "Acetylcholinesterase",
+        "tid": "CHEMBL220",
+        "accession": "P22303"
+    },
+    "13": {
+        "pref_name": "Nicotinamide phosphoribosyltransferase",
+        "tid": "CHEMBL1744525",
+        "accession": "P43490"
+    },
+    "71": {
+        "pref_name": "Epidermal growth factor receptor erbB1",
+        "tid": "CHEMBL203",
+        "accession": "P00533"
+    },
+    "95": {
+        "pref_name": "Serine/threonine-protein kinase Aurora-B",
+        "tid": "CHEMBL2185",
+        "accession": "Q96GD4"
+    },
+    "194": {
+        "pref_name": "Cyclin-dependent kinase 1",
+        "tid": "CHEMBL308",
+        "accession": "P06493"
+    },
+    "86": {
+        "pref_name": "Glutaminase kidney isoform, mitochondrial",
+        "tid": "CHEMBL2146302",
+        "accession": "O94925"
+    },
+    "80": {
+        "pref_name": "Thromboxane A2 receptor",
+        "tid": "CHEMBL2069",
+        "accession": "P21731"
+    },
+    "87": {
+        "pref_name": "Serine/threonine-protein kinase PIM1",
+        "tid": "CHEMBL2147",
+        "accession": "P11309"
+    },
+    "299": {
+        "pref_name": "Serine/threonine-protein kinase Chk1",
+        "tid": "CHEMBL4630",
+        "accession": "O14757"
+    },
+    "178": {
+        "pref_name": "Sigma opioid receptor",
+        "tid": "CHEMBL287",
+        "accession": "Q99720"
+    },
+    "136": {
+        "pref_name": "Adenosine A2a receptor",
+        "tid": "CHEMBL251",
+        "accession": "P29274"
+    },
+    "119": {
+        "pref_name": "Dopamine D3 receptor",
+        "tid": "CHEMBL234",
+        "accession": "P35462"
+    },
+    "153": {
+        "pref_name": "Lysosomal alpha-glucosidase",
+        "tid": "CHEMBL2608",
+        "accession": "P10253"
+    },
+    "1": {
+        "pref_name": "Tyrosyl-DNA phosphodiesterase 1",
+        "tid": "CHEMBL1075138",
+        "accession": "Q9NUW8"
+    },
+    "49": {
+        "pref_name": "Monoamine oxidase A",
+        "tid": "CHEMBL1951",
+        "accession": "P21397"
+    },
+    "301": {
+        "pref_name": "Aldo-keto-reductase family 1 member C3",
+        "tid": "CHEMBL4681",
+        "accession": "P42330"
+    },
+    "206": {
+        "pref_name": "PI3-kinase p110-gamma subunit",
+        "tid": "CHEMBL3267",
+        "accession": "P48736"
+    },
+    "294": {
+        "pref_name": "Matrix metalloproteinase 8",
+        "tid": "CHEMBL4588",
+        "accession": "P22894"
+    },
+    "2": {
+        "pref_name": "Pyruvate kinase isozymes M1/M2",
+        "tid": "CHEMBL1075189",
+        "accession": "P14618"
+    },
+    "261": {
+        "pref_name": "MAP kinase ERK2",
+        "tid": "CHEMBL4040",
+        "accession": "P28482"
+    },
+    "121": {
+        "pref_name": "Delta opioid receptor",
+        "tid": "CHEMBL236",
+        "accession": "P41143"
+    },
+    "159": {
+        "pref_name": "Tyrosine-protein kinase SRC",
+        "tid": "CHEMBL267",
+        "accession": "P12931"
+    },
+    "143": {
+        "pref_name": "Adenosine A2b receptor",
+        "tid": "CHEMBL255",
+        "accession": "P29275"
+    },
+    "70": {
+        "pref_name": "Dihydrofolate reductase",
+        "tid": "CHEMBL202",
+        "accession": "P00374"
+    },
+    "321": {
+        "pref_name": "Serine/threonine-protein kinase B-raf",
+        "tid": "CHEMBL5145",
+        "accession": "P15056"
+    },
+    "246": {
+        "pref_name": "Cathepsin L",
+        "tid": "CHEMBL3837",
+        "accession": "P07711"
+    },
+    "276": {
+        "pref_name": "Serine/threonine-protein kinase AKT",
+        "tid": "CHEMBL4282",
+        "accession": "P31749"
+    },
+    "46": {
+        "pref_name": "Alpha-2b adrenergic receptor",
+        "tid": "CHEMBL1942",
+        "accession": "P18089"
+    },
+    "142": {
+        "pref_name": "Phosphodiesterase 4A",
+        "tid": "CHEMBL254",
+        "accession": "P27815"
+    },
+    "99": {
+        "pref_name": "Cyclooxygenase-1",
+        "tid": "CHEMBL221",
+        "accession": "P23219"
+    },
+    "218": {
+        "pref_name": "Caspase-7",
+        "tid": "CHEMBL3468",
+        "accession": "P55210"
+    },
+    "60": {
+        "pref_name": "Glucagon receptor",
+        "tid": "CHEMBL1985",
+        "accession": "P47871"
+    },
+    "309": {
+        "pref_name": "Caspase-1",
+        "tid": "CHEMBL4801",
+        "accession": "P29466"
+    },
+    "147": {
+        "pref_name": "Cathepsin D",
+        "tid": "CHEMBL2581",
+        "accession": "P07339"
+    },
+    "333": {
+        "pref_name": "Prostaglandin E synthase",
+        "tid": "CHEMBL5658",
+        "accession": "O14684"
+    },
+    "193": {
+        "pref_name": "Protein kinase C beta",
+        "tid": "CHEMBL3045",
+        "accession": "P05771"
+    },
+    "155": {
+        "pref_name": "Glycogen synthase kinase-3 beta",
+        "tid": "CHEMBL262",
+        "accession": "P49841"
+    },
+    "258": {
+        "pref_name": "PI3-kinase p110-alpha subunit",
+        "tid": "CHEMBL4005",
+        "accession": "P42336"
+    },
+    "130": {
+        "pref_name": "Muscarinic acetylcholine receptor M3",
+        "tid": "CHEMBL245",
+        "accession": "P20309"
+    },
+    "181": {
+        "pref_name": "Arachidonate 15-lipoxygenase",
+        "tid": "CHEMBL2903",
+        "accession": "P16050"
+    },
+    "101": {
+        "pref_name": "Serotonin 2a (5-HT2a) receptor",
+        "tid": "CHEMBL224",
+        "accession": "P28223"
+    },
+    "288": {
+        "pref_name": "C-X-C chemokine receptor type 3",
+        "tid": "CHEMBL4441",
+        "accession": "P49682"
+    },
+    "268": {
+        "pref_name": "Endoplasmic reticulum-associated amyloid beta-peptide-binding protein",
+        "tid": "CHEMBL4159",
+        "accession": "Q99714"
+    },
+    "202": {
+        "pref_name": "Metabotropic glutamate receptor 5",
+        "tid": "CHEMBL3227",
+        "accession": "P41594"
+    },
+    "82": {
+        "pref_name": "Beta-2 adrenergic receptor",
+        "tid": "CHEMBL210",
+        "accession": "P07550"
+    },
+    "29": {
+        "pref_name": "Tyrosine-protein kinase ABL",
+        "tid": "CHEMBL1862",
+        "accession": "P00519"
+    },
+    "274": {
+        "pref_name": "11-beta-hydroxysteroid dehydrogenase 1",
+        "tid": "CHEMBL4235",
+        "accession": "P28845"
+    },
+    "310": {
+        "pref_name": "P2X purinoceptor 7",
+        "tid": "CHEMBL4805",
+        "accession": "Q99572"
+    },
+    "36": {
+        "pref_name": "Serotonin 1b (5-HT1b) receptor",
+        "tid": "CHEMBL1898",
+        "accession": "P28222"
+    },
+    "157": {
+        "pref_name": "Histamine H3 receptor",
+        "tid": "CHEMBL264",
+        "accession": "Q9Y5N1"
+    },
+    "112": {
+        "pref_name": "Alpha-1b adrenergic receptor",
+        "tid": "CHEMBL232",
+        "accession": "P35368"
+    },
+    "308": {
+        "pref_name": "Vanilloid receptor",
+        "tid": "CHEMBL4794",
+        "accession": "Q8NER1"
+    },
+    "107": {
+        "pref_name": "c-Jun N-terminal kinase 1",
+        "tid": "CHEMBL2276",
+        "accession": "P45983"
+    },
+    "64": {
+        "pref_name": "Inosine-5'-monophosphate dehydrogenase 2",
+        "tid": "CHEMBL2002",
+        "accession": "P12268"
+    },
+    "197": {
+        "pref_name": "PI3-kinase p110-delta subunit",
+        "tid": "CHEMBL3130",
+        "accession": "O00329"
+    },
+    "81": {
+        "pref_name": "Trypsin I",
+        "tid": "CHEMBL209",
+        "accession": "P07477"
+    },
+    "323": {
+        "pref_name": "Neuropeptide S receptor",
+        "tid": "CHEMBL5162",
+        "accession": "Q6W5P4"
+    },
+    "57": {
+        "pref_name": "Sodium channel protein type V alpha subunit",
+        "tid": "CHEMBL1980",
+        "accession": "Q14524"
+    },
+    "295": {
+        "pref_name": "Tyrosine kinase non-receptor protein 2",
+        "tid": "CHEMBL4599",
+        "accession": "Q07912"
+    },
+    "169": {
+        "pref_name": "Nerve growth factor receptor Trk-A",
+        "tid": "CHEMBL2815",
+        "accession": "P04629"
+    },
+    "24": {
+        "pref_name": "Serotonin 2b (5-HT2b) receptor",
+        "tid": "CHEMBL1833",
+        "accession": "P41595"
+    },
+    "127": {
+        "pref_name": "Serine/threonine-protein kinase AKT2",
+        "tid": "CHEMBL2431",
+        "accession": "P31751"
+    },
+    "306": {
+        "pref_name": "Orexin receptor 2",
+        "tid": "CHEMBL4792",
+        "accession": "O43614"
+    },
+    "177": {
+        "pref_name": "Renin",
+        "tid": "CHEMBL286",
+        "accession": "P00797"
+    },
+    "319": {
+        "pref_name": "Orexin receptor 1",
+        "tid": "CHEMBL5113",
+        "accession": "O43613"
+    },
+    "311": {
+        "pref_name": "Beta-secretase 1",
+        "tid": "CHEMBL4822",
+        "accession": "P56817"
+    },
+    "284": {
+        "pref_name": "Free fatty acid receptor 1",
+        "tid": "CHEMBL4422",
+        "accession": "O14842"
+    },
+    "56": {
+        "pref_name": "Cytochrome P450 19A1",
+        "tid": "CHEMBL1978",
+        "accession": "P11511"
+    },
+    "146": {
+        "pref_name": "Tyrosine-protein kinase LCK",
+        "tid": "CHEMBL258",
+        "accession": "P06239"
+    },
+    "100": {
+        "pref_name": "Alpha-1d adrenergic receptor",
+        "tid": "CHEMBL223",
+        "accession": "P25100"
+    },
+    "195": {
+        "pref_name": "Poly [ADP-ribose] polymerase-1",
+        "tid": "CHEMBL3105",
+        "accession": "P09874"
+    },
+    "73": {
+        "pref_name": "Monoamine oxidase B",
+        "tid": "CHEMBL2039",
+        "accession": "P27338"
+    },
+    "45": {
+        "pref_name": "Stem cell growth factor receptor",
+        "tid": "CHEMBL1936",
+        "accession": "P10721"
+    },
+    "300": {
+        "pref_name": "Dipeptidyl peptidase VIII",
+        "tid": "CHEMBL4657",
+        "accession": "Q6V1X1"
+    },
+    "223": {
+        "pref_name": "Tyrosine-protein kinase TYK2",
+        "tid": "CHEMBL3553",
+        "accession": "P29597"
+    },
+    "281": {
+        "pref_name": "Sphingosine 1-phosphate receptor Edg-1",
+        "tid": "CHEMBL4333",
+        "accession": "P21453"
+    },
+    "185": {
+        "pref_name": "Rho-associated protein kinase 2",
+        "tid": "CHEMBL2973",
+        "accession": "O75116"
+    },
+    "283": {
+        "pref_name": "Phosphodiesterase 10A",
+        "tid": "CHEMBL4409",
+        "accession": "Q9Y233"
+    },
+    "48": {
+        "pref_name": "Melatonin receptor 1B",
+        "tid": "CHEMBL1946",
+        "accession": "P49286"
+    },
+    "55": {
+        "pref_name": "Tyrosine-protein kinase receptor FLT3",
+        "tid": "CHEMBL1974",
+        "accession": "P36888"
+    },
+    "94": {
+        "pref_name": "Cannabinoid CB1 receptor",
+        "tid": "CHEMBL218",
+        "accession": "P21554"
+    },
+    "265": {
+        "pref_name": "Tyrosine-protein kinase TIE-2",
+        "tid": "CHEMBL4128",
+        "accession": "Q02763"
+    },
+    "198": {
+        "pref_name": "DNA-dependent protein kinase",
+        "tid": "CHEMBL3142",
+        "accession": "P78527"
+    },
+    "160": {
+        "pref_name": "Cathepsin K",
+        "tid": "CHEMBL268",
+        "accession": "P43235"
+    },
+    "175": {
+        "pref_name": "Serine/threonine-protein kinase mTOR",
+        "tid": "CHEMBL2842",
+        "accession": "P42345"
+    },
+    "115": {
+        "pref_name": "Carbonic anhydrase VII",
+        "tid": "CHEMBL2326",
+        "accession": "P43166"
+    },
+    "93": {
+        "pref_name": "Beta-glucocerebrosidase",
+        "tid": "CHEMBL2179",
+        "accession": "P04062"
+    },
+    "68": {
+        "pref_name": "Nociceptin receptor",
+        "tid": "CHEMBL2014",
+        "accession": "P41146"
+    },
+    "40": {
+        "pref_name": "Cytochrome P450 11B1",
+        "tid": "CHEMBL1908",
+        "accession": "P15538"
+    },
+    "98": {
+        "pref_name": "MAP kinase-activated protein kinase 2",
+        "tid": "CHEMBL2208",
+        "accession": "P49137"
+    },
+    "257": {
+        "pref_name": "Dual specificity protein kinase TTK",
+        "tid": "CHEMBL3983",
+        "accession": "P33981"
+    },
+    "340": {
+        "pref_name": "Lysosomal protective protein",
+        "tid": "CHEMBL6115",
+        "accession": "P10619"
+    },
+    "322": {
+        "pref_name": "Ephrin type-B receptor 4",
+        "tid": "CHEMBL5147",
+        "accession": "P54760"
+    },
+    "42": {
+        "pref_name": "Platelet-derived growth factor receptor beta",
+        "tid": "CHEMBL1913",
+        "accession": "P09619"
+    },
+    "139": {
+        "pref_name": "Serine/threonine-protein kinase Chk2",
+        "tid": "CHEMBL2527",
+        "accession": "O96017"
+    },
+    "162": {
+        "pref_name": "Cytochrome P450 11B2",
+        "tid": "CHEMBL2722",
+        "accession": "P19099"
+    },
+    "164": {
+        "pref_name": "C-C chemokine receptor type 5",
+        "tid": "CHEMBL274",
+        "accession": "P51681"
+    },
+    "61": {
+        "pref_name": "Inhibitor of nuclear factor kappa B kinase beta subunit",
+        "tid": "CHEMBL1991",
+        "accession": "O14920"
+    },
+    "250": {
+        "pref_name": "Sphingosine 1-phosphate receptor Edg-3",
+        "tid": "CHEMBL3892",
+        "accession": "Q99500"
+    },
+    "0": {
+        "pref_name": "Leucine-rich repeat serine/threonine-protein kinase 2",
+        "tid": "CHEMBL1075104",
+        "accession": "Q5S007"
+    },
+    "190": {
+        "pref_name": "Cyclin-dependent kinase 2",
+        "tid": "CHEMBL301",
+        "accession": "P24941"
+    },
+    "182": {
+        "pref_name": "Cathepsin S",
+        "tid": "CHEMBL2954",
+        "accession": "P25774"
+    },
+    "269": {
+        "pref_name": "c-Jun N-terminal kinase 2",
+        "tid": "CHEMBL4179",
+        "accession": "P45984"
+    },
+    "291": {
+        "pref_name": "Serine/threonine-protein kinase PIM2",
+        "tid": "CHEMBL4523",
+        "accession": "Q9P1W9"
+    },
+    "275": {
+        "pref_name": "ALK tyrosine kinase receptor",
+        "tid": "CHEMBL4247",
+        "accession": "Q9UM73"
+    },
+    "303": {
+        "pref_name": "Serine/threonine-protein kinase Aurora-A",
+        "tid": "CHEMBL4722",
+        "accession": "O14965"
+    },
+    "282": {
+        "pref_name": "Matrix metalloproteinase 12",
+        "tid": "CHEMBL4393",
+        "accession": "P39900"
+    },
+    "312": {
+        "pref_name": "Acetyl-CoA carboxylase 2",
+        "tid": "CHEMBL4829",
+        "accession": "O00763"
+    },
+    "47": {
+        "pref_name": "Melatonin receptor 1A",
+        "tid": "CHEMBL1945",
+        "accession": "P48039"
+    },
+    "50": {
+        "pref_name": "Thymidylate synthase",
+        "tid": "CHEMBL1952",
+        "accession": "P04818"
+    },
+    "207": {
+        "pref_name": "Urokinase-type plasminogen activator",
+        "tid": "CHEMBL3286",
+        "accession": "P00749"
+    },
+    "78": {
+        "pref_name": "Dopamine D1 receptor",
+        "tid": "CHEMBL2056",
+        "accession": "P21728"
+    },
+    "138": {
+        "pref_name": "Beta secretase 2",
+        "tid": "CHEMBL2525",
+        "accession": "Q9Y5Z0"
+    },
+    "31": {
+        "pref_name": "Vascular endothelial growth factor receptor 1",
+        "tid": "CHEMBL1868",
+        "accession": "P17948"
+    },
+    "225": {
+        "pref_name": "Cholesteryl ester transfer protein",
+        "tid": "CHEMBL3572",
+        "accession": "P11597"
+    },
+    "227": {
+        "pref_name": "Dual specificity mitogen-activated protein kinase kinase 1",
+        "tid": "CHEMBL3587",
+        "accession": "Q02750"
+    },
+    "125": {
+        "pref_name": "Epoxide hydratase",
+        "tid": "CHEMBL2409",
+        "accession": "P34913"
+    },
+    "132": {
+        "pref_name": "Leukocyte elastase",
+        "tid": "CHEMBL248",
+        "accession": "P08246"
+    },
+    "39": {
+        "pref_name": "Serine/threonine-protein kinase RAF",
+        "tid": "CHEMBL1906",
+        "accession": "P04049"
+    },
+    "236": {
+        "pref_name": "Histamine H4 receptor",
+        "tid": "CHEMBL3759",
+        "accession": "Q9H3N8"
+    },
+    "292": {
+        "pref_name": "Neuropeptide Y receptor type 5",
+        "tid": "CHEMBL4561",
+        "accession": "Q15761"
+    },
+    "326": {
+        "pref_name": "Mitogen-activated protein kinase kinase kinase kinase 2",
+        "tid": "CHEMBL5330",
+        "accession": "Q12851"
+    },
+    "18": {
+        "pref_name": "Plasminogen",
+        "tid": "CHEMBL1801",
+        "accession": "P00747"
+    },
+    "6": {
+        "pref_name": "ATP-dependent DNA helicase Q1",
+        "tid": "CHEMBL1293236",
+        "accession": "P46063"
+    },
+    "220": {
+        "pref_name": "Carbonic anhydrase XIV",
+        "tid": "CHEMBL3510",
+        "accession": "Q9ULX7"
+    },
+    "23": {
+        "pref_name": "Phosphodiesterase 5A",
+        "tid": "CHEMBL1827",
+        "accession": "O76074"
+    },
+    "37": {
+        "pref_name": "Serotonin 3a (5-HT3a) receptor",
+        "tid": "CHEMBL1899",
+        "accession": "P46098"
+    },
+    "84": {
+        "pref_name": "Beta-1 adrenergic receptor",
+        "tid": "CHEMBL213",
+        "accession": "P08588"
+    },
+    "208": {
+        "pref_name": "Caspase-6",
+        "tid": "CHEMBL3308",
+        "accession": "P55212"
+    },
+    "59": {
+        "pref_name": "Serotonin 1d (5-HT1d) receptor",
+        "tid": "CHEMBL1983",
+        "accession": "P28221"
+    },
+    "260": {
+        "pref_name": "Cyclin-dependent kinase 5",
+        "tid": "CHEMBL4036",
+        "accession": "Q00535"
+    },
+    "290": {
+        "pref_name": "Ribosomal protein S6 kinase 1",
+        "tid": "CHEMBL4501",
+        "accession": "P23443"
+    },
+    "137": {
+        "pref_name": "Endothelin receptor ET-A",
+        "tid": "CHEMBL252",
+        "accession": "P25101"
+    },
+    "239": {
+        "pref_name": "Interleukin-1 receptor-associated kinase 4",
+        "tid": "CHEMBL3778",
+        "accession": "Q9NWZ3"
+    },
+    "69": {
+        "pref_name": "Coagulation factor IX",
+        "tid": "CHEMBL2016",
+        "accession": "P00740"
+    },
+    "267": {
+        "pref_name": "Fatty acid synthase",
+        "tid": "CHEMBL4158",
+        "accession": "P49327"
+    },
+    "315": {
+        "pref_name": "Tyrosine-protein kinase receptor UFO",
+        "tid": "CHEMBL4895",
+        "accession": "P30530"
+    },
+    "328": {
+        "pref_name": "G-protein coupled bile acid receptor 1",
+        "tid": "CHEMBL5409",
+        "accession": "Q8TDU6"
+    },
+    "307": {
+        "pref_name": "Dipeptidyl peptidase IX",
+        "tid": "CHEMBL4793",
+        "accession": "Q86TI2"
+    },
+    "188": {
+        "pref_name": "Protein kinase C delta",
+        "tid": "CHEMBL2996",
+        "accession": "Q05655"
+    },
+    "332": {
+        "pref_name": "Glucose-dependent insulinotropic receptor",
+        "tid": "CHEMBL5652",
+        "accession": "Q8TDV5"
+    },
+    "325": {
+        "pref_name": "Serine/threonine-protein kinase TAO1",
+        "tid": "CHEMBL5261",
+        "accession": "Q7L7X3"
+    },
+    "83": {
+        "pref_name": "Muscarinic acetylcholine receptor M2",
+        "tid": "CHEMBL211",
+        "accession": "P08172"
+    },
+    "192": {
+        "pref_name": "Serine/threonine-protein kinase PLK1",
+        "tid": "CHEMBL3024",
+        "accession": "P53350"
+    },
+    "248": {
+        "pref_name": "Matrix metalloproteinase 14",
+        "tid": "CHEMBL3869",
+        "accession": "P50281"
+    },
+    "171": {
+        "pref_name": "Casein kinase I delta",
+        "tid": "CHEMBL2828",
+        "accession": "P48730"
+    },
+    "204": {
+        "pref_name": "Rho-associated protein kinase 1",
+        "tid": "CHEMBL3231",
+        "accession": "Q13464"
+    },
+    "272": {
+        "pref_name": "Dual specificity protein kinase CLK2",
+        "tid": "CHEMBL4225",
+        "accession": "P49760"
+    },
+    "102": {
+        "pref_name": "Anandamide amidohydrolase",
+        "tid": "CHEMBL2243",
+        "accession": "O00519"
+    },
+    "186": {
+        "pref_name": "Cholecystokinin B receptor",
+        "tid": "CHEMBL298",
+        "accession": "P32239"
+    },
+    "293": {
+        "pref_name": "Maternal embryonic leucine zipper kinase",
+        "tid": "CHEMBL4578",
+        "accession": "Q14680"
+    },
+    "254": {
+        "pref_name": "Fibroblast growth factor receptor 4",
+        "tid": "CHEMBL3973",
+        "accession": "P22455"
+    },
+    "14": {
+        "pref_name": "Endothelin receptor ET-B",
+        "tid": "CHEMBL1785",
+        "accession": "P24530"
+    },
+    "252": {
+        "pref_name": "Protein kinase C theta",
+        "tid": "CHEMBL3920",
+        "accession": "Q04759"
+    },
+    "280": {
+        "pref_name": "Purinergic receptor P2Y1",
+        "tid": "CHEMBL4315",
+        "accession": "P47900"
+    },
+    "219": {
+        "pref_name": "C-C chemokine receptor type 3",
+        "tid": "CHEMBL3473",
+        "accession": "P51677"
+    },
+    "19": {
+        "pref_name": "Angiotensin-converting enzyme",
+        "tid": "CHEMBL1808",
+        "accession": "P12821"
+    },
+    "337": {
+        "pref_name": "Smoothened homolog",
+        "tid": "CHEMBL5971",
+        "accession": "Q99835"
+    },
+    "187": {
+        "pref_name": "Protein kinase C alpha",
+        "tid": "CHEMBL299",
+        "accession": "P17252"
+    },
+    "38": {
+        "pref_name": "Aldose reductase",
+        "tid": "CHEMBL1900",
+        "accession": "P15121"
+    },
+    "75": {
+        "pref_name": "Tyrosine-protein kinase receptor RET",
+        "tid": "CHEMBL2041",
+        "accession": "P07949"
+    },
+    "212": {
+        "pref_name": "Protein-tyrosine phosphatase 1B",
+        "tid": "CHEMBL335",
+        "accession": "P18031"
+    },
+    "9": {
+        "pref_name": "ATP-sensitive inward rectifier potassium channel 1",
+        "tid": "CHEMBL1293292",
+        "accession": "P48048"
+    },
+    "241": {
+        "pref_name": "Serine/threonine-protein kinase PLK4",
+        "tid": "CHEMBL3788",
+        "accession": "O00444"
+    },
+    "271": {
+        "pref_name": "MAP kinase signal-integrating kinase 2",
+        "tid": "CHEMBL4204",
+        "accession": "Q9HBH9"
+    },
+    "249": {
+        "pref_name": "Calpain 1",
+        "tid": "CHEMBL3891",
+        "accession": "P07384"
+    },
+    "89": {
+        "pref_name": "Arachidonate 5-lipoxygenase",
+        "tid": "CHEMBL215",
+        "accession": "P09917"
+    },
+    "296": {
+        "pref_name": "Ghrelin receptor",
+        "tid": "CHEMBL4616",
+        "accession": "Q92847"
+    },
+    "335": {
+        "pref_name": "Trace amine-associated receptor 1",
+        "tid": "CHEMBL5857",
+        "accession": "Q96RJ0"
+    },
+    "135": {
+        "pref_name": "Neuronal acetylcholine receptor protein alpha-7 subunit",
+        "tid": "CHEMBL2492",
+        "accession": "P36544"
+    },
+    "25": {
+        "pref_name": "Thromboxane-A synthase",
+        "tid": "CHEMBL1835",
+        "accession": "P24557"
+    },
+    "58": {
+        "pref_name": "Insulin receptor",
+        "tid": "CHEMBL1981",
+        "accession": "P06213"
+    },
+    "62": {
+        "pref_name": "Plasma kallikrein",
+        "tid": "CHEMBL2000",
+        "accession": "P03952"
+    },
+    "33": {
+        "pref_name": "Calcium sensing receptor",
+        "tid": "CHEMBL1878",
+        "accession": "P41180"
+    },
+    "196": {
+        "pref_name": "Cyclin-dependent kinase 9",
+        "tid": "CHEMBL3116",
+        "accession": "P50750"
+    },
+    "251": {
+        "pref_name": "Tyrosine-protein kinase Lyn",
+        "tid": "CHEMBL3905",
+        "accession": "P07948"
+    },
+    "158": {
+        "pref_name": "Phosphodiesterase 2A",
+        "tid": "CHEMBL2652",
+        "accession": "O00408"
+    },
+    "255": {
+        "pref_name": "Proteinase-activated receptor 1",
+        "tid": "CHEMBL3974",
+        "accession": "P25116"
+    },
+    "66": {
+        "pref_name": "Isocitrate dehydrogenase [NADP] cytoplasmic",
+        "tid": "CHEMBL2007625",
+        "accession": "O75874"
+    },
+    "54": {
+        "pref_name": "Dihydroorotate dehydrogenase",
+        "tid": "CHEMBL1966",
+        "accession": "Q02127"
+    },
+    "165": {
+        "pref_name": "Fibroblast growth factor receptor 3",
+        "tid": "CHEMBL2742",
+        "accession": "P22607"
+    },
+    "65": {
+        "pref_name": "Platelet-derived growth factor receptor alpha",
+        "tid": "CHEMBL2007",
+        "accession": "P16234"
+    },
+    "15": {
+        "pref_name": "Vasopressin V2 receptor",
+        "tid": "CHEMBL1790",
+        "accession": "P30518"
+    },
+    "41": {
+        "pref_name": "Mitogen-activated protein kinase kinase kinase 12",
+        "tid": "CHEMBL1908389",
+        "accession": "Q12852"
+    },
+    "266": {
+        "pref_name": "Fibroblast growth factor receptor 2",
+        "tid": "CHEMBL4142",
+        "accession": "P21802"
+    },
+    "262": {
+        "pref_name": "Chymase",
+        "tid": "CHEMBL4068",
+        "accession": "P23946"
+    },
+    "126": {
+        "pref_name": "C-C chemokine receptor type 1",
+        "tid": "CHEMBL2413",
+        "accession": "P32246"
+    },
+    "329": {
+        "pref_name": "Cell division cycle 7-related protein kinase",
+        "tid": "CHEMBL5443",
+        "accession": "O00311"
+    },
+    "305": {
+        "pref_name": "Neuropeptide Y receptor type 1",
+        "tid": "CHEMBL4777",
+        "accession": "P25929"
+    },
+    "245": {
+        "pref_name": "LIM domain kinase 1",
+        "tid": "CHEMBL3836",
+        "accession": "P53667"
+    },
+    "297": {
+        "pref_name": "Leukotriene A4 hydrolase",
+        "tid": "CHEMBL4618",
+        "accession": "P09960"
+    },
+    "320": {
+        "pref_name": "Metabotropic glutamate receptor 2",
+        "tid": "CHEMBL5137",
+        "accession": "Q14416"
+    },
+    "44": {
+        "pref_name": "Alpha-2c adrenergic receptor",
+        "tid": "CHEMBL1916",
+        "accession": "P18825"
+    },
+    "17": {
+        "pref_name": "Corticotropin releasing factor receptor 1",
+        "tid": "CHEMBL1800",
+        "accession": "P34998"
+    },
+    "313": {
+        "pref_name": "Mitogen-activated protein kinase kinase kinase kinase 5",
+        "tid": "CHEMBL4852",
+        "accession": "Q9Y4K4"
+    },
+    "341": {
+        "pref_name": "Tankyrase-2",
+        "tid": "CHEMBL6154",
+        "accession": "Q9H2K2"
+    },
+    "156": {
+        "pref_name": "c-Jun N-terminal kinase 3",
+        "tid": "CHEMBL2637",
+        "accession": "P53779"
+    },
+    "166": {
+        "pref_name": "Phosphodiesterase 4B",
+        "tid": "CHEMBL275",
+        "accession": "Q07343"
+    },
+    "179": {
+        "pref_name": "Phosphodiesterase 4D",
+        "tid": "CHEMBL288",
+        "accession": "Q08499"
+    },
+    "259": {
+        "pref_name": "C-C chemokine receptor type 2",
+        "tid": "CHEMBL4015",
+        "accession": "P41597"
+    },
+    "92": {
+        "pref_name": "Complement factor D",
+        "tid": "CHEMBL2176771",
+        "accession": "P00746"
+    },
+    "150": {
+        "pref_name": "Protein kinase C iota",
+        "tid": "CHEMBL2598",
+        "accession": "P41743"
+    },
+    "16": {
+        "pref_name": "Carboxy-terminal domain RNA polymerase II polypeptide A small phosphatase 1",
+        "tid": "CHEMBL1795098",
+        "accession": "Q9GZU7"
+    },
+    "224": {
+        "pref_name": "Nitric-oxide synthase, brain",
+        "tid": "CHEMBL3568",
+        "accession": "P29475"
+    },
+    "230": {
+        "pref_name": "Casein kinase II alpha",
+        "tid": "CHEMBL3629",
+        "accession": "P68400"
+    },
+    "145": {
+        "pref_name": "Liver glycogen phosphorylase",
+        "tid": "CHEMBL2568",
+        "accession": "P06737"
+    },
+    "183": {
+        "pref_name": "Tyrosine-protein kinase ITK/TSK",
+        "tid": "CHEMBL2959",
+        "accession": "Q08881"
+    },
+    "285": {
+        "pref_name": "Prostanoid DP receptor",
+        "tid": "CHEMBL4427",
+        "accession": "Q13258"
+    },
+    "26": {
+        "pref_name": "Prostanoid EP4 receptor",
+        "tid": "CHEMBL1836",
+        "accession": "P35408"
+    },
+    "170": {
+        "pref_name": "Coagulation factor XI",
+        "tid": "CHEMBL2820",
+        "accession": "P03951"
+    },
+    "109": {
+        "pref_name": "Dual-specificity tyrosine-phosphorylation regulated kinase 1A",
+        "tid": "CHEMBL2292",
+        "accession": "Q13627"
+    },
+    "163": {
+        "pref_name": "Metabotropic glutamate receptor 4",
+        "tid": "CHEMBL2736",
+        "accession": "Q14833"
+    },
+    "141": {
+        "pref_name": "3-phosphoinositide dependent protein kinase-1",
+        "tid": "CHEMBL2534",
+        "accession": "O15530"
+    },
+    "30": {
+        "pref_name": "Alpha-2a adrenergic receptor",
+        "tid": "CHEMBL1867",
+        "accession": "P08913"
+    },
+    "133": {
+        "pref_name": "Beta amyloid A4 protein",
+        "tid": "CHEMBL2487",
+        "accession": "P05067"
+    },
+    "21": {
+        "pref_name": "Muscarinic acetylcholine receptor M4",
+        "tid": "CHEMBL1821",
+        "accession": "P08173"
+    },
+    "67": {
+        "pref_name": "C-X-C chemokine receptor type 7",
+        "tid": "CHEMBL2010631",
+        "accession": "P25106"
+    },
+    "51": {
+        "pref_name": "Vascular endothelial growth factor receptor 3",
+        "tid": "CHEMBL1955",
+        "accession": "P35916"
+    },
+    "20": {
+        "pref_name": "Prostanoid EP1 receptor",
+        "tid": "CHEMBL1811",
+        "accession": "P34995"
+    },
+    "116": {
+        "pref_name": "Neurokinin 2 receptor",
+        "tid": "CHEMBL2327",
+        "accession": "P21452"
+    },
+    "339": {
+        "pref_name": "Diacylglycerol O-acyltransferase 1",
+        "tid": "CHEMBL6009",
+        "accession": "O75907"
+    },
+    "120": {
+        "pref_name": "Ribosomal protein S6 kinase alpha 3",
+        "tid": "CHEMBL2345",
+        "accession": "P51812"
+    },
+    "304": {
+        "pref_name": "Pyruvate dehydrogenase kinase isoform 1",
+        "tid": "CHEMBL4766",
+        "accession": "Q15118"
+    },
+    "234": {
+        "pref_name": "Prostanoid EP3 receptor",
+        "tid": "CHEMBL3710",
+        "accession": "P43115"
+    },
+    "253": {
+        "pref_name": "Methionine aminopeptidase 2",
+        "tid": "CHEMBL3922",
+        "accession": "P50579"
+    },
+    "244": {
+        "pref_name": "Hexokinase type IV",
+        "tid": "CHEMBL3820",
+        "accession": "P35557"
+    },
+    "232": {
+        "pref_name": "Arachidonate 12-lipoxygenase",
+        "tid": "CHEMBL3687",
+        "accession": "P18054"
+    },
+    "264": {
+        "pref_name": "cAMP-dependent protein kinase alpha-catalytic subunit",
+        "tid": "CHEMBL4101",
+        "accession": "P17612"
+    },
+    "176": {
+        "pref_name": "Glycogen synthase kinase-3 alpha",
+        "tid": "CHEMBL2850",
+        "accession": "P49840"
+    },
+    "279": {
+        "pref_name": "Bradykinin B1 receptor",
+        "tid": "CHEMBL4308",
+        "accession": "P46663"
+    },
+    "287": {
+        "pref_name": "TGF-beta receptor type I",
+        "tid": "CHEMBL4439",
+        "accession": "P36897"
+    },
+    "317": {
+        "pref_name": "Endothelial lipase",
+        "tid": "CHEMBL5080",
+        "accession": "Q9Y5X9"
+    },
+    "221": {
+        "pref_name": "Cytochrome P450 17A1",
+        "tid": "CHEMBL3522",
+        "accession": "P05093"
+    },
+    "242": {
+        "pref_name": "Serine-protein kinase ATM",
+        "tid": "CHEMBL3797",
+        "accession": "Q13315"
+    },
+    "318": {
+        "pref_name": "GABA receptor alpha-5 subunit",
+        "tid": "CHEMBL5112",
+        "accession": "P31644"
+    },
+    "278": {
+        "pref_name": "Voltage-gated potassium channel subunit Kv1.5",
+        "tid": "CHEMBL4306",
+        "accession": "P22460"
+    },
+    "289": {
+        "pref_name": "Nitric oxide synthase, inducible",
+        "tid": "CHEMBL4481",
+        "accession": "P35228"
+    },
+    "128": {
+        "pref_name": "Interleukin-8 receptor B",
+        "tid": "CHEMBL2434",
+        "accession": "P25025"
+    },
+    "189": {
+        "pref_name": "P2X purinoceptor 3",
+        "tid": "CHEMBL2998",
+        "accession": "P56373"
+    },
+    "302": {
+        "pref_name": "Proteinase activated receptor 4",
+        "tid": "CHEMBL4691",
+        "accession": "Q96RI0"
+    },
+    "35": {
+        "pref_name": "Vasopressin V1a receptor",
+        "tid": "CHEMBL1889",
+        "accession": "P37288"
+    },
+    "76": {
+        "pref_name": "Oxytocin receptor",
+        "tid": "CHEMBL2049",
+        "accession": "P30559"
+    },
+    "10": {
+        "pref_name": "FAD-linked sulfhydryl oxidase ALR",
+        "tid": "CHEMBL1741189",
+        "accession": "P55789"
+    },
+    "149": {
+        "pref_name": "Protein kinase C nu",
+        "tid": "CHEMBL2595",
+        "accession": "O94806"
+    },
+    "334": {
+        "pref_name": "Egl nine homolog 1",
+        "tid": "CHEMBL5697",
+        "accession": "Q9GZT9"
+    },
+    "237": {
+        "pref_name": "Urotensin II receptor",
+        "tid": "CHEMBL3764",
+        "accession": "Q9UKP6"
+    },
+    "203": {
+        "pref_name": "Sphingosine 1-phosphate receptor Edg-6",
+        "tid": "CHEMBL3230",
+        "accession": "O95977"
+    },
+    "298": {
+        "pref_name": "Apoptosis regulator Bcl-X",
+        "tid": "CHEMBL4625",
+        "accession": "Q07817"
+    },
+    "72": {
+        "pref_name": "Muscarinic acetylcholine receptor M5",
+        "tid": "CHEMBL2035",
+        "accession": "P08912"
+    },
+    "104": {
+        "pref_name": "Dipeptidyl peptidase I",
+        "tid": "CHEMBL2252",
+        "accession": "P53634"
+    },
+    "34": {
+        "pref_name": "Prostanoid EP2 receptor",
+        "tid": "CHEMBL1881",
+        "accession": "P43116"
+    },
+    "286": {
+        "pref_name": "Neurokinin 3 receptor",
+        "tid": "CHEMBL4429",
+        "accession": "P29371"
+    },
+    "240": {
+        "pref_name": "Hydroxycarboxylic acid receptor 2",
+        "tid": "CHEMBL3785",
+        "accession": "Q8TDS4"
+    },
+    "32": {
+        "pref_name": "Serotonin 4 (5-HT4) receptor",
+        "tid": "CHEMBL1875",
+        "accession": "Q13639"
+    },
+    "28": {
+        "pref_name": "Gonadotropin-releasing hormone receptor",
+        "tid": "CHEMBL1855",
+        "accession": "P30968"
+    },
+    "336": {
+        "pref_name": "Mitogen-activated protein kinase kinase kinase 14",
+        "tid": "CHEMBL5888",
+        "accession": "Q99558"
+    },
+    "4": {
+        "pref_name": "Carnitine O-palmitoyltransferase 1, liver isoform",
+        "tid": "CHEMBL1293194",
+        "accession": "P50416"
+    },
+    "191": {
+        "pref_name": "Phosphodiesterase 7A",
+        "tid": "CHEMBL3012",
+        "accession": "Q13946"
+    },
+    "314": {
+        "pref_name": "Apoptosis regulator Bcl-2",
+        "tid": "CHEMBL4860",
+        "accession": "P10415"
+    },
+    "63": {
+        "pref_name": "Purinergic receptor P2Y12",
+        "tid": "CHEMBL2001",
+        "accession": "Q9H244"
+    },
+    "243": {
+        "pref_name": "Calcitonin gene-related peptide type 1 receptor",
+        "tid": "CHEMBL3798",
+        "accession": "Q16602"
+    },
+    "331": {
+        "pref_name": "Acyl-CoA desaturase",
+        "tid": "CHEMBL5555",
+        "accession": "O00767"
+    },
+    "113": {
+        "pref_name": "Potassium channel subfamily K member 3",
+        "tid": "CHEMBL2321613",
+        "accession": "O14649"
+    },
+    "106": {
+        "pref_name": "Type-1 angiotensin II receptor",
+        "tid": "CHEMBL227",
+        "accession": "P30556"
+    },
+    "11": {
+        "pref_name": "Sentrin-specific protease 7",
+        "tid": "CHEMBL1741213",
+        "accession": "Q9BQF6"
+    },
+    "114": {
+        "pref_name": "Alpha-1,6-mannosyl-glycoprotein 2-beta-N-acetylglucosaminyltransferase",
+        "tid": "CHEMBL2321630",
+        "accession": "Q10469"
+    },
+    "273": {
+        "pref_name": "Lipoxin A4 receptor",
+        "tid": "CHEMBL4227",
+        "accession": "P25090"
+    },
+    "338": {
+        "pref_name": "Transient receptor potential cation channel subfamily A member 1",
+        "tid": "CHEMBL6007",
+        "accession": "O75762"
+    },
+    "330": {
+        "pref_name": "Baculoviral IAP repeat-containing protein 2",
+        "tid": "CHEMBL5462",
+        "accession": "Q13490"
+    }
+}
