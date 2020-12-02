@@ -147,13 +147,11 @@ if __name__ == '__main__':
     ##Run through each algo, send the 'space' to skop, run HPO, and write output file:
     for algo, space, name in zip(algorithms, spaces, names):
         print(name)
-        #if name=='rfc.dat':
-        #    result = run_skopt(algo, space, interaction_matrix, random_starts = 9, total_runs = 14, fps=fps, njobs=1)
-        #    write_results(name, result, space)
-        #if name == 'sea.dat':
-        #    result = run_skopt(algo, space, interaction_matrix, random_starts = 9, total_runs = 14, fps=fps, njobs=1)
-        #else:
-        if name in ['hpo_implicit_bpr.dat', 'hpo_lightfm_warp.dat']:
+        if name in ['rfc.dat', 'sea.dat']:
+            result = run_skopt(algo, space, interaction_matrix, random_starts = 9, total_runs = 14, fps=fps, njobs=1)
+            write_results(name, result, space)
+        else:
+            #name in ['hpo_implicit_bpr.dat', 'hpo_lightfm_warp.dat']:
             result = run_skopt(algo, space, interaction_matrix, njobs=1)
             write_results(name, result, space)
-        #write_results(name, result, space)
+

@@ -45,10 +45,6 @@ if __name__ == '__main__':
         train, test, fps = utils.load_time_split(year=year, return_fingerprints=True)
 
         for name, algo in zip(filenames, algorithms):
-            if name =='rfc':
-                pass
-            else:
-                continue
             print(name)                
             ranks = calc_ranks_given_name(name, algo, train, test, fps)
             np.save('./processed_data/'+str(year)+'_'+name+'.npy', ranks)

@@ -9,11 +9,9 @@ from seaborn import kdeplot
 
 
 
-filenames = ['label_correlation', 'hpo_implicit_als', 'hpo_implicit_bpr',
-             'hpo_lightfm_warp', 'hpo_lightfm_bpr', 'nearest_neighbor']
+filenames = ['label_correlation', 'hpo_implicit_bpr', 'hpo_lightfm_warp',
+             'sea', 'rfc', 'nearest_neighbor']
 
-yrs = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017]
-num_targets = [225, 228, 231, 234, 237, 240, 242, 243, 243, 243]
 year = 2015
 
 def plot_fig_label(ax, lab):
@@ -42,8 +40,6 @@ def plot(nn=False):
         nnranks = np.load('./processed_data/2015_nearest_neighbor.npy')
         mask = nnranks>3
 
-    jits = np.linspace(0.35,4.4, 6)
-    np.random.shuffle(jits)
     for count, name in enumerate(filenames):
         #load
         ranks = np.load('./processed_data/'+str(year)+'_'+name+'.npy')
@@ -54,43 +50,51 @@ def plot(nn=False):
         bstrap = simple_bootstrap(ranks, take=len(ranks))
         ci = simple_ci(bstrap)
         x,y = simple_ecdf(ranks, 243)
+
+        print(name, np.mean(bstrap), ci)
     
         #plot:
         #A
         ax[0].plot(x,y,'-o', mfc='white', mew=1.5, linewidth=1.5,label=name, c='C'+str(count))
     
         #B
-        out = kdeplot(bstrap, ax=ax[1], shade=True, color='C'+str(count))
-        #jit = np.random.uniform()*3+1
-        jit = jits[count]
-        ax[1].plot([ci[0], ci[1]], [-jit,-jit], lw=5.5, c='C'+str(count),zorder=10)
-        ax[1].scatter([np.mean(ci)], [-jit], 
-                       facecolor='white', 
+        sjitter = np.abs(np.random.randn(len(bstrap))) / 10
+        ljitter = 0#np.random.randn(len(bstrap))/200
+        ax[1].scatter(count+sjitter+0.15, bstrap+ljitter, alpha=0.05)
+        ax[1].plot([count,count], [ci[0], ci[1]], lw=5.5, c='C'+str(count),zorder=10)
+        ax[1].scatter([count], [np.mean(ci)],
+                       facecolor='white',
                        edgecolor='C'+str(count),
                        lw=3.5,
                        zorder=20)
 
     fsize = 14
-    ax[1].plot([0.3, 0.5], [1e6, 1e6], c='black', linewidth=3.5, label='95% CI')
-    ax[1].set_ylim(-5,25)
-    ax[1].set_xlim(-0.01, 0.6)
-    ax[1].legend()
-    ax[1].set_xlabel('p@3', fontsize=fsize)
-    ax[1].set_ylabel('Bootstrap density', fontsize=fsize)
+    ax[1].set_ylim(-0.05,0.6)
+    ax[1].set_xticks(np.arange(len(filenames)))
+    ax[1].set_xticklabels([i.replace("hpo_", '') for i in filenames], rotation=35, ha='center',fontsize=fsize)
+    ax[1].set_ylabel('p@3', fontsize=fsize)
     yt = np.arange(-5,25, 5)
-    ax[1].set_yticks(yt)
-    ax[1].set_yticklabels(['' for i in yt])
+    #ax[1].set_yticks(yt)
+    #ax[1].set_yticklabels(['' for i in yt])
     
     plot_fig_label(ax[0], 'A.')
     plot_fig_label(ax[1], 'B.')
 
-    ax[0].legend()    
+
     ax[0].set_xlim(0,20)
+    ax[0].set_ylim(-0.05, 1)
     ax[0].set_xlabel('Rank', fontsize=fsize)
     ax[0].set_ylabel('ECDF', fontsize=fsize)
     xt = np.arange(1,20,2)
     ax[0].set_xticks(xt)
     ax[0].axvline(3, c='k', linestyle='--', zorder=1)
+    ax[1].axhline(0, c='k', linestyle='--', alpha=0.2)
+
+
+    ax[1].plot([0,0], [1e6, 1e6+1], lw=5.5, c='k',zorder=10, label='95% CI')
+    ax[1].scatter([0], [1e6], c='k', alpha=0.6, label='Bootstrap estimates')
+    ax[0].legend()
+    ax[1].legend()
     plt.tight_layout()
 
     return fig, ax
