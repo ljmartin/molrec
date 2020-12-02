@@ -1698,5 +1698,15 @@
         "pref_name": "Baculoviral IAP repeat-containing protein 2",
         "tid": "CHEMBL5462",
         "accession": "Q13490"
+    },
+    "342": {
+        "pref_name": "Tankyrase-1",
+        "tid": "CHEMBL6164",
+        "accession": "O95271"
+    },
+    "7": {
+        "pref_name": "Bloom syndrome protein",
+        "tid": "CHEMBL1293237",
+        "accession": "P54132"
     }
 }
