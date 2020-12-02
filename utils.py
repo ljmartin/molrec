@@ -9,7 +9,7 @@ from tqdm import tqdm
 from joblib import Parallel, delayed
 from scipy.spatial.distance import squareform
 import pymc3 as pm
-
+from sklearn.ensemble import RandomForestClassifier
 
 def train_test_split(input_matrix, fraction):
     """
@@ -273,6 +273,37 @@ def train_sea(params, inp, fps, njobs=6, fraction=5):
     sea.fit()
     sea.predict()
     return sea.y_new
+
+def train_rfc(params, inp, fps, njobs=8):
+    #first fold the fingerprints to a manageable size
+    fpsize = 2048
+    while fps.shape[1]>fpsize:
+        fps = fold(fps)
+        
+    rfc = RandomForestClassifier(n_estimators=params['n_estimators'], 
+                             n_jobs=njobs,
+                             min_samples_leaf=params['min_samples_per_leaf'],
+                            bootstrap=True,
+                                 max_samples=params['max_samples'])
+
+    rfc.fit(fps, inp.toarray())
+    probability_matrix = rfc.predict_proba(fps)
+    probability_matrix = np.vstack([i[:,-1] for i in probability_matrix]).T
+        
+    return probability_matrix
+
+def fold(arr):
+    folded_arr = arr[:,:int(arr.shape[1]/2)] + arr[:,int(arr.shape[1]/2):]
+    return folded_arr
+
+def train_lr(inp, fps):
+    from sklearn.multioutput import MultiOutputClassifier
+    from sklearn.linear_model import LogisticRegression
+    moc = MultiOutputClassifier(LogisticRegression(max_iter=10000))
+    print(fps.shape, inp.shape)
+    moc.fit(fps, inp.toarray())
+
+    return moc.predict_proba(fps)
 
 def train_implicit_als(params, inp):
     model = implicit.als.AlternatingLeastSquares(factors=params['factors'],

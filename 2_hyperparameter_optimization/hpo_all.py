@@ -90,8 +90,8 @@ if __name__ == '__main__':
     ##Set the order of algorithms to be tested:
     algorithms = [utils.train_implicit_bpr,                  
                   utils.train_lightfm_warp,
-                  utils.train_lightfm_warp_fp,
-                  utils.train_sea]
+                  utils.train_sea,
+                  utils.train_rfc]
 
 
 #Log has been removed because it requires negative records (ChEMBL highly biased to positive)
@@ -118,31 +118,42 @@ if __name__ == '__main__':
         Integer(1,15, name='max_sampled'),
         Real(10**-5, 10**0, "log-uniform", name='learning_rate'),
         Integer(1,20, name='epochs')])
-    #lightfm,warp_fp:
-    spaces.append([Integer(1, 400, name='no_components'),
-        Integer(1,15, name='max_sampled'),
-        Real(10**-5, 10**0, "log-uniform", name='learning_rate'),
-        Integer(1,20, name='epochs')])
-    #lightfm,bpr:
-    #spaces.append([Integer(1, 400, name='no_components'),
-    #    Integer(1,15, name='max_sampled'),
-    #    Real(10**-5, 10**0, "log-uniform", name='learning_rate'),
-    #    Integer(1,20, name='epochs')])
+
+    ###lightfm,warp_fp:
+    ##spaces.append([Integer(1, 400, name='no_components'),
+    ##    Integer(1,15, name='max_sampled'),
+    ##    Real(10**-5, 10**0, "log-uniform", name='learning_rate'),
+    ##    Integer(1,20, name='epochs')])
+
+    ##lightfm,bpr:
+    ##spaces.append([Integer(1, 400, name='no_components'),
+    ##    Integer(1,15, name='max_sampled'),
+    ##    Real(10**-5, 10**0, "log-uniform", name='learning_rate'),
+    ##    Integer(1,20, name='epochs')])
 
     #sea:
     spaces.append([Real(0.05, 0.95, name='cutoff')])
-    
+
+    #random forest:
+    spaces.append([Integer(100,200, name='n_estimators'),
+                   Integer(4, 10, name='min_samples_per_leaf'),
+                   Integer(20000, 50000, name='max_samples')])
+
     ##associated filenames for the outputs:
     names = ['hpo_implicit_bpr.dat','hpo_lightfm_warp.dat',
-             'hpo_lightfm_warp_fp.dat', 'sea.dat']
+             'sea.dat', 'rfc.dat']
 
 
     ##Run through each algo, send the 'space' to skop, run HPO, and write output file:
     for algo, space, name in zip(algorithms, spaces, names):
-        if name == 'sea.dat':
-            result = run_skopt(algo, space, interaction_matrix, random_starts = 9, total_runs = 14, fps=fps, njobs=1)
-        elif name == 'hpo_lightfm_warp_fp.dat':
-            result = run_skopt(algo, space, interaction_matrix, fps=fps)
-        else:
-            result = run_skopt(algo, space, interaction_matrix)
-        write_results(name, result, space)
+        print(name)
+        #if name=='rfc.dat':
+        #    result = run_skopt(algo, space, interaction_matrix, random_starts = 9, total_runs = 14, fps=fps, njobs=1)
+        #    write_results(name, result, space)
+        #if name == 'sea.dat':
+        #    result = run_skopt(algo, space, interaction_matrix, random_starts = 9, total_runs = 14, fps=fps, njobs=1)
+        #else:
+        if name in ['hpo_implicit_bpr.dat', 'hpo_lightfm_warp.dat']:
+            result = run_skopt(algo, space, interaction_matrix, njobs=1)
+            write_results(name, result, space)
+        #write_results(name, result, space)

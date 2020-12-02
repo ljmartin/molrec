@@ -10,7 +10,7 @@ from seaborn import kdeplot
 
 
 filenames = ['label_correlation', 'hpo_implicit_bpr', 'hpo_lightfm_warp',
-             'hpo_lightfm_warp_fp', 'sea', 'nearest_neighbor']
+             'sea', 'rfc', 'nearest_neighbor']
 
 year = 2015
 

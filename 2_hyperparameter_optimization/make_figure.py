@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 plt.style.use('seaborn')
 
 filenames = ['hpo_implicit_bpr.dat','hpo_lightfm_warp.dat',
-             'hpo_lightfm_warp_fp.dat', 'sea.dat']
+             'sea.dat', 'rfc.dat']
 
 
 fig, ax = plt.subplots(6)
