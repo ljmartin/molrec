@@ -32,10 +32,10 @@ def simple_ecdf(ranks, maxrank):
     ecdf = [(ranks<=i).sum()/len(ranks) for i in x]
     return x, ecdf
 
-def plot(nn=False):
-    fig, ax = plt.subplots(nrows=2, ncols=1)
-    fig.set_figheight(10)
-    fig.set_figwidth(7)
+def plot(ax, labs, nn=False):
+    #fig, ax = plt.subplots(nrows=2, ncols=1)
+    #fig.set_figheight(10)
+    #fig.set_figwidth(7)
     if nn:
         nnranks = np.load('./processed_data/2015_nearest_neighbor.npy')
         mask = nnranks>3
@@ -69,16 +69,24 @@ def plot(nn=False):
                        zorder=20)
 
     fsize = 14
+
     ax[1].set_ylim(-0.05,0.6)
     ax[1].set_xticks(np.arange(len(filenames)))
     ax[1].set_xticklabels([i.replace("hpo_", '') for i in filenames], rotation=35, ha='center',fontsize=fsize)
     ax[1].set_ylabel('p@3', fontsize=fsize)
+    for tick in ax[0].yaxis.get_major_ticks():
+                tick.label.set_fontsize(fsize)
+    for tick in ax[0].xaxis.get_major_ticks():
+        tick.label.set_fontsize(fsize)
+    for tick in ax[1].yaxis.get_major_ticks():
+        tick.label.set_fontsize(fsize) 
+
     yt = np.arange(-5,25, 5)
     #ax[1].set_yticks(yt)
     #ax[1].set_yticklabels(['' for i in yt])
     
-    plot_fig_label(ax[0], 'A.')
-    plot_fig_label(ax[1], 'B.')
+    plot_fig_label(ax[0], labs[0])
+    plot_fig_label(ax[1], labs[1])
 
 
     ax[0].set_xlim(0,20)
@@ -97,13 +105,24 @@ def plot(nn=False):
     ax[1].legend()
     plt.tight_layout()
 
-    return fig, ax
+    #return fig, ax
 
-fig, ax = plot()
-fig.savefig('./figures/timesplit.png')
-fig.savefig('./figures/timesplit.tif')
-fig.savefig('./figures/timesplit.svg')
-fig, ax = plot(nn=True)
-fig.savefig('./figures/timesplit_minusNN.png')
-fig.savefig('./figures/timesplit_minusNN.tif')
-fig.savefig('./figures/timesplit_minusNN.svg')
+#fig, ax = plot()
+#fig.savefig('./figures/timesplit.png')
+#fig.savefig('./figures/timesplit.tif')
+#fig.savefig('./figures/timesplit.svg')
+#fig, ax = plot(nn=True)
+#fig.savefig('./figures/timesplit_minusNN.png')
+#fig.savefig('./figures/timesplit_minusNN.tif')
+#fig.savefig('./figures/timesplit_minusNN.svg')
+
+
+fig, ax = plt.subplots(nrows=2, ncols=2)
+fig.set_figheight(10)
+fig.set_figwidth(14)
+plot([ax[0,0], ax[1,0]], ['A.', 'B.'])
+plot([ax[0,1], ax[1,1]], ['C.', 'D.'],nn=True)
+
+fig.savefig('./figures/timesplit_common.png')
+fig.savefig('./figures/timesplit_common.svg')
+fig.savefig('./figures/timesplit_common.tif')
